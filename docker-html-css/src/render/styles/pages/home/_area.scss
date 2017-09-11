@@ -1,0 +1,14 @@
+/* List practis area */
+.area-list {
+
+  &__item {
+    margin-top: 15px;
+  }
+
+  &__icon {
+    @extend %text-align-center;
+    padding-top: 20px;
+    font-size: 40px;
+    color: $color-area-list-icon;
+  }
+}

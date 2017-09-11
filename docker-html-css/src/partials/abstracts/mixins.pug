@@ -1,0 +1,22 @@
+//- Create menu
+mixin list-menu(list, link, href, value)
+  ul(class=list)
+    - for (var i = 0; i < value.length; i++)
+      li
+        a(class=link, href=href)= value[i]
+
+//- Create main section general
+mixin main-section-group(main_section_group, main_title, desc_main, value)
+  div(class=main_section_group)
+    h2(class=main_title)= value[0]
+    p(class=desc_main)= value[1]
+
+//- List photo used in section attorney and recent
+mixin list-photo(item, value)
+  .main-section__content
+    ul.row.main-section__list
+      - for (var i = 0; i < value.length; i++)
+        li(class=item)
+          img.photo(src= value[i][0], alt= value[i][1])
+          h3.title-item= value[i][1]
+          p.desc-item.desc-item--position= value[i][2]

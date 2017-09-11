@@ -1,0 +1,23 @@
+version: "2"
+services:
+    app:
+        build:
+            context: ../../
+            dockerfile: docker/dev/Dockerfile
+        image: form-control
+        ports:
+            - "4200:4200"
+            # - "9876:9876"
+            - "9800:9800"
+            - "49153:49153"
+
+        volumes:
+            # Remaps the volume for live editing
+            - ../../:/workspace
+
+        command: ng serve --host 0.0.0.0 --port 4200
+        # npm start
+
+        environment:
+            # ng build --env=stag
+            BUILD_ENVIRONMENT: ""

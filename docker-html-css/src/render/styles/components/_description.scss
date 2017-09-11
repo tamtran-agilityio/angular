@@ -1,0 +1,35 @@
+/* Description main general */
+.desc-main {
+  @include font-format($font-playfair-display-regular, 20px, $color-desc-main);
+  margin-top: 15px;
+  line-height: 1.5;
+
+  /* Description job in banner */
+  &--job {
+    font-size: 31px;
+    color: $color-banner-job;
+  }
+}
+
+/* Description item general */
+.desc-item {
+  @include font-format($font-open-sans-regular, 16px, $color-desc-item);
+  margin-top: 15px;
+  line-height: 2;
+
+  /* Description year in about us */
+  &--year {
+    @include font-format($font-open-sans-regular, 21px);
+  }
+
+  /* Description position in recent, attorney */
+  &--position {
+    margin-top: 5px;
+  }
+
+  /* Description answer in question */
+  &--answer {
+    //placeholders can not working in here
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,57 @@
+/* Media query for device < 768px */
+@media (max-width: $screen-xs-max) {
+
+  /* Styles in banner */
+  .banner {
+    padding: 100px 0;
+  }
+
+  /* Styles in main section */
+  .main-section {
+    padding: 30px 0;
+  }
+
+  .main-section__content {
+    margin-top: 20px;
+  }
+
+  /* Styles title main */
+  .title-main {
+    font-size: 20px;
+
+    /* Styles name in banner */
+    &--name {
+      font-size: 35px;
+    }
+  }
+
+  /* Styles title item */
+  .title-item {
+    font-size: 16px;
+  }
+
+  /* Styles desc main */
+  .desc-main {
+    font-size: 17px;
+
+    /* Styles desc job in banner */
+    &--job {
+      font-size: 21px;
+    }
+  }
+
+  /* Styles desc item */
+  .desc-item {
+    font-size: 14px;
+  }
+
+  /* Styles answer in question */
+  .answer {
+    margin-top: 30px;
+  }
+
+  /* Styles expertise in about us */
+  .expertise {
+    margin-top: 15px;
+  }
+}

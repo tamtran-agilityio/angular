@@ -1,0 +1,39 @@
+.title-main,
+.title-item {
+  @extend %font-playfair-display-regular;
+}
+/* Title main general */
+.title-main {
+  @extend %text-transform-capitalize;
+  color: $color-title-main;
+  font-size: 30px;
+
+  /* Name in banner */
+  &--name {
+    font-size: 65px;
+  }
+
+  /*
+    Name in banner
+    Title main in area
+    Title main in client
+    Title main in question
+  */
+  &--name,
+  &--area,
+  &--client,
+  &--question {
+    color: $color-white;
+  }
+}
+
+/* Title item general */
+.title-item {
+  font-size: 21px;
+  margin-top: 10px;
+
+  /* Title item in area */
+  &--area {
+    color: $color-white;
+  }
+}

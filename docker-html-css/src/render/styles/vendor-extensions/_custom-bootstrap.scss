@@ -1,0 +1,18 @@
+/* Change styles of class navbar in bootstrap on header */
+.navbar {
+  @extend %margin-zero;
+}
+
+/* Change styles navbar default in bootstrap on header */
+.navbar-default {
+  @extend %bg-transparent;
+  @extend %border-none;
+}
+
+/* Change styles navbar link in bootstrap on header */
+.navbar-default .navbar-nav .link {
+  @extend %text-transform-uppercase;
+  @extend %font-open-sans-regular;
+  color: $color-navbar-link;
+  font-size: 16px;
+}

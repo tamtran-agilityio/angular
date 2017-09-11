@@ -1,0 +1,34 @@
+/* Import font family */
+@mixin font-face($font-family, $path) {
+
+  @font-face {
+    font-family: $font-family;
+    src: url($path+'.eot');
+    src: url($path+'.eot?#iefix') format('embedded-opentype'),
+    url($path+'.woff2') format('woff2'),
+    url($path+'.woff') format('woff'),
+    url($path+'.ttf') format('truetype'),
+    url($path+'.svg') format('svg');
+  }
+}
+
+/* Set width, height */
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+/* Format text */
+@mixin font-format($font-family, $font-size, $color: $color-cod-gray) {
+  font-family: $font-family;
+  font-size: $font-size;
+  color: $color;
+}
+
+/* Create background image */
+@mixin bg-image($bg-image, $bg-position, $bg-repeat, $bg-size){
+  background-image: $bg-image;
+  background-position: $bg-position;
+  background-repeat: $bg-repeat;
+  background-size: $bg-size;
+}

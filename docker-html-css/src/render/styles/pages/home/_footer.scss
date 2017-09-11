@@ -1,0 +1,43 @@
+.main-footer {
+  background-color: $color-bg-footer;
+
+  &__license {
+    //placeholders can not working in here
+    margin-top: 0;
+    float: left;
+  }
+}
+
+.footer-icon-list {
+  float: right;
+
+  &__item {
+    @extend %float-left;
+    padding: 0 5px;
+  }
+}
+
+.network-icon {
+  @include size(35px, 35px);
+  @extend %display-block;
+  @extend %bg-no-repeat;
+  background-image: url('../images/network.png');
+  background-size: 150px 33px;
+
+  &--facebook {
+    background-position: -2px 1px;
+  }
+
+  &--twitter {
+    background-position: -40px 1px;
+  }
+
+  &--google-plus {
+    background-position: -76px 1px;
+  }
+
+  &--instagram {
+    background-position: -112px 1px;
+  }
+}
+

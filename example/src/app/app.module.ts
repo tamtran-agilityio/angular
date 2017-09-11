@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { ControlMessagesComponent } from './control-messages.component';
+import { ControlMessagesComponent } from './messages/control-messages.component';
 import { ValidationService } from './validation.service';
 
 @NgModule({

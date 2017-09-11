@@ -1,0 +1,16 @@
+include ../partials/abstracts/mixins
+include ../partials/abstracts/variables
+
+header.main-header
+  .container
+    .row
+      nav.navbar.navbar-default
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          h1.logo
+            a.navbar-brand.logo__advocatus(href='javascript:void(0)')
+        #navbar-collapse.collapse.navbar-collapse
+          +list-menu("nav navbar-nav navbar-right", "link", "javascript:void(0)", menu)

@@ -1,0 +1,13 @@
+section.main-section.main-section--question
+  .container
+    +main-section-group("main-section__group", "title-main title-main--question", "desc-main", main_section[6])
+    .main-section__content
+      .row.question
+        .col-xs-12.col-sm-6
+          ul
+            - for (var i = 0; i < question.length; i++)
+              li.question-list-item
+                p= question[i]
+        .col-xs-12.col-sm-6.group-answer
+          .answer
+            p.desc-item.desc-item--answer Long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
