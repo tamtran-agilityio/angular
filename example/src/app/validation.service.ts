@@ -1,9 +1,12 @@
+import { FormControl } from '@angular/forms';
+
 export class ValidationService {
     static getValidatorErrorMessage(validatorName: string, validatorValue?: any) {
         let config = {
             'required': 'Required',
             'invalidCreditCard': 'Is invalid credit card number',
             'invalidEmailAddress': 'Invalid email address',
+            'invalidAddress': 'Invalid address',
             'invalidPassword': 'Invalid password. Password must be at least 6 characters long, and contain a number.',
             'minlength': `Minimum length ${validatorValue.requiredLength}`,
             'maxlength': `Minimum length ${validatorValue.requiredLength}`
@@ -38,5 +41,13 @@ export class ValidationService {
         } else {
             return { 'invalidPassword': true };
         }
+    }
+
+    static validateAddress(c: FormControl) {
+        let ADDRESS_REGEXP = /^[a-z0-9\s,'-]*$/;
+
+        return ADDRESS_REGEXP.test(c.value) ? null : {
+            'invalidAddress': true
+        };
     }
 }

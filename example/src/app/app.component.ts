@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
         this.userForm = this.formBuilder.group({
             'name': ['', Validators.required],
             'email': ['', [Validators.required, ValidationService.emailValidator]],
+            'address': ['', [Validators.required]],
             'profile': ['', Validators.compose([
                 Validators.required,
                 Validators.maxLength(30),
@@ -25,7 +26,7 @@ export class AppComponent implements OnInit {
     ngOnInit() {
         // Set value form with serValue and patchValue
         // this.userForm.patchValue({name: 'Test', email: 'test@gmail.com'});
-        this.userForm.setValue({name: 'Test', email: 'test@gmail.com',  profile: ''});
+        this.userForm.setValue({name: 'Test', email: 'test@gmail.com', 'address': '', profile: ''});
     }
 
     saveUser() {

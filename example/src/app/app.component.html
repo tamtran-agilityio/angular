@@ -9,7 +9,7 @@
     <control-messages [control]="userForm.controls.email"></control-messages>
 
     <label for="address">Address</label>
-    <input class="form-control" formControlName="address" id="address" />
+    <input class="form-control" formControlName="address" id="address" ngModel validateAddress/>
     <control-messages [control]="userForm.controls.address"></control-messages>
 
     <label for="profile">Profile Description</label>
