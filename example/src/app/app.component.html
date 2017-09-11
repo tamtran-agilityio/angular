@@ -8,11 +8,14 @@
     <input class="form-control" formControlName="email" id="email" />
     <control-messages [control]="userForm.controls.email"></control-messages>
 
+    <label for="address">Address</label>
+    <input class="form-control" formControlName="address" id="address" />
+    <control-messages [control]="userForm.controls.address"></control-messages>
+
     <label for="profile">Profile Description</label>
     <textarea class="form-control" rows="3" formControlName="profile" id="profile"></textarea>
     <control-messages [control]="userForm.controls.profile"></control-messages>
 
     <button class="btn btn-default" type="submit" [disabled]="!userForm.valid">Submit</button>
-    <button class="btn btn-default" (click)="reSet(userForm)" type="reset">Reset</button>
   </form>
 </div>
