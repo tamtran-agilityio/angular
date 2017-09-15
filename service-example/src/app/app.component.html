@@ -1,0 +1,5 @@
+<div class="container">
+  <h1>{{title}}</h1>
+  <heroes-item id="authorized" *ngIf="isAuthorized"></heroes-item>
+  <heroes-item id="unauthorized" *ngIf="!isAuthorized"></heroes-item>
+</div>
