@@ -18,7 +18,9 @@ RUN yarn global add typescript@2.0.10 \
 # Rebuild node-sass comparative with current node version
 RUN npm rebuild node-sass --force
 WORKDIR /workspace
-ADD package.json .
+# ADD package.json .
 # ADD yarn.lock .
 
 RUN yarn install
+
+EXPOSE 8888
