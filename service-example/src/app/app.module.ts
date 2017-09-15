@@ -10,17 +10,19 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroListComponent } from './heroes/hero-list.component';
 import { HeroService } from './heroes/heroes.service';
 import { Logger } from './core/logger.service';
+import { ProviderComponent } from './component/provider.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         HeroesComponent,
         HeroListComponent,
+        ProviderComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
-        HttpModule,
+        HttpModule
     ],
     providers: [
         Logger,

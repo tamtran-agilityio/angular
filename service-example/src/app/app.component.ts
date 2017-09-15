@@ -13,10 +13,12 @@ import { Logger } from './core/logger.service';
 })
 export class AppComponent {
     title: string;
+    names: string;
 
     constructor(@Inject(APP_CONFIG) config: AppConfig,
                 private userService: UserService) {
                 this.title = config.title;
+                this.names = config.names;
     }
 
     get isAuthorized() {

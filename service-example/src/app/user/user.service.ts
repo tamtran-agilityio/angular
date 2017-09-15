@@ -15,4 +15,8 @@ export class UserService {
     getNewUser() {
         return this.user;
     }
+
+    getUserName() {
+        return this.user.name;
+    }
 }
