@@ -5,19 +5,22 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { UserService } from './user/user.service';
+import { User } from './user/user';
 import { APP_CONFIG, HERO_DI_CONFIG } from './core/app.config';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroListComponent } from './heroes/hero-list.component';
 import { HeroService } from './heroes/heroes.service';
 import { Logger } from './core/logger.service';
 import { ProviderComponent } from './component/provider.component';
+import { LoginComponent } from './auth/login.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         HeroesComponent,
         HeroListComponent,
-        ProviderComponent
+        ProviderComponent,
+        LoginComponent
     ],
     imports: [
         BrowserModule,
@@ -28,7 +31,9 @@ import { ProviderComponent } from './component/provider.component';
         Logger,
         HeroService,
         UserService,
-        { provide: APP_CONFIG, useValue: HERO_DI_CONFIG }
+        { provide: APP_CONFIG, useValue: HERO_DI_CONFIG },
+        User,
+        { provide: 'userName', useValue: 'Tom' },
     ],
     bootstrap: [AppComponent]
 })
