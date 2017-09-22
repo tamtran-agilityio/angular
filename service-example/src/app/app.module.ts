@@ -10,6 +10,8 @@ import { APP_CONFIG, HERO_DI_CONFIG } from './core/app.config';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroListComponent } from './heroes/hero-list.component';
 import { HeroService } from './heroes/heroes.service';
+import { PostService } from './post/post.service';
+import { PostListComponent } from './post/post-list.component';
 import { Logger } from './core/logger.service';
 import { ProviderComponent } from './component/provider.component';
 import { LoginComponent } from './auth/login.component';
@@ -20,7 +22,8 @@ import { LoginComponent } from './auth/login.component';
         HeroesComponent,
         HeroListComponent,
         ProviderComponent,
-        LoginComponent
+        LoginComponent,
+        PostListComponent
     ],
     imports: [
         BrowserModule,
@@ -30,6 +33,7 @@ import { LoginComponent } from './auth/login.component';
     providers: [
         Logger,
         HeroService,
+        PostService,
         UserService,
         { provide: APP_CONFIG, useValue: HERO_DI_CONFIG },
         User,
