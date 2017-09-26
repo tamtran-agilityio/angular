@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import { URLSearchParams } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 import { Post } from './post';
@@ -54,6 +55,7 @@ export class PostService {
         let errMsg = (error.message) ? error.message :
 
         error.status ? `${error.status} - ${error.statusText}` : 'Server error';
+        console.log("errMsg", errMsg);
         return Observable.throw(errMsg);
     }
 
