@@ -1,4 +1,5 @@
 import { Component }   from '@angular/core';
+import { JsonPipe, LowerCasePipe, PercentPipe } from '@angular/common';
 
 import { Hero }        from './hero';
 import { HeroService } from './heroes.service';

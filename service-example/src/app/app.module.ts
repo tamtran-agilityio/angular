@@ -15,6 +15,8 @@ import { PostListComponent } from './post/post-list.component';
 import { Logger } from './core/logger.service';
 import { ProviderComponent } from './component/provider.component';
 import { LoginComponent } from './auth/login.component';
+import { DateFormatPipe } from './pipe/date-format.pipe';
+import { PipeComponent } from './pipe/pipe.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +25,9 @@ import { LoginComponent } from './auth/login.component';
         HeroListComponent,
         ProviderComponent,
         LoginComponent,
-        PostListComponent
+        PostListComponent,
+        DateFormatPipe,
+        PipeComponent
     ],
     imports: [
         BrowserModule,

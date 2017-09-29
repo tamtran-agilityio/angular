@@ -1,10 +1,14 @@
 <div class="container">
-  <h1>{{title}} {{names}}</h1>
+  <h1>{{title}} {{names | lowercase}}</h1>
   <heroes-item id="unauthorized" *ngIf="!isAuthorized"></heroes-item>
   <heroes-item id="authorized" *ngIf="isAuthorized"></heroes-item>
   <provider-better></provider-better>
+  <h2> Pipe </h2>
+  <p>Date : {{currentDate | dateFormatPipe }}</p>
+  <p>Custom pipe on component : {{customDate}}</p>
   <h2> Using classValue </h2>
   <login></login>
   <h2> Post list views on http </h2>
   <post-list></post-list>
+  <pipe></pipe>
 </div>
