@@ -1,0 +1,23 @@
+version: "2"
+services:
+    example:
+        build:
+            context: ../../
+            dockerfile: docker/dev/Dockerfile
+        image: angular2-example
+        ports:
+            # - "3000:3000"
+            # - "9876:9876"
+            - "8888:8888"
+            # - "49153:49153"
+
+        volumes:
+            # Remaps the volume for live editing
+            - ../../:/workspace
+
+        command: ng serve --host 0.0.0.0 --port 8888
+        # npm start
+
+        environment:
+            # ng build --env=stag
+            BUILD_ENVIRONMENT: ""
