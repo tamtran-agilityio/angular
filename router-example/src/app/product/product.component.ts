@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
 
 import { ProductService, Product } from './product.service';
 import { ProductDetailsComponent } from './product-details/product-details.component';
@@ -11,11 +11,15 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  public products: Product[];
+  products$: Observable<Product[]>;
   constructor(private productService: ProductService,
+              private route: ActivatedRoute,
               private router: Router) { }
 
   ngOnInit() {
-      this.productService.getProduct().then(products => this.products = products);
+    this.products$ = this.route.paramMap
+        .switchMap((params: ParamMap) => {
+        return this.productService.getProduct();
+        });
   }
 }
