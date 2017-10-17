@@ -3,13 +3,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from "@angular/router";
 
 import { AppComponent } from './app.component';
-// import { HomeComponent } from './home/home.component';
 import { HomeModule } from './home/home.module';
+import { ProductModule } from './product/product.module';
 import { AboutModule } from './about/about.module';
-import { routerConfig } from './app.routing';
+import { AppRoutingModule } from './app.routing.module';
 import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
@@ -18,12 +17,12 @@ import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
     PageNotFoundComponent
   ],
   imports: [
-    CommonModule,
+    AppRoutingModule,
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(routerConfig),
     HomeModule,
+    ProductModule,
     AboutModule
   ],
   providers: [],

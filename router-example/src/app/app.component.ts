@@ -22,4 +22,9 @@ export class AppComponent {
       }
     });
   }
+
+  onClickButton() {
+    //   this.router.navigateByUrl('/about')
+      this.router.navigate(['/home']);
+  }
 }
