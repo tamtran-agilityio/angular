@@ -9,9 +9,11 @@
         [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
       <li><a routerLink="product" class="nav-link" routerLinkActive="active">Product</a></li>
       <li><a routerLink="about" class="nav-link" routerLinkActive="active">About</a></li>
+      <li><a [routerLink]="[{outlets: { contact: ['contact'] } }]">Contact</a></li>
     </ul>
   </div>
 </nav>
 <div class="container">
   <router-outlet></router-outlet>
+  <router-outlet name='contact'></router-outlet>
 </div>

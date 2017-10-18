@@ -10,11 +10,13 @@ import { ProductModule } from './product/product.module';
 import { AboutModule } from './about/about.module';
 import { AppRoutingModule } from './app.routing.module';
 import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ContactComponent
   ],
   imports: [
     AppRoutingModule,

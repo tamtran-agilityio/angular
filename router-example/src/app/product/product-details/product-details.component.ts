@@ -20,4 +20,8 @@ export class ProductDetailsComponent implements OnInit {
         );
     }
 
+    onBack() {
+        this.router.navigate(['/product']);
+    }
+
 }

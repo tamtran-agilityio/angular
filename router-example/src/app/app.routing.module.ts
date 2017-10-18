@@ -4,6 +4,7 @@ import { HomeModule } from './home/home.module';
 import { AboutModule } from './about/about.module';
 import { ProductModule } from './product/product.module';
 import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component';
+import { ContactComponent } from './contact/contact.component'
 import { ROUTES as homeRouter } from './home/home.routing';
 import { ROUTES as aboutRouter } from './about/about.routing';
 import { ROUTES as productRouter } from './product/product.routing';
@@ -36,6 +37,11 @@ export const ROUTES: any[] = [
   {
     path: '**',
     component: PageNotFoundComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+    outlet: 'contact'
   }
 ];
 
