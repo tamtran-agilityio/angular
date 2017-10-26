@@ -1,0 +1,37 @@
+<h2> *ngFor directive </h2>
+<ul class="list-group text-left">
+  <li *ngFor="let episode of episodes trackBy: trackById; let i = index; let isOld = odd; let isEvent = even;"
+    class="list-group-item"
+    [ngClass]= "{
+      'active': isOld,
+      'event-active': isEvent
+    }">
+    <label> Index: {{i}} </label>
+    Title: {{episode.title}}
+  </li>
+</ul>
+
+<h2> Selet option </h2>
+<select [(ngModel)]="episode.id" name="episode" (change)="updateSelectedValue($event)">
+    <option *ngFor="let episode of episodes" value="{{episode.id}}"> {{episode.title}} </option>
+</select>
+
+<h2> ngSwitch </h2>
+<span [ngSwitch]="episode.id">
+  <span *ngSwitchCase="1"> First</span>
+  <span *ngSwitchCase="2"> Two </ span>
+  <span *ngSwitchCase="3">Three</span>
+  <span *ngSwitchDefault> Default</span>
+</span>
+
+<h2> ngPlural </h2>
+<span [ngPlural]="episode.id">
+    <template ngPluralCase="zero">there are no items.</template>
+    <template ngPluralCase="=2">there is one item.</template>
+    <template ngPluralCase="two">there are a couple items.</template>
+    <template ngPluralCase="few">there are a few items.</template>
+    <template ngPluralCase="=4">there are four items.</template>
+    <template ngPluralCase="many">there are many items.</template>
+    <template ngPluralCase="other">there are some items.</template>
+</span>
+  
