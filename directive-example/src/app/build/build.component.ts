@@ -4,7 +4,7 @@ import { Episode } from './episode';
 @Component({
   selector: 'app-build',
   templateUrl: './build.component.html',
-  styleUrls: ['./build.component.css']
+  styleUrls: ['./build.component.scss']
 })
 export class BuildComponent implements OnInit, AfterContentInit {
   @ViewChild('template') el: ElementRef;
@@ -12,6 +12,7 @@ export class BuildComponent implements OnInit, AfterContentInit {
   episodes: Episode[];
   episode: Episode =  null;
   count = 1;
+  firebrick= 'firebrick';
   constructor(private render: Renderer) { }
 
   ngOnInit() {
