@@ -1,0 +1,18 @@
+<div class="panel-group">
+    <ng-template class="panel panel-default" [ngIf]="tabs" [ngIfElse]="loading">
+    <!--  You can using *ngIf="lessons else loading" -->
+    <app-accordion-content #panel *ngFor="let tab of tabs; let i=index" [isOpen]="i==0">
+      <div title class="panel-heading">
+          <div class="panel-title">
+            {{tab.name}}
+          </div>
+      </div>
+      <div content *ngIf="panel.isOpen" class="panel-body">
+          <app-list-item></app-list-item>
+      </div>
+    </app-accordion-content>
+  </ng-template>
+  <ng-template #loading>
+      <div>Loading...</div>
+  </ng-template>
+</div>
