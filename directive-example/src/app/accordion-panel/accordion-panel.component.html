@@ -16,3 +16,11 @@
       <div>Loading...</div>
   </ng-template>
 </div>
+
+<ng-container *ngIf="tabs">
+    <div *ngFor="let tab of tabs">
+        <div>
+            {{tab.name}}
+        </div>
+    </div>
+</ng-container>
