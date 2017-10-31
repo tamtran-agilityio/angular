@@ -16,7 +16,7 @@
       <div>Loading...</div>
   </ng-template>
 </div>
-
+<ng-container *ngTemplateOutlet="loading"></ng-container>
 <ng-container *ngIf="tabs">
     <div *ngFor="let tab of tabs">
         <div>
