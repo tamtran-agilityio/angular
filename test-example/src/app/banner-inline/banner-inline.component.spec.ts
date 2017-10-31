@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, ComponentFixtureAutoDetect } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
@@ -12,7 +12,10 @@ describe('BannerInlineComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BannerInlineComponent ]
+      declarations: [ BannerInlineComponent ],
+      providers: [
+        { provide: ComponentFixtureAutoDetect, useValue: true }
+      ]
     })
     .compileComponents();
   }));
@@ -29,7 +32,7 @@ describe('BannerInlineComponent', () => {
   });
 
   it(' no title in the DOM until manually call `detectChanges()` ', () => {
-    expect(el.textContent).toEqual('');
+    expect(el.textContent).toEqual('banner-inline works!');
   });
 
   it(' should `banner-inline works!` when add detect Changes', () => {
