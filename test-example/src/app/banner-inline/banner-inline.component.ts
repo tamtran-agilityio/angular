@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner-inline.component.css']
 })
 export class BannerInlineComponent implements OnInit {
-
+  title: String = 'banner-inline works!';
   constructor() { }
 
   ngOnInit() {

@@ -20,12 +20,20 @@ describe('BannerInlineComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(BannerInlineComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
     de = fixture.debugElement.query(By.css('p'));
     el = de.nativeElement;
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it(' no title in the DOM until manually call `detectChanges()` ', () => {
+    expect(el.textContent).toEqual('');
+  });
+
+  it(' should `banner-inline works!` when add detect Changes', () => {
+    fixture.detectChanges();
+    expect(el.textContent).toEqual('banner-inline works!');
   });
 });
