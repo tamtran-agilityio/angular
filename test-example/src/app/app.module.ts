@@ -3,16 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BannerInlineComponent } from './banner-inline/banner-inline.component';
+import { UserComponent } from './user/user.component';
+import { UserService } from './user/user.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BannerInlineComponent
+    BannerInlineComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

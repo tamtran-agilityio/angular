@@ -12,4 +12,7 @@ export class BannerInlineComponent implements OnInit {
   ngOnInit() {
   }
 
+  setMessage(newMessage: string) {
+    this.title = newMessage;
+  }
 }

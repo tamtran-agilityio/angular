@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed, ComponentFixtureAutoDetect } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, ComponentFixtureAutoDetect, inject } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
@@ -36,7 +36,15 @@ describe('BannerInlineComponent', () => {
   });
 
   it(' should `banner-inline works!` when add detect Changes', () => {
-    fixture.detectChanges();
     expect(el.textContent).toEqual('banner-inline works!');
   });
+
+  it('should set the title', async(inject([], () => {
+    component.setMessage('Test title');
+    fixture.detectChanges();
+    fixture.whenStable().then(() => {
+      const compiled = fixture.debugElement.nativeElement;
+      expect(compiled.querySelector('p').innerText).toEqual('Test title');
+    });
+  })));
 });
