@@ -39,7 +39,7 @@ describe('UserComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it(' should check list user return it is result', (done) => {
+  it('should check list user return it is result', (done) => {
     backend.connections.subscribe((connection: MockConnection) => {
       const options = new ResponseOptions({
         body: JSON.stringify({ success: true })

@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Observable';
 
 import { USERS } from './mock-data';
-
+import { User } from './user';
 @Injectable()
 export class UserService {
 
@@ -13,8 +13,5 @@ export class UserService {
 
   getUsers() {
     return Observable.of(USERS);
-  }
-
-  login(name: string) {
   }
 }
