@@ -7,6 +7,7 @@ import { BannerInlineComponent } from './banner-inline.component';
 describe('BannerInlineComponent', () => {
   let component: BannerInlineComponent;
   let fixture: ComponentFixture<BannerInlineComponent>;
+  let fixtured: ComponentFixture<BannerInlineComponent>;
   let de: DebugElement;
   let el: HTMLElement;
 
@@ -19,6 +20,25 @@ describe('BannerInlineComponent', () => {
     })
     .compileComponents();
   }));
+
+  beforeEach(() => {
+    fixtured = TestBed.overrideComponent(BannerInlineComponent, {
+      set: {
+        template: '<h2>{{title}}</h2>'
+      }
+    })
+    .createComponent(BannerInlineComponent);
+    fixtured.detectChanges();
+  });
+
+  it('should set the title', async(inject([], () => {
+    fixtured.componentInstance.setMessage('Test title');
+    fixtured.detectChanges();
+    fixtured.whenStable().then(() => {
+      const compiled = fixtured.debugElement.nativeElement;
+      expect(compiled.querySelector('h2')).toEqual(null);
+    });
+  })));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(BannerInlineComponent);
