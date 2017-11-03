@@ -1,8 +1,0 @@
-<ul class="list-group">
-  <li *ngFor="let product of products$ | async"
-    class="list-group-item">
-    <a [routerLink]="['/product', product.id]">
-      <span>{{product.name}}</span>
-    </a>
-  </li>
-</ul>
