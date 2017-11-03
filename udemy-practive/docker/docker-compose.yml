@@ -1,0 +1,25 @@
+version: "2"
+services:
+  udemy:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    image: udemy-angular2
+    ports:
+      # - "3000:3000"
+      - "9876:9876"
+      - "9000:9000"
+      # - "49153:49153"
+
+    volumes:
+      # Remaps the volume for live editing
+      - ../:/workspace
+
+    # command: npm rebuild node-sass --force
+    command: ng serve --host 0.0.0.0 --port 9000
+    # command: ng test --host 0.0.0.0 --port 9876
+    # npm start
+
+    environment:
+      # ng build --env=stag
+      BUILD_ENVIRONMENT: ""
