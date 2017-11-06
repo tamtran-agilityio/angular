@@ -1,0 +1,12 @@
+// @font-face
+@mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url($file-name + '.eot');  /* IE9*/
+    src: url($file-name + '.eot?#iefix')  format('embedded-opentype'), /* IE6-IE8 */
+    url($file-name + '.woff') format('woff'), /* chrome、firefox */
+    url($file-name + '.ttf')  format('truetype'); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    font-weight: $weight;
+    font-style: $style;
+  }
+}

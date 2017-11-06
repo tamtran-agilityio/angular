@@ -1,13 +1,29 @@
 {
   "users": [
-    { "id": 1, "name": "admin", "author": "typicode" },
-    { "id": 2, "title": "user", "author": "typicode" }
+    { "id": 1, "name": "admin" }
   ],
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
+  "categories": [
+    { "id": 1, "title": "Development" }
   ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
+  "topics": [
+    { "categoryId": 1, "id": 1, "title": "All develop" }
   ],
-  "profile": [{ "name": "typicode" }]
+  "courses": [
+    { "id": 1, "topicsId": 1, "title": " Leanrning Angular 2", "learning": "", "decsription": "", "requirements": "", "teachId": 1, "rating": 2, "date": "2017/02/02" }
+  ],
+  "curriculum": [
+    { "courseId": 1, "id": 1, "name": "", "time": 80 }
+  ],
+  "part": [
+    { "curriculumId": 1, "id": 1, "title": " " }
+  ],
+  "chapter": [
+    {"partId": 1, "curriculumId": 1 , "id": 1, "title": " " }
+  ],
+  "my_courses": [
+    { "usedId": 1, "coursesId": 1, "chapterId": 1 }
+  ],
+  "teacher": [
+    { "id": 1, "name": "Jonk" }
+  ]
 }
