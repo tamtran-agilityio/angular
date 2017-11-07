@@ -1,0 +1,133 @@
+:host {
+  background: #fff;
+  box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+  display: block;
+  position: relative;
+  z-index: 1010;
+}
+.header {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    background: inherit;
+    border-top: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    height: 65px;
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1011;
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__udemy-logo {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    width: 110px;
+    height: 32px;
+    -ms-interpolation-mode: bicubic;
+    background: url(/assets/img/logo-coral.png) center no-repeat;
+    background-size: 100%;
+    margin-right: 16px;
+  }
+
+  &__categories {
+    flex: 1;
+    min-width: 1px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__setting {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.dropdown {
+  font-size: 13px;
+  margin: 0 2px;
+  padding: 10px 0;
+  position: relative;
+  &__toggle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 3px;
+    height: 45px;
+    border: 1px solid transparent;
+    max-width: 170px;
+  }
+  .fa-th {
+    color: #a1a7b3;
+    font-size: 15px;
+    margin-right: 5px;
+  }
+
+  &__main-link {
+    color: #505763;
+    display: block;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 12px 15px;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  &__ellipsis {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.search {
+  margin: 0 25px;
+  max-width: 630px;
+  width: 100%;
+
+  &__courses {
+    margin: 0 25px;
+    max-width: 630px;
+    width: 100%;
+  }
+}
+
+.udemy {
+  &__login {
+    font-size: 13px;
+    margin: 0 2px;
+    padding: 10px 0;
+    position: relative;
+  }
+}
+
+.btn-login {
+  color: #686f7a;
+  background-color: #fff;
+  border: 1px solid #505763;
+}
+
+.btn-sign {
+  color: #fff;
+  background-color: #ec5252;
+  border: 1px solid transparent;
+}
+
