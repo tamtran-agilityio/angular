@@ -1,4 +1,4 @@
-# UdemyPractive
+# UdemyPractice
 
 ## GOALS
 
