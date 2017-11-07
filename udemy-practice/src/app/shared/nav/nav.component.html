@@ -33,7 +33,7 @@
 
     </div>
     <div class="udemy__login">
-      <div class="btn btn-login">
+      <div class="btn btn-login" (click)='modalService.open(modalId)'>
         Log in
       </div>
     </div>
@@ -43,4 +43,8 @@
         </div>
       </div>
   </div>
+  <!-- Modal -->
+  <modal-box [modalTitle]="Login" [blocking]='false' [modalId]='modalId'>
+    <h2> Content form login </h2>
+  </modal-box>
 </div>

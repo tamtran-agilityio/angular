@@ -4,10 +4,20 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ResetComponent } from './reset/reset.component';
 
+export const AUTH_COMPONENT: any[] = [
+  LoginComponent,
+  RegisterComponent,
+  ResetComponent
+];
+
 @NgModule({
   imports: [
-    CommonModule
   ],
-  declarations: [LoginComponent, RegisterComponent, ResetComponent]
+  declarations: [
+    ...AUTH_COMPONENT
+  ],
+  exports: [
+    ...AUTH_COMPONENT
+  ]
 })
 export class AuthModule { }

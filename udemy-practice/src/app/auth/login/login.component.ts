@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalService } from '../../shared';
 
 @Component({
   selector: 'login-model',
@@ -6,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
-  constructor() { }
+  modalTitle: String = 'Login';
+  constructor(public modalService: ModalService) { }
 
   ngOnInit() {
   }

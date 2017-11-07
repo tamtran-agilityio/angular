@@ -4,6 +4,8 @@ import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MainFooterComponent } from './main-footer/main-footer.component';
 import { NavComponent } from './nav/nav.component';
+import { ModalComponent } from './modal/modal.component';
+import { ModalService } from './modal/modal.service';
 
 export const COMMON_MODULES: any[] = [
   FormsModule,
@@ -14,11 +16,12 @@ export const COMMON_MODULES: any[] = [
 
 export const SHARED_COMPONENT: any[] = [
   MainFooterComponent,
-  NavComponent
+  NavComponent,
+  ModalComponent
 ];
 
 export const CORE_PROVIDERS: any[] = [
-
+  ModalService
 ];
 
 @NgModule({
@@ -26,7 +29,7 @@ export const CORE_PROVIDERS: any[] = [
     ...COMMON_MODULES
   ],
   declarations: [
-    ...SHARED_COMPONENT
+    ...SHARED_COMPONENT,
   ],
   providers: [
     ...CORE_PROVIDERS

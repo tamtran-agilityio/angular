@@ -1,6 +1,6 @@
 {
   "users": [
-    { "id": 1, "name": "admin" }
+    { "id": 1, "fullName": "admin", "email": "trantamtk08b@gmail.com", "password": "test" }
   ],
   "categories": [
     { "id": 1, "title": "Development" }
