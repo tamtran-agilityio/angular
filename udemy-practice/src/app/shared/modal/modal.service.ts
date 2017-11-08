@@ -20,7 +20,7 @@ export class ModalService {
     this.modals.push(newModal);
   }
 
-  open(modalId: string): void {
+  openModal(modalId: string): void {
     const modal = this.findModal(modalId);
 
     if (modal) {
@@ -28,7 +28,7 @@ export class ModalService {
     }
   }
 
-  close(modalId: string, checkBlocking = false): void {
+  closeModal(modalId: string, checkBlocking = false): void {
     const modal = this.findModal(modalId);
 
     if (modal) {

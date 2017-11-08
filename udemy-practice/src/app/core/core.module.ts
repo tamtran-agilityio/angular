@@ -16,7 +16,7 @@ export const PIPE: any[] = [
   ],
   declarations: [
   ],
-  providers: [,
+  providers: [
     ...CORE_PROVIDERS
   ],
   exports: [

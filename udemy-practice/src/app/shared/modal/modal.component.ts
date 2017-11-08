@@ -23,13 +23,13 @@ export class ModalComponent implements OnInit {
     this.modalService.registerModal(this);
   }
 
-  close(checkBlocking = false): void {
-    this.modalService.close(this.modalId, checkBlocking);
+  closeModal(checkBlocking = false): void {
+    this.modalService.closeModal(this.modalId, checkBlocking);
   }
 
   private keyup(event: KeyboardEvent): void {
     if (event.keyCode === 27) {
-      this.modalService.close(this.modalId, true);
+      this.modalService.closeModal(this.modalId, true);
     }
   }
 
