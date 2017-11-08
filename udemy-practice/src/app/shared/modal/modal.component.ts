@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { ModalService } from './modal.service';
+
 @Component({
   selector: 'modal-box',
   templateUrl: './modal.component.html',
