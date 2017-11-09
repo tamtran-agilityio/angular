@@ -1,12 +1,19 @@
 import { NgModule } from '@angular/core';
-import { LoggerService } from './logger.service';
-import { HttpWrapper } from './http-wrapper';
-import { AppConfig } from './app-config';
+import { CommonModule } from '@angular/common';
+import { LoggerService } from './service/logger.service';
+import { HttpWrapperService } from './service/http-wrapper.service';
+import { AppConfigService } from './service/app-config.service';
+import { ValidationService } from './service/validation.service';
 
 export const CORE_PROVIDERS: any[] = [
-  AppConfig,
+  AppConfigService,
   LoggerService,
-  HttpWrapper
+  HttpWrapperService,
+  ValidationService
+];
+
+export const CORE_MODULES: any[] = [
+  CommonModule
 ];
 
 export const PIPE: any[] = [

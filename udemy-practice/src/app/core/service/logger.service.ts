@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class LoggerService {
+
   logs: string[] = [];
 
   logInfo(msg: any)  { this.log(`INFO: ${msg}`); }

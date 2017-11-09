@@ -1,4 +1,5 @@
-export { LoggerService } from './logger.service';
+export { LoggerService } from './service/logger.service';
 export { CoreModule } from './core.module';
-export { HttpWrapper } from './http-wrapper';
-export { AppConfig } from './app-config';
+export { HttpWrapperService } from './service/http-wrapper.service';
+export { AppConfigService } from './service/app-config.service';
+export { ValidationService } from './service/validation.service';
