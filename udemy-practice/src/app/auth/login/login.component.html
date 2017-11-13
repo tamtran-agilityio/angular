@@ -13,6 +13,7 @@
     <div class="login__separator--line"></div>
   </div>
   <form class="login__form" *ngIf="loginForm" [formGroup]="loginForm" (submit)="loginUser()">
+    <error-message [errorMessagge]="errorMessagge"></error-message>
     <div class="login__group">
         <input class="login__input" type="email" formControlName="email"  id="email">
         <control-messages [control]="loginForm.controls.email"></control-messages>

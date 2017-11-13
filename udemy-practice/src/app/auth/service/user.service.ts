@@ -17,4 +17,21 @@ export class UserService {
       });
     });
   }
+
+  getUserByEmail(user: User) : Observable<User>{
+    const url = this.appConfig.API + `users?email=${user.email}`;
+    return Observable.create( obs => {
+      this.httpWrapper.get(url, {}).subscribe((res: User) => {
+        obs.next(res);
+      });
+    });
+  }
+
+  addUser(user: User) {
+    const url = this.appConfig.API + `users/`;
+    return Observable.create( obs => {
+      return this.httpWrapper.post(url, {user}).subscribe((res) => {
+      });
+    });
+  }
 }
