@@ -8,6 +8,7 @@ import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core';
 import { AuthModule } from './auth/auth.module';
 import { HomeModule } from './home/home.module';
+import { CategoriesModule } from './categories/categories.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AboutComponent } from './about/about.component';
 
@@ -24,7 +25,8 @@ import { AboutComponent } from './about/about.component';
     CoreModule,
     SharedModule,
     AuthModule,
-    HomeModule
+    HomeModule,
+    CategoriesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
