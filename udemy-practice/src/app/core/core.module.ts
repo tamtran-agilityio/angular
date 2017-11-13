@@ -4,12 +4,14 @@ import { LoggerService } from './service/logger.service';
 import { HttpWrapperService } from './service/http-wrapper.service';
 import { AppConfigService } from './service/app-config.service';
 import { ValidationService } from './service/validation.service';
+import { HelperService } from './service/helper.service';
 
 export const CORE_PROVIDERS: any[] = [
   AppConfigService,
   LoggerService,
   HttpWrapperService,
-  ValidationService
+  ValidationService,
+  HelperService
 ];
 
 export const CORE_MODULES: any[] = [

@@ -1,3 +1,27 @@
-<p>
-  register works!
-</p>
+<modal-box [modalTitle]="loginTitle" [blocking]="false" [modalId]="modalId" [footerTitle]="footerTitle">
+  <a href="" class="signup__facebook signup__social">
+    <i class="fa fa-facebook" aria-hidden="true"></i>
+    Continue with Facebook
+  </a>
+  <a href="" class="signup__google signup__social">
+    <i class="fa fa-google" aria-hidden="true"></i>
+    Continue with Google
+  </a>
+  <div class="signup__separator">
+    <div class="signup__separator--line"></div>
+    <span class="signup__separator--text">OR</span>
+    <div class="signup__separator--line"></div>
+  </div>
+  <form class="signup__form" *ngIf="registerForm" [formGroup]="registerForm" (submit)="regiterUser()">
+    <error-message [errorMessagge]="errorMessagge"></error-message>
+    <div class="signup__group">
+        <input class="signup__input" type="text" formControlName="name"  id="name">
+        <control-messages [control]="registerForm.controls.name"></control-messages>
+        <input class="signup__input signup__input--email" type="email" formControlName="email"  id="email">
+        <control-messages [control]="registerForm.controls.email"></control-messages>
+        <input class="signup__input signup__input--password" formControlName="password" id="password">
+        <control-messages [control]="registerForm.controls.password"></control-messages>
+        <input class="signup__submit" type="submit" value="Sign Up">
+    </div>
+  </form>
+</modal-box>

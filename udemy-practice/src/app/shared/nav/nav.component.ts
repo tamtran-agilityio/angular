@@ -14,4 +14,11 @@ export class NavComponent implements OnInit {
   ngOnInit() {
   }
 
+  clickLogin() {
+    this.modalService.openModal('Login');
+  }
+
+  clickRegister() {
+    this.modalService.openModal('Register');
+  }
 }

@@ -12,10 +12,5 @@ export class HomeComponent implements OnInit {
   constructor(private logger: LoggerService,
               private userService: UserService) { }
 
-  ngOnInit() {
-    this.userService.getUserBy('trantamtk08b@gmail.com', 'test').subscribe(res => {
-      console.log('res', res);
-    });
-    this.logger.logDebug('Test logger');
-  }
+  ngOnInit() {}
 }

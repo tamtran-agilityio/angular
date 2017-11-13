@@ -9,6 +9,7 @@ import { ModalComponent } from './modal/modal.component';
 import { ModalService } from './modal/modal.service';
 import { ControlMessagesComponent } from './control-messages/control-messages.component';
 import { ClickOutsideDirective } from './directive/click-out-side.directive';
+import { ErrorMessageComponent } from './error-message/error-message.component';
 
 export const COMMON_MODULES: any[] = [
   FormsModule,
@@ -22,6 +23,7 @@ export const SHARED_COMPONENT: any[] = [
   NavComponent,
   ModalComponent,
   ControlMessagesComponent,
+  ErrorMessageComponent,
   ClickOutsideDirective
 ];
 
@@ -34,7 +36,7 @@ export const CORE_PROVIDERS: any[] = [
     ...COMMON_MODULES
   ],
   declarations: [
-    ...SHARED_COMPONENT,
+    ...SHARED_COMPONENT
   ],
   providers: [
     ...CORE_PROVIDERS
