@@ -96,17 +96,72 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+
+  &__category {
+    position: relative;
+    display: none;
+  }
+
+  &:hover {
+    .dropdown__category {
+      display: block;
+    }
+  }
 }
 
 .search {
   margin: 0 25px;
   max-width: 630px;
   width: 100%;
+  position: relative;
 
   &__courses {
-    margin: 0 25px;
     max-width: 630px;
+  }
+
+  &__input {
+    background-color: #f2f3f5;
+    border-color: #dedfe0;
+    border-right: 0;
+    box-shadow: none;
+    border: 1px solid transparent;
+    height: 45px;
+    padding: 0 15px;
+    border-radius: 2px 0 0 2px;
+    font-size: 13px;
     width: 100%;
+    outline: none;
+
+    &:focus {
+      background-color: #fff;
+      border-color: #dedfe0;
+      border-right: 0;
+      box-shadow: none;
+      .search__btn {
+        background-color: #fff;
+        border-color: #dedfe0;
+        border-right: 1px solid;
+      }
+
+    }
+  }
+
+  &__group {
+    position: absolute;
+    right: -36px;
+    top: 0;
+    bottom: 0;
+  }
+
+  &__btn {
+    height: 100%;
+    border: none;
+    width: 35px;
+    outline: none;
+    background-color: #f2f3f5;
+    .fa-search {
+      color: #ff0000;
+    }
   }
 }
 

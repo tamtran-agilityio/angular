@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule, Provider } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpModule, } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { MainFooterComponent } from './main-footer/main-footer.component';
 import { NavComponent } from './nav/nav.component';
@@ -10,13 +11,15 @@ import { ModalService } from './modal/modal.service';
 import { ControlMessagesComponent } from './control-messages/control-messages.component';
 import { ClickOutsideDirective } from './directive/click-out-side.directive';
 import { ErrorMessageComponent } from './error-message/error-message.component';
-import { CategoriesComponent } from './categories/categories.component';
+import { DropdownModule } from './dropdown/dropdown.module';
 
 export const COMMON_MODULES: any[] = [
   FormsModule,
   ReactiveFormsModule,
   HttpModule,
-  CommonModule
+  CommonModule,
+  RouterModule,
+  DropdownModule
 ];
 
 export const SHARED_COMPONENT: any[] = [
@@ -38,7 +41,6 @@ export const CORE_PROVIDERS: any[] = [
   ],
   declarations: [
     ...SHARED_COMPONENT,
-    CategoriesComponent
   ],
   providers: [
     ...CORE_PROVIDERS

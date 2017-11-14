@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class AppConfigService {
 
-  API = 'http://localhost:8000/';
+  API: string = 'http://localhost:8000/';
   KEY_CODE = {
     KEYUP: 27
   };

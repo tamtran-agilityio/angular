@@ -1,0 +1,11 @@
+<ul class="category">
+  <li category__item *ngFor="let category of categories">
+    <a [routerLink]="category.title | formatLink" class="category__link">
+      <i class="fa fa-gg-circle" aria-hidden="true"></i>
+      <span> {{category.title}} </span>
+    </a>
+    <div class="category__topics">
+        <list-topic [category]="category"></list-topic>
+      </div>
+  </li>
+</ul>
