@@ -13,7 +13,7 @@ import * as _ from 'lodash';
 
 import { ModalService } from '../../shared';
 import { UserService } from '../service/user.service';
-import { ValidationService, HelperService } from '../../core';
+import { ValidationService, HelperService, AppConfigService } from '../../core';
 import { User } from '../model/use';
 
 @Component({
@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
               private formBuilder: FormBuilder,
               private validationService: ValidationService,
               private helperService: HelperService,
+              private appConfig: AppConfigService,
               private cdr: ChangeDetectorRef) {
               }
 
@@ -49,11 +50,10 @@ export class LoginComponent implements OnInit {
       this.userService.getUserBy(this.loginForm.value.email, this.loginForm.value.password).subscribe(res => {
         if (!_.isEmpty(res)) {
           let user: User =  _.head(res);
-          console.log('user', user);
-          this.helperService.setLocalStorage('user', user);
+          this.helperService.setLocalStorage('user', JSON.stringify(user));
           this.modalService.closeModal('Login');
         } else {
-          this.errorMessagge = 'Test';
+          this.errorMessagge = this.appConfig.VALIDATION.AUTHENTICATION.AUTHENTICATION_FAIL;
         }
       });
     }

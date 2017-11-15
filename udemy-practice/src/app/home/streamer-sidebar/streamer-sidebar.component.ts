@@ -17,8 +17,7 @@ export class StreamerSidebarComponent implements OnInit {
   ngOnInit() {
   }
 
-  searchCourses(term: string) {
-    console.log('term', term);
+  searchCourses(term: any) {
     // this.searchField.valueChanges.debounceTime(400).switchMap(term => );
   }
 }

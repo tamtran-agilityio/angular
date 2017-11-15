@@ -1,6 +1,6 @@
 {
   "users": [
-    { "id": 1, "fullName": "admin", "email": "trantamtk08b@gmail.com", "password": "test" }
+    { "id": 1, "fullName": "admin", "email": "trantamtk08b@gmail.com", "password": "tamtamxuan@123" }
   ],
   "categories": [
     { "id": 1, "title": "Development",
@@ -26,7 +26,8 @@
     { "id": 1, "categoriesId": 1, "topicsId": 1, "title": " Leanrning Angular 2", "learning": "", "decsription": "", "requirements": "", "teachId": 1, "rating": 2, "date": "2017/02/02" }
   ],
   "curriculum": [
-    { "courseId": 1, "id": 1, "name": "", "time": 80 }
+    { "courseId": 1, "id": 1, "name": "", "time": 80 },
+    { "courseId": 1, "id": 2, "name": "", "time": 80 }
   ],
   "part": [
     { "curriculumId": 1, "id": 1, "title": " " }

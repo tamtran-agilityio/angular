@@ -36,17 +36,15 @@ export class RegisterComponent implements OnInit {
         fullName: this.registerForm.value.name,
         email: this.registerForm.value.email,
         password: this.registerForm.value.password
-      }
-
-      console.log('this.checkEmailAlready(user', user);
+      };
 
       this.userService.getUserByEmail(user).subscribe( (users: User) => {
-        if(_.isEmpty(users)) {
+        if (_.isEmpty(users)) {
           this.userService.addUser(user).subscribe( res => {
             console.log('res', res);
-          })
+          });
         } else {
-          console.log('failed')
+          console.log('failed');
         }
       });
     }
