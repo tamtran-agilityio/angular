@@ -2,11 +2,11 @@
   <div class="streamer__content">
     <h2 class="streamer__title"> Be able </h2>
     <p class="streamer__desc">Get skills in business, tech, and personal development</p>
-    <form action="" class="streamer__action">
+    <form class="streamer__action" (submit)="searchCourses(term.value)">
       <div class="streamer__search">
-        <input class="streamer__search--learn" type="text" name="learn" id="" placeholder="What do you want to learn?">
+        <input class="streamer__search--learn" type="text" name="courses" placeholder="What do you want to learn?" #term (keyup)="searchCourses(term.value)">
         <span class="streamer__search--group">
-          <button class="streamer__search--button">
+          <button class="streamer__search--button" type="submit">
             <i class="fa fa-search" aria-hidden="true"></i>
           </button>
         </span>
