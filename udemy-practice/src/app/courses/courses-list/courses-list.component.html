@@ -1,3 +1,15 @@
-<p>
-  courses-list works!
-</p>
+<h2> Top Courses in "Development" </h2>
+<carousel-slide
+  [inputs]="carouselOptions"
+  [moveToSlide]="1"
+  (carouselLoad)="onLoad($event)">
+  <carousel-item CarouselItem *ngFor="let  course of courses">
+    <courses-item [course]="course"></courses-item>
+  </carousel-item>
+  <button CarouselPrev class='leftRs'>
+    <i class="fa fa-angle-left" aria-hidden="true"></i>
+  </button>
+  <button CarouselNext class='rightRs'>
+    <i class="fa fa-angle-right" aria-hidden="true"></i>
+  </button>
+</carousel-slide>

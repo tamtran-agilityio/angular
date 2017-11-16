@@ -1,0 +1,29 @@
+.course {
+  &__container {
+
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 30px auto;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .carousel__container {
+    width: 1174px;
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel__container {
+    width: 974px;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel__container {
+    width: 754px;
+  }
+}

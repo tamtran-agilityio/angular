@@ -23,7 +23,131 @@
     }
   ],
   "courses": [
-    { "id": 1, "categoriesId": 1, "topicsId": 1, "title": " Leanrning Angular 2", "learning": "", "decsription": "", "requirements": "", "teachId": 1, "rating": 2, "date": "2017/02/02" }
+    {
+      "id": 1,
+      "categoriesId": 1,
+      "type": "new",
+      "topicsId": 1,
+      "images": "/assets/img/course/complete_unity.jpg"
+      ,"name": "Complete Unity Developer 2.0 - Learn C# Code & Make Games",
+      "learning": "Learn C#, a powerful modern language.",
+      "decsription": "We are adding a minimum of 20 new lectures a week throughout 2017. This enables us to incorporate your feedback into the course as we go. This is the long-awaited sequel to the Complete Unity Developer - one of the most popular e-learning courses on the internet! Completely re-worked from scratch with brand-new projects and our latest teaching techniques. You will benefit from the fact we have already taught over 250,000 students programming and game development, many shipping commercial games as a result. Unity 2017 is an incredible 3D package used for making video games, architectural and medical imaging and more. The challenge is that it's big and complicated to use, especially for complete beginners to coding and game development. We make learning to code easy and fun by leading you step-by-step through the process of creating exciting games.",
+      "requirements": "Free disc space (5GB on PC, 10GB on Mac) to install Unity, Visual Studio, and our projects. PC or Mac capable of running Unity 2017 (free Personal version). Regular internet access for Q&A and community.",
+      "teachId": 1,
+      "rating": 4.8,
+      "date": "2017/11/02"
+    },
+    {
+      "id": 2,
+      "categoriesId": 1,
+      "type": "new",
+      "topicsId": 1,
+      "images": "/assets/img/course/react_complete_guide.jpg"
+      ,"name": "React 16 - The Complete Guide (incl. React Router 4 & Redux)",
+      "learning": "Build powerful, fast, user-friendly and reactive web apps -Provide amazing user experiences by leveraging the power of JavaScript with ease -Apply for high-paid jobs or work as a freelancer in one the most-demanded sectors you can find in web dev right now",
+      "decsription": "What's this course about?. Learn React or dive deeper into it. Learn the theory, solve assignments, practice in demo projects and build one big application which is improved throughout the course: The Burger Builder! More details please! JavaScript is the major driver of modern web applications since it's the only programming language which runs in the browser and hence allows you to provide highly reactive apps. You'll be able to achieve mobile-app like user experiences in the web. But using JavaScript can be challenging - it quickly becomes overwhelming to create a nice web app with vanilla JavaScript and jQuery only",
+      "requirements": "JavaScript + HTML + CSS fundamentals are absolutely required. You DON'T need to be a JavaScript expert to succeed in this course!. ES6+ JavaScript knowledge is beneficial but not a must-have. NO prior React or any other JS framework experience is required!",
+      "teachId": 1,
+      "rating": 4.5,
+      "date": "2017/11/01"
+    },
+    {
+      "id": 3,
+      "categoriesId": 1,
+      "type": "new",
+      "topicsId": 1,
+      "images": "/assets/img/course/entity_framework.jpg"
+      ,"name": "Entity Framework in Depth: The Complete Guide",
+      "learning": "Understand the differences between database-first and code-first workflows. Build a domain model using database-first workflow. Build a domain model using code-first workflow (with an existing or a new database). Use code-first migrations to upgrade or downgrade your database. Override code-first conventions (using data annotations and fluent API). Query data using LINQ (using query syntax and extension methods). Use eager loading, lazy loading and explicit loading effectively. Add, update and remove objects. Use additional tools to profile and troubleshoot your applications. Understand what the repository pattern is, what and if you need it, and how to implement it. Apply best practices with Entity Framework",
+      "decsription": "With over 6,500 students and 1,500+ positive reviews, this course is Udemy's most popular course for learning Entity Framework! . Entity Framework is an Object / Relational Mapper (O/RM) that helps you read and write data from and to a database. In this course, Mosh, teaches you the core concepts of Entity Framework through a series of clear, concise and hands-on lectures.. Whether you're new to Entity Framework, or been using it for a while but are looking for a comprehensive course with a clean structure to fill the missing parts, you're going to love this course.",
+      "requirements": "Good understanding of advanced C# constructs (generics, lambda expressions)",
+      "teachId": 3,
+      "rating": 4.8,
+      "date": "2017/11/02"
+    },
+    {
+      "id": 4,
+      "categoriesId": 1,
+      "type": "new",
+      "topicsId": 1,
+      "images": "/assets/img/course/complete_unity.jpg"
+      ,"name": "Complete Unity Developer 2.0 - Learn C# Code & Make Games",
+      "learning": "Learn C#, a powerful modern language.",
+      "decsription": "We are adding a minimum of 20 new lectures a week throughout 2017. This enables us to incorporate your feedback into the course as we go. This is the long-awaited sequel to the Complete Unity Developer - one of the most popular e-learning courses on the internet! Completely re-worked from scratch with brand-new projects and our latest teaching techniques. You will benefit from the fact we have already taught over 250,000 students programming and game development, many shipping commercial games as a result. Unity 2017 is an incredible 3D package used for making video games, architectural and medical imaging and more. The challenge is that it's big and complicated to use, especially for complete beginners to coding and game development. We make learning to code easy and fun by leading you step-by-step through the process of creating exciting games.",
+      "requirements": "Free disc space (5GB on PC, 10GB on Mac) to install Unity, Visual Studio, and our projects. PC or Mac capable of running Unity 2017 (free Personal version). Regular internet access for Q&A and community.",
+      "teachId": 1,
+      "rating": 4.8,
+      "date": "2017/11/02"
+    },
+    {
+      "id": 5,
+      "categoriesId": 1,
+      "type": "new",
+      "topicsId": 1,
+      "images": "/assets/img/course/complete_unity.jpg"
+      ,"name": "Complete Unity Developer 2.0 - Learn C# Code & Make Games",
+      "learning": "Learn C#, a powerful modern language.",
+      "decsription": "We are adding a minimum of 20 new lectures a week throughout 2017. This enables us to incorporate your feedback into the course as we go. This is the long-awaited sequel to the Complete Unity Developer - one of the most popular e-learning courses on the internet! Completely re-worked from scratch with brand-new projects and our latest teaching techniques. You will benefit from the fact we have already taught over 250,000 students programming and game development, many shipping commercial games as a result. Unity 2017 is an incredible 3D package used for making video games, architectural and medical imaging and more. The challenge is that it's big and complicated to use, especially for complete beginners to coding and game development. We make learning to code easy and fun by leading you step-by-step through the process of creating exciting games.",
+      "requirements": "Free disc space (5GB on PC, 10GB on Mac) to install Unity, Visual Studio, and our projects. PC or Mac capable of running Unity 2017 (free Personal version). Regular internet access for Q&A and community.",
+      "teachId": 1,
+      "rating": 4.8,
+      "date": "2017/11/02"
+    },    {
+      "id": 6,
+      "categoriesId": 1,
+      "type": "new",
+      "topicsId": 1,
+      "images": "/assets/img/course/complete_unity.jpg"
+      ,"name": "Complete Unity Developer 2.0 - Learn C# Code & Make Games",
+      "learning": "Learn C#, a powerful modern language.",
+      "decsription": "We are adding a minimum of 20 new lectures a week throughout 2017. This enables us to incorporate your feedback into the course as we go. This is the long-awaited sequel to the Complete Unity Developer - one of the most popular e-learning courses on the internet! Completely re-worked from scratch with brand-new projects and our latest teaching techniques. You will benefit from the fact we have already taught over 250,000 students programming and game development, many shipping commercial games as a result. Unity 2017 is an incredible 3D package used for making video games, architectural and medical imaging and more. The challenge is that it's big and complicated to use, especially for complete beginners to coding and game development. We make learning to code easy and fun by leading you step-by-step through the process of creating exciting games.",
+      "requirements": "Free disc space (5GB on PC, 10GB on Mac) to install Unity, Visual Studio, and our projects. PC or Mac capable of running Unity 2017 (free Personal version). Regular internet access for Q&A and community.",
+      "teachId": 1,
+      "rating": 4.8,
+      "date": "2017/11/02"
+    },
+    {
+      "id": 7,
+      "categoriesId": 1,
+      "type": "new",
+      "topicsId": 1,
+      "images": "/assets/img/course/complete_unity.jpg"
+      ,"name": "Complete Unity Developer 2.0 - Learn C# Code & Make Games",
+      "learning": "Learn C#, a powerful modern language.",
+      "decsription": "We are adding a minimum of 20 new lectures a week throughout 2017. This enables us to incorporate your feedback into the course as we go. This is the long-awaited sequel to the Complete Unity Developer - one of the most popular e-learning courses on the internet! Completely re-worked from scratch with brand-new projects and our latest teaching techniques. You will benefit from the fact we have already taught over 250,000 students programming and game development, many shipping commercial games as a result. Unity 2017 is an incredible 3D package used for making video games, architectural and medical imaging and more. The challenge is that it's big and complicated to use, especially for complete beginners to coding and game development. We make learning to code easy and fun by leading you step-by-step through the process of creating exciting games.",
+      "requirements": "Free disc space (5GB on PC, 10GB on Mac) to install Unity, Visual Studio, and our projects. PC or Mac capable of running Unity 2017 (free Personal version). Regular internet access for Q&A and community.",
+      "teachId": 1,
+      "rating": 4.8,
+      "date": "2017/11/02"
+    },
+    {
+      "id": 8,
+      "categoriesId": 1,
+      "type": "new",
+      "topicsId": 1,
+      "images": "/assets/img/course/complete_unity.jpg"
+      ,"name": "Complete Unity Developer 2.0 - Learn C# Code & Make Games",
+      "learning": "Learn C#, a powerful modern language.",
+      "decsription": "We are adding a minimum of 20 new lectures a week throughout 2017. This enables us to incorporate your feedback into the course as we go. This is the long-awaited sequel to the Complete Unity Developer - one of the most popular e-learning courses on the internet! Completely re-worked from scratch with brand-new projects and our latest teaching techniques. You will benefit from the fact we have already taught over 250,000 students programming and game development, many shipping commercial games as a result. Unity 2017 is an incredible 3D package used for making video games, architectural and medical imaging and more. The challenge is that it's big and complicated to use, especially for complete beginners to coding and game development. We make learning to code easy and fun by leading you step-by-step through the process of creating exciting games.",
+      "requirements": "Free disc space (5GB on PC, 10GB on Mac) to install Unity, Visual Studio, and our projects. PC or Mac capable of running Unity 2017 (free Personal version). Regular internet access for Q&A and community.",
+      "teachId": 1,
+      "rating": 4.8,
+      "date": "2017/11/02"
+    },
+    {
+      "id": 9,
+      "categoriesId": 1,
+      "type": "new",
+      "topicsId": 1,
+      "images": "/assets/img/course/complete_unity.jpg"
+      ,"name": "Complete Unity Developer 2.0 - Learn C# Code & Make Games",
+      "learning": "Learn C#, a powerful modern language.",
+      "decsription": "We are adding a minimum of 20 new lectures a week throughout 2017. This enables us to incorporate your feedback into the course as we go. This is the long-awaited sequel to the Complete Unity Developer - one of the most popular e-learning courses on the internet! Completely re-worked from scratch with brand-new projects and our latest teaching techniques. You will benefit from the fact we have already taught over 250,000 students programming and game development, many shipping commercial games as a result. Unity 2017 is an incredible 3D package used for making video games, architectural and medical imaging and more. The challenge is that it's big and complicated to use, especially for complete beginners to coding and game development. We make learning to code easy and fun by leading you step-by-step through the process of creating exciting games.",
+      "requirements": "Free disc space (5GB on PC, 10GB on Mac) to install Unity, Visual Studio, and our projects. PC or Mac capable of running Unity 2017 (free Personal version). Regular internet access for Q&A and community.",
+      "teachId": 1,
+      "rating": 4.8,
+      "date": "2017/11/02"
+    }
   ],
   "curriculum": [
     { "courseId": 1, "id": 1, "name": "", "time": 80 },

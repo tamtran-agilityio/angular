@@ -1,0 +1,96 @@
+:host {
+  display: inline-block;
+}
+.course {
+  &__item {
+    display: block;
+    margin: 0 15px 15px 0;
+    position: relative;
+    text-align: left;
+    vertical-align: top;
+    width: 216px;
+    height: 290px;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+.course {
+  &__card {
+    background: #fff;
+    color: #29303b;
+    height: 290px;
+    display: block;
+    font-size: small;
+    overflow: hidden;
+    position: relative;
+    &--mark {
+      display: block;
+      position: relative;
+    }
+
+    &--image {
+      width: 100%;
+      opacity: 1;
+      -webkit-filter: sepia(.1) grayscale(.1) saturate(.8);
+      filter: sepia(.1) grayscale(.1) saturate(.8);
+      display: block;
+      height: auto;
+      overflow: hidden;
+      position: relative;
+    }
+    &--details {
+      display: block;
+      padding: 15px 10px 0 15px;
+    }
+    &--title {
+      display: block;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -moz-line-clamp: 2;
+      -ms-line-clamp: 2;
+      -o-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      -moz-box-orient: vertical;
+      -ms-box-orient: vertical;
+      -o-box-orient: vertical;
+      box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+      font-weight: 600;
+      height: 36px;
+      min-height: 42px;
+      font-size: 15px;
+      color: #29303b;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .course__item {
+    width: 216px;
+  }
+}
+
+@media (min-width: 992px) {
+  .course__item {
+    width: 220px;
+  }
+}
+
+@media (min-width: 768px) {
+  .course__item {
+    position: relative;
+    border: none;
+    box-shadow: none;
+    width: 230px;
+  }
+}

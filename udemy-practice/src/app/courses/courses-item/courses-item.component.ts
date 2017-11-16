@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
+import { Course } from '../modal/course';
 @Component({
-  selector: 'app-courses-item',
+  selector: 'courses-item',
   templateUrl: './courses-item.component.html',
   styleUrls: ['./courses-item.component.scss']
 })
 export class CoursesItemComponent implements OnInit {
-
+  @Input() course: Course;
   constructor() { }
 
   ngOnInit() {
