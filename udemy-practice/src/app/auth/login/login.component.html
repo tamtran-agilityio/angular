@@ -1,5 +1,25 @@
-<form action="">
-  <input type="text" name="" id="">
-  <input type="email" name="" id="">
-  <input type="password" name="" id="">
-</form>
+<modal-box [modalTitle]="loginTitle" [blocking]="false" [modalId]="modalId" [footerTitle]="footerTitle">
+  <a href="" class="login__facebook login__social">
+    <i class="fa fa-facebook" aria-hidden="true"></i>
+    Continue with Facebook
+  </a>
+  <a href="" class="login__google login__social">
+    <i class="fa fa-google" aria-hidden="true"></i>
+    Continue with Google
+  </a>
+  <div class="login__separator">
+    <div class="login__separator--line"></div>
+    <span class="login__separator--text">OR</span>
+    <div class="login__separator--line"></div>
+  </div>
+  <form class="login__form" *ngIf="loginForm" [formGroup]="loginForm" (submit)="loginUser()">
+    <error-message [errorMessagge]="errorMessagge"></error-message>
+    <div class="login__group">
+        <input class="login__input" type="email" formControlName="email"  id="email">
+        <control-messages [control]="loginForm.controls.email"></control-messages>
+        <input class="login__input login__input--password" formControlName="password" id="password">
+        <control-messages [control]="loginForm.controls.password"></control-messages>
+        <input class="login__submit" type="submit" value="Login">
+    </div>
+  </form>
+</modal-box>

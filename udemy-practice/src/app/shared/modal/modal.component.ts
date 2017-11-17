@@ -1,5 +1,10 @@
 import { Component, OnInit, Input, HostListener } from '@angular/core';
+
+import * as _ from 'lodash';
+
 import { ModalService } from './modal.service';
+import { AppConfigService } from '../../core';
+
 @Component({
   selector: 'modal-box',
   templateUrl: './modal.component.html',
@@ -9,15 +14,12 @@ export class ModalComponent implements OnInit {
 
   @Input() modalId: string;
   @Input() modalTitle: string;
+  @Input() footerTitle: string;
   @Input() blocking = false;
   isOpen = false;
 
-  @HostListener('keyup') onMouseEnter(event) {
-    this.keyup(event);
-  }
-
-  constructor(private modalService: ModalService) {
-  }
+  constructor(private modalService: ModalService,
+              private appConfig: AppConfigService) {}
 
   ngOnInit() {
     this.modalService.registerModal(this);
@@ -27,10 +29,9 @@ export class ModalComponent implements OnInit {
     this.modalService.closeModal(this.modalId, checkBlocking);
   }
 
-  private keyup(event: KeyboardEvent): void {
-    if (event.keyCode === 27) {
+  clickOutside(event) {
+    if (event.keyCode === this.appConfig.KEY_CODE.KEYUP) {
       this.modalService.closeModal(this.modalId, true);
     }
   }
-
 }

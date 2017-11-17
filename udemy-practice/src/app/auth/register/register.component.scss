@@ -1,0 +1,92 @@
+.signup {
+  &__social {
+    box-shadow: 0 2px 2px 0 rgba(41,48,59,.24), 0 0 2px 0 rgba(41,48,59,.12);
+    border-radius: 2px;
+    margin-top: 10px;
+    padding: 0 20px 0 0;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  &__facebook {
+    display: block;
+    color: #FFFFFF;
+    background-color: #1a538a;
+    .fa-facebook {
+      padding: 11px 0 11px 5px;
+      text-align: center;
+      width: 50px;
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
+
+  &__google {
+    display: block;
+    background-color: #fff;
+    color: #686f7a;
+    .fa-google {
+      padding: 11px 0 11px 5px;
+      text-align: center;
+      width: 50px;
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
+
+  &__separator {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+
+    &--line {
+      flex: 1 0 auto;
+      min-width: 1px;
+      border-top: 1px solid #dedfe0;
+      height: 1px;
+    }
+
+    &--text {
+      padding: 0 10px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+  }
+  &__group {
+    margin: 10px 0;
+    overflow: hidden;
+  }
+
+  &__input {
+    border-radius: 5px;
+    color: #29303b;
+    font-size: 18px;
+    height: auto;
+    padding: 11px 10px 12px 40px;
+    width: 84%;
+
+    &--email {
+      margin-top: 10px;
+    }
+
+    &--password {
+      margin-top: 10px;
+    }
+  }
+
+  &__submit {
+    font-size: 16px;
+    font-weight: 700;
+    height: 50px;
+    width: 100%;
+    -webkit-appearance: button;
+    cursor: pointer;
+    color: #fff;
+    background-color: #ec5252;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    padding: 11px 12px;
+    margin-top: 10px;
+    outline: none;
+  }
+}

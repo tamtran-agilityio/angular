@@ -1,13 +1,20 @@
 import { NgModule } from '@angular/core';
 import { HomeComponent } from './home.component';
 import { HomeRouting } from './home-routing.module';
+import { AuthModule } from '../auth/auth.module';
+
+export const COMMON_MODULE: any[] = [
+  AuthModule
+];
 
 export const HOME_COMPONENT: any[] = [
   HomeComponent
 ];
 
 @NgModule({
-  imports: [],
+  imports: [
+    ...COMMON_MODULE
+  ],
   declarations: [
     ...HOME_COMPONENT
   ]

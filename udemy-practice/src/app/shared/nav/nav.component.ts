@@ -8,9 +8,17 @@ import { ModalService } from '../modal/modal.service';
 })
 export class NavComponent implements OnInit {
   modalTitle: String = 'Login';
+  modalId: String = 'Login';
   constructor(public modalService: ModalService) { }
 
   ngOnInit() {
   }
 
+  clickLogin() {
+    this.modalService.openModal('Login');
+  }
+
+  clickRegister() {
+    this.modalService.openModal('Register');
+  }
 }

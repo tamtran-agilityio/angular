@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+
+import * as _ from 'lodash';
+
 import { ModalComponent } from './modal.component';
 
 @Injectable()
@@ -14,7 +17,7 @@ export class ModalService {
 
     // Delete existing to replace the modal
     if (modal) {
-      this.modals.splice(this.modals.indexOf(modal));
+      this.modals.splice(_.indexOf(this.modals, modal));
     }
 
     this.modals.push(newModal);

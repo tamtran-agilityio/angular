@@ -9,7 +9,7 @@ type ErrorInterceptor = (error: any) => any;
 const absoluteURLPattern = /^((?:https:\/\/)|(?:http:\/\/)|(?:www))/;
 
 @Injectable()
-export class HttpWrapper {
+export class HttpWrapperService {
   /**
    * Headers used in all requests.
    */
