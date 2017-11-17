@@ -74,23 +74,3 @@ img {
   }
 }
 
-@media (min-width: 1200px) {
-  .course__item {
-    width: 216px;
-  }
-}
-
-@media (min-width: 992px) {
-  .course__item {
-    width: 220px;
-  }
-}
-
-@media (min-width: 768px) {
-  .course__item {
-    position: relative;
-    border: none;
-    box-shadow: none;
-    width: 230px;
-  }
-}

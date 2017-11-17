@@ -1,15 +1,16 @@
-<h2> Top Courses in "Development" </h2>
-<carousel-slide
-  [inputs]="carouselOptions"
-  [moveToSlide]="1"
-  (carouselLoad)="onLoad($event)">
-  <carousel-item CarouselItem *ngFor="let  course of courses">
-    <courses-item [course]="course"></courses-item>
-  </carousel-item>
-  <button CarouselPrev class='leftRs'>
-    <i class="fa fa-angle-left" aria-hidden="true"></i>
-  </button>
-  <button CarouselNext class='rightRs'>
-    <i class="fa fa-angle-right" aria-hidden="true"></i>
-  </button>
-</carousel-slide>
+<div *ngFor="let course of courses; let i = index">
+  <h2> Top Courses in "{{getNameCategory(i)}}" </h2>
+  <carousel-slide
+    [inputs]="carouselOptions"
+    (carouselLoad)="onLoad($event)">
+    <carousel-item CarouselItem *ngFor="let item of course">
+      <courses-item [course]="item"></courses-item>
+    </carousel-item>
+    <button CarouselPrev class='carousel__pre'>
+      <i class="fa fa-angle-left" aria-hidden="true"></i>
+    </button>
+    <button CarouselNext class='carousel__next'>
+      <i class="fa fa-angle-right" aria-hidden="true"></i>
+    </button>
+  </carousel-slide>
+</div>

@@ -1,0 +1,39 @@
+.carousel {
+  &__next, &__pre {
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+    color: #007791;
+    font-size: 24px;
+    height: 47px;
+    line-height: 1;
+    padding: 11px 0;
+    text-align: center;
+    bottom: 45%;
+    transform: translateY(-50%);
+    transition: .3s;
+    width: 47px;
+    z-index: 3;
+    position: absolute;
+  }
+
+  &__next {
+    right: -15px;
+    padding-left: 2px;
+    padding-right: 0;
+  }
+
+  &__pre {
+    left: -15px;
+    padding-left: 2px;
+    padding-right: 0;
+  }
+}
+
+.course {
+  &__discover {
+    margin-right: -10px;
+    margin-left: -10px;
+    margin-bottom: 25px;
+  }
+}

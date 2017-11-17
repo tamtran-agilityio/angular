@@ -27,7 +27,7 @@
       "id": 1,
       "categoriesId": 1,
       "type": "new",
-      "topicsId": 1,
+      "topicsId": 2,
       "images": "/assets/img/course/complete_unity.jpg"
       ,"name": "Complete Unity Developer 2.0 - Learn C# Code & Make Games",
       "learning": "Learn C#, a powerful modern language.",
@@ -147,6 +147,90 @@
       "teachId": 1,
       "rating": 4.8,
       "date": "2017/11/02"
+    },
+    {
+      "id": 10,
+      "categoriesId": 1,
+      "type": "new",
+      "topicsId": 1,
+      "images": "/assets/img/course/complete_unity.jpg"
+      ,"name": "Complete Unity Developer 2.0 - Learn C# Code & Make Games",
+      "learning": "Learn C#, a powerful modern language.",
+      "decsription": "We are adding a minimum of 20 new lectures a week throughout 2017. This enables us to incorporate your feedback into the course as we go. This is the long-awaited sequel to the Complete Unity Developer - one of the most popular e-learning courses on the internet! Completely re-worked from scratch with brand-new projects and our latest teaching techniques. You will benefit from the fact we have already taught over 250,000 students programming and game development, many shipping commercial games as a result. Unity 2017 is an incredible 3D package used for making video games, architectural and medical imaging and more. The challenge is that it's big and complicated to use, especially for complete beginners to coding and game development. We make learning to code easy and fun by leading you step-by-step through the process of creating exciting games.",
+      "requirements": "Free disc space (5GB on PC, 10GB on Mac) to install Unity, Visual Studio, and our projects. PC or Mac capable of running Unity 2017 (free Personal version). Regular internet access for Q&A and community.",
+      "teachId": 1,
+      "rating": 4.8,
+      "date": "2017/11/02"
+    },
+    {
+      "id": 101,
+      "categoriesId": 1,
+      "type": "new",
+      "topicsId": 1,
+      "images": "/assets/img/course/complete_unity.jpg"
+      ,"name": "Complete Unity Developer 2.0 - Learn C# Code & Make Games",
+      "learning": "Learn C#, a powerful modern language.",
+      "decsription": "We are adding a minimum of 20 new lectures a week throughout 2017. This enables us to incorporate your feedback into the course as we go. This is the long-awaited sequel to the Complete Unity Developer - one of the most popular e-learning courses on the internet! Completely re-worked from scratch with brand-new projects and our latest teaching techniques. You will benefit from the fact we have already taught over 250,000 students programming and game development, many shipping commercial games as a result. Unity 2017 is an incredible 3D package used for making video games, architectural and medical imaging and more. The challenge is that it's big and complicated to use, especially for complete beginners to coding and game development. We make learning to code easy and fun by leading you step-by-step through the process of creating exciting games.",
+      "requirements": "Free disc space (5GB on PC, 10GB on Mac) to install Unity, Visual Studio, and our projects. PC or Mac capable of running Unity 2017 (free Personal version). Regular internet access for Q&A and community.",
+      "teachId": 1,
+      "rating": 4.8,
+      "date": "2017/11/02"
+    },
+    {
+      "id": 105,
+      "categoriesId": 1,
+      "type": "new",
+      "topicsId": 1,
+      "images": "/assets/img/course/complete_unity.jpg"
+      ,"name": "Complete Unity Developer 2.0 - Learn C# Code & Make Games",
+      "learning": "Learn C#, a powerful modern language.",
+      "decsription": "We are adding a minimum of 20 new lectures a week throughout 2017. This enables us to incorporate your feedback into the course as we go. This is the long-awaited sequel to the Complete Unity Developer - one of the most popular e-learning courses on the internet! Completely re-worked from scratch with brand-new projects and our latest teaching techniques. You will benefit from the fact we have already taught over 250,000 students programming and game development, many shipping commercial games as a result. Unity 2017 is an incredible 3D package used for making video games, architectural and medical imaging and more. The challenge is that it's big and complicated to use, especially for complete beginners to coding and game development. We make learning to code easy and fun by leading you step-by-step through the process of creating exciting games.",
+      "requirements": "Free disc space (5GB on PC, 10GB on Mac) to install Unity, Visual Studio, and our projects. PC or Mac capable of running Unity 2017 (free Personal version). Regular internet access for Q&A and community.",
+      "teachId": 1,
+      "rating": 4.8,
+      "date": "2017/11/02"
+    },
+    {
+      "id": 11,
+      "categoriesId": 2,
+      "type": "new",
+      "topicsId": 1,
+      "images": "/assets/img/course/modern_deep.jpg"
+      ,"name": "Modern Deep Learning in Python",
+      "learning": "Apply momentum to backpropagation to train neural networks. Apply adaptive learning rate procedures like AdaGrad, RMSprop, and Adam to backpropagation to train neural networks. Understand the basic building blocks of Theano. Build a neural network in Theano. Understand the basic building blocks of TensorFlow. Build a neural network in TensorFlow. Build a neural network that performs well on the MNIST dataset. Understand the difference between full gradient descent, batch gradient descent, and stochastic gradient descent. Understand and implement dropout regularization in Theano and TensorFlow. Understand and implement batch normalization in Theano and Tensorflow. Write a neural network using Keras. Write a neural network using PyTorch. Write a neural network using CNTK. Write a neural network using MXNet",
+      "decsription": "This course continues where my first course, Deep Learning in Python, left off. You already know how to build an artificial neural network in Python, and you have a plug-and-play script that you can use for TensorFlow. Neural networks are one of the staples of machine learning, and they are always a top contender in Kaggle contests. If you want to improve your skills with neural networks and deep learning, this is the course for you.. You already learned about backpropagation, but there were a lot of unanswered questions. How can you modify it to improve training speed? In this course you will learn about batch and stochastic gradient descent, two commonly used techniques that allow you to train on just a small sample of the data at each iteration, greatly speeding up training time.. You will also learn about momentum, which can be helpful for carrying you through local minima and prevent you from having to be too conservative with your learning rate. You will also learn about adaptive learning rate techniques like AdaGrad, RMSprop, and Adam which can also help speed up your training.. Because you already know about the fundamentals of neural networks, we are going to talk about more modern techniques, like dropout regularization and batch normalization, which we will implement in both TensorFlow and Theano. The course is constantly being updated and more advanced regularization techniques are coming in the near future.",
+      "requirements": "Be comfortable with Python, Numpy, and Matplotlib. Install Theano and TensorFlow. If you do not yet know about gradient descent, backprop, and softmax, take my earlier course, deep learning in Python, and then return to this course.",
+      "teachId": 2,
+      "rating": 4,
+      "date": "2017/10/02"
+    },
+    {
+      "id": 12,
+      "categoriesId": 2,
+      "type": "new",
+      "topicsId": 2,
+      "images": "/assets/img/course/machine_learn.jpg"
+      ,"name": "Machine Learning A-Z™: Hands-On Python & R In Data Science",
+      "learning": "Master Machine Learning on Python & R. Have a great intuition of many Machine Learning models. Make accurate predictions. Make powerful analysis. Make robust Machine Learning models. Create strong added value to your business. Use Machine Learning for personal purpose. Handle specific topics like Reinforcement Learning, NLP and Deep Learning. Handle advanced techniques like Dimensionality Reduction. Know which Machine Learning model to choose for each type of problem. Build an army of powerful Machine Learning models and know how to combine them to solve any problem",
+      "decsription": "Interested in the field of Machine Learning? Then this course is for you!. This course has been designed by two professional Data Scientists so that we can share our knowledge and help you learn complex theory, algorithms and coding libraries in a simple way.. We will walk you step-by-step into the World of Machine Learning. With every tutorial you will develop new skills and improve your understanding of this challenging yet lucrative sub-field of Data Science.. This course is fun and exciting, but at the same time we dive deep into Machine Learning. It is structured the following way",
+      "requirements": "Just some high school mathematics level.",
+      "teachId": 2,
+      "rating": 4,
+      "date": "2017/10/02"
+    },
+    {
+      "id": 13,
+      "categoriesId": 2,
+      "type": "new",
+      "topicsId": 3,
+      "images": "/assets/img/course/python_data.jpg"
+      ,"name": "Python for Data Science and Machine Learning Bootcamp",
+      "learning": "Master Machine Learning on Python & R. Have a great intuition of many Machine Learning models. Make accurate predictions. Make powerful analysis. Make robust Machine Learning models. Create strong added value to your business. Use Machine Learning for personal purpose. Handle specific topics like Reinforcement Learning, NLP and Deep Learning. Handle advanced techniques like Dimensionality Reduction. Know which Machine Learning model to choose for each type of problem. Build an army of powerful Machine Learning models and know how to combine them to solve any problem",
+      "decsription": "Interested in the field of Machine Learning? Then this course is for you!. This course has been designed by two professional Data Scientists so that we can share our knowledge and help you learn complex theory, algorithms and coding libraries in a simple way.. We will walk you step-by-step into the World of Machine Learning. With every tutorial you will develop new skills and improve your understanding of this challenging yet lucrative sub-field of Data Science.. This course is fun and exciting, but at the same time we dive deep into Machine Learning. It is structured the following way",
+      "requirements": "Just some high school mathematics level.",
+      "teachId": 2,
+      "rating": 4,
+      "date": "2017/10/02"
     }
   ],
   "curriculum": [

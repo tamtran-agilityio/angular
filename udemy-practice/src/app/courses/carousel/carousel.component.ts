@@ -203,13 +203,13 @@ export class CarouselComponent implements OnInit, AfterContentInit, AfterViewIni
     // const datas = this.items.first.nativeElement.getBoundingClientRect().width;
     if (this.data.type === 'responsive') {
       this.data.deviceType =
-      this.data.deviceWidth >= 1280
+      this.data.deviceWidth >= 1200
         ? 'xl'
           : this.data.deviceWidth >= 992
             ? 'lg'
             : this.data.deviceWidth >= 768
               ? 'md'
-              : this.data.deviceWidth >= 540 ? 'sm' : 'xs';
+              : this.data.deviceWidth >= 576 ? 'sm' : 'xs';
       this.data.items = this.userData.grid[this.data.deviceType];
       this.data.itemWidth = this.data.carouselWidth / this.data.items;
     } else {
@@ -404,11 +404,11 @@ export class CarouselComponent implements OnInit, AfterContentInit, AfterViewIni
         const itemWidth_xl =
         styleid + ' .item {width: ' + 100 / this.userData.grid.xl + '%}';
 
-      itemStyle = `@media (max-width:767px){${itemWidth_xs}}
-                    @media (min-width:540px){${itemWidth_sm}}
-                    @media (min-width:768px){${itemWidth_md}}
-                    @media (min-width:992px){${itemWidth_lg}}
-                    @media (min-width:1280px){${itemWidth_xl}}`;
+      itemStyle = `@media (max-width:540px){${itemWidth_xs}}
+                    @media (min-width:767px){${itemWidth_sm}}
+                    @media (min-width:992px){${itemWidth_md}}
+                    @media (min-width:1200px){${itemWidth_lg}}
+                    @media (min-width:1400px){${itemWidth_xl}}`;
     } else {
       itemStyle = `${styleid} .item {width: ${this.userData.grid.all}px}`;
     }

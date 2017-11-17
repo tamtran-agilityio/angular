@@ -43,3 +43,48 @@ li {
   margin: 0;
   list-style: none;
 }
+
+@media (min-width: 768px) {
+  .course__container {
+    width: 754px;
+  }
+}
+
+@media (min-width: 992px) {
+  .course__container {
+    width: 974px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .course__container {
+    width: 1174px;
+  }
+}
+
+@media (min-width: 1431px) {
+  .course__container {
+    width: 1405px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .course__item {
+    width: 216px;
+  }
+}
+
+@media (min-width: 992px) {
+  .course__item {
+    width: 220px;
+  }
+}
+
+@media (min-width: 768px) {
+  .course__item {
+    position: relative;
+    border: none;
+    box-shadow: none;
+    width: 230px;
+  }
+}

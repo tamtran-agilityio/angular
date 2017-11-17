@@ -8,22 +8,9 @@
       margin-bottom: 0;
     }
   }
-}
-
-@media (min-width: 1200px) {
-  .carousel__container {
-    width: 1174px;
-  }
-}
-
-@media (min-width: 992px) {
-  .carousel__container {
-    width: 974px;
-  }
-}
-
-@media (min-width: 768px) {
-  .carousel__container {
-    width: 754px;
+  &__discover {
+    margin-right: -10px;
+    margin-left: -10px;
+    margin-bottom: 25px;
   }
 }
