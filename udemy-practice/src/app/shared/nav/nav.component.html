@@ -1,6 +1,6 @@
 <div class="header__inner">
   <h1 class="header__logo">
-    <a href="javacript:void(0)" class="header__udemy-logo">
+    <a routerLink="/" class="header__udemy-logo">
     </a>
   </h1>
   <div class="header__categories">
@@ -12,11 +12,19 @@
             Categories
           </span>
         </div>
+        <div class="dropdown__category">
+          <dropdown-category></dropdown-category>
+        </div>
       </div>
     </div>
     <div class="search">
       <form action="" class="search__courses">
-          <input type="text">
+        <input type="text" class="search__input" placeholder="Search for Courses">
+        <span class="search__group">
+          <button class="search__btn">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </span>
       </form>
       </div>
   </div>

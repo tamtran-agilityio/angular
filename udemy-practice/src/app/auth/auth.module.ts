@@ -8,6 +8,10 @@ import { CoreModule } from '../core/core.module';
 import { AuthService } from './service/auth.service';
 import { UserService } from './service/user.service';
 
+export const COMMON_MODULE: any[] = [
+  SharedModule,
+  CoreModule
+];
 export const AUTH_COMPONENT: any[] = [
   LoginComponent,
   RegisterComponent,
@@ -20,8 +24,7 @@ export const AUTH_PROVIDERS: any[] = [
 
 @NgModule({
   imports: [
-    SharedModule,
-    CoreModule
+    ...COMMON_MODULE
   ],
   declarations: [
     ...AUTH_COMPONENT
