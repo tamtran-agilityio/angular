@@ -6,6 +6,7 @@ import { SharedModule } from '../shared/shared.module';
 import { StreamerSidebarComponent } from './streamer-sidebar/streamer-sidebar.component';
 import { HowWorksComponent } from './how-works/how-works.component';
 import { CoursesModule } from '../courses/courses.module';
+import { AchieveGoalsComponent } from './achieve-goals/achieve-goals.component';
 
 export const COMMON_MODULE: any[] = [
   AuthModule,
@@ -16,7 +17,8 @@ export const COMMON_MODULE: any[] = [
 export const HOME_COMPONENT: any[] = [
   HomeComponent,
   StreamerSidebarComponent,
-  HowWorksComponent
+  HowWorksComponent,
+  AchieveGoalsComponent
 ];
 
 @NgModule({
