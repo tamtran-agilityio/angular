@@ -9,6 +9,7 @@ import { CoursesModule } from '../courses/courses.module';
 import { AchieveGoalsComponent } from './achieve-goals/achieve-goals.component';
 import { AchieveGoalsService } from './achieve-goals/service/achieve-goals.service';
 import { FeaturedTopicComponent } from './featured-topic/featured-topic.component';
+import { InstructorBusinessComponent } from './instructor-business/instructor-business.component';
 
 export const COMMON_MODULE: any[] = [
   AuthModule,
@@ -21,7 +22,8 @@ export const HOME_COMPONENT: any[] = [
   StreamerSidebarComponent,
   HowWorksComponent,
   AchieveGoalsComponent,
-  FeaturedTopicComponent
+  FeaturedTopicComponent,
+  InstructorBusinessComponent
 ];
 
 export const HOME_PROVIDERS: any[] = [
