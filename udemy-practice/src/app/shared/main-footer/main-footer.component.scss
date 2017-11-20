@@ -1,0 +1,46 @@
+.container-fluid {
+  max-width: 1440px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 40px auto 30px;
+}
+
+.footer {
+  .row {
+    margin-left: -15px;
+    margin-right: -15px;
+    &:before {
+      content: " ";
+      display: table;
+    }
+  }
+  &__link {
+    width: 75%;
+    float: left;
+    .link {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 90px;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      flex: 33.3%;
+      width: 33.3%;
+    }
+
+    a {
+      font-weight: 400;
+      color: #007791;
+    }
+  }
+  &__locale {
+    width: 25%;
+    float: left;
+  }
+}
