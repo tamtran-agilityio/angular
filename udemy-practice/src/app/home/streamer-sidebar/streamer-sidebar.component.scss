@@ -1,0 +1,106 @@
+:host {
+  align-items: center;
+  background-image: url('/assets/img/homepage_hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  background-color: #686f7a;
+  background-position: 50%;
+}
+
+.streamer {
+  &__sidebar {
+    margin: 30px auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 1174px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__content {
+    box-sizing: content-box;
+    max-width: 500px;
+    padding: 0 15px;
+    top: 0px;
+    position: relative;
+  }
+
+  &__title {
+    color: #FFF;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(41,48,59,.55);
+  }
+
+  &__desc {
+    color: #FFF;
+    font-size: 18px;
+    line-height: 34px;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(41,48,59,.55);
+  }
+
+  &__action {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+  }
+
+  &__search {
+    border-radius: 3px;
+    background: #fff;
+    position: relative;
+    width: 100%;
+    display: table;
+    border-collapse: separate;
+    &--learn {
+      outline: none;
+      position: relative;
+      z-index: 2;
+      float: left;
+      width: 93%;
+      margin-bottom: 0;
+      display: table-cell;
+      border-radius: 3px 0 0 3px;
+      border: none;
+      font-size: 16px;
+      font-weight: 200;
+      padding: 13px 17px;
+    }
+
+    &--group {
+      display: table-cell;
+      vertical-align: middle;
+      width: 1%;
+      position: relative;
+    }
+
+    &--button {
+      outline: none;
+      background: #fff;
+      border: 0;
+      border-radius: 0 3px 3px 0;
+      color: #ec5252;
+      display: block;
+      font-size: 18px;
+      padding: 10px;
+      width: 100%;
+      padding: 11px 14px;
+      font-size: 20px;
+
+      &:hover {
+        color: #fff;
+        background: #ec5252;
+      }
+    }
+  }
+}

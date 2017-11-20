@@ -3,9 +3,12 @@ body {
   font-size: 15px;
   line-height: 1.43;
   color: #29303b;
-  background-color: #fff;
+  background: #f7f8fa;
   padding: 0;
   margin: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 a {
@@ -39,4 +42,49 @@ li {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+@media (min-width: 768px) {
+  .course__container, .course__channels {
+    width: 754px;
+  }
+}
+
+@media (min-width: 992px) {
+  .course__container, .course__channels {
+    width: 974px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .course__container, .course__channels {
+    width: 1174px;
+  }
+}
+
+@media (min-width: 1431px) {
+  .course__container, .course__channels {
+    width: 1405px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .course__item {
+    width: 216px;
+  }
+}
+
+@media (min-width: 992px) {
+  .course__item {
+    width: 220px;
+  }
+}
+
+@media (min-width: 768px) {
+  .course__item {
+    position: relative;
+    border: none;
+    box-shadow: none;
+    width: 230px;
+  }
 }

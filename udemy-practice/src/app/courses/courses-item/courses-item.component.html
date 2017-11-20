@@ -1,3 +1,12 @@
-<p>
-  courses-item works!
-</p>
+<div *ngIf="course" class="course__item">
+  <a routerLink="/{{course.name | formatLink}}" class="course__card">
+    <span class="course__card--mark">
+      <img src="{{ course.images }}" alt="{{ course.images }}" class="">
+    </span>
+    <div class="course__card--details">
+        <div class="course__card--content">
+          <h3 class="course__card--title"> {{course.name}}</h3>
+        </div>
+    </div>
+  </a>
+</div>

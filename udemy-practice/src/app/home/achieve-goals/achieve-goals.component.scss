@@ -1,0 +1,63 @@
+.course {
+  &__channels {
+    margin-bottom: 0;
+    margin: 30px 0 0;
+  }
+
+  &__collection {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.collection {
+  &__item {
+    flex: 1;
+    min-width: 1px;
+    margin: 0 30px 30px 0;
+    text-align: center;
+    flex: auto;
+    text-transform: capitalize;
+    width: 30%;
+    &:nth-child(n + 4) {
+      width: 15%;
+      margin-bottom: 10px;
+    }
+
+    &--content {
+      display: block;
+      background: rgba(41,48,59,.8);
+      margin-bottom: 15px;
+      border-radius: 4px;
+      overflow: hidden;
+      img {
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+        border: 0;
+        -ms-interpolation-mode: bicubic;
+      }
+    }
+
+    &--decs {
+      font-size: 15px;
+      margin-bottom: 0;
+      font-weight: 400;
+      color: #29303b;
+      margin: 0 0 10.5px;
+    }
+
+    img {
+      width: 100%;
+      transition: opacity .3s ease-out;
+    }
+  }
+  &__expand {
+    width: 30%;
+  }
+
+  &__invest {
+    width: 15%;
+  }
+}

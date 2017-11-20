@@ -16,7 +16,7 @@ export class AppConfigService {
       'minlength': `Minimum length`
     },
     AUTHENTICATION: {
-      'AUTHENTICATION_FAIL': 'Ooh! Invalid login. Please try again',
+      'AUTHENTICATION_FAIL': 'Please check your email and password.',
       'REGISTER_FAIL': 'Ooh! Email exists. Please try again',
       'AUTHENTICATION_PASSWORD_FAIL': 'Invalid password',
     },
