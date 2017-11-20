@@ -45,25 +45,25 @@ li {
 }
 
 @media (min-width: 768px) {
-  .course__container {
+  .course__container, .course__channels {
     width: 754px;
   }
 }
 
 @media (min-width: 992px) {
-  .course__container {
+  .course__container, .course__channels {
     width: 974px;
   }
 }
 
 @media (min-width: 1200px) {
-  .course__container {
+  .course__container, .course__channels {
     width: 1174px;
   }
 }
 
 @media (min-width: 1431px) {
-  .course__container {
+  .course__container, .course__channels {
     width: 1405px;
   }
 }

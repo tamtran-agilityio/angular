@@ -1,0 +1,9 @@
+<div class="course__channels">
+  <h2 class="featured__title"> Featured topics </h2>
+  <div *ngFor="let topic of topics"
+    class="featured__topics">
+    <a [routerLink]="['/collection', topic.name | formatLink]"
+      class="featured__redirect">{{topic.name}}
+    </a>
+  </div>
+</div>
