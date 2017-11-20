@@ -7,6 +7,8 @@ import { StreamerSidebarComponent } from './streamer-sidebar/streamer-sidebar.co
 import { HowWorksComponent } from './how-works/how-works.component';
 import { CoursesModule } from '../courses/courses.module';
 import { AchieveGoalsComponent } from './achieve-goals/achieve-goals.component';
+import { AchieveGoalsService } from './achieve-goals/service/achieve-goals.service';
+import { FeaturedTopicComponent } from './featured-topic/featured-topic.component';
 
 export const COMMON_MODULE: any[] = [
   AuthModule,
@@ -18,7 +20,12 @@ export const HOME_COMPONENT: any[] = [
   HomeComponent,
   StreamerSidebarComponent,
   HowWorksComponent,
-  AchieveGoalsComponent
+  AchieveGoalsComponent,
+  FeaturedTopicComponent
+];
+
+export const HOME_PROVIDERS: any[] = [
+  AchieveGoalsService
 ];
 
 @NgModule({
@@ -27,6 +34,9 @@ export const HOME_COMPONENT: any[] = [
   ],
   declarations: [
     ...HOME_COMPONENT
+  ],
+  providers: [
+    ...HOME_PROVIDERS
   ]
 })
 export class HomeModule { }

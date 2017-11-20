@@ -1,3 +1,13 @@
-<p>
-  achieve-goals works!
-</p>
+<div class="course__channels">
+  <div class="course__collection">
+    <div *ngFor="let collection of collections"
+      class="collection__item">
+      <a [routerLink]="['/collection', collection.desc | formatLink]" class="collection__item--link">
+        <span class="collection__item--content">
+          <img src="{{collection.image}}" alt="expand">
+        </span>
+        <div class="collection__item--decs"> {{collection.desc}} </div>
+      </a>
+    </div>
+  </div>
+</div>
