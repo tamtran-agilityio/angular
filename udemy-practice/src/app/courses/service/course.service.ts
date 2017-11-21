@@ -28,6 +28,15 @@ export class CourseService {
     });
   }
 
+  getCourseByName(name: string): Observable<Course[]> {
+    let url = this.appConfig.API + `courses/?name=${name}`;
+    return Observable.create( obs => {
+      this.httpWrapper.get(url, {}).subscribe(res => {
+        obs.next(res);
+      });
+    });
+  }
+
   getCoursesByCategory(categories: Category[]): Observable<any> {
     return Observable.create( obs => {
       if (!_.isEmpty(categories)) {

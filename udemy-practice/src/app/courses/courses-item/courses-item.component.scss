@@ -46,7 +46,7 @@ img {
     }
     &--details {
       display: block;
-      padding: 15px 10px 0 15px;
+      padding: 0 10px 0 15px;
     }
     &--title {
       display: block;
@@ -65,12 +65,17 @@ img {
       text-overflow: ellipsis;
       white-space: normal;
       font-weight: 600;
-      height: 36px;
-      min-height: 42px;
+      height: 32px;
+      min-height: 32px;
       font-size: 15px;
       color: #29303b;
       margin-bottom: 10px;
     }
+  }
+}
+a:hover {
+  img {
+    opacity: 0.5;
   }
 }
 

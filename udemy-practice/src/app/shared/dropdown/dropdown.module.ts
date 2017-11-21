@@ -12,7 +12,7 @@ import { DropdownComponent } from './dropdown.component';
 export const COMMON_CORE: any[] = [
   RouterModule,
   CommonModule
-]
+];
 export const DROPDOWN_COMPONENT: any[] = [
   CategoryComponent,
   TopicComponent,
