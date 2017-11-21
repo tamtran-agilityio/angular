@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-footer.component.scss']
 })
 export class MainFooterComponent implements OnInit {
-
+  country: String = 'English';
+  countrys: string[] = ['English', 'Deutsch', 'Francais', 'Espanol'];
   constructor() { }
 
   ngOnInit() {
