@@ -4,6 +4,8 @@ export interface Course {
   categoriesId: number;
   topicsId: number;
   name: string;
+  title?: string;
+  subtitle?: string;
   image: string;
   learning: string;
   decsription: string;
@@ -11,4 +13,5 @@ export interface Course {
   teachId: number;
   rating: number;
   date: string;
+  language?: string;
 }

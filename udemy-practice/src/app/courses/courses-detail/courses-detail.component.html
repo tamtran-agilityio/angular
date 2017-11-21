@@ -1,3 +1,48 @@
-<p>
-  courses-detail works!
-</p>
+<div *ngIf="course">
+  <div class="streamer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 streamer__actions">
+          <a href="javascript:void(0)" class="streamer__actions--link">Gift this course</a>
+          <i class="fa fa-heart-o" aria-hidden="true"></i>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-8 left-col">
+          <h1>{{course.title}}</h1>
+          <p>{{course.subtitle}}</p>
+          <div class="streamer__status">
+            <div [className]="course.type === 'new' ? 'streamer__badge green' : 'streamer__badge yellow'">
+              <span>{{course.type}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-8 left-col">
+        <div class="what-get">
+          <div class="what-get__wrapper">
+            <div class="what-get__title">What will i learn?</div>
+            {{course.learning}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-8 left-col">
+            <div class="what-get__title">Requirements</div>
+            {{course.requirements}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-8 left-col">
+            <div class="what-get__title">Description</div>
+            {{course.decsription}}
+        </div>
+    </div>
+  </div>
+</div>
