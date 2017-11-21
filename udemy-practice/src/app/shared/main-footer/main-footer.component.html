@@ -14,8 +14,43 @@
           <li><a routerLink="/affiliate"> Affiliate</a></li>
         </ul>
       </div>
-      <div class="footer__locate"></div>
+      <div class="footer__locale">
+        <select [(ngModel)]="country" name="Select name" class="footer__locale--dropdown">
+          <option *ngFor="let country of countrys" [attr.value]="country">{{country}}</option>
+        </select>
+      </div>
     </div>
-
+    <div class="row">
+      <div class="international">
+        <ul>
+          <li>
+            <strong>
+              Local home pages
+            </strong>
+          </li>
+          <li *ngFor="let country of countrys" >
+            <a href="javascript:void(0)">{{country}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="copyright">
+        <a routerLink="/" class="copyright__logo">
+        </a>
+        <span copyright__author>
+            Copyright © 2017 Udemy, Inc.
+        </span>
+      </div>
+      <div class="security">
+        <ul>
+          <li><a href="javascript:void(0)"> Terms</a></li>
+          <li><a href="javascript:void(0)"> Privacy Policy and Cookie </a></li>
+          <li><a href="javascript:void(0)"> Intellectual Property </a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </footer>
