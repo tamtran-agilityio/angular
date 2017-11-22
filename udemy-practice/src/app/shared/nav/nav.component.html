@@ -28,7 +28,8 @@
       </form>
       </div>
   </div>
-  <div class="header__setting">
+  <div *ngIf="user === null"
+    class="header__setting">
     <div class="udemy__business">
       <a href="" class="dropdown__main-link">
         Udemy business
@@ -50,6 +51,26 @@
           Sign up
         </div>
       </div>
+  </div>
+  <div *ngIf="user"
+    class="header__setting">
+    <div class="udemy__business">
+      <a href="" class="dropdown__main-link">
+       Become in Instrutor
+      </a>
+    </div>
+    <div class="udemy__business">
+      <a href="" class="dropdown__main-link"> My Courses</a>
+    </div>
+    <div class="dropdown__user">
+      <div class="dropdown__toggle">
+        <a href="">
+          <div class="dropdown__link">
+            <span>{{ shortName.name }}</span>
+          </div>
+        </a>
+      </div>
+    </div>
   </div>
   <!-- Modal -->
   <!-- <modal-box [modalTitle]="modalTitle" [blocking]="false" [modalId]='modalId'>
