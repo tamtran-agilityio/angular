@@ -12,6 +12,7 @@ import { ControlMessagesComponent } from './control-messages/control-messages.co
 import { ClickOutsideDirective } from './directive/click-out-side.directive';
 import { ErrorMessageComponent } from './error-message/error-message.component';
 import { DropdownModule } from './dropdown/dropdown.module';
+import { RatingModule } from './rating/rating.module';
 
 export const COMMON_MODULES: any[] = [
   FormsModule,
@@ -19,7 +20,8 @@ export const COMMON_MODULES: any[] = [
   HttpModule,
   CommonModule,
   RouterModule,
-  DropdownModule
+  DropdownModule,
+  RatingModule
 ];
 
 export const SHARED_COMPONENT: any[] = [

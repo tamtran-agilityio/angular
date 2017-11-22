@@ -3,31 +3,27 @@
     { "id": 1, "fullName": "admin", "email": "trantamtk08b@gmail.com", "password": "tamtamxuan@123" }
   ],
   "categories": [
-    { "id": 1, "title": "Development",
-      "topics": [
-        {"id": 1, "title": "All development"},
-        {"id": 2, "title": "Mobile apps"},
-        {"id": 3, "title": "Programming languages"},
-        {"id": 4, "title": "Game development"},
-        {"id": 5, "title": "Web development"}
-      ]
-    },
-    { "id": 2, "title": "Business",
-      "topics": [
-        {"id": 1, "title": "All business"},
-        {"id": 2, "title": "Finance"},
-        {"id": 3, "title": "Entrepreneurship"},
-        {"id": 4, "title": "Communications"},
-        {"id": 5, "title": "Management"}
-      ]
-    }
+    { "id": 1, "title": "Development"},
+    { "id": 2, "title": "Business"}
+  ],
+  "topics": [
+    { "categoryId": 1, "id": 1, "title": "All development"},
+    { "categoryId": 1, "id": 2, "title": "Mobile apps"},
+    { "categoryId": 1, "id": 3, "title": "Programming languages"},
+    { "categoryId": 1, "id": 4, "title": "Game development"},
+    { "categoryId": 1, "id": 5, "title": "Web development"},
+    { "categoryId": 2, "id": 6, "title": "All business"},
+    { "categoryId": 2, "id": 7, "title": "Finance"},
+    { "categoryId": 2, "id": 8, "title": "Entrepreneurship"},
+    { "categoryId": 2, "id": 9, "title": "Communications"},
+    { "categoryId": 2, "id": 10, "title": "Management"}
   ],
   "courses": [
     {
       "id": 1,
-      "categoriesId": 1,
+      "categoryId": 1,
       "type": "new",
-      "topicsId": 2,
+      "topicId": 2,
       "images": "/assets/img/course/complete_unity.jpg",
       "name": "complete-unity-developer-2-0-learn-c-code-make-games",
       "title": "Complete Unity Developer 2.0 - Learn C# Code & Make Games",
@@ -35,85 +31,102 @@
       "learning": "Learn C#, a powerful modern language.",
       "decsription": "We are adding a minimum of 20 new lectures a week throughout 2017. This enables us to incorporate your feedback into the course as we go. This is the long-awaited sequel to the Complete Unity Developer - one of the most popular e-learning courses on the internet! Completely re-worked from scratch with brand-new projects and our latest teaching techniques. You will benefit from the fact we have already taught over 250,000 students programming and game development, many shipping commercial games as a result. Unity 2017 is an incredible 3D package used for making video games, architectural and medical imaging and more. The challenge is that it's big and complicated to use, especially for complete beginners to coding and game development. We make learning to code easy and fun by leading you step-by-step through the process of creating exciting games.",
       "requirements": "Free disc space (5GB on PC, 10GB on Mac) to install Unity, Visual Studio, and our projects. PC or Mac capable of running Unity 2017 (free Personal version). Regular internet access for Q&A and community.",
-      "teachId": 1,
-      "rating": 4.8,
+      "teacherId": 1,
+      "rating": 4.2,
+      "price": 105,
+      "discountPrice": 10,
       "date": "2017/11/02",
       "language": "English"
     },
     {
       "id": 2,
-      "categoriesId": 1,
+      "categoryId": 1,
       "type": "Best seller",
-      "topicsId": 1,
+      "topicId": 1,
       "images": "/assets/img/course/react_complete_guide.jpg",
       "name": "react-16-the-complete-guide-incl-react-router-4-redux",
       "title": "React 16 - The Complete Guide (incl. React Router 4 & Redux)",
       "learning": "Build powerful, fast, user-friendly and reactive web apps. Provide amazing user experiences by leveraging the power of JavaScript with ease. Apply for high-paid jobs or work as a freelancer in one the most-demanded sectors you can find in web dev right now",
       "decsription": "What's this course about?. Learn React or dive deeper into it. Learn the theory, solve assignments, practice in demo projects and build one big application which is improved throughout the course: The Burger Builder! More details please! JavaScript is the major driver of modern web applications since it's the only programming language which runs in the browser and hence allows you to provide highly reactive apps. You'll be able to achieve mobile-app like user experiences in the web. But using JavaScript can be challenging - it quickly becomes overwhelming to create a nice web app with vanilla JavaScript and jQuery only",
       "requirements": "JavaScript + HTML + CSS fundamentals are absolutely required. You DON'T need to be a JavaScript expert to succeed in this course!. ES6+ JavaScript knowledge is beneficial but not a must-have. NO prior React or any other JS framework experience is required!",
-      "teachId": 1,
-      "rating": 4.5,
-      "date": "2017/11/01"
+      "teacherId": 2,
+      "rating": 4.8,
+      "price": 105,
+      "discountPrice": 10,
+      "date": "2017/11/01",
+      "language": "English"
     },
     {
       "id": 3,
-      "categoriesId": 1,
+      "categoryId": 1,
       "type": "new",
-      "topicsId": 1,
+      "topicId": 1,
       "images": "/assets/img/course/entity_framework.jpg",
       "name": "entity-framework-in-depth-the-complete-guide",
       "title": "Entity Framework in Depth: The Complete Guide",
       "learning": "Understand the differences between database-first and code-first workflows. Build a domain model using database-first workflow. Build a domain model using code-first workflow (with an existing or a new database). Use code-first migrations to upgrade or downgrade your database. Override code-first conventions (using data annotations and fluent API). Query data using LINQ (using query syntax and extension methods). Use eager loading, lazy loading and explicit loading effectively. Add, update and remove objects. Use additional tools to profile and troubleshoot your applications. Understand what the repository pattern is, what and if you need it, and how to implement it. Apply best practices with Entity Framework",
       "decsription": "With over 6,500 students and 1,500+ positive reviews, this course is Udemy's most popular course for learning Entity Framework! . Entity Framework is an Object / Relational Mapper (O/RM) that helps you read and write data from and to a database. In this course, Mosh, teaches you the core concepts of Entity Framework through a series of clear, concise and hands-on lectures.. Whether you're new to Entity Framework, or been using it for a while but are looking for a comprehensive course with a clean structure to fill the missing parts, you're going to love this course.",
       "requirements": "Good understanding of advanced C# constructs (generics, lambda expressions)",
-      "teachId": 3,
-      "rating": 4.8,
-      "date": "2017/11/02"
+      "teacherId": 3,
+      "rating": 4.5,
+      "price": 105,
+      "discountPrice": 10,
+      "date": "2017/11/02",
+      "language": "English"
     },
     {
       "id": 11,
-      "categoriesId": 2,
+      "categoryId": 2,
       "type": "new",
-      "topicsId": 1,
+      "topicId": 1,
       "images": "/assets/img/course/modern_deep.jpg",
       "name": "modern-deep-learning-in-python",
       "title": "Modern Deep Learning in Python",
       "learning": "Apply momentum to backpropagation to train neural networks. Apply adaptive learning rate procedures like AdaGrad, RMSprop, and Adam to backpropagation to train neural networks. Understand the basic building blocks of Theano. Build a neural network in Theano. Understand the basic building blocks of TensorFlow. Build a neural network in TensorFlow. Build a neural network that performs well on the MNIST dataset. Understand the difference between full gradient descent, batch gradient descent, and stochastic gradient descent. Understand and implement dropout regularization in Theano and TensorFlow. Understand and implement batch normalization in Theano and Tensorflow. Write a neural network using Keras. Write a neural network using PyTorch. Write a neural network using CNTK. Write a neural network using MXNet",
       "decsription": "This course continues where my first course, Deep Learning in Python, left off. You already know how to build an artificial neural network in Python, and you have a plug-and-play script that you can use for TensorFlow. Neural networks are one of the staples of machine learning, and they are always a top contender in Kaggle contests. If you want to improve your skills with neural networks and deep learning, this is the course for you.. You already learned about backpropagation, but there were a lot of unanswered questions. How can you modify it to improve training speed? In this course you will learn about batch and stochastic gradient descent, two commonly used techniques that allow you to train on just a small sample of the data at each iteration, greatly speeding up training time.. You will also learn about momentum, which can be helpful for carrying you through local minima and prevent you from having to be too conservative with your learning rate. You will also learn about adaptive learning rate techniques like AdaGrad, RMSprop, and Adam which can also help speed up your training.. Because you already know about the fundamentals of neural networks, we are going to talk about more modern techniques, like dropout regularization and batch normalization, which we will implement in both TensorFlow and Theano. The course is constantly being updated and more advanced regularization techniques are coming in the near future.",
       "requirements": "Be comfortable with Python, Numpy, and Matplotlib. Install Theano and TensorFlow. If you do not yet know about gradient descent, backprop, and softmax, take my earlier course, deep learning in Python, and then return to this course.",
-      "teachId": 2,
+      "teacherId": 4,
       "rating": 4,
-      "date": "2017/10/02"
+      "price": 105,
+      "discountPrice": 10,
+      "date": "2017/10/02",
+      "language": "English"
     },
     {
       "id": 12,
-      "categoriesId": 2,
+      "categoryId": 2,
       "type": "new",
-      "topicsId": 2,
+      "topicId": 2,
       "images": "/assets/img/course/machine_learn.jpg",
       "name": "machine-learning-a-z™-hands-on-python-r-in-data-sciencemodern-deep-learning-in-python",
       "title": "Machine Learning A-Z™: Hands-On Python & R In Data Science",
       "learning": "Master Machine Learning on Python & R. Have a great intuition of many Machine Learning models. Make accurate predictions. Make powerful analysis. Make robust Machine Learning models. Create strong added value to your business. Use Machine Learning for personal purpose. Handle specific topics like Reinforcement Learning, NLP and Deep Learning. Handle advanced techniques like Dimensionality Reduction. Know which Machine Learning model to choose for each type of problem. Build an army of powerful Machine Learning models and know how to combine them to solve any problem",
       "decsription": "Interested in the field of Machine Learning? Then this course is for you!. This course has been designed by two professional Data Scientists so that we can share our knowledge and help you learn complex theory, algorithms and coding libraries in a simple way.. We will walk you step-by-step into the World of Machine Learning. With every tutorial you will develop new skills and improve your understanding of this challenging yet lucrative sub-field of Data Science.. This course is fun and exciting, but at the same time we dive deep into Machine Learning. It is structured the following way",
       "requirements": "Just some high school mathematics level.",
-      "teachId": 2,
+      "teacherId": 5,
       "rating": 4,
-      "date": "2017/10/02"
+      "price": 105,
+      "discountPrice": 10,
+      "date": "2017/10/02",
+      "language": "English"
     },
     {
       "id": 13,
-      "categoriesId": 2,
+      "categoryId": 2,
       "type": "new",
-      "topicsId": 3,
+      "topicId": 3,
       "images": "/assets/img/course/python_data.jpg",
       "name": "python-for-data-science-and-machine-learning-bootcamp",
       "title": "Python for Data Science and Machine Learning Bootcamp",
       "learning": "Master Machine Learning on Python & R. Have a great intuition of many Machine Learning models. Make accurate predictions. Make powerful analysis. Make robust Machine Learning models. Create strong added value to your business. Use Machine Learning for personal purpose. Handle specific topics like Reinforcement Learning, NLP and Deep Learning. Handle advanced techniques like Dimensionality Reduction. Know which Machine Learning model to choose for each type of problem. Build an army of powerful Machine Learning models and know how to combine them to solve any problem",
       "decsription": "Interested in the field of Machine Learning? Then this course is for you!. This course has been designed by two professional Data Scientists so that we can share our knowledge and help you learn complex theory, algorithms and coding libraries in a simple way.. We will walk you step-by-step into the World of Machine Learning. With every tutorial you will develop new skills and improve your understanding of this challenging yet lucrative sub-field of Data Science.. This course is fun and exciting, but at the same time we dive deep into Machine Learning. It is structured the following way",
       "requirements": "Just some high school mathematics level.",
-      "teachId": 2,
+      "teacherId": 6,
       "rating": 4,
-      "date": "2017/10/02"
+      "price": 105,
+      "discountPrice": 10,
+      "date": "2017/10/02",
+      "language": "English"
     }
   ],
   "curriculum": [
@@ -129,8 +142,78 @@
   "my_courses": [
     { "usedId": 1, "coursesId": 1, "chapterId": 1 }
   ],
-  "teacher": [
-    { "id": 1, "name": "Jonk" }
+  "teachers": [
+    {
+      "id": 1,
+      "fullName": "Schuyler Hacard",
+      "avatar": "https://robohash.org/culpatotamet.jpg?size=96x96&set=set1",
+      "company": "Jaxbean",
+      "password": "pLXSlSPI",
+      "desc": "Activities involving string instrument playing"
+    }, {
+      "id": 2,
+      "fullName": "Gaston Rubury",
+      "avatar": "https://robohash.org/etasperioresvoluptate.png?size=96x96&set=set1",
+      "company": "Rhycero",
+      "password": "jzYeIb",
+      "desc": "Heart valve replaced by transplant"
+    }, {
+      "id": 3,
+      "fullName": "Federica Zanni",
+      "avatar": "https://robohash.org/architectoautemmaiores.bmp?size=96x96&set=set1",
+      "company": "Thoughtstorm",
+      "password": "gX9mbphfENw",
+      "desc": "Mixed disturbance of conduct and emotions"
+    }, {
+      "id": 4,
+      "fullName": "Kingsley Downs",
+      "avatar": "https://robohash.org/officiisconsequaturodit.jpg?size=96x96&set=set1",
+      "company": "Twimm",
+      "password": "9c1RzeqRIe",
+      "desc": "Contaminated substance injected or used for vaccination"
+    }, {
+      "id": 5,
+      "fullName": "Stephen Heads",
+      "avatar": "https://robohash.org/eosvoluptateperspiciatis.jpg?size=96x96&set=set1",
+      "company": "Feednation",
+      "password": "6ufpSO",
+      "desc": "Excessive attrition, unspecified"
+    }, {
+      "id": 6,
+      "fullName": "Pavla Haggart",
+      "avatar": "https://robohash.org/nisiinrerum.png?size=96x96&set=set1",
+      "company": "Gabvine",
+      "password": "YMlrwvXTf",
+      "desc": "Arthropathy, unspecified, multiple sites"
+    }, {
+      "id": 7,
+      "fullName": "Chiquita Aubin",
+      "avatar": "https://robohash.org/consecteturveldolores.bmp?size=96x96&set=set1",
+      "company": "Divanoodle",
+      "password": "uiH03j0Z",
+      "desc": "Wiskott-aldrich syndrome"
+    }, {
+      "id": 8,
+      "fullName": "Paolina Le Breton",
+      "avatar": "https://robohash.org/repellendusdoloresqui.jpg?size=96x96&set=set1",
+      "company": "Tagcat",
+      "password": "z9yZhRzF",
+      "desc": "Sacroiliitis, not elsewhere classified"
+    }, {
+      "id": 9,
+      "fullName": "Tulley Delamaine",
+      "avatar": "https://robohash.org/inciduntvoluptatemet.png?size=96x96&set=set1",
+      "company": "Teklist",
+      "password": "GDZYqJ2m",
+      "desc": "Cryptococcosis"
+    }, {
+      "id": 10,
+      "fullName": "Giraldo Norcock",
+      "avatar": "https://robohash.org/rerummaioresprovident.jpg?size=96x96&set=set1",
+      "company": "Buzzbean",
+      "password": "SGsniUN0hq",
+      "desc": "Nonspecific abnormal electrocardiogram [ECG] [EKG]"
+    }
   ],
   "collection": [
     { "id": 1, "image": "/assets/img/expand.jpg", "desc": "Expand you programming knowledge" },
@@ -140,5 +223,12 @@
     { "id": 5, "image": "/assets/img/invest.jpg", "desc": "Invest in your passion" },
     { "id": 6, "image": "/assets/img/potential.jpg", "desc": "Unlock you potential" },
     { "id": 7, "image": "/assets/img/analytics.jpg", "desc": "Make analytics work for you" }
+  ],
+  "posts": [
+    { "id": 1, "title": "json-server", "author": "typicode" }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 },
+    { "id": 2, "body": "some comment", "postId": 1 }
   ]
 }

@@ -1,9 +1,15 @@
 import { Injectable } from '@angular/core';
+import {
+  environment
+} from '../../../environments/environment';
+
 
 @Injectable()
 export class AppConfigService {
 
-  API: string = 'http://localhost:8000/';
+  API = {
+    API_ROOT: environment.API_ROOT
+  };
   KEY_CODE = {
     KEYUP: 27
   };

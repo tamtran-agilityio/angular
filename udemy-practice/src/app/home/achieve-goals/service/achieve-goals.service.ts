@@ -17,7 +17,7 @@ export class AchieveGoalsService {
               }
 
   getAchieve(): Observable<Collection[]> {
-    let url = this.appConfig.API + `collection/`;
+    let url = this.appConfig.API.API_ROOT + `collection/`;
 
     return Observable.create( obs => {
       this.httpWapper.get(url, {}).subscribe((res: Collection[]) => {

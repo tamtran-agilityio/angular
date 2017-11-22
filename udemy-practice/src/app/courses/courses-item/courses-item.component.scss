@@ -71,6 +71,68 @@ img {
       color: #29303b;
       margin-bottom: 10px;
     }
+
+    &--content {
+
+      span {
+        margin-left: 10px;
+      }
+    }
+  }
+  &__rating {
+    font-weight: 500;
+    color: #505763;
+    font-size: 16px;
+  }
+
+  &__status {
+    margin-bottom: 10px;
+  }
+
+  &__instructor {
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -moz-line-clamp: 1;
+    -ms-line-clamp: 1;
+    -o-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -o-box-orient: vertical;
+    box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    min-height: 21px;
+    height: 21px;
+    font-size: 12px;
+    color: #686f7a;
+    margin-bottom: 10px;
+  }
+
+  &__cost {
+    display: flex;
+    justify-content: flex-end;
+    min-height: 36px;
+
+    &--price {
+      order: -1;
+      color: #686f7a;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 2;
+      margin-right: 5px;
+      text-decoration: line-through;
+    }
+
+    &--discount {
+      color: #29303b;
+      font-size: 18px;
+      font-weight: 600;
+      margin-right: 10px;
+    }
   }
 }
 a:hover {

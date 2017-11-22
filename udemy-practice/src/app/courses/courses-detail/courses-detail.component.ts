@@ -14,6 +14,7 @@ import { Course } from '../modal/course';
 export class CoursesDetailComponent implements OnInit {
   name: String;
   course: Course;
+  starsCount: number;
   constructor(private route: ActivatedRoute,
               private courseService: CourseService) { }
 

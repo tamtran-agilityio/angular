@@ -6,10 +6,16 @@ export class HelperService {
   constructor() { }
 
   getLocalStorage(item: string) {
-    localStorage.getItem(item);
+    return JSON.parse(localStorage.getItem(item));
   }
 
   setLocalStorage(item: string, data: any) {
-    localStorage.setItem(item, data);
+    return localStorage.setItem(item, data);
+  }
+
+  getShortName(value: string) {
+    return value.split(' ').reduce(function(previous, current){
+      return {name : previous.name + ' ' + current[0]};
+    }, {name : ''});
   }
 }
