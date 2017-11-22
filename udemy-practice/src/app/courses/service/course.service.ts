@@ -20,7 +20,7 @@ export class CourseService {
               private appConfig: AppConfigService) { }
 
   getCourses(): Observable<Course[]> {
-    let url = this.appConfig.API + 'courses/';
+    let url = this.appConfig.API.API_ROOT + 'courses/';
     return Observable.create( obs => {
       this.httpWrapper.get(url, {}).subscribe(res => {
         obs.next(res);
@@ -29,10 +29,12 @@ export class CourseService {
   }
 
   getCourseByName(name: string): Observable<Course[]> {
-    let url = this.appConfig.API + `courses/?name=${name}`;
+    let url = this.appConfig.API.API_ROOT + `courses/?name=${name}`;
     return Observable.create( obs => {
       this.httpWrapper.get(url, {}).subscribe(res => {
-        obs.next(res);
+        this.getCoursesByCategoryId(_.first(res).categoryId).subscribe(course => {
+          obs.next(course);
+        });
       });
     });
   }
@@ -59,7 +61,7 @@ export class CourseService {
   }
 
   getCoursesByCategoryId(id: number) {
-    let url = this.appConfig.API + `courses/?categoriesId=${id}`;
+    let url = this.appConfig.API.API_ROOT + `courses/?categoryId=${id}&_expand=teacher`;
     return this.httpWrapper.get(url, {})
       .map(res => res);
   }
