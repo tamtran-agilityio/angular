@@ -1,0 +1,89 @@
+.streamer {
+  &__rating {
+    margin: 0 10px;
+    display: inline-block;
+
+    &--number {
+      display: inline-block;
+    }
+  }
+
+  &__status {
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    .green {
+      background: #46c28e;
+      color: #fff;
+    }
+
+    .yellow {
+      background: #f4c150;
+      color: #29303b;
+    }
+  }
+
+  &__badge {
+    border-radius: 3px;
+    font-size: 9px;
+    padding: 1px 8px;
+    background: #14171c;
+    border: none;
+    color: #fff;
+    min-width: inherit;
+    display: inline-block;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    top: -3px;
+    z-index: 2;
+    vertical-align: baseline;
+    &:after {
+      border-radius: 3px;
+      right: -4px;
+      background: inherit;
+      content: "";
+      height: 11px;
+      position: absolute;
+      top: 2px;
+      transform: rotate(45deg);
+      width: 11px;
+      z-index: 1;
+      display: block;
+    }
+  }
+
+  &__auth {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-right: 10px;
+  }
+
+  &__auth-item {
+    margin-right: 20px;
+    margin-top: 5px;
+    color: #e6f2f5;
+  }
+
+  &__auth-link {
+    color: #e6f2f5;
+  }
+
+  &__language {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+
+    .fa-comment {
+      margin-right: 5px;
+      color: #FFF;
+      margin-top: 2px;
+    }
+    span {
+      margin-right: 20px;
+    }
+  }
+}

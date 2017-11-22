@@ -9,12 +9,16 @@ import { CoursesDiscoverComponent } from './courses-discover/courses-discover.co
 import { CarouselModule } from './carousel/carousel.module';
 import { SharedModule } from '../shared/shared.module';
 import { CourseService } from './service/course.service';
+import { CoursesIntroductionComponent } from './courses-detail/courses-introduction/courses-introduction.component';
+import { CoursesWhatLearnComponent } from './courses-detail/courses-what-learn/courses-what-learn.component';
 
 export const COURSES_COMPONENT: any[] = [
   CoursesListComponent,
   CoursesDetailComponent,
   CoursesItemComponent,
-  CoursesDiscoverComponent
+  CoursesDiscoverComponent,
+  CoursesIntroductionComponent,
+  CoursesWhatLearnComponent
 ];
 
 export const COURSES_PROVIDERS: any[] = [

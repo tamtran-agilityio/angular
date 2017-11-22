@@ -76,6 +76,27 @@
     border: 1px solid transparent;
   }
 
+  &__cart, &__bell, &__heart {
+    border-radius: 50%;
+    width: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 45px;
+    border: 1px solid transparent;
+    font-size: 20px;
+    color: #686f7a;
+    display: block;
+    text-align: center;
+    position: relative;
+    padding: 10px 0;
+    position: relative;
+    &:hover {
+      background-color: #f2f3f5;
+      border: 1px solid #dedfe0;
+    }
+  }
+
   &__link {
     color: #505763;
     display: block;

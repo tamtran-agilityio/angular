@@ -1,8 +1,9 @@
+import { Teacher } from '../../teacher/modal/teacher';
 export interface Course {
   id: number;
   type: string;
-  categoriesId: number;
-  topicsId: number;
+  categoryId: number;
+  topicId: number;
   name: string;
   title?: string;
   subtitle?: string;
@@ -10,8 +11,11 @@ export interface Course {
   learning: string;
   decsription: string;
   requirements: string;
-  teachId: number;
+  teacherId: number;
+  teacher: Teacher;
   rating: number;
+  price: number;
+  discountPrice: number;
   date: string;
   language?: string;
 }
