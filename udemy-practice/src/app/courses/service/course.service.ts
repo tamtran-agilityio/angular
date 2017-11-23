@@ -9,8 +9,7 @@ import * as _ from 'lodash';
 
 import { HttpWrapperService, AppConfigService } from '../../core';
 import { Course } from '../modal/course';
-import { Category } from '../../shared/dropdown/modal/category';
-
+import { Category } from '../../categories/modal/category';
 
 @Injectable()
 export class CourseService {
@@ -29,12 +28,11 @@ export class CourseService {
   }
 
   getCourseByName(name: string): Observable<Course[]> {
-    let url = this.appConfig.API.API_ROOT + `courses/?name=${name}`;
+    console.log('name', name);
+    let url = this.appConfig.API.API_ROOT + `courses/?name=${name}&_expand=teacher`;
     return Observable.create( obs => {
       this.httpWrapper.get(url, {}).subscribe(res => {
-        this.getCoursesByCategoryId(_.first(res).categoryId).subscribe(course => {
-          obs.next(course);
-        });
+        obs.next(res);
       });
     });
   }

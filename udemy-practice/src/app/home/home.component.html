@@ -3,7 +3,9 @@
 <streamer-sidebar></streamer-sidebar>
 <how-works></how-works>
 <div class="course__container">
-  <courses-list></courses-list>
+  <courses-list
+    [courses]="coursesData"
+  ></courses-list>
   <div class="course__discover">
       <courses-discover></courses-discover>
     </div>

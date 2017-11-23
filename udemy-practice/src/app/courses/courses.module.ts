@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { CoursesListComponent } from './courses-list/courses-list.component';
-import { CoursesDetailComponent } from './courses-detail/courses-detail.component';
-import { CoursesItemComponent } from './courses-item/courses-item.component';
-import { CoursesDiscoverComponent } from './courses-discover/courses-discover.component';
-import { CarouselModule } from './carousel/carousel.module';
+import { CoursesListComponent } from './component/courses-list/courses-list.component';
+import { CoursesDetailComponent } from './component/courses-detail/courses-detail.component';
+import { CoursesItemComponent } from './component/courses-item/courses-item.component';
+import { CoursesDiscoverComponent } from './component/courses-discover/courses-discover.component';
+import { CarouselModule } from '../carousel/carousel.module';
 import { SharedModule } from '../shared/shared.module';
 import { CourseService } from './service/course.service';
-import { CoursesIntroductionComponent } from './courses-detail/courses-introduction/courses-introduction.component';
-import { CoursesWhatLearnComponent } from './courses-detail/courses-what-learn/courses-what-learn.component';
+import { CoursesIntroductionComponent } from './component/courses-introduction/courses-introduction.component';
+import { CoursesWhatLearnComponent } from './component/courses-what-learn/courses-what-learn.component';
 
 export const COURSES_COMPONENT: any[] = [
   CoursesListComponent,

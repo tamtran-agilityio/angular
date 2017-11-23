@@ -1,0 +1,28 @@
+:host {
+  padding: 15px 0;
+  width: 270px;
+}
+
+.topic {
+  &__item {
+    &hover {
+      background-color: #f2f3f5;
+    }
+  }
+  &__title {
+    padding: 0 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #29303b;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 10px 22px;
+    width: 100%;
+    position: relative;
+
+    &:hover {
+      color: #007791;
+    }
+  }
+}

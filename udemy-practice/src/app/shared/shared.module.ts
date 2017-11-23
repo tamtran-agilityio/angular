@@ -4,15 +4,16 @@ import { HttpModule, } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { MainFooterComponent } from './main-footer/main-footer.component';
-import { NavComponent } from './nav/nav.component';
-import { ModalComponent } from './modal/modal.component';
-import { ModalService } from './modal/modal.service';
-import { ControlMessagesComponent } from './control-messages/control-messages.component';
+import { MainFooterComponent } from './component/main-footer/main-footer.component';
+import { NavComponent } from './component/nav/nav.component';
+import { ModalComponent } from './component/modal/modal.component';
+import { ModalService } from './service/modal.service';
+import { ControlMessagesComponent } from './component/control-messages/control-messages.component';
 import { ClickOutsideDirective } from './directive/click-out-side.directive';
-import { ErrorMessageComponent } from './error-message/error-message.component';
-import { DropdownModule } from './dropdown/dropdown.module';
-import { RatingModule } from './rating/rating.module';
+import { ErrorMessageComponent } from './component/error-message/error-message.component';
+import { DropdownModule } from './component/dropdown/dropdown.module';
+import { RatingModule } from './component/rating/rating.module';
+import { FormatLinkPipe } from './pipes/format-link.pipe';
 
 export const COMMON_MODULES: any[] = [
   FormsModule,
@@ -30,7 +31,8 @@ export const SHARED_COMPONENT: any[] = [
   ModalComponent,
   ControlMessagesComponent,
   ErrorMessageComponent,
-  ClickOutsideDirective
+  ClickOutsideDirective,
+  FormatLinkPipe
 ];
 
 export const CORE_PROVIDERS: any[] = [

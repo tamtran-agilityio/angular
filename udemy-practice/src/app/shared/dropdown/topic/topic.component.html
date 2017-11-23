@@ -1,7 +1,0 @@
-<ul *ngIf="category" class="topic">
-  <li *ngFor="let topic of topics" class="topic__item">
-      <a [routerLink]="[category.title | formatLink, topic.title | formatLink]" class="topic__title">
-        <span>{{topic.title}}</span>
-      </a>
-  </li>
-</ul>

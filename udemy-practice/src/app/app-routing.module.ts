@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { ROUTES as homeRouting } from './home/home-routing.module';
 import { ROUTES as courseRouting } from './courses/courses-routing.module';
+import { ROUTES as collectionRouting } from './collection/collection-routing.module';
 
 export const ROUTES: Routes = [
   {
@@ -19,6 +20,12 @@ export const ROUTES: Routes = [
     path: ':name',
     children: [
       ...courseRouting
+    ]
+  },
+  {
+    path: 'collection/:name',
+    children: [
+      ...collectionRouting
     ]
   },
   {
