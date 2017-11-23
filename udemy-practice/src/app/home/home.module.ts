@@ -3,13 +3,12 @@ import { HomeComponent } from './home.component';
 import { HomeRouting } from './home-routing.module';
 import { AuthModule } from '../auth/auth.module';
 import { SharedModule } from '../shared/shared.module';
-import { StreamerSidebarComponent } from './streamer-sidebar/streamer-sidebar.component';
-import { HowWorksComponent } from './how-works/how-works.component';
+import { StreamerSidebarComponent } from './component/streamer-sidebar/streamer-sidebar.component';
+import { HowWorksComponent } from './component/how-works/how-works.component';
 import { CoursesModule } from '../courses/courses.module';
-import { AchieveGoalsComponent } from './achieve-goals/achieve-goals.component';
-import { AchieveGoalsService } from './achieve-goals/service/achieve-goals.service';
-import { FeaturedTopicComponent } from './featured-topic/featured-topic.component';
-import { InstructorBusinessComponent } from './instructor-business/instructor-business.component';
+import { AchieveGoalsComponent } from './component/achieve-goals/achieve-goals.component';
+import { FeaturedTopicComponent } from './component/featured-topic/featured-topic.component';
+import { InstructorBusinessComponent } from './component/instructor-business/instructor-business.component';
 
 export const COMMON_MODULE: any[] = [
   AuthModule,
@@ -27,7 +26,6 @@ export const HOME_COMPONENT: any[] = [
 ];
 
 export const HOME_PROVIDERS: any[] = [
-  AchieveGoalsService
 ];
 
 @NgModule({

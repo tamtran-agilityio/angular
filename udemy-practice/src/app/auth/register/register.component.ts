@@ -2,7 +2,7 @@ import { Component, OnInit, OnChanges } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import * as _ from 'lodash';
-import { ModalService } from '../../shared';
+import { ModalService } from '../../shared/service/modal.service';
 import { UserService } from '../service/user.service';
 import { ValidationService } from '../../core';
 import { User } from '../model/use';

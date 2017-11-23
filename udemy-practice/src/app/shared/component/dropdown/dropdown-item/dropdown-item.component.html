@@ -1,0 +1,7 @@
+<ul *ngIf="dropdowns.topics" class="topic">
+  <li *ngFor="let item of dropdowns.topics" class="topic__item">
+      <a [routerLink]="['courses', dropdowns.title , item.title ]" class="topic__title">
+        <span>{{item.title}}</span>
+      </a>
+  </li>
+</ul>

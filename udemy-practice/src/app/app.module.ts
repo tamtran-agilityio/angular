@@ -10,6 +10,8 @@ import { AuthModule } from './auth/auth.module';
 import { HomeModule } from './home/home.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AboutComponent } from './about/about.component';
+import { CollectionModule } from './collection/collection.module';
+import { CategoriesModule } from './categories/categories.module';
 
 @NgModule({
   declarations: [
@@ -23,8 +25,10 @@ import { AboutComponent } from './about/about.component';
     AppRoutingModule,
     CoreModule,
     SharedModule,
+    CategoriesModule,
     AuthModule,
-    HomeModule
+    HomeModule,
+    CollectionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

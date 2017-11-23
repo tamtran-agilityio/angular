@@ -11,7 +11,7 @@ import {
 
 import * as _ from 'lodash';
 
-import { ModalService } from '../../shared';
+import { ModalService } from '../../shared/service/modal.service';
 import { UserService } from '../service/user.service';
 import { ValidationService, HelperService, AppConfigService } from '../../core';
 import { User } from '../model/use';

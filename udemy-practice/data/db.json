@@ -22,7 +22,7 @@
     {
       "id": 1,
       "categoryId": 1,
-      "type": "new",
+      "type": "best seller",
       "topicId": 2,
       "images": "/assets/img/course/complete_unity.jpg",
       "name": "complete-unity-developer-2-0-learn-c-code-make-games",
@@ -216,11 +216,20 @@
     }
   ],
   "collection": [
-    { "id": 1, "image": "/assets/img/expand.jpg", "desc": "Expand you programming knowledge" },
-    { "id": 2, "image": "/assets/img/own_boss.jpg", "desc": "Be your own boss" },
+    { "id": 1,
+      "image": "/assets/img/expand.jpg",
+      "desc": "Expand you programming knowledge"
+    },
+    {
+      "id": 2, "image": "/assets/img/own_boss.jpg", "desc": "Be your own boss"
+    },
     { "id": 3, "image": "/assets/img/land_tec.jpg", "desc": "Land and Exciting new tech Job" },
     { "id": 4, "image": "/assets/img/indulge.jpg", "desc": "Indulge your couriosity" },
-    { "id": 5, "image": "/assets/img/invest.jpg", "desc": "Invest in your passion" },
+    {
+      "id": 5, "image": "/assets/img/invest.jpg",
+      "title": "Invest in your passion",
+      "desc": "Give hobbies the attention they deserve."
+    },
     { "id": 6, "image": "/assets/img/potential.jpg", "desc": "Unlock you potential" },
     { "id": 7, "image": "/assets/img/analytics.jpg", "desc": "Make analytics work for you" }
   ],

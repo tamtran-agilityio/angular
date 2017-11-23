@@ -1,9 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+
 import { LoggerService } from '../core';
 import { UserService } from '../auth/service/user.service';
-import { AchieveGoalsService } from './achieve-goals/service/achieve-goals.service';
-import { Collection } from './achieve-goals/modal/collection';
-import { Topic } from '../shared/dropdown/modal/topic';
+import { Topic } from '../categories/modal/topic';
+import { CategoryService } from '../categories/service/category.service';
+import { Category } from '../categories/modal/category';
+import { Course } from '../courses/modal/course';
+import { CourseService } from '../courses/service/course.service';
+import { Collection } from '../collection/modal/collection';
+import { CollectionService } from '../collection/service/collection.service';
 
 @Component({
   selector: 'home-page',
@@ -14,13 +19,23 @@ export class HomeComponent implements OnInit {
 
   collectionsData: Collection[];
   topicData: Topic[];
+  categories: Category[];
+  coursesData: Course[];
   constructor(private logger: LoggerService,
               private userService: UserService,
-              private achieveGoalsService: AchieveGoalsService) { }
+              private collectionService: CollectionService,
+              private categoryService: CategoryService,
+              private courseService: CourseService) { }
 
   ngOnInit() {
-    this.achieveGoalsService.getAchieve().subscribe((res: Collection[]) => {
+    this.collectionService.getCollection().subscribe((res: Collection[]) => {
       this.collectionsData = res;
+    });
+    this.categoryService.getCategories().subscribe((res: any) => {
+      this.categories = res;
+      this.courseService.getCoursesByCategory(res).subscribe( (course) => {
+        this.coursesData = course;
+      });
     });
   }
 }
