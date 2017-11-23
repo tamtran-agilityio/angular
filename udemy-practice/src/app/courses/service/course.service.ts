@@ -63,4 +63,16 @@ export class CourseService {
     return this.httpWrapper.get(url, {})
       .map(res => res);
   }
+
+  getCurriculum(id: number) {
+    let url = this.appConfig.API.API_ROOT + `courses/${id}?_embed=curriculum`;
+    return this.httpWrapper.get(url, {})
+      .map(res => res);
+  }
+
+  getPartByCurriculumId(id: number) {
+    let url = this.appConfig.API.API_ROOT + `curriculum/${id}?_embed=part`;
+    return this.httpWrapper.get(url, {})
+      .map(res => res);
+  }
 }
