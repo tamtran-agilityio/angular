@@ -15,13 +15,13 @@ export class CoursesDetailComponent implements OnInit {
   name: String;
   course: Course;
   starsCount: number;
+  posts: any[] = [];
   constructor(private route: ActivatedRoute,
               private courseService: CourseService) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.courseService.getCourseByName(params.name).subscribe((res) => {
-        console.log('res', res);
         this.course = _.first(res);
       });
     });

@@ -45,5 +45,16 @@
         <div class="streamer__title">Compare to Other Courses</div>
       </div>
     </div>
+    <div class="row">
+        <div class="col-xs-8 left-col streamer__wrapper">
+          <accordion>
+              <div *ngFor="let post of posts">
+              <accordion-item [title]="post.title">
+                {{ post.body }}
+              </accordion-item>
+              </div>
+            </accordion>
+        </div>
+      </div>
   </div>
 </div>

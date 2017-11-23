@@ -14,12 +14,14 @@ import { ErrorMessageComponent } from './component/error-message/error-message.c
 import { DropdownModule } from './component/dropdown/dropdown.module';
 import { RatingModule } from './component/rating/rating.module';
 import { FormatLinkPipe } from './pipes/format-link.pipe';
+import { AccordionComponent } from './component/accordion/accordion.component';
+import { AccordionItemComponent } from './component/accordion/accordion-item/accordion-item.component';
 
 export const COMMON_MODULES: any[] = [
   FormsModule,
   ReactiveFormsModule,
-  HttpModule,
   CommonModule,
+  HttpModule,
   RouterModule,
   DropdownModule,
   RatingModule
@@ -31,6 +33,8 @@ export const SHARED_COMPONENT: any[] = [
   ModalComponent,
   ControlMessagesComponent,
   ErrorMessageComponent,
+  AccordionComponent,
+  AccordionItemComponent,
   ClickOutsideDirective,
   FormatLinkPipe
 ];
@@ -44,7 +48,7 @@ export const CORE_PROVIDERS: any[] = [
     ...COMMON_MODULES
   ],
   declarations: [
-    ...SHARED_COMPONENT,
+    ...SHARED_COMPONENT
   ],
   providers: [
     ...CORE_PROVIDERS

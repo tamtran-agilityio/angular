@@ -6,15 +6,7 @@ import { ROUTES as courseRouting } from '../courses/courses-routing.module';
 export const ROUTES: Routes = [
   {
     path: '',
-    component: HomeComponent,
-    children: [
-      {
-        path: ':name',
-        children: [
-          ...courseRouting
-        ]
-      },
-    ]
+    component: HomeComponent
   }
 ];
 
