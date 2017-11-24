@@ -25,4 +25,13 @@ export class CollectionService {
       });
     });
   }
+
+  getCollectionByName(name: string): Observable<Collection[]> {
+    let url = this.appConfig.API.API_ROOT + `collection?name=${name}`;
+      return Observable.create( obs => {
+        this.httpWapper.get(url, {}).subscribe((res: Collection[]) => {
+          obs.next(res);
+        });
+      });
+  }
 }

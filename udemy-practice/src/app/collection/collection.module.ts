@@ -2,9 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CollectionComponent } from './component/collection.component';
 import { CollectionService } from './service/collection.service';
+import { CollectionChannelComponent } from './component/collection-channel/collection-channel.component';
+import { SetbackgroundDirective } from './directive/setbackground.directive';
 
 export const COLLECTION_COMPONENT: any[] = [
-  CollectionComponent
+  CollectionComponent,
+  CollectionChannelComponent,
+  SetbackgroundDirective
 ];
 
 export const COLLECTION_PROVIDERS: any[] = [
