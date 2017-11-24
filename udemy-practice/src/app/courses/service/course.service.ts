@@ -73,29 +73,41 @@ export class CourseService {
     });
   }
 
-  getCurriculum(id: number): Observable<any> {
-    let url = this.appConfig.API.API_ROOT + `courses/${id}?_embed=curriculum`;
+  getChapter(id: number): Observable<any> {
+    let url = this.appConfig.API.API_ROOT + `courses/${id}?_embed=chapters`;
     return Observable.create( obs => {
       return this.httpWrapper.get(url, {})
       .map(res => res)
       .subscribe((res: any) => {
+        console.log('rez', res);
         obs.next(res);
       });
     });
   }
 
-  getPartByCurriculumId(curriculum: any): Observable<any> {
+  getPartByChapterId(id: number) {
+    let url = this.appConfig.API.API_ROOT + `chapters/${id}?_embed=parts`;
+    return this.httpWrapper.get(url, {})
+                .map(res => res);
+  }
+
+  getPartByChapters(chapter: any): Observable<any> {
     return Observable.create( obs => {
-    if (!_.isEmpty(curriculum)) {
-      _.each(curriculum, (item) => {
-        let url = this.appConfig.API.API_ROOT + `curriculum/${item.id}?_embed=part`;
-          return this.httpWrapper.get(url, {})
-          .map(res => res)
+      if (!_.isEmpty(chapter)) {
+        this.getPartByChapterId(1)
+          .switchMap((response: any) => {
+            let subServices = [];
+            _.each(chapter, (item) => {
+              subServices.push(this.getPartByChapterId(item.id));
+            });
+            return Observable.zip(...subServices, (...res) => {
+              return res;
+            });
+          })
           .subscribe(res => {
             obs.next(res);
           });
-        });
       }
-  });
+    });
   }
 }

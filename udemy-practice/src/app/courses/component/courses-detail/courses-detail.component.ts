@@ -17,7 +17,7 @@ export class CoursesDetailComponent implements OnInit {
   course: Course;
   coursesComparion: Course[];
   starsCount: number;
-  posts: any[] = [];
+  chapters: any[];
   constructor(private route: ActivatedRoute,
               private courseService: CourseService) { }
 
@@ -28,13 +28,12 @@ export class CoursesDetailComponent implements OnInit {
         this.courseService.getCoursesComparison(_.first(res).topicId).subscribe((courses: Course[]) => {
           this.coursesComparion = courses;
         });
-        this.courseService.getCurriculum(_.first(res).id).subscribe((coursesCurriculum: any) => {
-          this.courseService.getPartByCurriculumId(coursesCurriculum.curriculum).subscribe(part => {
-            console.log('part', part);
+        this.courseService.getChapter(_.first(res).id).subscribe((coursesCurriculum: any) => {
+          this.courseService.getPartByChapters(coursesCurriculum.chapters).subscribe(chapter => {
+            this.chapters = chapter;
           });
         });
       });
     });
   }
-
 }
