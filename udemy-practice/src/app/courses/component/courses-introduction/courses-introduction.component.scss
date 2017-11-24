@@ -1,10 +1,36 @@
 .streamer {
+  width: 100%;
+  background: linear-gradient(#29303b,#29303b,#29303b);
+  color: #fff;
+  padding-bottom: 60px;
   &__rating {
     margin: 0 10px;
     display: inline-block;
 
     &--number {
       display: inline-block;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+
+    &--link {
+      color: #cacbcc;
+      padding-right: 20px;
+      text-decoration: none;
+      text-transform: capitalize;
+      font-weight: 400;
+    }
+
+    .fa-heart-o {
+      text-stroke: 1px #ec5252;
+      -webkit-text-stroke: 1px #ec5252;
+      color: transparent;
+      font-size: 20px;
+      font-weight: 400;
     }
   }
 
