@@ -11,6 +11,7 @@ import { SharedModule } from '../shared/shared.module';
 import { CourseService } from './service/course.service';
 import { CoursesIntroductionComponent } from './component/courses-introduction/courses-introduction.component';
 import { CoursesWhatLearnComponent } from './component/courses-what-learn/courses-what-learn.component';
+import { CousesCompareComponent } from './component/couses-compare/couses-compare.component';
 
 export const COURSES_COMPONENT: any[] = [
   CoursesListComponent,
@@ -18,7 +19,8 @@ export const COURSES_COMPONENT: any[] = [
   CoursesItemComponent,
   CoursesDiscoverComponent,
   CoursesIntroductionComponent,
-  CoursesWhatLearnComponent
+  CoursesWhatLearnComponent,
+  CousesCompareComponent
 ];
 
 export const COURSES_PROVIDERS: any[] = [

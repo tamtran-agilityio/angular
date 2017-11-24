@@ -5,6 +5,7 @@ import * as _ from 'lodash';
 
 import { CourseService } from '../../service/course.service';
 import { Course } from '../../modal/course';
+import { concat } from 'rxjs/operator/concat';
 
 @Component({
   selector: 'courses-detail',
@@ -14,6 +15,7 @@ import { Course } from '../../modal/course';
 export class CoursesDetailComponent implements OnInit {
   name: String;
   course: Course;
+  coursesComparion: Course[];
   starsCount: number;
   posts: any[] = [];
   constructor(private route: ActivatedRoute,
@@ -23,6 +25,14 @@ export class CoursesDetailComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.courseService.getCourseByName(params.name).subscribe((res) => {
         this.course = _.first(res);
+        this.courseService.getCoursesComparison(_.first(res).topicId).subscribe((courses: Course[]) => {
+          this.coursesComparion = courses;
+        });
+        this.courseService.getCurriculum(_.first(res).id).subscribe((coursesCurriculum: any) => {
+          this.courseService.getPartByCurriculumId(coursesCurriculum.curriculum).subscribe(part => {
+            console.log('part', part);
+          });
+        });
       });
     });
   }
