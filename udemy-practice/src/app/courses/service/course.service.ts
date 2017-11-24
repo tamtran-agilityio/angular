@@ -64,15 +64,38 @@ export class CourseService {
       .map(res => res);
   }
 
-  getCurriculum(id: number) {
-    let url = this.appConfig.API.API_ROOT + `courses/${id}?_embed=curriculum`;
-    return this.httpWrapper.get(url, {})
-      .map(res => res);
+  getCoursesComparison(topicId: number): Observable<Course[]> {
+    let url = this.appConfig.API.API_ROOT + `topics/${topicId}/courses?_sort=votes&_order=asc`;
+    return Observable.create( obs => {
+      return this.httpWrapper.get(url , {} ).subscribe( (res: Course[]) => {
+        obs.next(res);
+      });
+    });
   }
 
-  getPartByCurriculumId(id: number) {
-    let url = this.appConfig.API.API_ROOT + `curriculum/${id}?_embed=part`;
-    return this.httpWrapper.get(url, {})
-      .map(res => res);
+  getCurriculum(id: number): Observable<any> {
+    let url = this.appConfig.API.API_ROOT + `courses/${id}?_embed=curriculum`;
+    return Observable.create( obs => {
+      return this.httpWrapper.get(url, {})
+      .map(res => res)
+      .subscribe((res: any) => {
+        obs.next(res);
+      });
+    });
+  }
+
+  getPartByCurriculumId(curriculum: any): Observable<any> {
+    return Observable.create( obs => {
+    if (!_.isEmpty(curriculum)) {
+      _.each(curriculum, (item) => {
+        let url = this.appConfig.API.API_ROOT + `curriculum/${item.id}?_embed=part`;
+          return this.httpWrapper.get(url, {})
+          .map(res => res)
+          .subscribe(res => {
+            obs.next(res);
+          });
+        });
+      }
+  });
   }
 }

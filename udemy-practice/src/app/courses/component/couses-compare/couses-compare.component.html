@@ -1,0 +1,40 @@
+<ul *ngIf="coursesComparion"
+  class="comparion">
+  <li *ngFor="let course of coursesComparion"
+    class="comparion__card">
+    <a routerLink="/{{course.name}}">
+      <div class="comparion__item">
+        <div class="comparion__wish">
+          <i class="fa fa-heart-o" aria-hidden="true"></i>
+        </div>
+        <div class="comparion__image">
+          <img src="{{course.images}}" alt="{{course.name}}">
+          <div class="comparion__subtitle"> <strong>1</strong> hr</div>
+        </div>
+        <div class="comparion__info">
+          <div class="comparion__title">
+            <div class="comparion__title--details"> {{course.title}} </div>
+            <div class="comparion__title--updated"> {{course.date}} </div>
+          </div>
+          <div class="comparion__discuss">
+            <div class="comparion__rating">
+              <rating-star [(ngModel)]="course.rating"
+                [max]= 1
+                [titles]="true"
+                [readonly]="true">
+              </rating-star>
+              <span> {{course.rating}} </span>
+            </div>
+            <div class="comparion__studen">
+              <span> 4123 </span>
+            </div>
+            <div class="comparion__cost">
+              <span class="comparion__cost--price"> {{course.price}} </span>
+              <span class="comparion__cost--discount">{{course.discountPrice}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>
