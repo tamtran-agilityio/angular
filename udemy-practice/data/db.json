@@ -1,22 +1,73 @@
 {
   "users": [
-    { "id": 1, "fullName": "admin", "email": "trantamtk08b@gmail.com", "password": "tamtamxuan@123" }
+    {
+      "id": 1,
+      "fullName": "admin",
+      "email": "trantamtk08b@gmail.com",
+      "password": "tamtamxuan@123"
+    }
   ],
   "categories": [
-    { "id": 1, "title": "Development"},
-    { "id": 2, "title": "Business"}
+    {
+      "id": 1,
+      "title": "Development"
+    },
+    {
+      "id": 2,
+      "title": "Business"
+    }
   ],
   "topics": [
-    { "categoryId": 1, "id": 1, "title": "All development"},
-    { "categoryId": 1, "id": 2, "title": "Mobile apps"},
-    { "categoryId": 1, "id": 3, "title": "Programming languages"},
-    { "categoryId": 1, "id": 4, "title": "Game development"},
-    { "categoryId": 1, "id": 5, "title": "Web development"},
-    { "categoryId": 2, "id": 6, "title": "All business"},
-    { "categoryId": 2, "id": 7, "title": "Finance"},
-    { "categoryId": 2, "id": 8, "title": "Entrepreneurship"},
-    { "categoryId": 2, "id": 9, "title": "Communications"},
-    { "categoryId": 2, "id": 10, "title": "Management"}
+    {
+      "categoryId": 1,
+      "id": 1,
+      "title": "All development"
+    },
+    {
+      "categoryId": 1,
+      "id": 2,
+      "title": "Mobile apps"
+    },
+    {
+      "categoryId": 1,
+      "id": 3,
+      "title": "Programming languages"
+    },
+    {
+      "categoryId": 1,
+      "id": 4,
+      "title": "Game development"
+    },
+    {
+      "categoryId": 1,
+      "id": 5,
+      "title": "Web development"
+    },
+    {
+      "categoryId": 2,
+      "id": 6,
+      "title": "All business"
+    },
+    {
+      "categoryId": 2,
+      "id": 7,
+      "title": "Finance"
+    },
+    {
+      "categoryId": 2,
+      "id": 8,
+      "title": "Entrepreneurship"
+    },
+    {
+      "categoryId": 2,
+      "id": 9,
+      "title": "Communications"
+    },
+    {
+      "categoryId": 2,
+      "id": 10,
+      "title": "Management"
+    }
   ],
   "courses": [
     {
@@ -130,1000 +181,1216 @@
     }
   ],
   "chapters": [
-    { "courseId": 1, "id": 1, "name": " First steps - getting setup"},
-    { "courseId": 1, "id": 2, "name": "Terminal hacker - basic C#"},
+    {
+      "courseId": 1,
+      "id": 1,
+      "name": " First steps - getting setup"
+    },
+    {
+      "courseId": 1,
+      "id": 2,
+      "name": "Terminal hacker - basic C#"
+    },
     {
       "courseId": 1,
       "id": 3,
       "name": "Spaced Invaders"
-    }, {
+    },
+    {
       "courseId": 1,
       "id": 4,
       "name": "Halloween Tree, The"
-    }, {
+    },
+    {
       "courseId": 1,
       "id": 5,
       "name": "How Tasty Was My Little Frenchman (Como Era Gostoso o Meu Francês)"
-    }, {
+    },
+    {
       "courseId": 1,
       "id": 6,
       "name": "Westworld"
-    }, {
+    },
+    {
       "courseId": 1,
       "id": 7,
       "name": "Student Prince in Old Heidelberg, The"
-    }, {
+    },
+    {
       "courseId": 8,
       "id": 8,
       "name": "Fun in Acapulco"
-    }, {
+    },
+    {
       "courseId": 9,
       "id": 9,
       "name": "Chamber, The"
-    }, {
+    },
+    {
       "courseId": 10,
       "id": 10,
       "name": "Pink Panther, The"
-    }, {
+    },
+    {
       "courseId": 11,
       "id": 11,
       "name": "My Brilliant Career"
-    }, {
+    },
+    {
       "courseId": 12,
       "id": 12,
       "name": "Drinking Buddies"
-    }, {
+    },
+    {
       "courseId": 13,
       "id": 13,
       "name": "Black Pirate, The"
-    }, {
+    },
+    {
       "courseId": 14,
       "id": 14,
       "name": "Marie and Bruce"
-    }, {
+    },
+    {
       "courseId": 15,
       "id": 15,
       "name": "Just Pals"
-    }, {
+    },
+    {
       "courseId": 16,
       "id": 16,
       "name": "I Love You, I Love You (Je t'aime je t'aime)"
-    }, {
+    },
+    {
       "courseId": 17,
       "id": 17,
       "name": "Pippi on the Run (På rymmen med Pippi Långstrump)"
-    }, {
+    },
+    {
       "courseId": 18,
       "id": 18,
       "name": "Lawless, The"
-    }, {
+    },
+    {
       "courseId": 19,
       "id": 19,
       "name": "Chaos"
-    }, {
+    },
+    {
       "courseId": 20,
       "id": 20,
       "name": "Hell's Highway"
-    }, {
+    },
+    {
       "courseId": 21,
       "id": 21,
       "name": "Attack of the Puppet People"
-    }, {
+    },
+    {
       "courseId": 22,
       "id": 22,
       "name": "Family Plot"
-    }, {
+    },
+    {
       "courseId": 23,
       "id": 23,
       "name": "Down Periscope"
-    }, {
+    },
+    {
       "courseId": 24,
       "id": 24,
       "name": "Wings of Honneamise (Ôritsu uchûgun Oneamisu no tsubasa)"
-    }, {
+    },
+    {
       "courseId": 25,
       "id": 25,
       "name": "Interstate 60"
-    }, {
+    },
+    {
       "courseId": 26,
       "id": 26,
       "name": "Moscow Clad in Snow (Moscou sous la neige) "
-    }, {
+    },
+    {
       "courseId": 27,
       "id": 27,
       "name": "Beneath the Planet of the Apes"
-    }, {
+    },
+    {
       "courseId": 28,
       "id": 28,
       "name": "Project Almanac"
-    }, {
+    },
+    {
       "courseId": 29,
       "id": 29,
       "name": "Bitter Tea of General Yen, The"
-    }, {
+    },
+    {
       "courseId": 30,
       "id": 30,
       "name": "Fatal Hour, The"
-    }, {
+    },
+    {
       "courseId": 31,
       "id": 31,
       "name": "ZMD: Zombies of Mass Destruction"
-    }, {
+    },
+    {
       "courseId": 32,
       "id": 32,
       "name": "Yobi, The Five-Tailed Fox"
-    }, {
+    },
+    {
       "courseId": 33,
       "id": 33,
       "name": "Red Violin, The (Violon rouge, Le)"
-    }, {
+    },
+    {
       "courseId": 34,
       "id": 34,
       "name": "Only the Lonely"
-    }, {
+    },
+    {
       "courseId": 35,
       "id": 35,
       "name": "Que Viva Mexico (¡Que Viva Mexico! - Da zdravstvuyet Meksika!)"
-    }, {
+    },
+    {
       "courseId": 36,
       "id": 36,
       "name": "Mondo Hollywood"
-    }, {
+    },
+    {
       "courseId": 37,
       "id": 37,
       "name": "Boss of It All, The (Direktøren for det hele)"
-    }, {
+    },
+    {
       "courseId": 38,
       "id": 38,
       "name": "Munyurangabo"
-    }, {
+    },
+    {
       "courseId": 39,
       "id": 39,
       "name": "Variety Lights"
-    }, {
+    },
+    {
       "courseId": 40,
       "id": 40,
       "name": "Flaming Star"
-    }, {
+    },
+    {
       "courseId": 41,
       "id": 41,
       "name": "Child of Rage"
-    }, {
+    },
+    {
       "courseId": 42,
       "id": 42,
       "name": "Crimson Petal and the White, The"
-    }, {
+    },
+    {
       "courseId": 43,
       "id": 43,
       "name": "Clouds of May (Mayis sikintisi)"
-    }, {
+    },
+    {
       "courseId": 44,
       "id": 44,
       "name": "Hothead (Coup de tête)"
-    }, {
+    },
+    {
       "courseId": 45,
       "id": 45,
       "name": "Flying Down to Rio"
-    }, {
+    },
+    {
       "courseId": 46,
       "id": 46,
       "name": "White Sands"
-    }, {
+    },
+    {
       "courseId": 47,
       "id": 47,
       "name": "Adventures of Pinocchio, The"
-    }, {
+    },
+    {
       "courseId": 48,
       "id": 48,
       "name": "King Creole"
-    }, {
+    },
+    {
       "courseId": 49,
       "id": 49,
       "name": "Foster Brothers, The (Süt kardesler)"
-    }, {
+    },
+    {
       "courseId": 50,
       "id": 50,
       "name": "World War Z"
-    }, {
+    },
+    {
       "courseId": 51,
       "id": 51,
       "name": "Tavarataivas"
-    }, {
+    },
+    {
       "courseId": 52,
       "id": 52,
       "name": "Wife! Be Like a Rose! (Tsuma yo bara no yo ni)"
-    }, {
+    },
+    {
       "courseId": 53,
       "id": 53,
       "name": "Babe, The"
-    }, {
+    },
+    {
       "courseId": 54,
       "id": 54,
       "name": "Wyrmwood"
-    }, {
+    },
+    {
       "courseId": 55,
       "id": 55,
       "name": "Fire in the Sky"
-    }, {
+    },
+    {
       "courseId": 56,
       "id": 56,
       "name": "Zardoz"
-    }, {
+    },
+    {
       "courseId": 57,
       "id": 57,
       "name": "Little Fugitive"
-    }, {
+    },
+    {
       "courseId": 58,
       "id": 58,
       "name": "Che: Part One"
-    }, {
+    },
+    {
       "courseId": 59,
       "id": 59,
       "name": "Always"
-    }, {
+    },
+    {
       "courseId": 60,
       "id": 60,
       "name": "Heavenly Body, The"
-    }, {
+    },
+    {
       "courseId": 61,
       "id": 61,
       "name": "End of the Century: The Story of the Ramones"
-    }, {
+    },
+    {
       "courseId": 62,
       "id": 62,
       "name": "Conversations with Other Women"
-    }, {
+    },
+    {
       "courseId": 63,
       "id": 63,
       "name": "Bungee Jumping of Their Own (Beonjijeompeureul hada)"
-    }, {
+    },
+    {
       "courseId": 64,
       "id": 64,
       "name": "Two Times Lotte"
-    }, {
+    },
+    {
       "courseId": 65,
       "id": 65,
       "name": "Straight Shooting"
-    }, {
+    },
+    {
       "courseId": 66,
       "id": 66,
       "name": "Die Hard 2"
-    }, {
+    },
+    {
       "courseId": 67,
       "id": 67,
       "name": "Streets of Blood"
-    }, {
+    },
+    {
       "courseId": 68,
       "id": 68,
       "name": "Unknown Known, The"
-    }, {
+    },
+    {
       "courseId": 69,
       "id": 69,
       "name": "Bomber"
-    }, {
+    },
+    {
       "courseId": 70,
       "id": 70,
       "name": "Devil Came on Horseback, The"
-    }, {
+    },
+    {
       "courseId": 71,
       "id": 71,
       "name": "Young Girls of Rochefort, The (Demoiselles de Rochefort, Les)"
-    }, {
+    },
+    {
       "courseId": 72,
       "id": 72,
       "name": "The Old Maid"
-    }, {
+    },
+    {
       "courseId": 73,
       "id": 73,
       "name": "Back to School with Franklin"
-    }, {
+    },
+    {
       "courseId": 74,
       "id": 74,
       "name": "Judith of Bethulia"
-    }, {
+    },
+    {
       "courseId": 75,
       "id": 75,
       "name": "Relentless"
-    }, {
+    },
+    {
       "courseId": 76,
       "id": 76,
       "name": "Rage at Dawn"
-    }, {
+    },
+    {
       "courseId": 77,
       "id": 77,
       "name": "Heiter bis wolkig"
-    }, {
+    },
+    {
       "courseId": 78,
       "id": 78,
       "name": "Paris Was a Woman"
-    }, {
+    },
+    {
       "courseId": 79,
       "id": 79,
       "name": "Cradle 2 the Grave"
-    }, {
+    },
+    {
       "courseId": 80,
       "id": 80,
       "name": "First Love, Last Rites"
-    }, {
+    },
+    {
       "courseId": 81,
       "id": 81,
       "name": "Stuart Little 3: Call of the Wild"
-    }, {
+    },
+    {
       "courseId": 82,
       "id": 82,
       "name": "Germany Pale Mother"
-    }, {
+    },
+    {
       "courseId": 83,
       "id": 83,
       "name": "Tatort: Im Schmerz geboren"
-    }, {
+    },
+    {
       "courseId": 84,
       "id": 84,
       "name": "Passport to Pimlico"
-    }, {
+    },
+    {
       "courseId": 85,
       "id": 85,
       "name": "Rear Window"
-    }, {
+    },
+    {
       "courseId": 86,
       "id": 86,
       "name": "Buffy the Vampire Slayer"
-    }, {
+    },
+    {
       "courseId": 87,
       "id": 87,
       "name": "My Best Friend's Wife"
-    }, {
+    },
+    {
       "courseId": 88,
       "id": 88,
       "name": "Pat and Mike"
-    }, {
+    },
+    {
       "courseId": 89,
       "id": 89,
       "name": "Painted Lady"
-    }, {
+    },
+    {
       "courseId": 90,
       "id": 90,
       "name": "Falling Up"
-    }, {
+    },
+    {
       "courseId": 91,
       "id": 91,
       "name": "Dangerous Profession, A"
-    }, {
+    },
+    {
       "courseId": 92,
       "id": 92,
       "name": "Counsellor at Law"
-    }, {
+    },
+    {
       "courseId": 93,
       "id": 93,
       "name": "Scoop"
-    }, {
+    },
+    {
       "courseId": 94,
       "id": 94,
       "name": "Jesus Henry Christ"
-    }, {
+    },
+    {
       "courseId": 95,
       "id": 95,
       "name": "Just the Ticket"
-    }, {
+    },
+    {
       "courseId": 96,
       "id": 96,
       "name": "Charlie Chan and the Curse of the Dragon Queen"
-    }, {
+    },
+    {
       "courseId": 97,
       "id": 97,
       "name": "Blow Job"
-    }, {
+    },
+    {
       "courseId": 98,
       "id": 98,
       "name": "Am Ende eiens viel zu kurzen Tages (Death of a superhero)"
-    }, {
+    },
+    {
       "courseId": 99,
       "id": 99,
       "name": "Fifty Pills"
-    }, {
+    },
+    {
       "courseId": 100,
       "id": 100,
       "name": "Prime of Miss Jean Brodie, The"
     }
   ],
   "parts": [
-    { "chapterId": 1, "id": 1, "title": "Why You Should Buy This Course", "desc": "" , "time": "00:01:32" },
-    { "chapterId": 1, "id": 2, "title": "Get Unity & Visual Studio Downloading", "desc": "", "time": "00:08:05" },
+    {
+      "chapterId": 1,
+      "id": 1,
+      "title": "Why You Should Buy This Course",
+      "desc": "",
+      "time": "00:01:32"
+    },
+    {
+      "chapterId": 1,
+      "id": 2,
+      "title": "Get Unity & Visual Studio Downloading",
+      "desc": "",
+      "time": "00:08:05"
+    },
     {
       "chapterId": 1,
       "id": 1,
       "title": "Tapia",
       "decs": "Monteggia's fracture of left ulna, subsequent encounter for open fracture type IIIA, IIIB, or IIIC with routine healing",
       "time": "00:10:23"
-    }, {
+    },
+    {
       "chapterId": 1,
       "id": 2,
       "title": "Slingshot, The (Kådisbellan)",
       "decs": "Hodgkin lymphoma, unspecified",
       "time": "00:12:41"
-    }, {
+    },
+    {
       "chapterId": 1,
       "id": 3,
       "title": "War on Democracy, The",
       "decs": "Other specified multiple gestation, unspecified number of placenta and unspecified number of amniotic sacs, third trimester",
       "time": "00:6:56"
-    }, {
+    },
+    {
       "chapterId": 1,
       "id": 4,
       "title": "Planet of the Apes",
       "decs": "Other mechanical complication of unspecified cardiac device, sequela",
       "time": "00:1:50"
-    }, {
+    },
+    {
       "chapterId": 1,
       "id": 5,
       "title": "Wings",
       "decs": "Poisoning by other antihypertensive drugs, undetermined, sequela",
       "time": "00:1:11"
-    }, {
+    },
+    {
       "chapterId": 2,
       "id": 6,
       "title": "Casting By",
       "decs": "Passenger in three-wheeled motor vehicle injured in collision with other motor vehicles in traffic accident",
       "time": "00:4:57"
-    }, {
+    },
+    {
       "chapterId": 2,
       "id": 7,
       "title": "Grown Ups 2",
       "decs": "Polyp of right middle ear",
       "time": "00:2:00"
-    }, {
+    },
+    {
       "chapterId": 2,
       "id": 8,
       "title": "Tintin and I",
       "decs": "NIHSS score 14",
       "time": "00:2:18"
-    }, {
+    },
+    {
       "chapterId": 2,
       "id": 9,
       "title": "Seafarers, The",
       "decs": "Displaced trimalleolar fracture of left lower leg, subsequent encounter for open fracture type IIIA, IIIB, or IIIC with routine healing",
       "time": "00:11:20"
-    }, {
+    },
+    {
       "chapterId": 2,
       "id": 10,
       "title": "Straight Story, The",
       "decs": "Other fracture of shaft of right femur, sequela",
       "time": "00:7:26"
-    }, {
+    },
+    {
       "chapterId": 3,
       "id": 11,
       "title": "Soul Man",
       "decs": "Displaced transverse fracture of shaft of left radius, subsequent encounter for closed fracture with routine healing",
       "time": "00:10:55"
-    }, {
+    },
+    {
       "chapterId": 3,
       "id": 12,
       "title": "Interiors",
       "decs": "Unspecified open wound of right ring finger with damage to nail, initial encounter",
       "time": "00:3:57"
-    }, {
+    },
+    {
       "chapterId": 4,
       "id": 13,
       "title": "Hangover, The",
       "decs": "Adverse effect of insulin and oral hypoglycemic [antidiabetic] drugs, initial encounter",
       "time": "00:2:08"
-    }, {
+    },
+    {
       "chapterId": 4,
       "id": 14,
       "title": "Revenge of Frankenstein, The",
       "decs": "Salter-Harris Type I physeal fracture of lower end of unspecified tibia, subsequent encounter for fracture with malunion",
       "time": "00:10:07"
-    }, {
+    },
+    {
       "chapterId": 5,
       "id": 15,
       "title": "Touch of Pink",
       "decs": "Displaced transverse fracture of shaft of unspecified ulna, subsequent encounter for open fracture type IIIA, IIIB, or IIIC with nonunion",
       "time": "00:11:31"
-    }, {
+    },
+    {
       "chapterId": 6,
       "id": 16,
       "title": "Solstice",
       "decs": "Displaced oblique fracture of shaft of right radius, subsequent encounter for closed fracture with delayed healing",
       "time": "00:1:46"
-    }, {
+    },
+    {
       "chapterId": 7,
       "id": 17,
       "title": "My Mom's New Boyfriend",
       "decs": "Newborn light for gestational age, 1000-1249 grams",
       "time": "00:7:12"
-    }, {
+    },
+    {
       "chapterId": 18,
       "id": 18,
       "title": "Comedy of Terrors, The",
       "decs": "Displaced fracture of middle third of navicular [scaphoid] bone of left wrist, subsequent encounter for fracture with delayed healing",
       "time": "00:4:19"
-    }, {
+    },
+    {
       "chapterId": 19,
       "id": 19,
       "title": "Permanent Midnight",
       "decs": "Kidney dialysis as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure",
       "time": "00:4:55"
-    }, {
+    },
+    {
       "chapterId": 20,
       "id": 20,
       "title": "Magic Trip",
       "decs": "Other forms of scoliosis",
       "time": "00:2:18"
-    }, {
+    },
+    {
       "chapterId": 21,
       "id": 21,
       "title": "Scary Movie 4",
       "decs": "Nondisplaced fracture of lateral condyle of left tibia, initial encounter for closed fracture",
       "time": "00:9:40"
-    }, {
+    },
+    {
       "chapterId": 22,
       "id": 22,
       "title": "Boccaccio '70",
       "decs": "Other shellfish poisoning, intentional self-harm, subsequent encounter",
       "time": "00:6:03"
-    }, {
+    },
+    {
       "chapterId": 23,
       "id": 23,
       "title": "Strawberry Wine",
       "decs": "Arthropathy following intestinal bypass, shoulder",
       "time": "00:4:34"
-    }, {
+    },
+    {
       "chapterId": 24,
       "id": 24,
       "title": "Off Beat",
       "decs": "Other lack of coordination",
       "time": "00:5:55"
-    }, {
+    },
+    {
       "chapterId": 25,
       "id": 25,
       "title": "Rabbit Without Ears 2 (Zweiohrküken)",
       "decs": "Other proteinuria",
       "time": "00:12:33"
-    }, {
+    },
+    {
       "chapterId": 26,
       "id": 26,
       "title": "Lust, Caution (Se, jie)",
       "decs": "Adverse effect of therapeutic gases, sequela",
       "time": "00:10:37"
-    }, {
+    },
+    {
       "chapterId": 27,
       "id": 27,
       "title": "My Love Has Been Burning (Waga koi wa moenu)",
       "decs": "Anterior subluxation of left ulnohumeral joint, sequela",
       "time": "00:2:02"
-    }, {
+    },
+    {
       "chapterId": 28,
       "id": 28,
       "title": "Heroic Cops (Jing wang shuang xiong)",
       "decs": "Unspecified physeal fracture of upper end of humerus, right arm, subsequent encounter for fracture with routine healing",
       "time": "00:5:09"
-    }, {
+    },
+    {
       "chapterId": 29,
       "id": 29,
       "title": "貞子3D",
       "decs": "Fracture of acromial process",
       "time": "00:6:10"
-    }, {
+    },
+    {
       "chapterId": 30,
       "id": 30,
       "title": "Messenger, The",
       "decs": "Derangement of unspecified meniscus due to old tear or injury, left knee",
       "time": "00:1:56"
-    }, {
+    },
+    {
       "chapterId": 31,
       "id": 31,
       "title": "Down to the Cellar (Do pivnice)",
       "decs": "Laceration of other extensor muscle, fascia and tendon at forearm level, left arm, initial encounter",
       "time": "00:12:24"
-    }, {
+    },
+    {
       "chapterId": 32,
       "id": 32,
       "title": "Bowery at Midnight",
       "decs": "Fall down embankment (hill), sequela",
       "time": "00:7:22"
-    }, {
+    },
+    {
       "chapterId": 33,
       "id": 33,
       "title": "Alone in the Wilderness",
       "decs": "Driver of heavy transport vehicle injured in collision with pedestrian or animal in nontraffic accident, subsequent encounter",
       "time": "00:7:57"
-    }, {
+    },
+    {
       "chapterId": 34,
       "id": 34,
       "title": "Shadow People",
       "decs": "Laceration without foreign body of left ear, subsequent encounter",
       "time": "00:7:39"
-    }, {
+    },
+    {
       "chapterId": 35,
       "id": 35,
       "title": "Soldier of Fortune",
       "decs": "Poisoning by other parasympatholytics [anticholinergics and antimuscarinics] and spasmolytics, intentional self-harm, subsequent encounter",
       "time": "00:6:37"
-    }, {
+    },
+    {
       "chapterId": 36,
       "id": 36,
       "title": "Lucrèce Borgia",
       "decs": "Driver of military vehicle injured in traffic accident, subsequent encounter",
       "time": "00:2:56"
-    }, {
+    },
+    {
       "chapterId": 37,
       "id": 37,
       "title": "Valley of Decision, The",
       "decs": "Acute lymphangitis of other sites",
       "time": "00:12:46"
-    }, {
+    },
+    {
       "chapterId": 38,
       "id": 38,
       "title": "Star Wars: Episode IV - A New Hope",
       "decs": "Burn of second degree of right ear [any part, except ear drum], initial encounter",
       "time": "00:1:07"
-    }, {
+    },
+    {
       "chapterId": 39,
       "id": 39,
       "title": "30 Days of Night",
       "decs": "Crohn's disease of large intestine with other complication",
       "time": "00:3:16"
-    }, {
+    },
+    {
       "chapterId": 40,
       "id": 40,
       "title": "Ninth Gate, The",
       "decs": "Erectile dysfunction due to arterial insufficiency",
       "time": "00:1:27"
-    }, {
+    },
+    {
       "chapterId": 41,
       "id": 41,
       "title": "Merlin's Apprentice",
       "decs": "Other specified anemias",
       "time": "00:7:39"
-    }, {
+    },
+    {
       "chapterId": 42,
       "id": 42,
       "title": "Repatriation",
       "decs": "Juvenile osteochondrosis of metatarsus, right foot",
       "time": "00:2:11"
-    }, {
+    },
+    {
       "chapterId": 43,
       "id": 43,
       "title": "Hunger (Sult)",
       "decs": "Nondisplaced fracture of fourth metatarsal bone, unspecified foot",
       "time": "00:1:44"
-    }, {
+    },
+    {
       "chapterId": 44,
       "id": 44,
       "title": "Hallelujah!",
       "decs": "Anterior dislocation of right ulnohumeral joint, sequela",
       "time": "00:12:40"
-    }, {
+    },
+    {
       "chapterId": 45,
       "id": 45,
       "title": "Crows Zero (Kurôzu zero)",
       "decs": "Osteonecrosis due to drugs, right foot",
       "time": "00:7:33"
-    }, {
+    },
+    {
       "chapterId": 46,
       "id": 46,
       "title": "Protocol",
       "decs": "Nondisplaced spiral fracture of shaft of unspecified fibula, initial encounter for open fracture type I or II",
       "time": "00:6:18"
-    }, {
+    },
+    {
       "chapterId": 47,
       "id": 47,
       "title": "Dead Heat",
       "decs": "Other displaced fracture of fifth cervical vertebra, sequela",
       "time": "00:5:36"
-    }, {
+    },
+    {
       "chapterId": 48,
       "id": 48,
       "title": "One Man Against the Organization",
       "decs": "Subluxation of metacarpophalangeal joint of right thumb",
       "time": "00:4:32"
-    }, {
+    },
+    {
       "chapterId": 49,
       "id": 49,
       "title": "My Mother Likes Women (A mi madre le gustan las mujeres)",
       "decs": "Salter-Harris Type III physeal fracture of upper end of radius, right arm, subsequent encounter for fracture with nonunion",
       "time": "00:3:41"
-    }, {
+    },
+    {
       "chapterId": 50,
       "id": 50,
       "title": "Absent-Minded Professor, The",
       "decs": "Nondisplaced spiral fracture of shaft of ulna, right arm, initial encounter for closed fracture",
       "time": "00:11:00"
-    }, {
+    },
+    {
       "chapterId": 51,
       "id": 51,
       "title": "Ponette",
       "decs": "Unspecified B-cell lymphoma, unspecified site",
       "time": "00:11:24"
-    }, {
+    },
+    {
       "chapterId": 52,
       "id": 52,
       "title": "Man Who Loved Women, The (Homme qui aimait les femmes, L')",
       "decs": "Other displaced fracture of second cervical vertebra, subsequent encounter for fracture with delayed healing",
       "time": "00:12:55"
-    }, {
+    },
+    {
       "chapterId": 53,
       "id": 53,
       "title": "Mephisto",
       "decs": "Other fracture of right lower leg, subsequent encounter for open fracture type I or II with nonunion",
       "time": "00:3:37"
-    }, {
+    },
+    {
       "chapterId": 54,
       "id": 54,
       "title": "Rio Bravo",
       "decs": "Toxic effect of venom of centipedes and venomous millipedes",
       "time": "00:1:46"
-    }, {
+    },
+    {
       "chapterId": 55,
       "id": 55,
       "title": "Big Lebowski, The",
       "decs": "Burn of unspecified degree of right knee, subsequent encounter",
       "time": "00:5:05"
-    }, {
+    },
+    {
       "chapterId": 56,
       "id": 56,
       "title": "Leaning Tower, The (Kalteva torni)",
       "decs": "Nondisplaced dome fracture of unspecified acetabulum, subsequent encounter for fracture with delayed healing",
       "time": "00:5:00"
-    }, {
+    },
+    {
       "chapterId": 57,
       "id": 57,
       "title": "Joy Luck Club, The",
       "decs": "Displaced subtrochanteric fracture of left femur, subsequent encounter for open fracture type I or II with nonunion",
       "time": "00:7:30"
-    }, {
+    },
+    {
       "chapterId": 58,
       "id": 58,
       "title": "Special Forces (Forces spéciales)",
       "decs": "Male orgasmic disorder",
       "time": "00:4:54"
-    }, {
+    },
+    {
       "chapterId": 59,
       "id": 59,
       "title": "Student of Prague, The (a.k.a. Bargain with Satan, A) (Student von Prag, Der)",
       "decs": "Injury of trigeminal nerve, left side, subsequent encounter",
       "time": "00:9:45"
-    }, {
+    },
+    {
       "chapterId": 60,
       "id": 60,
       "title": "Happythankyoumoreplease",
       "decs": "Subluxation and dislocation of tarsal joint",
       "time": "00:9:28"
-    }, {
+    },
+    {
       "chapterId": 61,
       "id": 61,
       "title": "Scarecrow, The",
       "decs": "Benign lipomatous neoplasm of other sites",
       "time": "00:12:58"
-    }, {
+    },
+    {
       "chapterId": 62,
       "id": 62,
       "title": "Black Robe",
       "decs": "Adverse effect of amphetamines, initial encounter",
       "time": "00:8:46"
-    }, {
+    },
+    {
       "chapterId": 63,
       "id": 63,
       "title": "Awfully Big Adventure, An",
       "decs": "Toxic effect of tetrachloroethylene, assault",
       "time": "00:11:10"
-    }, {
+    },
+    {
       "chapterId": 64,
       "id": 64,
       "title": "Regular Guys (Echte Kerle)",
       "decs": "Other specified injury of popliteal vein",
       "time": "00:10:22"
-    }, {
+    },
+    {
       "chapterId": 65,
       "id": 65,
       "title": "Barnyard: The Original Party Animals",
       "decs": "Burn of second degree of unspecified thumb (nail)",
       "time": "00:8:39"
-    }, {
+    },
+    {
       "chapterId": 66,
       "id": 66,
       "title": "The Reverse",
       "decs": "Wedge compression fracture of fourth thoracic vertebra, initial encounter for closed fracture",
       "time": "00:7:38"
-    }, {
+    },
+    {
       "chapterId": 67,
       "id": 67,
       "title": "The True Story of Puss 'n Boots",
       "decs": "Nondisplaced comminuted fracture of shaft of ulna, right arm, subsequent encounter for closed fracture with malunion",
       "time": "00:5:54"
-    }, {
+    },
+    {
       "chapterId": 68,
       "id": 68,
       "title": "Wildcat, The (Die Bergkatze)",
       "decs": "Contusion of unspecified external genital organ, male, initial encounter",
       "time": "00:11:25"
-    }, {
+    },
+    {
       "chapterId": 69,
       "id": 69,
       "title": "Garfield Christmas Special, A",
       "decs": "Low income",
       "time": "00:2:05"
-    }, {
+    },
+    {
       "chapterId": 70,
       "id": 70,
       "title": "Blue Velvet",
       "decs": "Displaced fracture (avulsion) of lateral epicondyle of unspecified humerus, subsequent encounter for fracture with nonunion",
       "time": "00:12:40"
-    }, {
+    },
+    {
       "chapterId": 71,
       "id": 71,
       "title": "Space Truckers",
       "decs": "Other specified injuries of right foot, sequela",
       "time": "00:5:04"
-    }, {
+    },
+    {
       "chapterId": 72,
       "id": 72,
       "title": "Millions Game, The (Das Millionenspiel)",
       "decs": "Maternal care for other isoimmunization, first trimester",
       "time": "00:4:30"
-    }, {
+    },
+    {
       "chapterId": 73,
       "id": 73,
       "title": "Emma's Bliss (Emmas Glück)",
       "decs": "Other specified disorders of Eustachian tube, bilateral",
       "time": "00:5:06"
-    }, {
+    },
+    {
       "chapterId": 74,
       "id": 74,
       "title": "Heidi Fleiss: Hollywood Madam",
       "decs": "Crohn's disease of large intestine with other complication",
       "time": "00:11:29"
-    }, {
+    },
+    {
       "chapterId": 75,
       "id": 75,
       "title": "Double Happiness",
       "decs": "Superficial frostbite of unspecified finger(s), initial encounter",
       "time": "00:12:17"
-    }, {
+    },
+    {
       "chapterId": 76,
       "id": 76,
       "title": "Guide for the Married Man, A",
       "decs": "Posterior displaced Type II dens fracture, initial encounter for open fracture",
       "time": "00:1:15"
-    }, {
+    },
+    {
       "chapterId": 77,
       "id": 77,
       "title": "Female Agents (Les femmes de l'ombre)",
       "decs": "Unspecified fracture of unspecified lower leg, initial encounter for closed fracture",
       "time": "00:6:30"
-    }, {
+    },
+    {
       "chapterId": 78,
       "id": 78,
       "title": "The Kiss",
       "decs": "Strain of extensor muscle, fascia and tendon of unspecified thumb at wrist and hand level",
       "time": "00:11:46"
-    }, {
+    },
+    {
       "chapterId": 79,
       "id": 79,
       "title": "Expendables 3, The",
       "decs": "Contact with dry ice, sequela",
       "time": "00:3:53"
-    }, {
+    },
+    {
       "chapterId": 80,
       "id": 80,
       "title": "Dead, The",
       "decs": "Unspecified injury of radial artery at wrist and hand level of left arm, sequela",
       "time": "00:3:30"
-    }, {
+    },
+    {
       "chapterId": 81,
       "id": 81,
       "title": "Free Money",
       "decs": "Follicular lymphoma grade II",
       "time": "00:1:38"
-    }, {
+    },
+    {
       "chapterId": 82,
       "id": 82,
       "title": "Exit Wounds",
       "decs": "Unspecified fracture of lower end of left ulna, subsequent encounter for open fracture type IIIA, IIIB, or IIIC with malunion",
       "time": "00:4:30"
-    }, {
+    },
+    {
       "chapterId": 83,
       "id": 83,
       "title": "Crossfire Hurricane",
       "decs": "Adverse effect of anticoagulant antagonists, vitamin K and other coagulants, sequela",
       "time": "00:12:58"
-    }, {
+    },
+    {
       "chapterId": 84,
       "id": 84,
       "title": "Junebug",
       "decs": "Pathological fracture in other disease, unspecified hand",
       "time": "00:4:11"
-    }, {
+    },
+    {
       "chapterId": 85,
       "id": 85,
       "title": "Women, The",
       "decs": "Other specified bacterial intestinal infections",
       "time": "00:2:09"
-    }, {
+    },
+    {
       "chapterId": 86,
       "id": 86,
       "title": "Bowfinger",
       "decs": "Epidermolysis bullosa simplex",
       "time": "00:8:59"
-    }, {
+    },
+    {
       "chapterId": 87,
       "id": 87,
       "title": "Streamers",
       "decs": "Unspecified injury of extensor or abductor muscles, fascia and tendons of unspecified thumb at forearm level, subsequent encounter",
       "time": "00:11:44"
-    }, {
+    },
+    {
       "chapterId": 88,
       "id": 88,
       "title": "Howling IV: The Original Nightmare",
       "decs": "Crushing injury of scrotum and testis, initial encounter",
       "time": "00:3:04"
-    }, {
+    },
+    {
       "chapterId": 89,
       "id": 89,
       "title": "Sweethearts",
       "decs": "Other specified injury of intrinsic muscle and tendon at ankle and foot level, right foot, initial encounter",
       "time": "00:7:32"
-    }, {
+    },
+    {
       "chapterId": 90,
       "id": 90,
       "title": "Up the Yangtze",
       "decs": "Sprain of tarsal ligament of right foot, initial encounter",
       "time": "00:6:17"
-    }, {
+    },
+    {
       "chapterId": 91,
       "id": 91,
       "title": "Zen",
       "decs": "Partial traumatic metacarpophalangeal amputation of left thumb, initial encounter",
       "time": "00:6:18"
-    }, {
+    },
+    {
       "chapterId": 92,
       "id": 92,
       "title": "Berlin 36",
       "decs": "Displaced fracture of proximal phalanx of unspecified great toe, sequela",
       "time": "00:5:16"
-    }, {
+    },
+    {
       "chapterId": 93,
       "id": 93,
       "title": "CQ",
       "decs": "Poisoning by unspecified hormone antagonists, undetermined, initial encounter",
       "time": "12:12"
-    }, {
+    },
+    {
       "chapterId": 94,
       "id": 94,
       "title": "Big Trouble",
       "decs": "Nondisplaced pilon fracture of right tibia, subsequent encounter for open fracture type I or II with nonunion",
       "time": "5:29"
-    }, {
+    },
+    {
       "chapterId": 95,
       "id": 95,
       "title": "Dragons Forever",
       "decs": "Stress fracture, left ulna, subsequent encounter for fracture with nonunion",
       "time": "12:59"
-    }, {
+    },
+    {
       "chapterId": 96,
       "id": 96,
       "title": "What Did the Lady Forget? (Shukujo wa nani o wasureta ka) ",
       "decs": "Other secondary chronic gout, unspecified hand, without tophus (tophi)",
       "time": "8:06"
-    }, {
+    },
+    {
       "chapterId": 97,
       "id": 97,
       "title": "Intouchables",
       "decs": "Unspecified injury of other part of small intestine",
       "time": "3:34"
-    }, {
+    },
+    {
       "chapterId": 98,
       "id": 98,
       "title": "Cocoanuts, The",
       "decs": "Palindromic rheumatism, left ankle and foot",
       "time": "7:16"
-    }, {
+    },
+    {
       "chapterId": 99,
       "id": 99,
       "title": "The Gunman",
       "decs": "Contusion, laceration, and hemorrhage of brainstem with loss of consciousness of 1 hour to 5 hours 59 minutes",
       "time": "7:57"
-    }, {
+    },
+    {
       "chapterId": 100,
       "id": 100,
       "title": "Michael",
@@ -1132,7 +1399,11 @@
     }
   ],
   "my_courses": [
-    { "usedId": 1, "coursesId": 1, "chapterId": 1 }
+    {
+      "usedId": 1,
+      "coursesId": 1,
+      "chapterId": 1
+    }
   ],
   "teachers": [
     {
@@ -1142,63 +1413,72 @@
       "company": "Best-selling Instructor, Game Developer, Online Entrepreneur",
       "password": "pLXSlSPI",
       "desc": "Activities involving string instrument playing"
-    }, {
+    },
+    {
       "id": 2,
       "fullName": "Gaston Rubury",
       "avatar": "https://robohash.org/etasperioresvoluptate.png?size=96x96&set=set1",
       "company": "Rhycero",
       "password": "jzYeIb",
       "desc": "Heart valve replaced by transplant"
-    }, {
+    },
+    {
       "id": 3,
       "fullName": "Federica Zanni",
       "avatar": "https://robohash.org/architectoautemmaiores.bmp?size=96x96&set=set1",
       "company": "Thoughtstorm",
       "password": "gX9mbphfENw",
       "desc": "Mixed disturbance of conduct and emotions"
-    }, {
+    },
+    {
       "id": 4,
       "fullName": "Kingsley Downs",
       "avatar": "https://robohash.org/officiisconsequaturodit.jpg?size=96x96&set=set1",
       "company": "Twimm",
       "password": "9c1RzeqRIe",
       "desc": "Contaminated substance injected or used for vaccination"
-    }, {
+    },
+    {
       "id": 5,
       "fullName": "Stephen Heads",
       "avatar": "https://robohash.org/eosvoluptateperspiciatis.jpg?size=96x96&set=set1",
       "company": "Feednation",
       "password": "6ufpSO",
       "desc": "Excessive attrition, unspecified"
-    }, {
+    },
+    {
       "id": 6,
       "fullName": "Pavla Haggart",
       "avatar": "https://robohash.org/nisiinrerum.png?size=96x96&set=set1",
       "company": "Gabvine",
       "password": "YMlrwvXTf",
       "desc": "Arthropathy, unspecified, multiple sites"
-    }, {
+    },
+    {
       "id": 7,
       "fullName": "Chiquita Aubin",
       "avatar": "https://robohash.org/consecteturveldolores.bmp?size=96x96&set=set1",
       "company": "Divanoodle",
       "password": "uiH03j0Z",
       "desc": "Wiskott-aldrich syndrome"
-    }, {
+    },
+    {
       "id": 8,
       "fullName": "Paolina Le Breton",
       "avatar": "https://robohash.org/repellendusdoloresqui.jpg?size=96x96&set=set1",
       "company": "Tagcat",
       "password": "z9yZhRzF",
       "desc": "Sacroiliitis, not elsewhere classified"
-    }, {
+    },
+    {
       "id": 9,
       "fullName": "Tulley Delamaine",
       "avatar": "https://robohash.org/inciduntvoluptatemet.png?size=96x96&set=set1",
       "company": "Teklist",
       "password": "GDZYqJ2m",
       "desc": "Cryptococcosis"
-    }, {
+    },
+    {
       "id": 10,
       "fullName": "Giraldo Norcock",
       "avatar": "https://robohash.org/rerummaioresprovident.jpg?size=96x96&set=set1",
@@ -1210,7 +1490,7 @@
   "collection": [
     {
       "id": 1,
-      "name":"expand-you-programming-knowledge",
+      "name": "expand-you-programming-knowledge",
       "image": "/assets/img/expand.jpg",
       "imageLg": "/assets/img/knowledges.jpg",
       "title": "Expand you programming knowledge",
@@ -1218,7 +1498,7 @@
     },
     {
       "id": 2,
-      "name":"be-your-own-boss",
+      "name": "be-your-own-boss",
       "image": "/assets/img/own_boss.jpg",
       "imageLg": "/assets/img/owns_boss.jpg",
       "title": "Be your own boss",
@@ -1228,13 +1508,13 @@
       "id": 3,
       "image": "/assets/img/land_tec.jpg",
       "imageLg": "/assets/img/tech_job.jpg",
-      "name":"land-and-exciting-new-tech-job",
+      "name": "land-and-exciting-new-tech-job",
       "title": "Land and Exciting new tech Job",
       "desc": "Land and Exciting new tech Job"
     },
     {
       "id": 4,
-      "name":"indulge-your-couriosity",
+      "name": "indulge-your-couriosity",
       "image": "/assets/img/indulge.jpg",
       "imageLg": "/assets/img/indulge_curiosity.jpg",
       "title": "Indulge your couriosity",
@@ -1242,7 +1522,7 @@
     },
     {
       "id": 5,
-      "name":"invest-in-your-passion",
+      "name": "invest-in-your-passion",
       "image": "/assets/img/invest.jpg",
       "imageLg": "/assets/img/invests.jpg",
       "title": "Invest in your passion",
@@ -1250,7 +1530,7 @@
     },
     {
       "id": 6,
-      "name":"unlock-you-potential",
+      "name": "unlock-you-potential",
       "image": "/assets/img/potential.jpg",
       "imageLg": "/assets/img/unlock_potential.jpg",
       "title": "Unlock you potential",
@@ -1258,7 +1538,7 @@
     },
     {
       "id": 7,
-      "name":"make-analytics-work-for-you",
+      "name": "make-analytics-work-for-you",
       "image": "/assets/img/analytics.jpg",
       "imageLg": "/assets/img/make_analytics.jpg",
       "title": "Make analytics work for you",
@@ -1266,10 +1546,29 @@
     }
   ],
   "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
   ],
   "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment", "postId": 1 }
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "user_course": [
+    {
+      "userId": 1,
+      "courseId": 1,
+      "id": 1
+    }
   ]
 }

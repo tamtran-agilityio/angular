@@ -11,7 +11,7 @@ export class UserService {
               private appConfig: AppConfigService) { }
 
   getUserBy(email: string, password: string): Observable<User> {
-    const url = this.appConfig.API + `users?email=${email}&password=${password}`;
+    const url = this.appConfig.API.API_ROOT + `users?email=${email}&password=${password}`;
     return Observable.create( obs => {
       this.httpWrapper.get(url, {}).subscribe((res: User) => {
         obs.next(res);
@@ -19,8 +19,8 @@ export class UserService {
     });
   }
 
-  getUserByEmail(user: User) : Observable<User>{
-    const url = this.appConfig.API + `users?email=${user.email}`;
+  getUserByEmail(user: User): Observable<User> {
+    const url = this.appConfig.API.API_ROOT + `users?email=${user.email}`;
     return Observable.create( obs => {
       this.httpWrapper.get(url, {}).subscribe((res: User) => {
         obs.next(res);
@@ -29,7 +29,7 @@ export class UserService {
   }
 
   addUser(user: User) {
-    const url = this.appConfig.API + `users/`;
+    const url = this.appConfig.API.API_ROOT + `users/`;
     return Observable.create( obs => {
       return this.httpWrapper.post(url, {user}).subscribe((res) => {
       });

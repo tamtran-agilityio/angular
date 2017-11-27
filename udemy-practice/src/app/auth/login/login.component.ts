@@ -1,7 +1,8 @@
 import {
   Component,
   OnInit,
-  ChangeDetectorRef
+  ChangeDetectorRef,
+  NgZone
 } from '@angular/core';
 import {
   FormBuilder,
@@ -15,6 +16,7 @@ import { ModalService } from '../../shared/service/modal.service';
 import { UserService } from '../service/user.service';
 import { ValidationService, HelperService, AppConfigService } from '../../core';
 import { User } from '../model/use';
+import { locale } from 'moment';
 
 @Component({
   selector: 'login-box',
@@ -33,7 +35,8 @@ export class LoginComponent implements OnInit {
               private validationService: ValidationService,
               private helperService: HelperService,
               private appConfig: AppConfigService,
-              private cdr: ChangeDetectorRef) {
+              private cdr: ChangeDetectorRef,
+              private zone: NgZone) {
               }
 
   ngOnInit() {
@@ -52,6 +55,9 @@ export class LoginComponent implements OnInit {
           let user: User =  _.head(res);
           this.helperService.setLocalStorage('user', JSON.stringify(user));
           this.modalService.closeModal('Login');
+          this.zone.runOutsideAngular(() => {
+            location.reload();
+          });
         } else {
           this.errorMessagge = this.appConfig.VALIDATION.AUTHENTICATION.AUTHENTICATION_FAIL;
         }

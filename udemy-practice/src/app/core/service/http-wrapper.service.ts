@@ -1,4 +1,4 @@
-import { Http, Response, RequestOptionsArgs, Headers } from '@angular/http';
+import { Http, Response, RequestOptionsArgs, Headers, ResponseOptions } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
@@ -171,6 +171,14 @@ export class HttpWrapperService {
   post<T>(url: string, data: Object, options?: RequestOptionsArgs): Observable<T> {
     const newData = this.prepareData(data);
     return this.http.post(this.generateUrl(url), newData, this.generateOptions(options))
+      .map(this.responseHandler, this)
+      .catch(this.errorHandler.bind(this));
+  }
+
+  posts<T>(url: string, data: Object): Observable<T> {
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new ResponseOptions({ headers: headers });
+    return this.http.post(this.generateUrl(url), data, options)
       .map(this.responseHandler, this)
       .catch(this.errorHandler.bind(this));
   }
