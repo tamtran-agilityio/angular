@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { ResetComponent } from './reset/reset.component';
+import { LoginComponent } from '@app/auth/component/login/login.component';
+import { RegisterComponent } from '@app/auth/component/register/register.component';
+import { ResetComponent } from '@app/auth/component/reset/reset.component';
 import { SharedModule } from '../shared/shared.module';
 import { CoreModule } from '../core/core.module';
 import { AuthService } from './service/auth.service';

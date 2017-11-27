@@ -2,10 +2,13 @@ import { Component, OnInit, OnChanges } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import * as _ from 'lodash';
-import { ModalService } from '../../shared/service/modal.service';
-import { UserService } from '../service/user.service';
-import { ValidationService } from '../../core';
-import { User } from '../model/use';
+
+import { ModalService } from '@app/shared/service/modal.service';
+import { UserService } from '@app/auth/service/user.service';
+import { ValidationService } from '@app/core/service/validation.service';
+import { HelperService } from '@app/core/service/helper.service';
+import { AppConfigService } from '@app/core/service/app-config.service';
+import { User } from '@app/auth/model/use';
 
 @Component({
   selector: 'register-box',

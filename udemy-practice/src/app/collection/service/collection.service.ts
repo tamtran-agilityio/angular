@@ -34,4 +34,14 @@ export class CollectionService {
         });
       });
   }
+
+  getCourseByUser(id: number) {
+    let url = this.appConfig.API.API_ROOT + `users/${id}?_embed=user_courses`;
+    return Observable.create( obs => {
+      this.httpWapper.get(url, {}).subscribe((res: Collection[]) => {
+        obs.next(res);
+      });
+    });
+    //users/1?_embed=user_courses
+  }
 }

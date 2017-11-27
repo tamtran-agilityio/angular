@@ -31,7 +31,7 @@ export class UserService {
   addUser(user: User) {
     const url = this.appConfig.API.API_ROOT + `users/`;
     return Observable.create( obs => {
-      return this.httpWrapper.post(url, {user}).subscribe((res) => {
+      return this.httpWrapper.posts(url, JSON.stringify(user)).subscribe((res) => {
       });
     });
   }
