@@ -1,0 +1,26 @@
+<div class="col-xs-8 left-col about">
+  <div class="about__title"> About the instructors</div>
+  <div class="about__instructor">
+    <div class="about__name">
+      <a routerLink="/user/{{course.teacher?.fullName | formatLink}}">
+        {{teacher?.fullName}}
+      </a>
+    </div>
+    <div class="about__job"> {{course.teacher?.company}}</div>
+    <div class="about__status">
+      <a routerLink="/user/{{course.teacher?.fullName | formatLink}}">
+        <div class="about__image">
+          <div class="about__user" appSetbackground="{{course.teacher?.avatar}}">
+          </div>
+        </div>
+      </a>
+      <div class="about__rating">
+        <i class="fa fa-star" aria-hidden="true"></i>
+        {{course.rating}}  Average Rating
+      </div>
+    </div>
+    <div class="about__desc">
+      <p> {{course.teacher?.desc }} </p>
+    </div>
+  </div>
+</div>

@@ -1,11 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ChangeDetectorRef
+} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import * as _ from 'lodash';
 
-import { CourseService } from '../../service/course.service';
+
 import { Course } from '../../modal/course';
 import { concat } from 'rxjs/operator/concat';
+import { Chapter } from '@app/courses/modal/chapter';
+import { CourseService } from '@app/courses/service/course.service';
+import { CourseItem } from '@app/courses/modal/course-item';
 
 @Component({
   selector: 'courses-detail',
@@ -14,26 +21,61 @@ import { concat } from 'rxjs/operator/concat';
 })
 export class CoursesDetailComponent implements OnInit {
   name: String;
-  course: Course;
-  coursesComparion: Course[];
-  starsCount: number;
-  chapters: any[];
+  courseItem: CourseItem = {
+    course: null,
+    courses: [],
+    chapters: [],
+    active: false,
+    countLecture: 0
+  };
   constructor(private route: ActivatedRoute,
+              private cdr: ChangeDetectorRef,
               private courseService: CourseService) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.courseService.getCourseByName(params.name).subscribe((res) => {
-        this.course = _.first(res);
-        this.courseService.getCoursesComparison(_.first(res).topicId).subscribe((courses: Course[]) => {
-          this.coursesComparion = courses;
-        });
-        this.courseService.getChapter(_.first(res).id).subscribe((coursesCurriculum: any) => {
-          this.courseService.getPartByChapters(coursesCurriculum.chapters).subscribe(chapter => {
-            this.chapters = chapter;
-          });
-        });
+        let cloned = _.cloneDeep(this.courseItem);
+        cloned.course = _.first(res);
+        this.courseItem = cloned;
+        this.getCoursesComparion(cloned.course);
+        this.getChapters(cloned.course);
+        this.cdr.markForCheck();
       });
     });
+  }
+
+  getCoursesComparion(course) {
+    this.courseService.getCoursesComparison(course.topicId).subscribe((courses: Course[]) => {
+      let cloned = _.cloneDeep(this.courseItem);
+      cloned.courses = courses;
+      this.courseItem = cloned;
+    });
+  }
+
+  getChapters(course) {
+    this.courseService.getChapter(course.id).subscribe((coursesCurriculum: any) => {
+      this.courseService.getPartByChapters(coursesCurriculum.chapters).subscribe(chapter => {
+        let cloned = _.cloneDeep(this.courseItem);
+        cloned.chapters = chapter;
+        cloned.countLecture = this.getTotalLecture(chapter);
+        this.courseItem = cloned;
+      });
+    });
+  }
+
+  allCollapse(event) {
+    this.courseItem.active = !this.courseItem.active;
+  }
+
+  getTotalLecture(chapters: Chapter[]): number {
+
+    if (!_.isNil(chapters)) {
+      let count = 0;
+      _.each(chapters, (chapter) => {
+        count += chapter.parts.length;
+      });
+      return count;
+    }
   }
 }

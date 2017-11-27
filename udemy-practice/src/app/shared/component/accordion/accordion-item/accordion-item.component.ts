@@ -25,6 +25,7 @@ export class AccordionItemComponent implements OnInit {
   @Output() toggleAccordion: EventEmitter<boolean> = new EventEmitter();
   parts: Part[];
   countTime: String = '';
+  countLectured: Number = 0;
   constructor() {}
 
   ngOnInit() {
@@ -35,6 +36,7 @@ export class AccordionItemComponent implements OnInit {
     // let time = '';
     if (!_.isEmpty(chapter)) {
       let time = 0;
+      this.countLectured = chapter.parts.length;
       _.each(chapter.parts, (part: Part) => {
         if (!_.isNil(part.time)) {
           time += moment(part.time, 'hh:mm:ss').diff(moment().startOf('day'), 'seconds');

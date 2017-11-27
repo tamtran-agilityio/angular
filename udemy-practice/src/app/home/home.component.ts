@@ -5,8 +5,7 @@ import { UserService } from '../auth/service/user.service';
 import { Topic } from '../categories/modal/topic';
 import { CategoryService } from '../categories/service/category.service';
 import { Category } from '../categories/modal/category';
-import { Course } from '../courses/modal/course';
-import { CourseService } from '../courses/service/course.service';
+import { Course, CourseService } from '@app/courses';
 import { Collection } from '../collection/modal/collection';
 import { CollectionService } from '../collection/service/collection.service';
 

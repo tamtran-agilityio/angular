@@ -1,0 +1,101 @@
+.accordion {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  &__header {
+    flex-direction: row;
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+  }
+
+  &__curriculum {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 10px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 45%;
+  }
+
+  &__status {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    margin-left: auto;
+    padding-right: 30px;
+    width: 50%;
+  }
+
+  &__leture {
+    margin-left: 16px;
+  }
+
+  &__time {
+    text-align: right;
+    width: 20%;
+    margin-left: 5px;
+    color: #505763;
+  }
+}
+
+.chapter {
+
+    &__wrapper {
+      background-color: #fff;
+      border-bottom-color: #e8e9eb;
+      border-bottom-style: solid;
+      border-left-color: #e8e9eb;
+      border-left-style: solid;
+      border-right-color: #e8e9eb;
+      border-right-style: solid;
+      border-width: 0 1px 1px;
+      color: #686f7a;
+      letter-spacing: .3px;
+      line-height: 1.33;
+    }
+
+    &__container {
+      padding: 12px 30px 12px 43px;
+      display: flex;
+      border-top: 1px solid #e8e9eb;
+    }
+
+    &__content {
+      display: flex;
+      align-items: flex-start;
+      width: 50%;
+
+      .fa-play-circle {
+        color: #007791;
+        opacity: 0.3;
+      }
+    }
+
+    &__title {
+      font-size: 14px;
+      color: #505763;
+      margin-left: 15px;
+    }
+
+    &__lecture {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      margin-left: auto;
+      width: 50%;
+      font-size: 14px;
+    }
+
+    &__time {
+      display: flex;
+      flex-basis: 40%;
+      justify-content: flex-end;
+      color: #505763;
+    }
+  }

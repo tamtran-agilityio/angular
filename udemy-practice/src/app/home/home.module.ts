@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { HomeComponent } from './home.component';
-import { HomeRouting } from './home-routing.module';
+import { HomeRouting } from '@app/home/home-routing.module';
 import { AuthModule } from '../auth/auth.module';
 import { SharedModule } from '../shared/shared.module';
 import { StreamerSidebarComponent } from './component/streamer-sidebar/streamer-sidebar.component';
@@ -10,9 +10,11 @@ import { AchieveGoalsComponent } from './component/achieve-goals/achieve-goals.c
 import { FeaturedTopicComponent } from './component/featured-topic/featured-topic.component';
 import { InstructorBusinessComponent } from './component/instructor-business/instructor-business.component';
 
+
 export const COMMON_MODULE: any[] = [
   AuthModule,
   SharedModule,
+  HomeRouting,
   CoursesModule
 ];
 

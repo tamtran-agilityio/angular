@@ -7,6 +7,7 @@ import { SharedModule } from '../shared/shared.module';
 import { CoreModule } from '../core/core.module';
 import { AuthService } from './service/auth.service';
 import { UserService } from './service/user.service';
+import { SettingComponent } from './component/setting/setting.component';
 
 export const COMMON_MODULE: any[] = [
   SharedModule,
@@ -27,7 +28,8 @@ export const AUTH_PROVIDERS: any[] = [
     ...COMMON_MODULE
   ],
   declarations: [
-    ...AUTH_COMPONENT
+    ...AUTH_COMPONENT,
+    SettingComponent
   ],
   exports: [
     ...AUTH_COMPONENT

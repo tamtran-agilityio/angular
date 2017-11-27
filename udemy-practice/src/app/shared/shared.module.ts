@@ -16,12 +16,15 @@ import { RatingModule } from './component/rating/rating.module';
 import { FormatLinkPipe } from './pipes/format-link.pipe';
 import { AccordionComponent } from './component/accordion/accordion.component';
 import { AccordionItemComponent } from './component/accordion/accordion-item/accordion-item.component';
+import { CoreModule } from '@app/core';
+import { SetbackgroundDirective } from '@app/shared/directive/setbackground.directive';
 
 export const COMMON_MODULES: any[] = [
   FormsModule,
   ReactiveFormsModule,
   CommonModule,
   HttpModule,
+  CoreModule,
   RouterModule,
   DropdownModule,
   RatingModule
@@ -36,7 +39,8 @@ export const SHARED_COMPONENT: any[] = [
   AccordionComponent,
   AccordionItemComponent,
   ClickOutsideDirective,
-  FormatLinkPipe
+  FormatLinkPipe,
+  SetbackgroundDirective
 ];
 
 export const CORE_PROVIDERS: any[] = [

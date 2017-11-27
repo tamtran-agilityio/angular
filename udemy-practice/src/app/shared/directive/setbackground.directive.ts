@@ -2,10 +2,9 @@ import {
   Directive,
   Input,
   Renderer,
-  ElementRef
+  ElementRef,
+  AfterViewInit
 } from '@angular/core';
-import {  } from '@angular/core/src/metadata/directives';
-import { AfterViewInit } from '@angular/core/src/metadata/lifecycle_hooks';
 
 @Directive({
   selector: '[appSetbackground]'
