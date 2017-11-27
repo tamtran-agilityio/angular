@@ -1,0 +1,39 @@
+<div class="col-xs-8 left-col accordion">
+    <div class="accordion__header">
+      <div class="accordion__title">
+        <div class="accordion__curriculum">Curriculum for this course</div>
+      </div>
+      <div class="accordion__status">
+        <a href="javascript:void(0)"
+          (click)="allCollapse($event)"
+          *ngIf="courseItem.active === false">Collapse all</a>
+        <a href="javascript:void(0)"
+          (click)="allCollapse($event)"
+          *ngIf="courseItem.active === true">Expand all</a>
+          <div class="accordion__leture">
+            {{courseItem.countLecture}} Lectures
+          </div>
+          <div class="accordion__time">
+            Time
+          </div>
+      </div>
+  </div>
+    <accordion>
+        <div *ngFor="let chapter of courseItem.chapters">
+        <accordion-item [chapter]="chapter" [active]="courseItem.active">
+          <ul class="chapter__wrapper">
+            <li *ngFor="let part of chapter.parts"
+              class="chapter__container">
+              <div class="chapter__content">
+                <i class="fa fa-play-circle" aria-hidden="true"></i>
+                <div class="chapter__title"> {{part.title}} </div>
+              </div>
+              <div class="chapter__lecture">
+                <div class="chapter__time"> {{part.time}} </div>
+              </div>
+            </li>
+          </ul>
+        </accordion-item>
+        </div>
+      </accordion>
+  </div>
