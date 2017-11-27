@@ -12,7 +12,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AboutComponent } from './about/about.component';
 import { CollectionModule } from './collection/collection.module';
 import { CategoriesModule } from './categories/categories.module';
-import { CoursesModule } from './courses/courses.module';
+import { CoursesModule } from './courses';
 
 @NgModule({
   declarations: [
@@ -29,8 +29,8 @@ import { CoursesModule } from './courses/courses.module';
     CategoriesModule,
     AuthModule,
     HomeModule,
-    CoursesModule,
-    CollectionModule
+    CollectionModule,
+    CoursesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

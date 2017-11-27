@@ -41,6 +41,14 @@
 
   &:after {
     border-color: transparent transparent #fff;
+    top: -12px;
+    border-style: solid;
+    border-width: 0 10px 13px;
+    content: "";
+    height: 0;
+    position: absolute;
+    left: 14px;
+    width: 0;
   }
   display: block;
   padding: 15px 0;

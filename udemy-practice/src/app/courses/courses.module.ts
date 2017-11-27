@@ -12,6 +12,8 @@ import { CourseService } from './service/course.service';
 import { CoursesIntroductionComponent } from './component/courses-introduction/courses-introduction.component';
 import { CoursesWhatLearnComponent } from './component/courses-what-learn/courses-what-learn.component';
 import { CousesCompareComponent } from './component/couses-compare/couses-compare.component';
+import { CoursesAccordionComponent } from './component/courses-accordion/courses-accordion.component';
+import { CoursesAboutInstructorComponent } from './component/courses-about-instructor/courses-about-instructor.component';
 
 export const COURSES_COMPONENT: any[] = [
   CoursesListComponent,
@@ -20,7 +22,14 @@ export const COURSES_COMPONENT: any[] = [
   CoursesDiscoverComponent,
   CoursesIntroductionComponent,
   CoursesWhatLearnComponent,
-  CousesCompareComponent
+  CousesCompareComponent,
+  CoursesAccordionComponent,
+  CoursesAboutInstructorComponent
+];
+
+export const COURSES_COMMON: any[] = [
+  SharedModule,
+  CarouselModule
 ];
 
 export const COURSES_PROVIDERS: any[] = [
@@ -29,8 +38,7 @@ export const COURSES_PROVIDERS: any[] = [
 
 @NgModule({
   imports: [
-    SharedModule,
-    CarouselModule
+    ...COURSES_COMMON
   ],
   declarations: [
     ...COURSES_COMPONENT

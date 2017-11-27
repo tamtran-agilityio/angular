@@ -6,12 +6,11 @@ import {
 
 import * as _ from 'lodash';
 
-import { Carousel } from '../../../carousel/modal/carousel';
-import { CourseService } from '../../service/course.service';
-import { Course } from '../../modal/course';
-import { CategoryService } from '../../../categories/service/category.service';
-import { Category } from '../../../categories/modal/category';
-import { isEmpty } from 'rxjs/operator/isEmpty';
+import { Carousel } from '@app/carousel/modal/carousel';
+import { Course } from '@app/courses/modal/course';
+import { Category } from '@app/categories/modal/category';
+import { CourseService } from '@app/courses/service/course.service';
+import { CategoryService } from '@app/categories/service/category.service';
 
 @Component({
   selector: 'courses-list',
@@ -21,12 +20,11 @@ import { isEmpty } from 'rxjs/operator/isEmpty';
 export class CoursesListComponent implements OnInit {
   carouselOptions: Carousel;
   @Input() courses: Course[];
-  categories: Category[];
+  categories: Category;
   constructor(private courseService: CourseService,
               private categoryService: CategoryService) {}
 
   ngOnInit() {
-
     this.carouselOptions = {
       grid: {xs: 1, sm: 3, md: 4, lg: 5, xl: 6, all: 0},
       slide: 2,
@@ -35,7 +33,8 @@ export class CoursesListComponent implements OnInit {
         visible: false
       },
       load: 2,
-      touch: true
+      touch: true,
+      easing: 'ease'
     };
   }
 

@@ -13,7 +13,7 @@ import { Course } from '../../modal/course';
 })
 export class CoursesIntroductionComponent implements OnInit {
   @Input() course: Course;
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
   }

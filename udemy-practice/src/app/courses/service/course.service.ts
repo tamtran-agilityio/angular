@@ -7,7 +7,7 @@ import {
 
 import * as _ from 'lodash';
 
-import { HttpWrapperService, AppConfigService } from '../../core';
+import { HttpWrapperService, AppConfigService } from '@app/core';
 import { Course } from '../modal/course';
 import { Category } from '../../categories/modal/category';
 
@@ -79,7 +79,6 @@ export class CourseService {
       return this.httpWrapper.get(url, {})
       .map(res => res)
       .subscribe((res: any) => {
-        console.log('rez', res);
         obs.next(res);
       });
     });

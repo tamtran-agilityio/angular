@@ -7,13 +7,14 @@
   </div>
   <div class="row">
     <div class="col-xs-8 left-col">
-      <h1> {{course.title}} </h1>
-      <p> {{course.subtitle}} </p>
+      <h1> {{course?.title}} </h1>
+      <p> {{course?.subtitle}} </p>
       <div class="streamer__status">
         <div [className]="course.type === 'new' ? 'streamer__badge green' : 'streamer__badge yellow'">
-          <span>{{course.type}}</span>
+          <span>{{course?.type}}</span>
         </div>
-        <div class="streamer__rating">
+        <div class="streamer__rating"
+          *ngIf="course.rating !== null">
           <rating-star [(ngModel)]="course.rating"
             [titles]="true"
             [readonly]="true">
@@ -25,13 +26,13 @@
         <div class="streamer__auth">
           <span class="streamer__auth-item">
             Created by
-            <a class="streamer__auth-link" href="javascript:void(0)"> {{course.teacher.fullName}} </a>
+            <a class="streamer__auth-link" href="javascript:void(0)"> {{course?.teacher.fullName}} </a>
           </span>
           <span class="streamer__auth-item">Last updated {{course.date | date: 'dd/yyyy'}} </span>
         </div>
         <div class="streamer__language">
           <i class="fa fa-comment" aria-hidden="true"></i>
-          <span>{{course.language}}</span>
+          <span>{{course?.language}}</span>
         </div>
       </div>
     </div>

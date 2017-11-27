@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { CollectionComponent } from './component/collection.component';
 import { CollectionService } from './service/collection.service';
 import { CollectionChannelComponent } from './component/collection-channel/collection-channel.component';
-import { SetbackgroundDirective } from './directive/setbackground.directive';
+import { SharedModule } from '@app/shared/shared.module';
+import { CoursesModule } from '@app/courses/courses.module';
 
 export const COLLECTION_COMPONENT: any[] = [
   CollectionComponent,
-  CollectionChannelComponent,
-  SetbackgroundDirective
+  CollectionChannelComponent
 ];
 
 export const COLLECTION_PROVIDERS: any[] = [
@@ -17,7 +17,9 @@ export const COLLECTION_PROVIDERS: any[] = [
 
 @NgModule({
   imports: [
-    CommonModule
+    SharedModule,
+    CommonModule,
+    CoursesModule
   ],
   declarations: [
     ...COLLECTION_COMPONENT
