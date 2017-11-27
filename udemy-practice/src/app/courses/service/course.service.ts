@@ -109,4 +109,13 @@ export class CourseService {
       }
     });
   }
+
+  joinNewCourse(course) {
+    let url = this.appConfig.API.API_ROOT + `user_course`;
+
+    let body = JSON.stringify(course);
+
+    return this.httpWrapper.posts(url, body)
+      .map(res => res);
+  }
 }

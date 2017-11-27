@@ -14,6 +14,8 @@ import { CoursesWhatLearnComponent } from './component/courses-what-learn/course
 import { CousesCompareComponent } from './component/couses-compare/couses-compare.component';
 import { CoursesAccordionComponent } from './component/courses-accordion/courses-accordion.component';
 import { CoursesAboutInstructorComponent } from './component/courses-about-instructor/courses-about-instructor.component';
+import { CoursesEnrollComponent } from './component/courses-enroll/courses-enroll.component';
+import { CoreModule } from '@app/core/core.module';
 
 export const COURSES_COMPONENT: any[] = [
   CoursesListComponent,
@@ -24,10 +26,12 @@ export const COURSES_COMPONENT: any[] = [
   CoursesWhatLearnComponent,
   CousesCompareComponent,
   CoursesAccordionComponent,
-  CoursesAboutInstructorComponent
+  CoursesAboutInstructorComponent,
+  CoursesEnrollComponent
 ];
 
 export const COURSES_COMMON: any[] = [
+  CoreModule,
   SharedModule,
   CarouselModule
 ];
