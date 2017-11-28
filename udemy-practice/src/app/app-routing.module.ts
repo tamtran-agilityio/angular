@@ -7,22 +7,15 @@ import { ROUTES as homeRouting } from './home/home-routing.module';
 import { ROUTES as courseRouting } from './courses/courses-routing.module';
 import { ROUTES as collectionRouting } from './collection/collection-routing.module';
 import { ROUTES as categoriesRouting } from './categories/categories-routing.module';
-import { MyCoursesComponent } from '@app/courses/component/my-courses/my-courses.component';
+import { ROUTES as myCoursesRouting } from './my-courses/mycourses-routing.module';
+import { ROUTES as teacherRouting } from './teacher/teacher-routing.module';
 import { PrimarylayoutComponent } from '@app/shared/component/primarylayout/primarylayout.component';
 
 export const ROUTES: Routes = [
   {
     path: '',
-    redirectTo: '',
-    pathMatch: 'full',
     children: [
       ...homeRouting
-    ]
-  },
-  {
-    path: ':name',
-    children: [
-      ...courseRouting
     ]
   },
   {
@@ -33,12 +26,14 @@ export const ROUTES: Routes = [
   },
   {
     path: 'home',
-    component: PrimarylayoutComponent,
     children: [
-      {
-        path: ':name',
-        component: MyCoursesComponent
-      }
+      ...myCoursesRouting
+    ]
+  },
+  {
+    path: 'teacher',
+    children: [
+      ...teacherRouting
     ]
   },
   {
@@ -54,7 +49,19 @@ export const ROUTES: Routes = [
   },
   {
     path: 'about',
-    component: AboutComponent
+    component: PrimarylayoutComponent,
+    children: [
+      {
+        path: '',
+        component: AboutComponent
+      }
+    ]
+  },
+  {
+    path: ':name',
+    children: [
+      ...courseRouting
+    ]
   },
   {
     path: '**',

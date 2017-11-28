@@ -13,6 +13,8 @@ import { AboutComponent } from './about/about.component';
 import { CollectionModule } from './collection/collection.module';
 import { CategoriesModule } from './categories/categories.module';
 import { CoursesModule } from './courses';
+import { MyCoursesModule } from '@app/my-courses/my-courses.module';
+import { TeacherModule } from '@app/teacher/teacher.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { CoursesModule } from './courses';
     AuthModule,
     HomeModule,
     CollectionModule,
-    CoursesModule
+    CoursesModule,
+    MyCoursesModule,
+    TeacherModule
   ],
   providers: [],
   bootstrap: [AppComponent]

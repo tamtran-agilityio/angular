@@ -99,6 +99,42 @@
             <span>{{ shortName.name }}</span>
           </div>
         </a>
+        <ul class="user__setting">
+          <li class="user__item">
+            <a href="">
+                <div class="user__infor">
+                  <span class="dropdown__link">{{ shortName.name }}</span>
+                  <div class="user__infor-login">
+                    <span class="user__infor--name">{{ user.fullName }}</span>
+                    <span class="user__infor--email">{{ user.email }}</span>
+                  </div>
+                </div>
+              </a>
+          </li>
+          <li class="user__item">
+            <div class="user__message">
+              <i class="fa fa-commenting-o" aria-hidden="true"></i>
+              <span class="user__title"> My Messages</span>
+            </div>
+          </li>
+          <li class="user__item">
+            <div class="user__message">
+              <i class="fa fa-address-card" aria-hidden="true"></i>
+              <span class="user__title"> Udemy Credits </span>
+            </div>
+          </li>
+          <li class="user__item">
+            <div class="user__message">
+              <i class="fa fa-history" aria-hidden="true"></i>
+              <span class="user__title"> Purchase History</span>
+            </div>
+          </li>
+          <li class="user__item" (click)="logOut($event)">
+              <div class="user__message">
+                <span class="user__title"> Log out</span>
+              </div>
+            </li>
+        </ul>
       </div>
     </div>
   </div>

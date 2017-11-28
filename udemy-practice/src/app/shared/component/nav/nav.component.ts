@@ -5,6 +5,7 @@ import {
   Input,
   ChangeDetectorRef
 } from '@angular/core';
+import { Router } from '@angular/router';
 
 import * as _ from 'lodash';
 import { ModalService } from '../../service/modal.service';
@@ -13,6 +14,7 @@ import { HelperService } from '../../../core/service/helper.service';
 import { Dropdown } from '../../modal/dropdown';
 import { CategoryService } from '../../../categories/service/category.service';
 import { CourseService } from '@app/courses/service/course.service';
+
 
 @Component({
   selector: 'nav-bar',
@@ -32,7 +34,8 @@ export class NavComponent implements OnInit, OnChanges {
               private helperService: HelperService,
               private categoryService: CategoryService,
               private courseService: CourseService,
-              private cdr: ChangeDetectorRef) { }
+              private cdr: ChangeDetectorRef,
+              private router: Router) { }
 
   ngOnInit() {
     this.user = this.helperService.getLocalStorage('user');
@@ -63,5 +66,10 @@ export class NavComponent implements OnInit, OnChanges {
 
   clickRegister() {
     this.modalService.openModal('Register');
+  }
+
+  logOut(event) {
+    localStorage.removeItem('user');
+    this.router.navigate(['/']);
   }
 }
