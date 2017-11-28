@@ -6,6 +6,9 @@ import { HomeComponent } from './home/home.component';
 import { ROUTES as homeRouting } from './home/home-routing.module';
 import { ROUTES as courseRouting } from './courses/courses-routing.module';
 import { ROUTES as collectionRouting } from './collection/collection-routing.module';
+import { ROUTES as categoriesRouting } from './categories/categories-routing.module';
+import { MyCoursesComponent } from '@app/courses/component/my-courses/my-courses.component';
+import { PrimarylayoutComponent } from '@app/shared/component/primarylayout/primarylayout.component';
 
 export const ROUTES: Routes = [
   {
@@ -23,9 +26,30 @@ export const ROUTES: Routes = [
     ]
   },
   {
-    path: 'collection/:name',
+    path: 'courses',
     children: [
-      ...collectionRouting
+      ...categoriesRouting
+    ]
+  },
+  {
+    path: 'home',
+    component: PrimarylayoutComponent,
+    children: [
+      {
+        path: ':name',
+        component: MyCoursesComponent
+      }
+    ]
+  },
+  {
+    path: 'collection',
+    children: [
+      {
+        path: ':name',
+        children: [
+          ...collectionRouting
+        ]
+      }
     ]
   },
   {

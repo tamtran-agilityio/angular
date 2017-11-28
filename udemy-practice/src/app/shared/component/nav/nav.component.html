@@ -60,7 +60,28 @@
       </a>
     </div>
     <div class="udemy__business">
-      <a href="" class="dropdown__main-link"> My Courses</a>
+      <a href="" class="dropdown__main-link dropdown__my-course"> My Courses</a>
+      <div class="my-course">
+        <ul class="my-course__container">
+            <li *ngFor="let item of myCourses"
+              class="my-course__item">
+              <a routerLink="/{{item.course.name}}"
+                class="my-course__link">
+                <div class="my-course__image">
+                  <img src="{{item.course.images}}" alt="{{item.course.name}}">
+                  <div class="my-course__play"></div>
+                </div>
+                <div class="my-course__content">
+                  <div class="my-course__title"> {{item.course.title}}</div>
+                  <div class="my-course__meta"> {{item.teacher?.fullName}} {{item.teacher?.company}}</div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        <div class="my-course__footer">
+          <a routerLink="/home/my-courses"> See All</a>
+        </div>
+      </div>
     </div>
     <div class="dropdown__heart">
       <i class="fa fa-heart-o" aria-hidden="true"></i>

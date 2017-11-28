@@ -64,10 +64,6 @@ export class CoursesDetailComponent implements OnInit {
     });
   }
 
-  allCollapse(event) {
-    this.courseItem.active = !this.courseItem.active;
-  }
-
   getTotalLecture(chapters: Chapter[]): number {
 
     if (!_.isNil(chapters)) {

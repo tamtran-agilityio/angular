@@ -3,7 +3,7 @@
   <div class="about__instructor">
     <div class="about__name">
       <a routerLink="/user/{{course.teacher?.fullName | formatLink}}">
-        {{teacher?.fullName}}
+        {{course.teacher?.fullName}}
       </a>
     </div>
     <div class="about__job"> {{course.teacher?.company}}</div>

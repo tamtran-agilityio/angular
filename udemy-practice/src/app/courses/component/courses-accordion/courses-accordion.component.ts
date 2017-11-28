@@ -17,4 +17,8 @@ export class CoursesAccordionComponent implements OnInit {
   ngOnInit() {
   }
 
+  allCollapse(event) {
+    this.courseItem.active = !this.courseItem.active;
+  }
+
 }

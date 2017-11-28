@@ -18,6 +18,7 @@ import { AccordionComponent } from './component/accordion/accordion.component';
 import { AccordionItemComponent } from './component/accordion/accordion-item/accordion-item.component';
 import { CoreModule } from '@app/core';
 import { SetbackgroundDirective } from '@app/shared/directive/setbackground.directive';
+import { PrimarylayoutComponent } from './component/primarylayout/primarylayout.component';
 
 export const COMMON_MODULES: any[] = [
   FormsModule,
@@ -35,11 +36,11 @@ export const SHARED_COMPONENT: any[] = [
   NavComponent,
   ModalComponent,
   ControlMessagesComponent,
+  PrimarylayoutComponent,
   ErrorMessageComponent,
   AccordionComponent,
   AccordionItemComponent,
   ClickOutsideDirective,
-  FormatLinkPipe,
   SetbackgroundDirective
 ];
 
