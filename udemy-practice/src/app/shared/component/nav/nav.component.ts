@@ -1,4 +1,10 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  OnChanges,
+  Input,
+  ChangeDetectorRef
+} from '@angular/core';
 
 import * as _ from 'lodash';
 import { ModalService } from '../../service/modal.service';
@@ -6,13 +12,17 @@ import { User } from '../../../auth/model/use';
 import { HelperService } from '../../../core/service/helper.service';
 import { Dropdown } from '../../modal/dropdown';
 import { CategoryService } from '../../../categories/service/category.service';
+import { CourseService } from '@app/courses/service/course.service';
 
 @Component({
   selector: 'nav-bar',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
-export class NavComponent implements OnInit {
+export class NavComponent implements OnInit, OnChanges {
+
+  // @Input() myCoures: any[];
+  myCourses: any[];
   modalTitle: String = 'Login';
   modalId: String = 'Login';
   user: User = null;
@@ -20,7 +30,9 @@ export class NavComponent implements OnInit {
   dropdowns: Dropdown[];
   constructor(private modalService: ModalService,
               private helperService: HelperService,
-              private categoryService: CategoryService) { }
+              private categoryService: CategoryService,
+              private courseService: CourseService,
+              private cdr: ChangeDetectorRef) { }
 
   ngOnInit() {
     this.user = this.helperService.getLocalStorage('user');
@@ -31,6 +43,18 @@ export class NavComponent implements OnInit {
     this.categoryService.getCategories().subscribe( (res: any[]) => {
       this.dropdowns = res;
     });
+
+    if (!_.isNil(this.user)) {
+      this.courseService.getCoursesByUser(this.user).subscribe((res) => {
+        this.courseService.getCourseByUser(res.user_courses).subscribe( (myCoures: any) => {
+          this.myCourses = myCoures;
+          this.cdr.markForCheck();
+        });
+      });
+    }
+  }
+
+  ngOnChanges() {
   }
 
   clickLogin() {

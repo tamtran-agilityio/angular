@@ -31,7 +31,7 @@ export class CoursesEnrollComponent implements OnInit {
         userId: user.id,
         courseId: course.id
       };
-    this.courseService.joinNewCourse(enrollCourse).subscribe((res) => {
+    this.courseService.addNewCourse(enrollCourse).subscribe((res) => {
     });
     }
   }

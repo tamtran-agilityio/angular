@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import * as _ from 'lodash';
+
 import { LoggerService } from '../core';
 import { UserService } from '../auth/service/user.service';
 import { Topic } from '../categories/modal/topic';

@@ -5,6 +5,12 @@
       "fullName": "admin",
       "email": "trantamtk08b@gmail.com",
       "password": "tamtamxuan@123"
+    },
+    {
+      "id": 2,
+      "fullName": "tamtran",
+      "email": "tamtamxuan.com",
+      "password": "tamtamxuan@1234"
     }
   ],
   "categories": [
@@ -1568,7 +1574,26 @@
     {
       "userId": 1,
       "courseId": 1,
-      "id": 1
+      "id": 1,
+      "teacherId": 1
+    },
+    {
+      "userId": 1,
+      "courseId": 2,
+      "id": 2,
+      "teacherId": 2
+    },
+    {
+      "userId": 2,
+      "courseId": 1,
+      "id": 3,
+      "teacherId": 2
+    },
+    {
+      "userId": 2,
+      "courseId": 2,
+      "id": 4,
+      "teacherId": 1
     }
   ]
 }

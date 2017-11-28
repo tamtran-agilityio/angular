@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CollectionComponent } from './component/collection.component';
-import { cleanSession } from 'selenium-webdriver/safari';
+import { CategoryComponent } from '@app/categories/component/category/category.component';
 import { PrimarylayoutComponent } from '@app/shared/component/primarylayout/primarylayout.component';
 
 export const ROUTES: Routes = [
@@ -10,8 +9,12 @@ export const ROUTES: Routes = [
     component: PrimarylayoutComponent,
     children: [
       {
-        path: '',
-        component: CollectionComponent
+        path: 'development',
+        component: CategoryComponent
+      },
+      {
+        path: ':name',
+        component: CategoryComponent
       }
     ]
   }
@@ -22,4 +25,4 @@ export const ROUTES: Routes = [
   exports: [ RouterModule]
 })
 
-export class CollectionRoutingModule {}
+export class CategoriesRoutingModule {}

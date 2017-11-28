@@ -6,7 +6,6 @@ import { TopicComponent } from './component/topic/topic.component';
 import { SharedModule } from '../shared/shared.module';
 
 export const CATEGORIES_COMPONENT: any[] = [
-  // SharedModule,
   CategoryComponent,
   TopicComponent
 ];

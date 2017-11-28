@@ -10,6 +10,8 @@ import * as _ from 'lodash';
 import { HttpWrapperService, AppConfigService } from '@app/core';
 import { Course } from '../modal/course';
 import { Category } from '../../categories/modal/category';
+import { User } from '@app/auth/model/use';
+import { Chapter } from '@app/courses/modal/chapter';
 
 @Injectable()
 export class CourseService {
@@ -28,7 +30,6 @@ export class CourseService {
   }
 
   getCourseByName(name: string): Observable<Course[]> {
-    console.log('name', name);
     let url = this.appConfig.API.API_ROOT + `courses/?name=${name}&_expand=teacher`;
     return Observable.create( obs => {
       this.httpWrapper.get(url, {}).subscribe(res => {
@@ -90,7 +91,7 @@ export class CourseService {
                 .map(res => res);
   }
 
-  getPartByChapters(chapter: any): Observable<any> {
+  getPartByChapters(chapter: Chapter[]): Observable<any> {
     return Observable.create( obs => {
       if (!_.isEmpty(chapter)) {
         this.getPartByChapterId(1)
@@ -110,12 +111,47 @@ export class CourseService {
     });
   }
 
-  joinNewCourse(course) {
+  addNewCourse(course) {
     let url = this.appConfig.API.API_ROOT + `user_course`;
 
     let body = JSON.stringify(course);
 
     return this.httpWrapper.posts(url, body)
       .map(res => res);
+  }
+
+  getCoursesByUser(user: User): Observable<any> {
+    let url = this.appConfig.API.API_ROOT + `users/${user.id}?_embed=user_courses`;
+    return Observable.create( obs => {
+      this.httpWrapper.get(url, {}).subscribe( res => {
+        obs.next(res);
+      });
+    });
+  }
+
+  getCourseByUser(courseUser: any): Observable<any> {
+    return Observable.create( obs => {
+      if (!_.isEmpty(courseUser)) {
+        this.getMyCourseById(1)
+          .switchMap((response: any) => {
+            let subServices = [];
+            _.each(courseUser, (item) => {
+              subServices.push(this.getMyCourseById(item.id));
+            });
+            return Observable.zip(...subServices, (...res) => {
+              return res;
+            });
+          })
+          .subscribe(res => {
+            obs.next(res);
+          });
+      }
+    });
+  }
+
+  getMyCourseById(id: number) {
+    let url = this.appConfig.API.API_ROOT + `user_courses/${id}?_expand=user&_expand=course&_expand=teacher`;
+    return this.httpWrapper.get(url, {})
+                           .map(res => res);
   }
 }

@@ -6,7 +6,7 @@ import {
 
 import * as _ from 'lodash';
 
-import { Dropdown } from '../../../modal/dropdown';
+import { Dropdown } from '@app/shared/modal/dropdown';
 
 @Component({
   selector: 'dropdown-item',

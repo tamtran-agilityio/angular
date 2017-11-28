@@ -1,7 +1,7 @@
 <div class="dropdown">
   <ul class="category">
     <li category__item *ngFor="let dropdown of dropdowns">
-      <a [routerLink]="['courses', dropdown.title]" class="category__link">
+      <a [routerLink]="['/courses', dropdown.title | formatLink]" class="category__link">
         <i class="fa fa-gg-circle" aria-hidden="true"></i>
         <span> {{dropdown.title}} </span>
       </a>

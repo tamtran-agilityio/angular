@@ -29,7 +29,7 @@ export class AccordionItemComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.countTime = moment.utc((this.getTimePart(this.chapter)) * 10000).format('hh:mm:ss');
+    this.countTime = moment.utc((this.getTimePart(this.chapter)) * 10000).format('HH:mm:ss');
   }
 
   getTimePart(chapter: Chapter) {
@@ -39,7 +39,7 @@ export class AccordionItemComponent implements OnInit {
       this.countLectured = chapter.parts.length;
       _.each(chapter.parts, (part: Part) => {
         if (!_.isNil(part.time)) {
-          time += moment(part.time, 'hh:mm:ss').diff(moment().startOf('day'), 'seconds');
+          time += moment(part.time, 'HH:mm:ss').diff(moment().startOf('day'), 'seconds');
         }
       });
       return time;

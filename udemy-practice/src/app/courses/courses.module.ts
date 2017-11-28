@@ -16,6 +16,7 @@ import { CoursesAccordionComponent } from './component/courses-accordion/courses
 import { CoursesAboutInstructorComponent } from './component/courses-about-instructor/courses-about-instructor.component';
 import { CoursesEnrollComponent } from './component/courses-enroll/courses-enroll.component';
 import { CoreModule } from '@app/core/core.module';
+import { MyCoursesComponent } from '@app/courses/component/my-courses/my-courses.component';
 
 export const COURSES_COMPONENT: any[] = [
   CoursesListComponent,
@@ -27,7 +28,8 @@ export const COURSES_COMPONENT: any[] = [
   CousesCompareComponent,
   CoursesAccordionComponent,
   CoursesAboutInstructorComponent,
-  CoursesEnrollComponent
+  CoursesEnrollComponent,
+  MyCoursesComponent
 ];
 
 export const COURSES_COMMON: any[] = [

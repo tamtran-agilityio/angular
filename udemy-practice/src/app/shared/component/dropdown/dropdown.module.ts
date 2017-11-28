@@ -14,10 +14,10 @@ export const COMMON_CORE: any[] = [
 export const DROPDOWN_COMPONENT: any[] = [
   DropdownItemComponent,
   DropdownComponent,
+  FormatLinkPipe
 ];
 
 export const DROPDOWN_PROVIDERS: any[] = [
-  FormatLinkPipe
 ];
 
 @NgModule({

@@ -36,6 +36,7 @@ export class RegisterComponent implements OnInit {
 
     if (this.registerForm.dirty && this.registerForm.valid) {
       let user: User = {
+        id: null,
         fullName: this.registerForm.value.name,
         email: this.registerForm.value.email,
         password: this.registerForm.value.password
