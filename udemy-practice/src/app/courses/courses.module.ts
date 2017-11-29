@@ -16,6 +16,8 @@ import { CoursesAccordionComponent } from './component/courses-accordion/courses
 import { CoursesAboutInstructorComponent } from './component/courses-about-instructor/courses-about-instructor.component';
 import { CoursesEnrollComponent } from './component/courses-enroll/courses-enroll.component';
 import { CoreModule } from '@app/core/core.module';
+import { CoursesSearchComponent } from './component/courses-search/courses-search.component';
+import { CoursesSearchItemComponent } from './component/courses-search-item/courses-search-item.component';
 
 export const COURSES_COMPONENT: any[] = [
   CoursesListComponent,
@@ -27,7 +29,9 @@ export const COURSES_COMPONENT: any[] = [
   CousesCompareComponent,
   CoursesAccordionComponent,
   CoursesAboutInstructorComponent,
-  CoursesEnrollComponent
+  CoursesEnrollComponent,
+  CoursesSearchComponent,
+  CoursesSearchItemComponent
 ];
 
 export const COURSES_COMMON: any[] = [

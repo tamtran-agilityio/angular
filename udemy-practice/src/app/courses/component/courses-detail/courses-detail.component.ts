@@ -7,9 +7,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import * as _ from 'lodash';
 
-
-import { Course } from '../../modal/course';
-import { concat } from 'rxjs/operator/concat';
+import { Course } from '@app/courses/modal/course';
 import { Chapter } from '@app/courses/modal/chapter';
 import { CourseService } from '@app/courses/service/course.service';
 import { CourseItem } from '@app/courses/modal/course-item';

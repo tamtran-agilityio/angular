@@ -13,6 +13,10 @@ export const ROUTES: Routes = [
       {
         path: '',
         component: HomeComponent
+      },
+      {
+        path: ':name',
+        component: CoursesDetailComponent
       }
     ]
   }

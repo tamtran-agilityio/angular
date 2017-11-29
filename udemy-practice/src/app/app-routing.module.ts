@@ -6,7 +6,6 @@ import { HomeComponent } from './home/home.component';
 import { ROUTES as homeRouting } from './home/home-routing.module';
 import { ROUTES as courseRouting } from './courses/courses-routing.module';
 import { ROUTES as collectionRouting } from './collection/collection-routing.module';
-import { ROUTES as categoriesRouting } from './categories/categories-routing.module';
 import { ROUTES as myCoursesRouting } from './my-courses/mycourses-routing.module';
 import { ROUTES as teacherRouting } from './teacher/teacher-routing.module';
 import { PrimarylayoutComponent } from '@app/shared/component/primarylayout/primarylayout.component';
@@ -21,7 +20,7 @@ export const ROUTES: Routes = [
   {
     path: 'courses',
     children: [
-      ...categoriesRouting
+      ...courseRouting
     ]
   },
   {
@@ -39,12 +38,7 @@ export const ROUTES: Routes = [
   {
     path: 'collection',
     children: [
-      {
-        path: ':name',
-        children: [
-          ...collectionRouting
-        ]
-      }
+      ...collectionRouting
     ]
   },
   {
@@ -55,12 +49,6 @@ export const ROUTES: Routes = [
         path: '',
         component: AboutComponent
       }
-    ]
-  },
-  {
-    path: ':name',
-    children: [
-      ...courseRouting
     ]
   },
   {
