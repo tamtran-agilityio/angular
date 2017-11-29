@@ -1,11 +1,13 @@
 import {
   Component,
   OnInit,
-  OnChanges,
   Input,
+  Output,
+  EventEmitter,
   ChangeDetectorRef
 } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 
 import * as _ from 'lodash';
 import { ModalService } from '../../service/modal.service';
@@ -16,26 +18,30 @@ import { CategoryService } from '../../../categories/service/category.service';
 import { CourseService } from '@app/courses/service/course.service';
 
 
+
 @Component({
   selector: 'nav-bar',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
-export class NavComponent implements OnInit, OnChanges {
-
-  // @Input() myCoures: any[];
+export class NavComponent implements OnInit {
+  @Output() termSearch: EventEmitter<string> = new EventEmitter<string>();
   myCourses: any[];
   modalTitle: String = 'Login';
   modalId: String = 'Login';
   user: User = null;
   shortName: any = '';
   dropdowns: Dropdown[];
+  searchForm: FormGroup;
+  searchField = new FormControl();
+
   constructor(private modalService: ModalService,
               private helperService: HelperService,
               private categoryService: CategoryService,
               private courseService: CourseService,
               private cdr: ChangeDetectorRef,
-              private router: Router) { }
+              private router: Router,
+              private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.user = this.helperService.getLocalStorage('user');
@@ -55,9 +61,10 @@ export class NavComponent implements OnInit, OnChanges {
         });
       });
     }
-  }
 
-  ngOnChanges() {
+    this.searchForm = this.formBuilder.group({
+      search: this.searchField
+    });
   }
 
   clickLogin() {
@@ -71,5 +78,16 @@ export class NavComponent implements OnInit, OnChanges {
   logOut(event) {
     localStorage.removeItem('user');
     this.router.navigate(['/']);
+  }
+
+  onChange(event) {
+    if (event.which === 13) {
+      let value = this.searchForm.controls.search.value;
+      if (_.isEmpty(value)) {
+        this.router.navigate(['/']);
+      } else {
+        this.router.navigate(['/courses/search/'], { queryParams: { q: value }});
+      }
+    }
   }
 }

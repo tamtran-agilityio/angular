@@ -18,8 +18,15 @@
       </div>
     </div>
     <div class="search">
-      <form action="" class="search__courses">
-        <input type="text" class="search__input" placeholder="Search for Courses">
+      <form class="search__courses" [formGroup]="searchForm" >
+        <input
+          #search
+          (keyup)="onChange($event)"
+          type="text"
+          id="search"
+          formControlName="search"
+          class="search__input"
+          placeholder="Search for Courses">
         <span class="search__group">
           <button class="search__btn">
             <i class="fa fa-search" aria-hidden="true"></i>

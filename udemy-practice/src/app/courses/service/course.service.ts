@@ -112,7 +112,7 @@ export class CourseService {
   }
 
   addNewCourse(course) {
-    let url = this.appConfig.API.API_ROOT + `user_course`;
+    let url = this.appConfig.API.API_ROOT + `user_courses`;
 
     let body = JSON.stringify(course);
 
@@ -153,5 +153,14 @@ export class CourseService {
     let url = this.appConfig.API.API_ROOT + `user_courses/${id}?_expand=user&_expand=course&_expand=teacher`;
     return this.httpWrapper.get(url, {})
                            .map(res => res);
+  }
+
+  getCourseLikeName(name: string): Observable<Course[]> {
+    let url = this.appConfig.API.API_ROOT + `courses/?name_like=${name}&_expand=teacher`;
+    return Observable.create( obs => {
+      this.httpWrapper.get(url, {}).subscribe(res => {
+        obs.next(res);
+      });
+    });
   }
 }

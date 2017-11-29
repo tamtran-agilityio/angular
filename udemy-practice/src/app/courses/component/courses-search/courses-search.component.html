@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="search__term">
+    <span>
+      Search results for "{{termSearch}}"
+    </span>
+  </div>
+</div>
+<div class="container">
+  <div class="search__filter">
+    <div class="filter__btn">
+      <button class="filter__level">
+        Level
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+      </button>
+      <button class="filter__level">
+        Language
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+      </button>
+      <button class="filter__level">
+        Feature
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+      </button>
+      <button class="filter__level">
+        Price
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="search__sort">
+      <span class="search__sort--title">Sort by: </span>
+      <button class="filter__level">
+        Most Relevant
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+
+
+  <ul class="search__list">
+    <li *ngFor="let course of courses">
+        <courses-search-item
+          [course]="course">
+        </courses-search-item>
+    </li>
+  </ul>
+</div>

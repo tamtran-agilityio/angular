@@ -16,12 +16,12 @@ import { Topic } from '../../modal/topic';
   styleUrls: ['./topic.component.scss']
 })
 export class TopicComponent implements OnInit, OnChanges {
-  @Input() category: Category[];
-  topics: Topic[];
+  // @Input() category: Category[];
+  // topics: Topic[];
   constructor() { }
 
   ngOnInit() {
-      this.topics = this.getListTopics(this.category);
+      // this.topics = this.getListTopics(this.category);
   }
 
   ngOnChanges() {

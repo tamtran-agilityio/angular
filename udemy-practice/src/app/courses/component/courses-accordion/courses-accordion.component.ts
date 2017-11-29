@@ -3,6 +3,7 @@ import {
   OnInit,
   Input
 } from '@angular/core';
+
 import { CourseItem } from '@app/courses/modal/course-item';
 
 @Component({

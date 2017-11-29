@@ -27,7 +27,6 @@ export class MyCoursesComponent implements OnInit {
       this.courseService.getCoursesByUser(user).subscribe((res) => {
         this.courseService.getCourseByUser(res.user_courses).subscribe( (courses: any) => {
           this.courses = this.helperService.customCourses(courses);
-          console.log('cours', courses);
           this.cdr.markForCheck();
         });
       });
