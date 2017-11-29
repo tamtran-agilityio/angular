@@ -10,7 +10,7 @@ export const ROUTES: Routes = [
     component: PrimarylayoutComponent,
     children: [
       {
-        path: '',
+        path: ':name',
         component: CollectionComponent
       }
     ]
