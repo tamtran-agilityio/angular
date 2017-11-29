@@ -1,5 +1,5 @@
 <div *ngIf="course" class="course__item">
-  <a routerLink="{{course.name | formatLink }}" class="course__card">
+  <a routerLink="/{{course.name | formatLink }}" class="course__card">
     <span class="course__card--mark">
       <img src="{{ course.images }}" alt="{{ course.images }}" class="">
     </span>
