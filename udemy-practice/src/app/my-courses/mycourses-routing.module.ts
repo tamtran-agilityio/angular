@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home.component';
-import { ROUTES as courseRouting } from '@app/courses/courses-routing.module';
 import { PrimarylayoutComponent } from '@app/shared/component/primarylayout/primarylayout.component';
-import { CoursesDetailComponent } from '@app/courses/component/courses-detail/courses-detail.component';
+import { MyCoursesComponent } from '@app/my-courses/component/my-courses/my-courses.component';
 
 export const ROUTES: Routes = [
   {
@@ -11,16 +9,17 @@ export const ROUTES: Routes = [
     component: PrimarylayoutComponent,
     children: [
       {
-        path: '',
-        component: HomeComponent
+        path: ':name',
+        component: MyCoursesComponent
       }
     ]
   }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forChild(ROUTES)],
   exports: [RouterModule]
 })
 
-export class HomeRouting {}
+export class MyCoursesRouting {}

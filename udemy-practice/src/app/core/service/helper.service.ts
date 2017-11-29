@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 
+import * as _ from 'lodash';
+import { Course } from '@app/courses/modal/course';
+
 @Injectable()
 export class HelperService {
 
@@ -17,5 +20,14 @@ export class HelperService {
     return value.split(' ').reduce(function(previous, current){
       return {name : previous.name + ' ' + current[0]};
     }, {name : ''});
+  }
+
+  customCourses(courses: any) {
+    let course: Course;
+    return _.map(courses, (item) => {
+      course = item.course;
+      course.teacher = item.teacher;
+      return course;
+    });
   }
 }

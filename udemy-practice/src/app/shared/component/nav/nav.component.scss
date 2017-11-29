@@ -74,6 +74,13 @@
     border-radius: 3px;
     height: 45px;
     border: 1px solid transparent;
+    position: relative;
+
+    &:hover {
+      .user__setting {
+        display: block;
+      }
+    }
   }
 
   &__cart, &__bell, &__heart {
@@ -431,5 +438,112 @@
   color: #fff;
   background-color: #ec5252;
   border: 1px solid transparent;
+}
+
+.user {
+  &__setting {
+    background-clip: padding-box;
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+    border-bottom-left-radius: 2px;
+    border-top: 1px solid #e8e9eb;
+    box-shadow: 0 4px 16px rgba(20,23,28,.25);
+    color: #505763;
+    display: none;
+    font-size: 13px;
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    z-index: 1000;
+    left: inherit;
+    right: -1px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    width: 330px;
+    max-width: 100vw;
+
+    &:hover {
+      display: block;
+    }
+  }
+  &:before {
+    border-color: transparent transparent #e8e9eb;
+    top: -13px;
+    border-style: solid;
+    border-width: 0 10px 13px;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 14px;
+    left: auto;
+    width: 0;
+  }
+
+  &:after {
+    border-color: transparent transparent #fff;
+    top: -12px;
+    border-style: solid;
+    border-width: 0 10px 13px;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 14px;
+    width: 0;
+  }
+
+  &__infor {
+    display: flex;
+    flex-direction: row;
+    &--name {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #29303b;
+      text-transform: capitalize;
+      margin-top: 4px;
+    }
+
+    &--email {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #686f7a;
+      display: block;
+      font-size: 13px;
+    }
+  }
+
+  &__infor-login {
+    color: #686f7a;
+    flex: 1;
+    min-width: 1px;
+    margin-left: 10px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #29303b;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 10px 22px;
+    width: 100%;
+    position: relative;
+    &:last-child {
+      background: #f2f3f5;
+    }
+  }
+
+  &__message {
+    .fa {
+      font-size: 20px;
+      margin: 0 22px 0 8px;
+    }
+  }
 }
 
