@@ -10,7 +10,7 @@ import { CourseService } from '@app/courses/service/course.service';
 import { Course } from '@app/courses/modal/course';
 
 @Component({
-  selector: 'app-collection',
+  selector: 'collection',
   templateUrl: './collection.component.html',
   styleUrls: ['./collection.component.scss']
 })

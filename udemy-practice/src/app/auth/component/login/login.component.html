@@ -17,7 +17,7 @@
     <div class="login__group">
         <input class="login__input" type="email" formControlName="email"  id="email">
         <control-messages [control]="loginForm.controls.email"></control-messages>
-        <input class="login__input login__input--password" formControlName="password" id="password">
+        <input class="login__input login__input--password" type="password" formControlName="password" id="password">
         <control-messages [control]="loginForm.controls.password"></control-messages>
         <input class="login__submit" type="submit" value="Login">
     </div>
