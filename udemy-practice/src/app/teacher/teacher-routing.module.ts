@@ -6,13 +6,7 @@ import { TeacherComponent } from '@app/teacher/teacher.component';
 export const ROUTES: Routes = [
   {
     path: '',
-    component: PrimarylayoutComponent,
-    children: [
-      {
-        path: '',
-        component: TeacherComponent
-      }
-    ]
+    component: TeacherComponent
   }
 ];
 

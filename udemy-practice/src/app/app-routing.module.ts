@@ -30,7 +30,7 @@ export const ROUTES: Routes = [
     ]
   },
   {
-    path: 'teacher',
+    path: 'teaching',
     children: [
       ...teacherRouting
     ]

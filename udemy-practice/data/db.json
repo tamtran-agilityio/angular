@@ -1594,6 +1594,12 @@
       "courseId": 2,
       "id": 4,
       "teacherId": 1
+    },
+    {
+      "userId": 1,
+      "courseId": 3,
+      "teacherId": 3,
+      "id": 5
     }
   ]
 }
