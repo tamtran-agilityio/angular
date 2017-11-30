@@ -31,6 +31,19 @@ export const ROUTES: Routes = [
             component: TopicComponent
           }
         ]
+      },
+      {
+        path: 'business',
+        children: [
+          {
+            path: '',
+            component: CategoryComponent
+          },
+          {
+            path: ':name',
+            component: TopicComponent
+          }
+        ]
       }
     ]
   }
