@@ -18,6 +18,7 @@ import { CoursesEnrollComponent } from './component/courses-enroll/courses-enrol
 import { CoreModule } from '@app/core/core.module';
 import { CoursesSearchComponent } from './component/courses-search/courses-search.component';
 import { CoursesSearchItemComponent } from './component/courses-search-item/courses-search-item.component';
+import { AddCoursesComponent } from './component/add-courses/add-courses.component';
 
 export const COURSES_COMPONENT: any[] = [
   CoursesListComponent,
@@ -31,7 +32,8 @@ export const COURSES_COMPONENT: any[] = [
   CoursesAboutInstructorComponent,
   CoursesEnrollComponent,
   CoursesSearchComponent,
-  CoursesSearchItemComponent
+  CoursesSearchItemComponent,
+  AddCoursesComponent
 ];
 
 export const COURSES_COMMON: any[] = [

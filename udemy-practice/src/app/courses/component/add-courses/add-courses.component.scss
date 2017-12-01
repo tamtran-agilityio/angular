@@ -1,0 +1,14 @@
+:host {
+  flex: 1;
+  padding: 40px 0px;
+}
+.course {
+  &__label {
+    width: 100px;
+  }
+
+  &__select {
+    width: auto;
+    display: inline-block;
+  }
+}
