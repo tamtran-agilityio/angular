@@ -6,6 +6,7 @@ import { PrimarylayoutComponent } from '@app/shared/component/primarylayout/prim
 import { CoursesSearchComponent } from '@app/courses/component/courses-search/courses-search.component';
 import { CategoryComponent } from '@app/categories/component/category/category.component';
 import { TopicComponent } from '@app/categories/component/topic/topic.component';
+import { AddCoursesComponent } from '@app/courses/component/add-courses/add-courses.component';
 export const ROUTES: Routes = [
   {
     path: '',
@@ -14,6 +15,10 @@ export const ROUTES: Routes = [
       {
         path: '',
         component: CoursesDetailComponent
+      },
+      {
+        path: 'add',
+        component: AddCoursesComponent
       },
       {
         path: 'search',

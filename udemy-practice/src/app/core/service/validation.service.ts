@@ -31,4 +31,10 @@ export class ValidationService {
         return { 'invalidPassword': true };
     }
   }
+
+  validateExt(c: FormControl) {
+    let extension = ['png', 'jpeg', 'gif'];
+    debugger;
+    return extension.indexOf(c.value) ? null : { validateExt: false };
+ }
 }
