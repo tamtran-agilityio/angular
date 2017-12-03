@@ -44,22 +44,26 @@ export class CoursesDetailComponent implements OnInit {
   }
 
   getCoursesComparion(course) {
-    this.courseService.getCoursesComparison(course.topicId).subscribe((courses: Course[]) => {
-      let cloned = _.cloneDeep(this.courseItem);
-      cloned.courses = courses;
-      this.courseItem = cloned;
-    });
+    if (!_.isNil(course)) {
+      this.courseService.getCoursesComparison(course.topicId).subscribe((courses: Course[]) => {
+        let cloned = _.cloneDeep(this.courseItem);
+        cloned.courses = courses;
+        this.courseItem = cloned;
+      });
+    }
   }
 
   getChapters(course) {
-    this.courseService.getChapter(course.id).subscribe((coursesCurriculum: any) => {
-      this.courseService.getPartByChapters(coursesCurriculum.chapters).subscribe(chapter => {
-        let cloned = _.cloneDeep(this.courseItem);
-        cloned.chapters = chapter;
-        cloned.countLecture = this.getTotalLecture(chapter);
-        this.courseItem = cloned;
+    if (!_.isNil(course)) {
+      this.courseService.getChapter(course.id).subscribe((coursesCurriculum: any) => {
+        this.courseService.getPartByChapters(coursesCurriculum.chapters).subscribe(chapter => {
+          let cloned = _.cloneDeep(this.courseItem);
+          cloned.chapters = chapter;
+          cloned.countLecture = this.getTotalLecture(chapter);
+          this.courseItem = cloned;
+        });
       });
-    });
+    }
   }
 
   getTotalLecture(chapters: Chapter[]): number {

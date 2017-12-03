@@ -19,6 +19,7 @@ import { AccordionItemComponent } from './component/accordion/accordion-item/acc
 import { CoreModule } from '@app/core';
 import { SetbackgroundDirective } from '@app/shared/directive/setbackground.directive';
 import { PrimarylayoutComponent } from './component/primarylayout/primarylayout.component';
+import { UploaderImageComponent } from './component/uploader-image/uploader-image.component';
 
 export const COMMON_MODULES: any[] = [
   FormsModule,
@@ -40,6 +41,7 @@ export const SHARED_COMPONENT: any[] = [
   ErrorMessageComponent,
   AccordionComponent,
   AccordionItemComponent,
+  UploaderImageComponent,
   ClickOutsideDirective,
   SetbackgroundDirective
 ];

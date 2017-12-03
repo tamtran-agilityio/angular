@@ -20,7 +20,7 @@ import { CategoryService } from '@app/categories/service/category.service';
 export class CoursesListComponent implements OnInit {
   carouselOptions: Carousel;
   @Input() courses: Course[];
-  categories: Category;
+  @Input() categories: Category[];
   constructor(private courseService: CourseService,
               private categoryService: CategoryService) {}
 
@@ -42,15 +42,14 @@ export class CoursesListComponent implements OnInit {
     console.log($event);
   }
 
-  getNameCategory(index: number) {
-    let categoryName = '';
-    if (!_.isEmpty(this.categories)) {
-      _.each(this.categories, (category: Category, id: number) => {
-        if (id === index) {
-          categoryName = category.title;
-        }
-      });
-    }
-    return categoryName;
+  getNameCategory(item: any) {
+    let course = _.first(item);
+    let categoryTitle = '';
+    _.each(this.categories, (category) => {
+      if (category.id === course.categoryId) {
+        categoryTitle =  category.title;
+      }
+    });
+    return categoryTitle;
   }
 }
