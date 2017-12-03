@@ -3,7 +3,6 @@ import {
   environment
 } from '../../../environments/environment';
 
-
 @Injectable()
 export class AppConfigService {
 
@@ -19,7 +18,11 @@ export class AppConfigService {
       'invalidCreditCard': 'Is invalid credit card number',
       'invalidEmailAddress': 'Invalid email address',
       'invalidPassword': 'Invalid password. Password must be at least 6 characters long, and contain a number.',
-      'minlength': `Minimum length`
+      'minlength': `Minimum length <%= validation.minlength %>`,
+      'maxlength': `Minimum length <%= validation.maxlength %>`,
+      'invalidRating': 'Is invalid number or max 5',
+      'invalidPrice': 'Is invalid number',
+      'required.length': 'Minimum length <%= validation.minlength %>'
     },
     AUTHENTICATION: {
       'AUTHENTICATION_FAIL': 'Please check your email and password.',
@@ -33,7 +36,8 @@ export class AppConfigService {
 
       'PASSWORD_PATTERN': /^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{4,100}$/,
       'PASSWORD_MINLENGTH': 4,
-      'PASSWORD_MAXLENGTH': 50
+      'PASSWORD_MAXLENGTH': 50,
+      'RATING_PATTERN': /^-?\d+\.?\d*$/
     }
   };
 }

@@ -1,0 +1,15 @@
+<div class="container">
+  <div *ngFor="let course of courses">
+    <div class="row">
+      <div class="col-xs-10">
+        <courses-search-item
+          [course]="course"
+          ></courses-search-item>
+      </div>
+      <div class="col-xs-2">
+        <a [routerLink]="['/courses/edit/', course.name]"> Edit </a>
+      </div>
+    </div>
+  </div>
+  <a routerLink="/courses/add"> Add new course</a>
+</div>
