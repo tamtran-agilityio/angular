@@ -223,6 +223,14 @@ export class HttpWrapperService {
       .catch(this.errorHandler.bind(this));
   }
 
+  deletes<T>(url: string): Observable<T> {
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new ResponseOptions({ headers: headers });
+    return this.http.delete(this.generateUrl(url), options)
+      .map(this.responseHandler, this)
+      .catch(this.errorHandler.bind(this));
+  }
+
   /**
    * Prepare data for request with interceptors
    * @param data     any

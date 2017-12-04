@@ -32,7 +32,16 @@ export class CourseService {
   getCourseByName(name: string): Observable<Course[]> {
     let url = this.appConfig.API.API_ROOT + `courses/?name=${name}&_expand=teacher`;
     return Observable.create( obs => {
-      this.httpWrapper.get(url, {}).subscribe(res => {
+      this.httpWrapper.get(url, {}).subscribe((res: Course[]) => {
+        obs.next(res);
+      });
+    });
+  }
+
+  getCourseByTeacher(teacherId: number): Observable<Course[]> {
+    let url = this.appConfig.API.API_ROOT + `courses/?teacherId=${teacherId}&_expand=teacher`;
+    return Observable.create( obs => {
+      this.httpWrapper.get(url, {}).subscribe((res: Course[]) => {
         obs.next(res);
       });
     });
@@ -66,12 +75,14 @@ export class CourseService {
   }
 
   getCoursesComparison(topicId: number): Observable<Course[]> {
-    let url = this.appConfig.API.API_ROOT + `topics/${topicId}/courses?_sort=votes&_order=asc`;
-    return Observable.create( obs => {
-      return this.httpWrapper.get(url , {} ).subscribe( (res: Course[]) => {
-        obs.next(res);
+    if (!_.isNil(topicId)) {
+      let url = this.appConfig.API.API_ROOT + `topics/${topicId}/courses?_sort=votes&_order=asc`;
+      return Observable.create( obs => {
+        return this.httpWrapper.get(url , {} ).subscribe( (res: Course[]) => {
+          obs.next(res);
+        });
       });
-    });
+    }
   }
 
   getChapter(id: number): Observable<any> {
@@ -118,6 +129,12 @@ export class CourseService {
 
     return this.httpWrapper.posts(url, body)
       .map(res => res);
+  }
+
+  deleteCourse(id: number) {
+    let url = this.appConfig.API.API_ROOT + `courses/${id}`;
+    return this.httpWrapper.deletes(url)
+               .map(res => res);
   }
 
   getCoursesByUser(user: User): Observable<any> {

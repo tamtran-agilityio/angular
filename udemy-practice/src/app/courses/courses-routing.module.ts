@@ -7,6 +7,8 @@ import { CoursesSearchComponent } from '@app/courses/component/courses-search/co
 import { CategoryComponent } from '@app/categories/component/category/category.component';
 import { TopicComponent } from '@app/categories/component/topic/topic.component';
 import { AddCoursesComponent } from '@app/courses/component/add-courses/add-courses.component';
+import { ManagerCoursesComponent } from '@app/courses/component/manager-courses/manager-courses.component';
+import { EditCoursesComponent } from '@app/courses/component/edit-courses/edit-courses.component';
 export const ROUTES: Routes = [
   {
     path: '',
@@ -21,8 +23,21 @@ export const ROUTES: Routes = [
         component: AddCoursesComponent
       },
       {
+        path: 'edit',
+        children: [
+          {
+            path: ':name',
+            component: EditCoursesComponent
+          }
+        ]
+      },
+      {
         path: 'search',
         component: CoursesSearchComponent
+      },
+      {
+        path: 'manager',
+        component: ManagerCoursesComponent
       },
       {
         path: 'development',

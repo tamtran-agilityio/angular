@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 
 import * as _ from 'lodash';
+import * as moment from 'moment';
+
 import { Course } from '@app/courses/modal/course';
 
 @Injectable()
@@ -29,5 +31,13 @@ export class HelperService {
       course.teacher = item.teacher;
       return course;
     });
+  }
+
+  formatTitle(value) {
+    return _.join(_.split( _.lowerCase(value), ' '), '-');
+  }
+
+  setCurrentDay() {
+    return moment().format('DD/MM/YYYY');
   }
 }
