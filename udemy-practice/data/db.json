@@ -252,26 +252,26 @@
       "id": 16
     },
     {
-      "category": "1",
-      "topic": "5",
       "title": "SQL - MySQL for Data Analytics and Business Intelligence",
       "subtitle": "SQL that will get you hired – SQL for Business Analysis, Marketing, and Data Management",
       "images": "/assets/img/course/1405632_6e6f.jpg",
       "learning": "Become an expert in SQL\nLearn how to code in SQL\nBoost your resume by learning an in-demand skill",
       "decsription": "How important is database management in the age of big data and analytics?",
-      "type": "best seller",
+      "type": "new",
       "requirements": "\nNo prior experience is required. We will start from the very basics",
       "rating": "4.6",
       "price": "195",
-      "discount": "15",
       "date": "2017-04-12",
       "language": "English",
       "categoryId": 1,
-      "topicId": 5,
+      "topicId": 1,
       "teacherId": 1,
-      "discountPrice": "15",
+      "discountPrice": "25",
       "name": "sql-my-sql-for-data-analytics-and-business-intelligence",
-      "id": 17
+      "id": 17,
+      "category": 1,
+      "topic": 1,
+      "discount": "25"
     }
   ],
   "chapters": [
