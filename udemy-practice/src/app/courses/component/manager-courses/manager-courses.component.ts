@@ -20,11 +20,15 @@ export class ManagerCoursesComponent implements OnInit {
     let user = this.helpService.getLocalStorage('user');
     if (!_.isNil(user)) {
       this.courseService.getCourseByTeacher(user.id).subscribe(res => {
-        console.log('res', res);
         this.courses = res;
       });
     }
+  }
 
+  deleteCourse(course: Course) {
+    this.courseService.deleteCourse(course.id).subscribe(res => {
+      console.log(res);
+    });
   }
 
 }

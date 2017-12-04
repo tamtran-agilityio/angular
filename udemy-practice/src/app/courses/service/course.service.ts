@@ -131,6 +131,12 @@ export class CourseService {
       .map(res => res);
   }
 
+  deleteCourse(id: number) {
+    let url = this.appConfig.API.API_ROOT + `courses/${id}`;
+    return this.httpWrapper.deletes(url)
+               .map(res => res);
+  }
+
   getCoursesByUser(user: User): Observable<any> {
     let url = this.appConfig.API.API_ROOT + `users/${user.id}?_embed=user_courses`;
     return Observable.create( obs => {

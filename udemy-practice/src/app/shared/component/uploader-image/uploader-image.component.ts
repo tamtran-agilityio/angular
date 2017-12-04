@@ -2,6 +2,8 @@ import {
   Component,
   OnInit,
   Output,
+  Input,
+  OnChanges,
   EventEmitter
 } from '@angular/core';
 
@@ -10,7 +12,7 @@ import {
   templateUrl: './uploader-image.component.html',
   styleUrls: ['./uploader-image.component.scss']
 })
-export class UploaderImageComponent implements OnInit {
+export class UploaderImageComponent implements OnInit, OnChanges {
   activeColor: string = 'green';
   baseColor: string = '#ccc';
   overlayColor: string = 'rgba(255,255,255,0.5)';
@@ -19,11 +21,14 @@ export class UploaderImageComponent implements OnInit {
   dragging: boolean = false;
   loaded: boolean = false;
   imageLoaded: boolean = false;
-  imageSrc: string = '';
+  @Input() imageSrc: string = '';
   @Output() images: EventEmitter<any> = new EventEmitter<any>();
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngOnChanges() {
   }
 
   handleDragEnter() {

@@ -97,7 +97,7 @@
       <div class="col-xs-8">
         <div class="form-group">
           <label class="course__label" for="images">Images: </label>
-          <uploader-image (images)="selectImages($event)"></uploader-image>
+          <uploader-image [imageSrc]="imageSrc" (images)="selectImages($event)"></uploader-image>
           <control-messages [control]="addCourse.controls.images"></control-messages>
         </div>
       </div>

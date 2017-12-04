@@ -31,6 +31,7 @@ export class AddCoursesComponent implements OnInit {
   typeSelected: string;
   languageSelected: string;
   currentDay: string;
+  imageSrc: String = '';
 
   addCourse: FormGroup;
   constructor(private categoryService: CategoryService,
@@ -45,9 +46,9 @@ export class AddCoursesComponent implements OnInit {
   ngOnInit() {
     this.categoryService.getCategories().subscribe((res) => {
       this.categories = res;
-      this.topics = this.categories[1].topics;
-      this.categorySelected = this.categories[1].id;
-      this.topicSelected = this.categories[1].topics[0].id;
+      this.topics = this.categories[0].topics;
+      this.categorySelected = this.categories[0].id;
+      this.topicSelected = this.categories[0].topics[0].id;
       this.typeSelected = 'new';
       this.cdr.markForCheck();
     });
@@ -106,25 +107,28 @@ export class AddCoursesComponent implements OnInit {
   }
 
   submitForm(value: any) {
-    let user = this.helperService.getLocalStorage('user');
-    let courseCloned = _.cloneDeep(this.addCourse.value);
-    if (this.addCourse.valid) {
-      let course = _.extend(courseCloned, {
-        categoryId: courseCloned.category,
-        topicId: courseCloned.topic,
-        teacherId: user.id,
-        images: '/assets/img/course/' + courseCloned.images,
-        discountPrice: courseCloned.discount,
-        name: this.helperService.formatTitle(this.addCourse.value.title)
-      });
+    this.addCourse.reset();
+    this.imageSrc = '';
+    // let user = this.helperService.getLocalStorage('user');
+    // let courseCloned = _.cloneDeep(this.addCourse.value);
+    // if (this.addCourse.valid) {
+    //   let course = _.extend(courseCloned, {
+    //     categoryId: _.parseInt(courseCloned.category),
+    //     topicId: _.parseInt(courseCloned.topic),
+    //     teacherId: user.id,
+    //     images: '/assets/img/course/' + courseCloned.images,
+    //     discountPrice: courseCloned.discount,
+    //     name: this.helperService.formatTitle(this.addCourse.value.title)
+    //   });
 
-      _.omit(course, ['category', 'topic']);
-      this.courseService.addCourse(course).subscribe( res => {
-        if (!_.isNil(res)) {
-          this.addCourse.reset();
-        }
-      });
-    }
+    //   _.omit(course, ['category', 'topic']);
+    //   this.courseService.addCourse(course).subscribe( res => {
+    //     if (!_.isNil(res)) {
+    //       this.addCourse.reset();
+    //       this.imageSrc = '';
+    //     }
+    //   });
+    // }
   }
 
 }

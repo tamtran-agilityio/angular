@@ -2,3 +2,14 @@
   flex: 1;
   padding: 40px 0;
 }
+
+.course {
+  &__edit {
+    display: block;
+    padding: 10px 20px;
+  }
+  &__delete {
+    display: block;
+    padding: 10px 20px;
+  }
+}

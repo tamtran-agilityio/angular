@@ -7,7 +7,8 @@
           ></courses-search-item>
       </div>
       <div class="col-xs-2">
-        <a [routerLink]="['/courses/edit/', course.name]"> Edit </a>
+        <a class="course__edit" [routerLink]="['/courses/edit/', course.name]"> Edit </a>
+        <button class="course__delete" (click)="deleteCourse(course)"> Delete</button>
       </div>
     </div>
   </div>

@@ -51,19 +51,23 @@ export class ValidationService {
     return (control: AbstractControl): {[key: string]: any} => {
       const input = control.value,
             isValid = input > max;
-      if (isValid || !control.value.match(/^-?\d+\.?\d*$/)) {
-        return { 'invalidRating': true };
-      } else {
-        return null;
+      if (!_.isNil(control.value)) {
+        if (isValid || !control.value.match(/^-?\d+\.?\d*$/)) {
+          return { 'invalidRating': true };
+        } else {
+          return null;
+        }
       }
     };
   }
 
   priceValidator(control: FormControl) {
+    if (!_.isNil(control.value)) {
       if (!control.value.match(/^-?\d+\.?\d*$/)) {
         return { 'invalidPrice': true };
       } else {
         return null;
       }
+    }
   }
 }
