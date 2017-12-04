@@ -52,8 +52,8 @@ export class EditCoursesComponent implements OnInit {
       'type': ['', Validators.required],
       'requirements': ['', Validators.required],
       'rating': ['', Validators.compose([Validators.required, this.validationService.ratingValidator(5)])],
-      'price': ['', Validators.compose([ Validators.required])],
-      'discount': ['', Validators.compose([ Validators.required])],
+      'price': ['', Validators.compose([ Validators.required, this.validationService.priceValidator])],
+      'discount': ['', Validators.compose([ Validators.required, this.validationService.priceValidator])],
       'date': ['', Validators.required],
       'language': ['', Validators.required],
     });
@@ -71,8 +71,8 @@ export class EditCoursesComponent implements OnInit {
         cloned = _.first(res);
         this.course = cloned;
         this.formCourse.setValue({
-          'category': this.course.categoryId,
-          'topic': this.course.topicId,
+          'category': _.parseInt(this.course.categoryId),
+          'topic': _.parseInt(this.course.topicId),
           'title': this.course.title,
           'subtitle': this.course.subtitle,
           'images': this.course.images,
@@ -80,8 +80,8 @@ export class EditCoursesComponent implements OnInit {
           'decsription': this.course.decsription,
           'type': this.course.type,
           'requirements': this.course.requirements,
-          'rating': this.course.rating.toString(),
-          'price': this.course.price.toString(),
+          'rating': this.course.rating,
+          'price': this.course.price,
           'discount': this.course.discountPrice,
           'date': this.course.date,
           'language': this.course.language,
@@ -125,7 +125,6 @@ export class EditCoursesComponent implements OnInit {
     this.formCourse.patchValue({
       type: type
     });
-    // this.formCourse.value.type = type;
   }
 
   selectImages(event) {
@@ -138,11 +137,11 @@ export class EditCoursesComponent implements OnInit {
     let courseCloned = _.cloneDeep(this.formCourse.value);
     if (this.formCourse.valid) {
       let course = _.extend(courseCloned, {
-        categoryId: this.formCourse.value.category,
-        topicId:  this.formCourse.value.topic,
+        categoryId: _.parseInt(this.formCourse.value.category),
+        topicId:  _.parseInt(this.formCourse.value.topic),
         teacherId: courseCloned.teacherId,
         images: courseCloned.images,
-        discountPrice:  this.formCourse.value.discount,
+        discountPrice:  _.parseInt(this.formCourse.value.discount),
         id: this.course.id,
         name: this.helperService.formatTitle(this.formCourse.value.title)
       });

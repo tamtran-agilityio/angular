@@ -230,8 +230,8 @@
       "id": 15
     },
     {
-      "category": "1",
-      "topic": "4",
+      "category": 1,
+      "topic": 1,
       "title": "Ultimate Guide to Digital Sketching: Beginner to Advanced",
       "subtitle": "Learn to digitally draw like a pro!",
       "images": "/assets/img/course/1325264_6025_3.jpg",
@@ -241,13 +241,13 @@
       "requirements": "A digital drawing tablet of some sort\nA basic understanding of the drawing software of your choice such as Photoshop, or Procreate",
       "rating": "4.6",
       "price": "200",
-      "discount": "15",
+      "discount": "10",
       "date": "2017-04-12",
       "language": "English",
       "categoryId": 1,
-      "topicId": 4,
+      "topicId": 1,
       "teacherId": 1,
-      "discountPrice": "15",
+      "discountPrice": "10",
       "name": "ultimate-guide-to-digital-sketching-beginner-to-advanced",
       "id": 16
     },
@@ -266,12 +266,12 @@
       "categoryId": 1,
       "topicId": 1,
       "teacherId": 1,
-      "discountPrice": "25",
+      "discountPrice": "15",
       "name": "sql-my-sql-for-data-analytics-and-business-intelligence",
       "id": 17,
       "category": 1,
       "topic": 1,
-      "discount": "25"
+      "discount": "15"
     }
   ],
   "chapters": [
