@@ -108,27 +108,26 @@ export class AddCoursesComponent implements OnInit {
 
   submitForm(value: any) {
     this.addCourse.reset();
-    this.imageSrc = '';
-    // let user = this.helperService.getLocalStorage('user');
-    // let courseCloned = _.cloneDeep(this.addCourse.value);
-    // if (this.addCourse.valid) {
-    //   let course = _.extend(courseCloned, {
-    //     categoryId: _.parseInt(courseCloned.category),
-    //     topicId: _.parseInt(courseCloned.topic),
-    //     teacherId: user.id,
-    //     images: '/assets/img/course/' + courseCloned.images,
-    //     discountPrice: courseCloned.discount,
-    //     name: this.helperService.formatTitle(this.addCourse.value.title)
-    //   });
+    let user = this.helperService.getLocalStorage('user');
+    let courseCloned = _.cloneDeep(this.addCourse.value);
+    if (this.addCourse.valid) {
+      let course = _.extend(courseCloned, {
+        categoryId: _.parseInt(courseCloned.category),
+        topicId: _.parseInt(courseCloned.topic),
+        teacherId: user.id,
+        images: '/assets/img/course/' + courseCloned.images,
+        discountPrice: courseCloned.discount,
+        name: this.helperService.formatTitle(this.addCourse.value.title)
+      });
 
-    //   _.omit(course, ['category', 'topic']);
-    //   this.courseService.addCourse(course).subscribe( res => {
-    //     if (!_.isNil(res)) {
-    //       this.addCourse.reset();
-    //       this.imageSrc = '';
-    //     }
-    //   });
-    // }
+      _.omit(course, ['category', 'topic']);
+      this.courseService.addCourse(course).subscribe( res => {
+        if (!_.isNil(res)) {
+          this.addCourse.reset();
+          this.imageSrc = '';
+        }
+      });
+    }
   }
 
 }
