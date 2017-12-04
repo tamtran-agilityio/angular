@@ -3,7 +3,7 @@ import {
   OnInit,
   ChangeDetectorRef
 } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 import * as _ from 'lodash';
@@ -33,6 +33,7 @@ export class EditCoursesComponent implements OnInit {
   constructor(private helperService: HelperService,
               private courseService: CourseService,
               private route: ActivatedRoute,
+              private router: Router,
               private categoryService: CategoryService,
               private cdr: ChangeDetectorRef,
               private formBuilder: FormBuilder,
@@ -51,8 +52,8 @@ export class EditCoursesComponent implements OnInit {
       'type': ['', Validators.required],
       'requirements': ['', Validators.required],
       'rating': ['', Validators.compose([Validators.required, this.validationService.ratingValidator(5)])],
-      'price': ['', Validators.compose([ Validators.required, this.validationService.priceValidator])],
-      'discount': ['', Validators.compose([ Validators.required, this.validationService.priceValidator])],
+      'price': ['', Validators.compose([ Validators.required])],
+      'discount': ['', Validators.compose([ Validators.required])],
       'date': ['', Validators.required],
       'language': ['', Validators.required],
     });
@@ -88,11 +89,10 @@ export class EditCoursesComponent implements OnInit {
         this.currentDay = this.course.date;
         this.categorySelected = this.course.categoryId;
         this.cdr.markForCheck();
-        this.categorySelected = this.categories[this.course.categoryId].id;
-        this.topics = this.categories[this.course.categoryId].topics;
-        this.categorySelected = this.categories[this.course.categoryId].id;
-        this.topicSelected = this.categories[this.course.categoryId].topics[this.course.topicId].id;
-        debugger;
+        // this.categorySelected = this.categories[this.course.categoryId].id;
+        // this.topics = this.categories[this.course.categoryId].topics;
+        // this.categorySelected = this.categories[this.course.categoryId].id;
+        // this.topicSelected = this.categories[this.course.categoryId].topics[this.course.topicId].id;
       });
     });
 
@@ -122,7 +122,10 @@ export class EditCoursesComponent implements OnInit {
 
   selectType(event) {
     let type = +event.target.value;
-    this.formCourse.value.type = type;
+    this.formCourse.patchValue({
+      type: type
+    });
+    // this.formCourse.value.type = type;
   }
 
   selectImages(event) {
@@ -131,26 +134,27 @@ export class EditCoursesComponent implements OnInit {
     });
   }
 
-  // submitForm(value: any) {
-  //   let user = this.helperService.getLocalStorage('user');
-  //   let courseCloned = _.cloneDeep(this.formCourse.value);
-  //   if (this.formCourse.valid) {
-  //     let course = _.extend(courseCloned, {
-  //       categoryId: courseCloned.category,
-  //       topicId: courseCloned.topic,
-  //       teacherId: user.id,
-  //       images: '/assets/img/course/' + courseCloned.images,
-  //       discountPrice: courseCloned.discount,
-  //       name: this.helperService.formatTitle(this.formCourse.value.title)
-  //     });
+  submitForm(value: any) {
+    let courseCloned = _.cloneDeep(this.formCourse.value);
+    if (this.formCourse.valid) {
+      let course = _.extend(courseCloned, {
+        categoryId: this.formCourse.value.category,
+        topicId:  this.formCourse.value.topic,
+        teacherId: courseCloned.teacherId,
+        images: courseCloned.images,
+        discountPrice:  this.formCourse.value.discount,
+        id: this.course.id,
+        name: this.helperService.formatTitle(this.formCourse.value.title)
+      });
 
-  //     _.omit(course, ['category', 'topic']);
-  //     // this.courseService.formCourse(course).subscribe( res => {
-  //     //   if (!_.isNil(res)) {
-  //     //     this.formCourse.reset();
-  //     //   }
-  //     // });
-  //   }
-  // }
+      _.omit(course, ['category', 'topic']);
+      this.courseService.editCourse(course).subscribe( res => {
+        if (!_.isNil(res)) {
+          this.router.navigate(['/courses/manager']);
+          this.formCourse.reset();
+        }
+      });
+    }
+  }
 
 }

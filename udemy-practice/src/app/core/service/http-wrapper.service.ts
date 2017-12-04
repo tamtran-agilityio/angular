@@ -211,6 +211,14 @@ export class HttpWrapperService {
       .catch(this.errorHandler.bind(this));
   }
 
+  patchs<T>(url: string, data: Object): Observable<T> {
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new ResponseOptions({ headers: headers });
+    return this.http.patch(this.generateUrl(url), data, options)
+      .map(this.responseHandler, this)
+      .catch(this.errorHandler.bind(this));
+  }
+
   /**
    * Performs a request with `delete` http method.
    * @param url      An url which is used in a http request.

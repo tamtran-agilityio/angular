@@ -137,6 +137,13 @@ export class CourseService {
                .map(res => res);
   }
 
+  editCourse(course: Course) {
+    let url = this.appConfig.API.API_ROOT + `courses/${course.id}`;
+    let body = JSON.stringify(course);
+    return this.httpWrapper.patchs(url, body)
+               .map(res => res);
+  }
+
   getCoursesByUser(user: User): Observable<any> {
     let url = this.appConfig.API.API_ROOT + `users/${user.id}?_embed=user_courses`;
     return Observable.create( obs => {
