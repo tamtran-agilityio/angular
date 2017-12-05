@@ -33,8 +33,8 @@ export class CoursesEnrollComponent implements OnInit {
     if (!_.isNil(user)) {
       this.courseService.getCoursesByUser(this.user).subscribe((res) => {
         if (!_.isEmpty(res)) {
-          let coures = res.user_courses;
-          _.each(coures, (item: any) => {
+          let course = res.user_courses;
+          _.each(course, (item: any) => {
             if (item.userId === this.user.id && item.courseId === this.course.id) {
               this.isValid = true;
               this.cdr.markForCheck();

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CollectionComponent } from './component/collection.component';
-import { cleanSession } from 'selenium-webdriver/safari';
 import { PrimarylayoutComponent } from '@app/shared/component/primarylayout/primarylayout.component';
 
 export const ROUTES: Routes = [

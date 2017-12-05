@@ -45,10 +45,8 @@ export class RegisterComponent implements OnInit {
       this.userService.getUserByEmail(user).subscribe( (users: User) => {
         if (_.isEmpty(users)) {
           this.userService.addUser(user).subscribe( res => {
-            console.log('res', res);
           });
         } else {
-          console.log('failed');
         }
       });
     }

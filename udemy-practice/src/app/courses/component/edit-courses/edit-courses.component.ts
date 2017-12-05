@@ -30,17 +30,20 @@ export class EditCoursesComponent implements OnInit {
   languageSelected: string;
   currentDay: string;
   formCourse: FormGroup;
-  constructor(private helperService: HelperService,
-              private courseService: CourseService,
-              private route: ActivatedRoute,
-              private router: Router,
-              private categoryService: CategoryService,
-              private cdr: ChangeDetectorRef,
-              private formBuilder: FormBuilder,
-              private validationService: ValidationService) {
-                this.currentDay = this.helperService.setCurrentDay();
-              }
-  ngOnInit() {
+  constructor(
+    private helperService: HelperService,
+    private courseService: CourseService,
+    private route: ActivatedRoute,
+    private router: Router,
+    private categoryService: CategoryService,
+    private cdr: ChangeDetectorRef,
+    private formBuilder: FormBuilder,
+    private validationService: ValidationService
+  ) {
+      this.currentDay = this.helperService.setCurrentDay();
+  }
+
+    ngOnInit() {
     this.formCourse = this.formBuilder.group({
       'category': ['', Validators.required],
       'topic': ['', Validators.required],
@@ -77,7 +80,7 @@ export class EditCoursesComponent implements OnInit {
           'subtitle': this.course.subtitle,
           'images': this.course.images,
           'learning': this.course.learning,
-          'decsription': this.course.decsription,
+          'decsription': this.course.description,
           'type': this.course.type,
           'requirements': this.course.requirements,
           'rating': this.course.rating,

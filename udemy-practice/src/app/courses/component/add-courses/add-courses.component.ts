@@ -111,6 +111,7 @@ export class AddCoursesComponent implements OnInit {
   }
 
   submitForm(value: any) {
+
     let user = this.helperService.getLocalStorage('user');
     let courseCloned = _.cloneDeep(this.addCourse.value);
     if (this.addCourse.valid) {
@@ -123,8 +124,7 @@ export class AddCoursesComponent implements OnInit {
         name: this.helperService.formatTitle(this.addCourse.value.title)
       });
 
-      _.omit(course, ['category', 'topic']);
-      this.courseService.addCourse(course).subscribe( res => {
+      this.courseService.addCourse(_.omit(course, ['category', 'topic'])).subscribe( res => {
         if (!_.isNil(res)) {
           this.addCourse.reset();
           this.router.navigate(['/courses/manager']);

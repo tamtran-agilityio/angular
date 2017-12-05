@@ -2,7 +2,7 @@
   <div class="course__search">
     <div class="course__wrapper-img">
       <a routerLink="/{{course.name | formatLink}}">
-        <img src="{{course.images}}" alt="{{course.name}}" class="course__image">
+        <img [src]="course.images" alt="{{course.name}}" class="course__image">
       </a>
     </div>
     <div class="course__content">

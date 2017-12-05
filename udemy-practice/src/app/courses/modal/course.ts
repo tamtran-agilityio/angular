@@ -9,7 +9,7 @@ export interface Course {
   subtitle?: string;
   images: string;
   learning: string;
-  decsription: string;
+  description: string;
   requirements: string;
   teacherId: number;
   teacher: Teacher;
