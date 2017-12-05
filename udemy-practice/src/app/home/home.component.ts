@@ -12,6 +12,7 @@ import { Collection } from '../collection/modal/collection';
 import { CollectionService } from '../collection/service/collection.service';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'home-page',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']

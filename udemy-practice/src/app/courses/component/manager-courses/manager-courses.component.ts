@@ -27,7 +27,7 @@ export class ManagerCoursesComponent implements OnInit {
 
   deleteCourse(course: Course) {
     this.courseService.deleteCourse(course.id).subscribe(res => {
-      if (_.isNil(res)) {
+      if (!_.isNil(res)) {
         location.reload();
       }
     });

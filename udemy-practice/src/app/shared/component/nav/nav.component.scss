@@ -441,6 +441,10 @@
 }
 
 .user {
+
+  &__message {
+    padding: 10px 20px;
+  }
   &__setting {
     background-clip: padding-box;
     background-color: #fff;
@@ -468,6 +472,7 @@
     &:hover {
       display: block;
     }
+
   }
   &:before {
     border-color: transparent transparent #e8e9eb;

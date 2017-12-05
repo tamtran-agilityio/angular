@@ -14,6 +14,7 @@ import { Part } from '../../../../courses/modal/part';
 import { concat } from 'rxjs/observable/concat';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'accordion-item',
   templateUrl: './accordion-item.component.html',
   styleUrls: ['./accordion-item.component.scss']

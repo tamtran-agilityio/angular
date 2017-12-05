@@ -123,7 +123,7 @@
     </div>
     <div class="row">
       <div class="col-xs-12">
-        <button type="submit" (click)="submitForm(addCourse.value)" class="btn btn-primary">Submit</button>
+        <button type="submit" (click)="submitForm(addCourse.value)" [disabled]="!addCourse.valid"class="btn btn-primary">Submit</button>
       </div>
     </div>
   </form>

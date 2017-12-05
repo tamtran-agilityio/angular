@@ -7,6 +7,7 @@ import {
 import * as _ from 'lodash';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'collection-channel',
   templateUrl: './collection-channel.component.html',
   styleUrls: ['./collection-channel.component.scss']

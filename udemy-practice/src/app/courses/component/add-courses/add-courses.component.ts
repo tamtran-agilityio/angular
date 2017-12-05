@@ -6,8 +6,9 @@ import {
 import {
   FormBuilder,
   FormGroup,
-  Validators
+  Validators,
 } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import * as _ from 'lodash';
 
@@ -19,6 +20,7 @@ import { ValidationService } from '@app/core/service/validation.service';
 import { HelperService } from '@app/core/service/helper.service';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'add-courses',
   templateUrl: './add-courses.component.html',
   styleUrls: ['./add-courses.component.scss']
@@ -39,7 +41,8 @@ export class AddCoursesComponent implements OnInit {
               private helperService: HelperService,
               private cdr: ChangeDetectorRef,
               private formBuilder: FormBuilder,
-              private validationService: ValidationService) {
+              private validationService: ValidationService,
+              private router: Router) {
                 this.currentDay = this.helperService.setCurrentDay();
               }
 
@@ -50,6 +53,7 @@ export class AddCoursesComponent implements OnInit {
       this.categorySelected = this.categories[0].id;
       this.topicSelected = this.categories[0].topics[0].id;
       this.typeSelected = 'new';
+      this.languageSelected = 'English';
       this.cdr.markForCheck();
     });
 
@@ -107,7 +111,6 @@ export class AddCoursesComponent implements OnInit {
   }
 
   submitForm(value: any) {
-    this.addCourse.reset();
     let user = this.helperService.getLocalStorage('user');
     let courseCloned = _.cloneDeep(this.addCourse.value);
     if (this.addCourse.valid) {
@@ -124,7 +127,7 @@ export class AddCoursesComponent implements OnInit {
       this.courseService.addCourse(course).subscribe( res => {
         if (!_.isNil(res)) {
           this.addCourse.reset();
-          this.imageSrc = '';
+          this.router.navigate(['/courses/manager']);
         }
       });
     }
