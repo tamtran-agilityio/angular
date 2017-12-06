@@ -1,0 +1,27 @@
+<div class="course__item">
+  <a routerLink="" class="course__card">
+    <span class="course__card--mark">
+      <img [src]="course.images" [alt]="course.name" class="">
+    </span>
+    <div class="course__card--details">
+        <div class="course__card--content">
+          <h3 class="course__card--title"> {{course.title}} </h3>
+          <div class="course__instructor">
+            <div> {{course.teacher.fullName}} </div>
+          </div>
+          <div class="course__status">
+            <rating [(ngModel)]="course.rating"
+              [titles]="true"
+              [readonly]="true">
+            </rating>
+            <span class="course__rating"> {{course.rating}}</span>
+          </div>
+          <div class="course__cost">
+            <div class="course__cost--price">{{course.price}}</div>
+            <div class="course__cost--discount">{{course.discountPrice}}</div>
+          </div>
+        </div>
+    </div>
+  </a>
+</div>
+

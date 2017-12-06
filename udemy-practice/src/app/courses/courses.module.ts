@@ -1,49 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 
-import { CoursesListComponent } from './component/courses-list/courses-list.component';
-import { CoursesDetailComponent } from './component/courses-detail/courses-detail.component';
-import { CoursesItemComponent } from './component/courses-item/courses-item.component';
-import { CoursesDiscoverComponent } from './component/courses-discover/courses-discover.component';
-import { CarouselModule } from '../carousel/carousel.module';
-import { SharedModule } from '../shared/shared.module';
-import { CourseService } from './service/course.service';
-import { CoursesIntroductionComponent } from './component/courses-introduction/courses-introduction.component';
-import { CoursesWhatLearnComponent } from './component/courses-what-learn/courses-what-learn.component';
-import { CousesCompareComponent } from './component/couses-compare/couses-compare.component';
-import { CoursesAccordionComponent } from './component/courses-accordion/courses-accordion.component';
-import { CoursesAboutInstructorComponent } from './component/courses-about-instructor/courses-about-instructor.component';
-import { CoursesEnrollComponent } from './component/courses-enroll/courses-enroll.component';
 import { CoreModule } from '@app/core/core.module';
-import { CoursesSearchComponent } from './component/courses-search/courses-search.component';
-import { CoursesSearchItemComponent } from './component/courses-search-item/courses-search-item.component';
-import { AddCoursesComponent } from './component/add-courses/add-courses.component';
-import { ManagerCoursesComponent } from './component/manager-courses/manager-courses.component';
-import { EditCoursesComponent } from './component/edit-courses/edit-courses.component';
+import { CourseComponent } from '@app/courses/components/course/course.component';
+import { CourseService } from '@app/courses/services/course.service';
+import { CourseCarouselComponent } from '@app/courses/components/course-carousel/course-carousel.component';
+import { SharedModule } from '@app/shared/shared.module';
+import { TitleCarouselPipe } from './pipes/title-carousel.pipe';
 
-export const COURSES_COMPONENT: any[] = [
-  CoursesListComponent,
-  CoursesDetailComponent,
-  CoursesItemComponent,
-  CoursesDiscoverComponent,
-  CoursesIntroductionComponent,
-  CoursesWhatLearnComponent,
-  CousesCompareComponent,
-  CoursesAccordionComponent,
-  CoursesAboutInstructorComponent,
-  CoursesEnrollComponent,
-  CoursesSearchComponent,
-  CoursesSearchItemComponent,
-  AddCoursesComponent,
-  ManagerCoursesComponent,
-  EditCoursesComponent
+export const COMMON_MODULE: any[] = [
+  SharedModule
 ];
 
-export const COURSES_COMMON: any[] = [
-  CoreModule,
-  SharedModule,
-  CarouselModule
+export const COURSES_COMPONENT: any[] = [
+  CourseComponent,
+  CourseCarouselComponent,
+  TitleCarouselPipe
 ];
 
 export const COURSES_PROVIDERS: any[] = [
@@ -52,12 +24,12 @@ export const COURSES_PROVIDERS: any[] = [
 
 @NgModule({
   imports: [
-    ...COURSES_COMMON
-  ],
-  declarations: [
-    ...COURSES_COMPONENT
+    ...COMMON_MODULE
   ],
   exports: [
+    ...COURSES_COMPONENT
+  ],
+  declarations: [
     ...COURSES_COMPONENT
   ],
   providers: [

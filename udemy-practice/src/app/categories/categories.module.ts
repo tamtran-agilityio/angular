@@ -1,33 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CategoryService } from './service/category.service';
-import { CategoryComponent } from './component/category/category.component';
-import { TopicComponent } from './component/topic/topic.component';
-import { SharedModule } from '../shared/shared.module';
 
-export const CATEGORIES_COMPONENT: any[] = [
-  CategoryComponent,
-  TopicComponent
-];
+import { CoreModule } from '@app/core/core.module';
+import { SharedModule } from '@app/shared/shared.module';
 
-export const CATEGORIES_PROVIDERS: any[] = [
-  CategoryService
+export const COMMON_MODULE: any[] = [
+  CoreModule,
+  SharedModule
 ];
 
 @NgModule({
   imports: [
-    SharedModule,
-    CommonModule
+    COMMON_MODULE
   ],
-  declarations: [
-    ...CATEGORIES_COMPONENT
-  ],
-  exports: [
-    ...CATEGORIES_COMPONENT
-  ],
-  providers: [
-    ...CATEGORIES_PROVIDERS
-  ]
+  declarations: []
 })
-
-export class CategoriesModule {}
+export class CategoriesModule { }
