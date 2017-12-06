@@ -1,40 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
-import { SharedModule } from './shared/shared.module';
-import { CoreModule } from './core';
-import { AuthModule } from './auth/auth.module';
-import { HomeModule } from './home/home.module';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { AboutComponent } from './about/about.component';
-import { CollectionModule } from './collection/collection.module';
-import { CategoriesModule } from './categories/categories.module';
-import { CoursesModule } from './courses';
-import { MyCoursesModule } from '@app/my-courses/my-courses.module';
-import { TeacherModule } from '@app/teacher/teacher.module';
+import { SharedModule } from '@app/shared/shared.module';
+import { CoreModule } from '@app/core/core.module';
+import { AppRoutingModule } from '@app/app-routing.module';
+import { HomeModule } from '@app/home/home.module';
+import { CoursesModule } from '@app/courses/courses.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PageNotFoundComponent,
-    AboutComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule,
-    AppRoutingModule,
     CoreModule,
     SharedModule,
-    CategoriesModule,
-    AuthModule,
+    AppRoutingModule,
     HomeModule,
-    CollectionModule,
-    CoursesModule,
-    MyCoursesModule,
-    TeacherModule
+    CoursesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,36 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoggerService } from './service/logger.service';
-import { HttpWrapperService } from './service/http-wrapper.service';
-import { AppConfigService } from './service/app-config.service';
-import { ValidationService } from './service/validation.service';
-import { HelperService } from './service/helper.service';
 
-export const CORE_PROVIDERS: any[] = [
+import { LocalStorageService } from '@app/core/services/local-storage.service';
+import { HttpWrapperService } from '@app/core/services/http-wrapper.service';
+import { AppConfigService } from '@app/core/services/app-config.service';
+import { LoggerService } from '@app/core/services/logger.service';
+
+export const CORE_SERVICE: any[] = [
   AppConfigService,
-  LoggerService,
+  LocalStorageService,
   HttpWrapperService,
-  ValidationService,
-  HelperService
-];
-
-export const CORE_MODULES: any[] = [
-  CommonModule
-];
-
-export const PIPE: any[] = [
-
+  LoggerService
 ];
 
 @NgModule({
   imports: [
+    CommonModule
   ],
-  declarations: [
-  ],
+  declarations: [],
   providers: [
-    ...CORE_PROVIDERS
-  ],
-  exports: [
+    ...CORE_SERVICE
   ]
 })
 export class CoreModule { }

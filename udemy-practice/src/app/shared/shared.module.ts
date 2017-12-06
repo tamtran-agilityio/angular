@@ -1,25 +1,31 @@
+import {
+  NgModule,
+  Provider
+} from '@angular/core';
+import {
+  FormsModule,
+  ReactiveFormsModule
+} from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { NgModule, Provider } from '@angular/core';
 import { HttpModule, } from '@angular/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { MainFooterComponent } from './component/main-footer/main-footer.component';
-import { NavComponent } from './component/nav/nav.component';
-import { ModalComponent } from './component/modal/modal.component';
-import { ModalService } from './service/modal.service';
-import { ControlMessagesComponent } from './component/control-messages/control-messages.component';
-import { ClickOutsideDirective } from './directive/click-out-side.directive';
-import { ErrorMessageComponent } from './component/error-message/error-message.component';
-import { DropdownModule } from './component/dropdown/dropdown.module';
-import { RatingModule } from './component/rating/rating.module';
-import { FormatLinkPipe } from './pipes/format-link.pipe';
-import { AccordionComponent } from './component/accordion/accordion.component';
-import { AccordionItemComponent } from './component/accordion/accordion-item/accordion-item.component';
-import { CoreModule } from '@app/core';
-import { SetbackgroundDirective } from '@app/shared/directive/setbackground.directive';
-import { PrimarylayoutComponent } from './component/primarylayout/primarylayout.component';
-import { UploaderImageComponent } from './component/uploader-image/uploader-image.component';
+import { MainFooterComponent } from '@app/shared/components/main-footer/main-footer.component';
+import { NavComponent } from '@app/shared/components/nav/nav.component';
+import { ModalComponent } from '@app/shared/components/modal/modal.component';
+import { ModalService } from '@app/shared/services/modal.service';
+import { ControlMessagesComponent } from '@app/shared/components/control-messages/control-messages.component';
+import { ClickOutsideDirective } from '@app/shared/directives/click-out-side.directive';
+import { ErrorMessageComponent } from '@app/shared/components/error-message/error-message.component';
+import { DropdownModule } from '@app/shared/components/dropdown/dropdown.module';
+import { FormatLinkPipe } from '@app/shared/pipes/format-link.pipe';
+import { AccordionComponent } from '@app/shared/components/accordion/accordion.component';
+import { AccordionItemComponent } from '@app/shared/components/accordion/accordion-item/accordion-item.component';
+import { SetbackgroundDirective } from '@app/shared/directives/setbackground.directive';
+import { PrimarylayoutComponent } from '@app/shared/components/primarylayout/primarylayout.component';
+import { CoreModule } from '@app/core/core.module';
+import { RatingModule } from 'ngx-rating';
+import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 
 export const COMMON_MODULES: any[] = [
   FormsModule,
@@ -29,7 +35,8 @@ export const COMMON_MODULES: any[] = [
   CoreModule,
   RouterModule,
   DropdownModule,
-  RatingModule
+  RatingModule,
+  Ng2CarouselamosModule
 ];
 
 export const SHARED_COMPONENT: any[] = [
@@ -41,7 +48,6 @@ export const SHARED_COMPONENT: any[] = [
   ErrorMessageComponent,
   AccordionComponent,
   AccordionItemComponent,
-  UploaderImageComponent,
   ClickOutsideDirective,
   SetbackgroundDirective
 ];

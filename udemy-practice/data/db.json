@@ -208,8 +208,6 @@
       "id": 14
     },
     {
-      "category": "1",
-      "topic": "5",
       "title": "Deep Learning A-Z™: Hands-On Artificial Neural Networks",
       "subtitle": "Learn to create Deep Learning Algorithms in Python from two Machine Learning & Data Science experts. Templates included.",
       "images": "/assets/img/course/deep_learning.jpg",
@@ -230,8 +228,6 @@
       "id": 15
     },
     {
-      "category": 1,
-      "topic": 1,
       "title": "Ultimate Guide to Digital Sketching: Beginner to Advanced",
       "subtitle": "Learn to digitally draw like a pro!",
       "images": "/assets/img/course/1325264_6025_3.jpg",
@@ -269,13 +265,9 @@
       "discountPrice": "15",
       "name": "sql-my-sql-for-data-analytics-and-business-intelligence",
       "id": 17,
-      "category": 1,
-      "topic": 1,
       "discount": "15"
     },
     {
-      "category": "1",
-      "topic": "5",
       "title": "Angular",
       "subtitle": "Learn more angular4",
       "images": "/assets/img/course/1045942_d12f.jpg",

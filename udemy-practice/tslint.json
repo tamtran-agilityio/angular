@@ -58,7 +58,7 @@
     "no-empty-interface": true,
     "no-eval": true,
     "no-inferrable-types": [
-      true,
+      false,
       "ignore-params"
     ],
     "no-misused-new": true,
@@ -118,10 +118,11 @@
     "directive-selector": [
       true,
       "attribute",
+      "",
       "camelCase"
     ],
     "component-selector": [
-      true,
+      false,
       "element",
       "kebab-case"
     ],
