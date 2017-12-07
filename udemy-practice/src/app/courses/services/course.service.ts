@@ -29,11 +29,10 @@ export class CourseService {
    * Handle get list category
    */
   getCategory(): Observable<Category[]> {
-    let options: RequestOptions = new RequestOptions();
     let tableCategories = this.appConfig.TABLES.CATEGORIES;
 
     return Observable.create( obs => {
-      this.httpWrapper.get(tableCategories, options).subscribe((res: Category) => {
+      this.httpWrapper.get(tableCategories).subscribe((res: Category) => {
         obs.next(res);
       });
     });
@@ -86,11 +85,10 @@ export class CourseService {
    * Get strategies of course
    */
   getStrategies(): Observable<Strategy[]> {
-    let options: RequestOptions = new RequestOptions();
     let tableStrategies = this.appConfig.TABLES.STRATEGIES;
 
     return Observable.create( obs => {
-      this.httpWrapper.get(tableStrategies, options).subscribe((res: Strategy[]) => {
+      this.httpWrapper.get(tableStrategies).subscribe((res: Strategy[]) => {
         obs.next(res);
       });
     });

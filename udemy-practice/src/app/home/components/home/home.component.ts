@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
   courses: Course[];
   categories: Category[];
   strategies: Strategy[];
+
   constructor(
     private cdr: ChangeDetectorRef,
     private courseService: CourseService
