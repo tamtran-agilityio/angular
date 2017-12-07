@@ -29,7 +29,9 @@ export class BannerComponent implements OnInit {
     private router: Router,
     private appConfig: AppConfigService
   ) {
-    this.searchForm = fb.group( {search: ''});
+    this.searchForm = fb.group({
+      search: ''
+    });
   }
 
   ngOnInit() {
