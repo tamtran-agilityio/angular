@@ -4,7 +4,10 @@ import {
   BehaviorSubject,
   Observable
 } from 'rxjs/Rx';
-import { Headers } from '@angular/http';
+import {
+  Headers,
+  RequestOptions
+} from '@angular/http';
 
 import * as _ from 'lodash';
 
@@ -21,12 +24,12 @@ export class CourseService {
     private appConfig: AppConfigService
   ) { }
 
+  /**
+   * Handle get list category
+   */
   getCategory(): Observable<Category[]> {
-    let headers = new Headers(),
-      tableCategories = this.appConfig.TABLES.CATEGORIES,
-      options = {
-        headers: headers
-      };
+    let options: RequestOptions = new RequestOptions();
+    let tableCategories = this.appConfig.TABLES.CATEGORIES;
 
     return Observable.create( obs => {
       this.httpWrapper.get(tableCategories, options).subscribe((res: Category) => {
@@ -35,7 +38,11 @@ export class CourseService {
     });
   }
 
-  getCoursesByCategory(categories: Category[]): Observable<any> {
+  /**
+   * Handle get course by category
+   * @param categories list category
+   */
+  getCoursesByCategory(categories: Category[]): Observable<Course[]> {
     return Observable.create( obs => {
       if (!_.isEmpty(categories)) {
         this.getCoursesByCategoryId(_.first(categories).id)
@@ -56,6 +63,10 @@ export class CourseService {
     });
   }
 
+  /**
+   * Get course by id comparion with teacher
+   * @param id id of course
+   */
   getCoursesByCategoryId(id: number) {
     let headers = new Headers(),
         tableCourse = this.appConfig.TABLES.COURSES,
@@ -68,5 +79,16 @@ export class CourseService {
         };
     return this.httpWrapper.get(tableCourse, options)
       .map(res => res);
+  }
+
+  getStrategies() {
+    let options: RequestOptions = new RequestOptions();
+    let tableStrategies = this.appConfig.TABLES.STRATEGIES;
+
+    return Observable.create( obs => {
+      this.httpWrapper.get(tableStrategies, options).subscribe((res: Category) => {
+        obs.next(res);
+      });
+    });
   }
 }

@@ -134,6 +134,14 @@ img {
       margin-right: 10px;
     }
   }
+  &__start {
+    color: #dedfe0;
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: -2px;
+    position: relative;
+    white-space: nowrap;
+  }
 }
 a:hover {
   img {

@@ -8,6 +8,7 @@ import {
 import { CourseService } from '@app/courses/services/course.service';
 import { Course } from '@app/courses/model/courses';
 import { Category } from '@app/categories/model/category';
+import { Strategy } from '@app/courses/model/strategy';
 
 @Component({
   selector: 'home',
@@ -18,6 +19,7 @@ import { Category } from '@app/categories/model/category';
 export class HomeComponent implements OnInit {
   courses: Course[];
   categories: Category[];
+  strategies: Strategy[];
   constructor(
     private cdr: ChangeDetectorRef,
     private courseService: CourseService
@@ -33,6 +35,9 @@ export class HomeComponent implements OnInit {
                         this.courses = result;
                         this.cdr.markForCheck();
                       });
+    this.courseService.getStrategies().subscribe( (strategies) => {
+      this.strategies = strategies;
+    });
   }
 
 }

@@ -2,7 +2,6 @@ import {
   Component,
   OnInit,
   Input,
-  OnChanges,
   ChangeDetectionStrategy
 } from '@angular/core';
 
@@ -14,15 +13,11 @@ import { Course } from '@app/courses/model/courses';
   styleUrls: ['./course.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CourseComponent implements OnInit, OnChanges {
+export class CourseComponent implements OnInit {
   @Input() course: Course[];
   constructor() { }
 
   ngOnInit() {
-  }
-
-  ngOnChanges() {
-
   }
 
 }

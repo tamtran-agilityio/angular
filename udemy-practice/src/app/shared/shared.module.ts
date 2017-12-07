@@ -24,7 +24,7 @@ import { AccordionItemComponent } from '@app/shared/components/accordion/accordi
 import { SetbackgroundDirective } from '@app/shared/directives/setbackground.directive';
 import { PrimarylayoutComponent } from '@app/shared/components/primarylayout/primarylayout.component';
 import { CoreModule } from '@app/core/core.module';
-import { RatingModule } from 'ngx-rating';
+import { StarRatingModule } from 'angular-star-rating';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 
 export const COMMON_MODULES: any[] = [
@@ -35,7 +35,7 @@ export const COMMON_MODULES: any[] = [
   CoreModule,
   RouterModule,
   DropdownModule,
-  RatingModule,
+  StarRatingModule,
   Ng2CarouselamosModule
 ];
 

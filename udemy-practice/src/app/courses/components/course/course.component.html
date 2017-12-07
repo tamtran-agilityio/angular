@@ -10,10 +10,13 @@
             <div> {{course.teacher.fullName}} </div>
           </div>
           <div class="course__status">
-            <rating [(ngModel)]="course.rating"
-              [titles]="true"
-              [readonly]="true">
-            </rating>
+            <div class="course__start">
+              <star-rating-comp
+                [starType]="'svg'"
+                [disabled]="true"
+                [rating]="course.rating">
+              </star-rating-comp>
+            </div>
             <span class="course__rating"> {{course.rating}}</span>
           </div>
           <div class="course__cost">
