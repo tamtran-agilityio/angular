@@ -19,7 +19,7 @@ export const COURSES_COMPONENT: any[] = [
   CourseCarouselComponent,
   CoursePopularComponent,
   CourseStrategyComponent,
-  TitleCarouselPipe
+  TitleCarouselPipe,
 ];
 
 export const COURSES_PROVIDERS: any[] = [

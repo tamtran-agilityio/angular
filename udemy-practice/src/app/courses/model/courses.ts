@@ -15,5 +15,6 @@ export interface Course {
   price: number;
   discountPrice: number;
   date: string;
+  teacher?: any;
   language?: string;
 }

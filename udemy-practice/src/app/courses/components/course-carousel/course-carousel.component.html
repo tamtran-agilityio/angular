@@ -1,12 +1,12 @@
 <div *ngFor="let course of courses">
-  <h2> Top Courses in "{{course | titleCarousel: categories}}"</h2>
+  <h2 class="carousel__title"> Top Courses in "{{course | titleCarousel: categories}}"</h2>
   <div ng2-carouselamos
     [width]="widthCarousel"
     [items]="course"
     [$item]="itemTemplate"
     [$prev]="prevTemplate"
     [$next]="nextTemplate"
-    (onSelectedItem)="selectedItem = $event.item; selectedIndex = $event.index"
+
   ></div>
   <ng-template #prevTemplate>
     <button class='carousel__pre'>

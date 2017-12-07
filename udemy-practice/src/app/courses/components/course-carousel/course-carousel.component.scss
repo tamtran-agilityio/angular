@@ -1,4 +1,10 @@
 .carousel {
+
+  &__title {
+    font-size: 20px;
+    color: #505763;
+    margin: 10px 0 10px;
+  }
   &__next, &__pre {
     background-color: #fff;
     border-radius: 50%;

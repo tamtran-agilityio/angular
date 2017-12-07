@@ -14,7 +14,7 @@ import { Course } from '@app/courses/model/courses';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CourseComponent implements OnInit {
-  @Input() course: Course[];
+  @Input() course: Course;
   constructor() { }
 
   ngOnInit() {

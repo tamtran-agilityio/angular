@@ -1,0 +1,15 @@
+<div class="course__channels">
+  <h2 class="strategy__title">Achieve your goals</h2>
+  <div class="course__strategy">
+    <div *ngFor="let strategy of strategies"
+      class="strategy__item">
+      <a [routerLink]="['/collection', strategy.title | formatLink]" class="strategy__item--link">
+        <span class="strategy__item--content">
+          <img [src]="strategy.image" alt="expand">
+        </span>
+        <div class="strategy__item--decs"> {{strategy.title}} </div>
+      </a>
+    </div>
+  </div>
+</div>
+

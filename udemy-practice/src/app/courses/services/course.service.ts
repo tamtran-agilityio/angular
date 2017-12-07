@@ -15,6 +15,7 @@ import { HttpWrapperService } from '@app/core/services/http-wrapper.service';
 import { Course } from '@app/courses/model/courses';
 import { AppConfigService } from '@app/core/services/app-config.service';
 import { Category } from '@app/categories/model/category';
+import { Strategy } from '@app/courses/model/strategy';
 
 @Injectable()
 export class CourseService {
@@ -81,12 +82,15 @@ export class CourseService {
       .map(res => res);
   }
 
-  getStrategies() {
+  /**
+   * Get strategies of course
+   */
+  getStrategies(): Observable<Strategy[]> {
     let options: RequestOptions = new RequestOptions();
     let tableStrategies = this.appConfig.TABLES.STRATEGIES;
 
     return Observable.create( obs => {
-      this.httpWrapper.get(tableStrategies, options).subscribe((res: Category) => {
+      this.httpWrapper.get(tableStrategies, options).subscribe((res: Strategy[]) => {
         obs.next(res);
       });
     });

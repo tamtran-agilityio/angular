@@ -1,9 +1,9 @@
-<div class="accordion__container">
+<div class="accordion__container" *ngIf="chapter">
   <div class="accordion__head" (click)="onClick($event)">
     <div class="accordion__head-content">
       <div class="accordion__head-title">
           <span [ngClass]="active ? 'accordion__minus': 'accordion__plus'"></span>
-          <span class="accordion__title" > {{chapter.name}} </span>
+          <span class="accordion__title" > {{chapter?.name}} </span>
       </div>
     </div>
     <div class="accordion__action">
