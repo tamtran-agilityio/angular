@@ -1,0 +1,19 @@
+<div class="banner">
+  <div class="banner__sidebar">
+    <div class="banner__content">
+      <h2 class="banner__title"> Be able </h2>
+      <p class="banner__desc">Get skills in business, tech, and personal development</p>
+      <form class="banner__action" [formGroup]="searchForm" (keyup)="searchCourses($event)">
+        <div class="banner__search">
+          <input class="banner__search--learn" type="text" name="term" placeholder="What do you want to learn?" formControlName="search" (keyup)="searchCourses(searchForm.value)">
+          <span class="banner__search--group">
+            <button class="banner__search--button" type="submit" (click)="openSeach()">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
