@@ -20,7 +20,8 @@ export class AppConfigService {
   TABLES = {
     COURSES: 'courses',
     TEACHER: 'teacher',
-    CATEGORIES: 'categories'
+    CATEGORIES: 'categories',
+    STRATEGIES: 'strategies'
   };
 
   // Vilidation available

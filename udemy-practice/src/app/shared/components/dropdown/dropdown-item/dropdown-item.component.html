@@ -1,5 +1,5 @@
-<ul *ngIf="dropdowns.topics" class="topic">
-  <li *ngFor="let item of dropdowns.topics" class="topic__item">
+<ul *ngIf="dropdowns.dropdownItem" class="topic">
+  <li *ngFor="let item of dropdowns.dropdownItem" class="topic__item">
       <a [routerLink]="['/courses', dropdowns.title | formatLink , item.title | formatLink]" class="topic__title">
         <span>{{item.title}}</span>
       </a>

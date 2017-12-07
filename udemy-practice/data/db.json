@@ -584,7 +584,7 @@
       "desc": "Nonspecific abnormal electrocardiogram [ECG] [EKG]"
     }
   ],
-  "collection": [
+  "strategies": [
     {
       "id": 1,
       "name": "expand-you-programming-knowledge",

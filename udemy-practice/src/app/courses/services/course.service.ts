@@ -4,7 +4,10 @@ import {
   BehaviorSubject,
   Observable
 } from 'rxjs/Rx';
-import { Headers } from '@angular/http';
+import {
+  Headers,
+  RequestOptions
+} from '@angular/http';
 
 import * as _ from 'lodash';
 
@@ -12,6 +15,7 @@ import { HttpWrapperService } from '@app/core/services/http-wrapper.service';
 import { Course } from '@app/courses/model/courses';
 import { AppConfigService } from '@app/core/services/app-config.service';
 import { Category } from '@app/categories/model/category';
+import { Strategy } from '@app/courses/model/strategy';
 
 @Injectable()
 export class CourseService {
@@ -21,21 +25,24 @@ export class CourseService {
     private appConfig: AppConfigService
   ) { }
 
+  /**
+   * Handle get list category
+   */
   getCategory(): Observable<Category[]> {
-    let headers = new Headers(),
-      tableCategories = this.appConfig.TABLES.CATEGORIES,
-      options = {
-        headers: headers
-      };
+    let tableCategories = this.appConfig.TABLES.CATEGORIES;
 
     return Observable.create( obs => {
-      this.httpWrapper.get(tableCategories, options).subscribe((res: Category) => {
+      this.httpWrapper.get(tableCategories).subscribe((res: Category) => {
         obs.next(res);
       });
     });
   }
 
-  getCoursesByCategory(categories: Category[]): Observable<any> {
+  /**
+   * Handle get course by category
+   * @param categories list category
+   */
+  getCoursesByCategory(categories: Category[]): Observable<Course[]> {
     return Observable.create( obs => {
       if (!_.isEmpty(categories)) {
         this.getCoursesByCategoryId(_.first(categories).id)
@@ -56,6 +63,10 @@ export class CourseService {
     });
   }
 
+  /**
+   * Get course by id comparion with teacher
+   * @param id id of course
+   */
   getCoursesByCategoryId(id: number) {
     let headers = new Headers(),
         tableCourse = this.appConfig.TABLES.COURSES,
@@ -68,5 +79,18 @@ export class CourseService {
         };
     return this.httpWrapper.get(tableCourse, options)
       .map(res => res);
+  }
+
+  /**
+   * Get strategies of course
+   */
+  getStrategies(): Observable<Strategy[]> {
+    let tableStrategies = this.appConfig.TABLES.STRATEGIES;
+
+    return Observable.create( obs => {
+      this.httpWrapper.get(tableStrategies).subscribe((res: Strategy[]) => {
+        obs.next(res);
+      });
+    });
   }
 }

@@ -6,7 +6,9 @@ import { CourseComponent } from '@app/courses/components/course/course.component
 import { CourseService } from '@app/courses/services/course.service';
 import { CourseCarouselComponent } from '@app/courses/components/course-carousel/course-carousel.component';
 import { SharedModule } from '@app/shared/shared.module';
-import { TitleCarouselPipe } from './pipes/title-carousel.pipe';
+import { TitleCarouselPipe } from '@app/courses/pipes/title-carousel.pipe';
+import { CoursePopularComponent } from './components/course-popular/course-popular.component';
+import { CourseStrategyComponent } from './components/course-strategy/course-strategy.component';
 
 export const COMMON_MODULE: any[] = [
   SharedModule
@@ -15,7 +17,9 @@ export const COMMON_MODULE: any[] = [
 export const COURSES_COMPONENT: any[] = [
   CourseComponent,
   CourseCarouselComponent,
-  TitleCarouselPipe
+  CoursePopularComponent,
+  CourseStrategyComponent,
+  TitleCarouselPipe,
 ];
 
 export const COURSES_PROVIDERS: any[] = [
