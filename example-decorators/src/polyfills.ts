@@ -46,6 +46,16 @@
 import 'core-js/es7/reflect';
 import 'reflect-metadata';
 
+// Import RxJs required methods
+import 'rxjs/add/observable/throw';
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/observable/of';
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/delay';
+import 'rxjs/add/operator/debounceTime';
+
 
 /**
  * Required to support Web Animations `@angular/platform-browser/animations`.

@@ -2,14 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from '../app.component';
 import { LoggerService } from '@app/core/services/logger.service';
+import { HttpWrapperModule } from '@app/core/decorators/http-wrapper';
 
 export const CORE_PROVIDERS: any[] = [
-  LoggerService
-]
+  LoggerService,
+];
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    HttpWrapperModule
   ],
   declarations: [
   ],

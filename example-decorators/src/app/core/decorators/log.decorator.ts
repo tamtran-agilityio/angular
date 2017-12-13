@@ -3,9 +3,9 @@
  * @param prefix the title about component
  */
 export function LogDecorator(prefix?: string) {
-  console.log(prefix);
+  // console.log(prefix);
   return function (target) {
-    console.log('Our decorated class', target);
+    // console.log('Our decorated class', target);
   };
 }
 

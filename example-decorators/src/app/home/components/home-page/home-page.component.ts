@@ -7,6 +7,7 @@ import {
 
 import { LogDecorator } from '@app/core/decorators/log.decorator';
 import { ComponentDecorator } from '@app/core/decorators/component.decorator';
+import { PostService } from '@app/post/services/post.service';
 
 @LogDecorator('test')
 @ComponentDecorator({
@@ -18,9 +19,12 @@ import { ComponentDecorator } from '@app/core/decorators/component.decorator';
 
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private postService: PostService
+  ) { }
 
   ngOnInit() {
+    // console.log('Test service', this.postService);
   }
 
 }
