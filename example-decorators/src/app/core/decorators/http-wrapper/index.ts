@@ -1,3 +1,3 @@
-export * from '@app/core/decorators/http-wapper/http-wapper.decorator';
-export * from '@app/core/decorators/http-wapper/services/client.service';
-export * from '@app/core/decorators/http-wapper/http-wapper.module';
+export * from '@app/core/decorators/http-wrapper/http-wrapper.decorator';
+export * from '@app/core/decorators/http-wrapper/services/client.service';
+export * from '@app/core/decorators/http-wrapper/http-wrapper.module';
