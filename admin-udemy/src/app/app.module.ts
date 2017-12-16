@@ -21,8 +21,15 @@ import {
   DashboardModule
 } from '@app/dashboard/dashboard.module';
 import {
+  CategoryModule
+} from '@app/category/category.module';
+import {
+  UserModule
+} from '@app/user/user.module';
+import {
   AppRoutingModule
 } from '@app/app-routing.module';
+
 
 export const COMMON_MODULE: any[] = [
   BrowserAnimationsModule,
@@ -30,6 +37,8 @@ export const COMMON_MODULE: any[] = [
   RouterModule,
   SharedModule,
   DashboardModule,
+  CategoryModule,
+  UserModule,
   AppRoutingModule
 ];
 

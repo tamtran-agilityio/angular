@@ -19,6 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "",
       "styles": [
+        "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
         "../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss",
         "styles.scss"
       ],

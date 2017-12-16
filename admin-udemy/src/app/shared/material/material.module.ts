@@ -20,13 +20,17 @@ import {
 import {
   MatInputModule
 } from '@angular/material/input';
+import {
+  MatCheckboxModule
+} from '@angular/material/checkbox';
 
 export const MATERIAL_MODULES: any[] = [
   MatSidenavModule,
   MatToolbarModule,
   MatIconModule,
   MatMenuModule,
-  MatInputModule
+  MatInputModule,
+  MatCheckboxModule
 ];
 
 @NgModule({

@@ -45,6 +45,11 @@
 // Used for reflect-metadata in JIT. If you use AOT (and only Angular decorators), you can remove.
 import 'core-js/es7/reflect';
 
+// Import operator
+import 'rxjs/add/observable/of';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/operator/filter';
 
 /**
  * Required to support Web Animations `@angular/platform-browser/animations`.
