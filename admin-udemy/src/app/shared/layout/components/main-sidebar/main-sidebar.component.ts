@@ -1,8 +1,12 @@
 import {
   Component,
   OnInit,
-  ChangeDetectionStrategy
+  ChangeDetectionStrategy,
+  ViewChild
 } from '@angular/core';
+import {
+  MatSidenav
+} from '@angular/material/sidenav';
 
 @Component({
   selector: 'main-sidebar',
@@ -11,10 +15,17 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MainSidebarComponent implements OnInit {
+  @ViewChild('sidenav') sidenav: MatSidenav;
 
-  constructor() { }
+  reason = '';
+  shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
+  close(reason: string) {
+    this.reason = reason;
+    this.sidenav.close();
+  }
 
   ngOnInit() {
+
   }
 
 }

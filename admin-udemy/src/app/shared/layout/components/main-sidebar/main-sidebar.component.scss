@@ -1,0 +1,14 @@
+:host {
+  position: fixed;
+  z-index: 1019;
+  width: 200px;
+  height: calc(100vh - 55px);
+  flex: 0 0 200px;
+  order: -1;
+  transition: margin-left 0.25s, margin-right 0.25s, width 0.25s, flex 0.25s, -ms-flex 0.25s;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  color: #fff;
+  background: #2a2c36;
+}

@@ -5,28 +5,29 @@ import {
   CommonModule
 } from '@angular/common';
 import {
+  UserComponent
+} from './components/user/user.component';
+import {
   SharedModule
 } from '@app/shared/shared.module';
-import {
-  DashboardComponent
-} from '@app/dashboard/components/dashboard/dashboard.component';
 
 export const COMMON_MODULE: any[] = [
   SharedModule
 ];
-export const DASHBOARD_COMPONENT: any[] = [
-  DashboardComponent
+
+export const USER_COMPONENT: any[] = [
+  UserComponent
 ];
 
 @NgModule({
   imports: [
-    ...COMMON_MODULE
+    COMMON_MODULE
   ],
   declarations: [
-    ...DASHBOARD_COMPONENT
+    ...USER_COMPONENT
   ],
   exports: [
-    ...DASHBOARD_COMPONENT
+    ...USER_COMPONENT
   ]
 })
-export class DashboardModule { }
+export class UserModule { }

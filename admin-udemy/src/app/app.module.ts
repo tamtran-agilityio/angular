@@ -2,8 +2,14 @@ import {
   BrowserModule
 } from '@angular/platform-browser';
 import {
+  BrowserAnimationsModule
+} from '@angular/platform-browser/animations';
+import {
   NgModule
 } from '@angular/core';
+import {
+  RouterModule
+} from '@angular/router';
 
 import {
   AppComponent
@@ -11,10 +17,29 @@ import {
 import {
   SharedModule
 } from '@app/shared/shared.module';
+import {
+  DashboardModule
+} from '@app/dashboard/dashboard.module';
+import {
+  CategoryModule
+} from '@app/category/category.module';
+import {
+  UserModule
+} from '@app/user/user.module';
+import {
+  AppRoutingModule
+} from '@app/app-routing.module';
+
 
 export const COMMON_MODULE: any[] = [
+  BrowserAnimationsModule,
   BrowserModule,
-  SharedModule
+  RouterModule,
+  SharedModule,
+  DashboardModule,
+  CategoryModule,
+  UserModule,
+  AppRoutingModule
 ];
 
 @NgModule({
