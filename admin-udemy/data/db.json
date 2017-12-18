@@ -1,0 +1,696 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fullName": "tamtran",
+      "email": "trantamtk08b@gmail.com",
+      "password": "tamtamxuan@123"
+    },
+    {
+      "id": 2,
+      "fullName": "tamtran",
+      "email": "tamtamxuan@gmail.com",
+      "password": "tamtamxuan@123"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "title": "Development"
+    },
+    {
+      "id": 2,
+      "title": "Business"
+    }
+  ],
+  "topics": [
+    {
+      "categoryId": 1,
+      "id": 1,
+      "title": "All development"
+    },
+    {
+      "categoryId": 1,
+      "id": 2,
+      "title": "Mobile apps"
+    },
+    {
+      "categoryId": 1,
+      "id": 3,
+      "title": "Programming languages"
+    },
+    {
+      "categoryId": 1,
+      "id": 4,
+      "title": "Game development"
+    },
+    {
+      "categoryId": 1,
+      "id": 5,
+      "title": "Web development"
+    },
+    {
+      "categoryId": 2,
+      "id": 6,
+      "title": "All business"
+    },
+    {
+      "categoryId": 2,
+      "id": 7,
+      "title": "Finance"
+    },
+    {
+      "categoryId": 2,
+      "id": 8,
+      "title": "Entrepreneurship"
+    },
+    {
+      "categoryId": 2,
+      "id": 9,
+      "title": "Communications"
+    },
+    {
+      "categoryId": 2,
+      "id": 10,
+      "title": "Management"
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "type": "best seller",
+      "topicId": 2,
+      "images": "/assets/img/course/complete_unity.jpg",
+      "name": "complete-unity-developer-2-0-learn-c-code-make-games",
+      "title": "Complete Unity Developer 2.0 - Learn C# Code & Make Games",
+      "subtitle": "Game development & design made fun. Learn C# using the NEW Unity 2017. Your first 2D & 3D games for web & mobile.",
+      "learning": "Learn C#, a powerful modern language.",
+      "decsription": "We are adding a minimum of 20 new lectures a week throughout 2017. This enables us to incorporate your feedback into the course as we go. This is the long-awaited sequel to the Complete Unity Developer - one of the most popular e-learning courses on the internet! Completely re-worked from scratch with brand-new projects and our latest teaching techniques. You will benefit from the fact we have already taught over 250,000 students programming and game development, many shipping commercial games as a result. Unity 2017 is an incredible 3D package used for making video games, architectural and medical imaging and more. The challenge is that it's big and complicated to use, especially for complete beginners to coding and game development. We make learning to code easy and fun by leading you step-by-step through the process of creating exciting games.",
+      "requirements": "Free disc space (5GB on PC, 10GB on Mac) to install Unity, Visual Studio, and our projects. PC or Mac capable of running Unity 2017 (free Personal version). Regular internet access for Q&A and community.",
+      "teacherId": 1,
+      "rating": 4.2,
+      "price": 105,
+      "discountPrice": 10,
+      "date": "2017/11/02",
+      "language": "English"
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "type": "Best seller",
+      "topicId": 1,
+      "images": "/assets/img/course/react_complete_guide.jpg",
+      "name": "react-16-the-complete-guide-incl-react-router-4-redux",
+      "title": "React 16 - The Complete Guide (incl. React Router 4 & Redux)",
+      "learning": "Build powerful, fast, user-friendly and reactive web apps. Provide amazing user experiences by leveraging the power of JavaScript with ease. Apply for high-paid jobs or work as a freelancer in one the most-demanded sectors you can find in web dev right now",
+      "decsription": "What's this course about?. Learn React or dive deeper into it. Learn the theory, solve assignments, practice in demo projects and build one big application which is improved throughout the course: The Burger Builder! More details please! JavaScript is the major driver of modern web applications since it's the only programming language which runs in the browser and hence allows you to provide highly reactive apps. You'll be able to achieve mobile-app like user experiences in the web. But using JavaScript can be challenging - it quickly becomes overwhelming to create a nice web app with vanilla JavaScript and jQuery only",
+      "requirements": "JavaScript + HTML + CSS fundamentals are absolutely required. You DON'T need to be a JavaScript expert to succeed in this course!. ES6+ JavaScript knowledge is beneficial but not a must-have. NO prior React or any other JS framework experience is required!",
+      "teacherId": 2,
+      "rating": 4.8,
+      "price": 105,
+      "discountPrice": 10,
+      "date": "2017/11/01",
+      "language": "English"
+    },
+    {
+      "id": 3,
+      "categoryId": 1,
+      "type": "new",
+      "topicId": 1,
+      "images": "/assets/img/course/entity_framework.jpg",
+      "name": "entity-framework-in-depth-the-complete-guide",
+      "title": "Entity Framework in Depth: The Complete Guide",
+      "learning": "Understand the differences between database-first and code-first workflows. Build a domain model using database-first workflow. Build a domain model using code-first workflow (with an existing or a new database). Use code-first migrations to upgrade or downgrade your database. Override code-first conventions (using data annotations and fluent API). Query data using LINQ (using query syntax and extension methods). Use eager loading, lazy loading and explicit loading effectively. Add, update and remove objects. Use additional tools to profile and troubleshoot your applications. Understand what the repository pattern is, what and if you need it, and how to implement it. Apply best practices with Entity Framework",
+      "decsription": "With over 6,500 students and 1,500+ positive reviews, this course is Udemy's most popular course for learning Entity Framework! . Entity Framework is an Object / Relational Mapper (O/RM) that helps you read and write data from and to a database. In this course, Mosh, teaches you the core concepts of Entity Framework through a series of clear, concise and hands-on lectures.. Whether you're new to Entity Framework, or been using it for a while but are looking for a comprehensive course with a clean structure to fill the missing parts, you're going to love this course.",
+      "requirements": "Good understanding of advanced C# constructs (generics, lambda expressions)",
+      "teacherId": 3,
+      "rating": 4.5,
+      "price": 105,
+      "discountPrice": 10,
+      "date": "2017/11/02",
+      "language": "English"
+    },
+    {
+      "id": 11,
+      "categoryId": 2,
+      "type": "new",
+      "topicId": 1,
+      "images": "/assets/img/course/modern_deep.jpg",
+      "name": "modern-deep-learning-in-python",
+      "title": "Modern Deep Learning in Python",
+      "learning": "Apply momentum to backpropagation to train neural networks. Apply adaptive learning rate procedures like AdaGrad, RMSprop, and Adam to backpropagation to train neural networks. Understand the basic building blocks of Theano. Build a neural network in Theano. Understand the basic building blocks of TensorFlow. Build a neural network in TensorFlow. Build a neural network that performs well on the MNIST dataset. Understand the difference between full gradient descent, batch gradient descent, and stochastic gradient descent. Understand and implement dropout regularization in Theano and TensorFlow. Understand and implement batch normalization in Theano and Tensorflow. Write a neural network using Keras. Write a neural network using PyTorch. Write a neural network using CNTK. Write a neural network using MXNet",
+      "decsription": "This course continues where my first course, Deep Learning in Python, left off. You already know how to build an artificial neural network in Python, and you have a plug-and-play script that you can use for TensorFlow. Neural networks are one of the staples of machine learning, and they are always a top contender in Kaggle contests. If you want to improve your skills with neural networks and deep learning, this is the course for you.. You already learned about backpropagation, but there were a lot of unanswered questions. How can you modify it to improve training speed? In this course you will learn about batch and stochastic gradient descent, two commonly used techniques that allow you to train on just a small sample of the data at each iteration, greatly speeding up training time.. You will also learn about momentum, which can be helpful for carrying you through local minima and prevent you from having to be too conservative with your learning rate. You will also learn about adaptive learning rate techniques like AdaGrad, RMSprop, and Adam which can also help speed up your training.. Because you already know about the fundamentals of neural networks, we are going to talk about more modern techniques, like dropout regularization and batch normalization, which we will implement in both TensorFlow and Theano. The course is constantly being updated and more advanced regularization techniques are coming in the near future.",
+      "requirements": "Be comfortable with Python, Numpy, and Matplotlib. Install Theano and TensorFlow. If you do not yet know about gradient descent, backprop, and softmax, take my earlier course, deep learning in Python, and then return to this course.",
+      "teacherId": 4,
+      "rating": 4,
+      "price": 105,
+      "discountPrice": 10,
+      "date": "2017/10/02",
+      "language": "English"
+    },
+    {
+      "id": 12,
+      "categoryId": 2,
+      "type": "new",
+      "topicId": 2,
+      "images": "/assets/img/course/machine_learn.jpg",
+      "name": "machine-learning-a-z™-hands-on-python-r-in-data-sciencemodern-deep-learning-in-python",
+      "title": "Machine Learning A-Z™: Hands-On Python & R In Data Science",
+      "learning": "Master Machine Learning on Python & R. Have a great intuition of many Machine Learning models. Make accurate predictions. Make powerful analysis. Make robust Machine Learning models. Create strong added value to your business. Use Machine Learning for personal purpose. Handle specific topics like Reinforcement Learning, NLP and Deep Learning. Handle advanced techniques like Dimensionality Reduction. Know which Machine Learning model to choose for each type of problem. Build an army of powerful Machine Learning models and know how to combine them to solve any problem",
+      "decsription": "Interested in the field of Machine Learning? Then this course is for you!. This course has been designed by two professional Data Scientists so that we can share our knowledge and help you learn complex theory, algorithms and coding libraries in a simple way.. We will walk you step-by-step into the World of Machine Learning. With every tutorial you will develop new skills and improve your understanding of this challenging yet lucrative sub-field of Data Science.. This course is fun and exciting, but at the same time we dive deep into Machine Learning. It is structured the following way",
+      "requirements": "Just some high school mathematics level.",
+      "teacherId": 5,
+      "rating": 4,
+      "price": 105,
+      "discountPrice": 10,
+      "date": "2017/10/02",
+      "language": "English"
+    },
+    {
+      "id": 13,
+      "categoryId": 2,
+      "type": "new",
+      "topicId": 3,
+      "images": "/assets/img/course/python_data.jpg",
+      "name": "python-for-data-science-and-machine-learning-bootcamp",
+      "title": "Python for Data Science and Machine Learning Bootcamp",
+      "learning": "Master Machine Learning on Python & R. Have a great intuition of many Machine Learning models. Make accurate predictions. Make powerful analysis. Make robust Machine Learning models. Create strong added value to your business. Use Machine Learning for personal purpose. Handle specific topics like Reinforcement Learning, NLP and Deep Learning. Handle advanced techniques like Dimensionality Reduction. Know which Machine Learning model to choose for each type of problem. Build an army of powerful Machine Learning models and know how to combine them to solve any problem",
+      "decsription": "Interested in the field of Machine Learning? Then this course is for you!. This course has been designed by two professional Data Scientists so that we can share our knowledge and help you learn complex theory, algorithms and coding libraries in a simple way.. We will walk you step-by-step into the World of Machine Learning. With every tutorial you will develop new skills and improve your understanding of this challenging yet lucrative sub-field of Data Science.. This course is fun and exciting, but at the same time we dive deep into Machine Learning. It is structured the following way",
+      "requirements": "Just some high school mathematics level.",
+      "teacherId": 6,
+      "rating": 4,
+      "price": 105,
+      "discountPrice": 10,
+      "date": "2017/10/02",
+      "language": "English"
+    },
+    {
+      "category": "1",
+      "topic": "5",
+      "title": "The Web Developer Bootcamp",
+      "subtitle": "The only course you need to learn web development - HTML, CSS, JS, Node, and More!",
+      "images": "/assets/img/course/625204_436a_2.jpg",
+      "learning": "Make REAL web applications using cutting-edge technologies\nContinue to learn and grow as a developer, long after the course ends\nCreate a blog application from scratch using Express, MongoDB, and Semantic UI",
+      "decsription": "Hi! Welcome to the Web Developer Bootcamp, the only course you need to learn web development. There are a lot of options for online developer training, but this course is without a doubt the most comprehensive and effective on the market.",
+      "type": "new",
+      "requirements": "Have a computer with Internet\nBe ready to learn an insane amount of awesome stuff\nPrepare to build real web apps!\n",
+      "rating": "4.5",
+      "price": "220",
+      "discount": "10",
+      "date": "2017-04-12",
+      "language": "English",
+      "categoryId": "1",
+      "topicId": "5",
+      "teacherId": 1,
+      "discountPrice": "10",
+      "name": "the-web-developer-bootcamp",
+      "id": 14
+    },
+    {
+      "title": "Deep Learning A-Z™: Hands-On Artificial Neural Networks",
+      "subtitle": "Learn to create Deep Learning Algorithms in Python from two Machine Learning & Data Science experts. Templates included.",
+      "images": "/assets/img/course/deep_learning.jpg",
+      "learning": "Understand the intuition behind Artificial Neural Networks\nApply Artificial Neural Networks in practice\nUnderstand the intuition behind Convolutional Neural Networks",
+      "decsription": "Artificial intelligence is growing exponentially. There is no doubt about that. Self-driving cars are clocking up millions of miles, IBM Watson is diagnosing patients better than armies of doctors and Google Deepmind's AlphaGo beat the World champion at Go - a game where intuition plays a key role.",
+      "type": "best seller",
+      "requirements": "Just some high school mathematics level",
+      "rating": "4.2",
+      "price": "200",
+      "discount": "15",
+      "date": "2017-04-12",
+      "language": "English",
+      "categoryId": 1,
+      "topicId": 5,
+      "teacherId": 1,
+      "discountPrice": "15",
+      "name": "deep-learning-a-z-hands-on-artificial-neural-networks",
+      "id": 15
+    },
+    {
+      "title": "Ultimate Guide to Digital Sketching: Beginner to Advanced",
+      "subtitle": "Learn to digitally draw like a pro!",
+      "images": "/assets/img/course/1325264_6025_3.jpg",
+      "learning": "\nDigitally sketch from life\nDigitally sketch objects and scenes from your imagination\nImprove your sketches using digital techniques",
+      "decsription": "Join the course and begin drawing today!\n\nDo you want to learn how to digitally sketch images for games and film like an industry pro? Or maybe you’re wanting to branch out and try working digitally? In any case you’ve come to the right place.",
+      "type": "new",
+      "requirements": "A digital drawing tablet of some sort\nA basic understanding of the drawing software of your choice such as Photoshop, or Procreate",
+      "rating": "4.6",
+      "price": "200",
+      "discount": "10",
+      "date": "2017-04-12",
+      "language": "English",
+      "categoryId": 1,
+      "topicId": 1,
+      "teacherId": 1,
+      "discountPrice": "10",
+      "name": "ultimate-guide-to-digital-sketching-beginner-to-advanced",
+      "id": 16
+    },
+    {
+      "title": "SQL - MySQL for Data Analytics and Business Intelligence",
+      "subtitle": "SQL that will get you hired – SQL for Business Analysis, Marketing, and Data Management",
+      "images": "/assets/img/course/1405632_6e6f.jpg",
+      "learning": "Become an expert in SQL\nLearn how to code in SQL\nBoost your resume by learning an in-demand skill",
+      "decsription": "How important is database management in the age of big data and analytics?",
+      "type": "new",
+      "requirements": "\nNo prior experience is required. We will start from the very basics",
+      "rating": "4.6",
+      "price": "195",
+      "date": "2017-04-12",
+      "language": "English",
+      "categoryId": 1,
+      "topicId": 1,
+      "teacherId": 1,
+      "discountPrice": "15",
+      "name": "sql-my-sql-for-data-analytics-and-business-intelligence",
+      "id": 17,
+      "discount": "15"
+    },
+    {
+      "title": "Angular",
+      "subtitle": "Learn more angular4",
+      "images": "/assets/img/course/1045942_d12f.jpg",
+      "learning": "What is new ",
+      "decsription": "You can l",
+      "type": "new",
+      "requirements": "sd",
+      "rating": "4.3",
+      "price": "240",
+      "discount": "12",
+      "date": "2017-05-12",
+      "language": "English",
+      "categoryId": 1,
+      "topicId": 5,
+      "teacherId": 1,
+      "discountPrice": "12",
+      "name": "angular",
+      "id": 18
+    }
+  ],
+  "chapters": [
+    {
+      "courseId": 1,
+      "id": 1,
+      "name": " First steps - getting setup"
+    },
+    {
+      "courseId": 1,
+      "id": 2,
+      "name": "Terminal hacker - basic C#"
+    },
+    {
+      "courseId": 1,
+      "id": 3,
+      "name": "Spaced Invaders"
+    },
+    {
+      "courseId": 1,
+      "id": 4,
+      "name": "Halloween Tree, The"
+    },
+    {
+      "courseId": 1,
+      "id": 5,
+      "name": "How Tasty Was My Little Frenchman (Como Era Gostoso o Meu Francês)"
+    },
+    {
+      "courseId": 1,
+      "id": 6,
+      "name": "Westworld"
+    },
+    {
+      "courseId": 1,
+      "id": 7,
+      "name": "Student Prince in Old Heidelberg, The"
+    },
+    {
+      "courseId": 11,
+      "id": 11,
+      "name": "My Brilliant Career"
+    },
+    {
+      "courseId": 12,
+      "id": 12,
+      "name": "Drinking Buddies"
+    },
+    {
+      "courseId": 13,
+      "id": 13,
+      "name": "Black Pirate, The"
+    },
+    {
+      "courseId": 14,
+      "id": 14,
+      "name": "Marie and Bruce"
+    },
+    {
+      "courseId": 15,
+      "id": 15,
+      "name": "Just Pals"
+    },
+    {
+      "courseId": 16,
+      "id": 16,
+      "name": "I Love You, I Love You (Je t'aime je t'aime)"
+    },
+    {
+      "courseId": 17,
+      "id": 17,
+      "name": "Pippi on the Run (På rymmen med Pippi Långstrump)"
+    }
+  ],
+  "parts": [
+    {
+      "chapterId": 1,
+      "id": 1,
+      "title": "Why You Should Buy This Course",
+      "desc": "",
+      "time": "00:01:32"
+    },
+    {
+      "chapterId": 1,
+      "id": 2,
+      "title": "Get Unity & Visual Studio Downloading",
+      "desc": "",
+      "time": "00:08:05"
+    },
+    {
+      "chapterId": 1,
+      "id": 1,
+      "title": "Tapia",
+      "decs": "Monteggia's fracture of left ulna, subsequent encounter for open fracture type IIIA, IIIB, or IIIC with routine healing",
+      "time": "00:10:23"
+    },
+    {
+      "chapterId": 1,
+      "id": 2,
+      "title": "Slingshot, The (Kådisbellan)",
+      "decs": "Hodgkin lymphoma, unspecified",
+      "time": "00:12:41"
+    },
+    {
+      "chapterId": 1,
+      "id": 3,
+      "title": "War on Democracy, The",
+      "decs": "Other specified multiple gestation, unspecified number of placenta and unspecified number of amniotic sacs, third trimester",
+      "time": "00:6:56"
+    },
+    {
+      "chapterId": 1,
+      "id": 4,
+      "title": "Planet of the Apes",
+      "decs": "Other mechanical complication of unspecified cardiac device, sequela",
+      "time": "00:1:50"
+    },
+    {
+      "chapterId": 1,
+      "id": 5,
+      "title": "Wings",
+      "decs": "Poisoning by other antihypertensive drugs, undetermined, sequela",
+      "time": "00:1:11"
+    },
+    {
+      "chapterId": 2,
+      "id": 6,
+      "title": "Casting By",
+      "decs": "Passenger in three-wheeled motor vehicle injured in collision with other motor vehicles in traffic accident",
+      "time": "00:4:57"
+    },
+    {
+      "chapterId": 2,
+      "id": 7,
+      "title": "Grown Ups 2",
+      "decs": "Polyp of right middle ear",
+      "time": "00:2:00"
+    },
+    {
+      "chapterId": 2,
+      "id": 8,
+      "title": "Tintin and I",
+      "decs": "NIHSS score 14",
+      "time": "00:2:18"
+    },
+    {
+      "chapterId": 2,
+      "id": 9,
+      "title": "Seafarers, The",
+      "decs": "Displaced trimalleolar fracture of left lower leg, subsequent encounter for open fracture type IIIA, IIIB, or IIIC with routine healing",
+      "time": "00:11:20"
+    },
+    {
+      "chapterId": 2,
+      "id": 10,
+      "title": "Straight Story, The",
+      "decs": "Other fracture of shaft of right femur, sequela",
+      "time": "00:7:26"
+    },
+    {
+      "chapterId": 3,
+      "id": 11,
+      "title": "Soul Man",
+      "decs": "Displaced transverse fracture of shaft of left radius, subsequent encounter for closed fracture with routine healing",
+      "time": "00:10:55"
+    },
+    {
+      "chapterId": 3,
+      "id": 12,
+      "title": "Interiors",
+      "decs": "Unspecified open wound of right ring finger with damage to nail, initial encounter",
+      "time": "00:3:57"
+    },
+    {
+      "chapterId": 4,
+      "id": 13,
+      "title": "Hangover, The",
+      "decs": "Adverse effect of insulin and oral hypoglycemic [antidiabetic] drugs, initial encounter",
+      "time": "00:2:08"
+    },
+    {
+      "chapterId": 4,
+      "id": 14,
+      "title": "Revenge of Frankenstein, The",
+      "decs": "Salter-Harris Type I physeal fracture of lower end of unspecified tibia, subsequent encounter for fracture with malunion",
+      "time": "00:10:07"
+    },
+    {
+      "chapterId": 5,
+      "id": 15,
+      "title": "Touch of Pink",
+      "decs": "Displaced transverse fracture of shaft of unspecified ulna, subsequent encounter for open fracture type IIIA, IIIB, or IIIC with nonunion",
+      "time": "00:11:31"
+    },
+    {
+      "chapterId": 6,
+      "id": 16,
+      "title": "Solstice",
+      "decs": "Displaced oblique fracture of shaft of right radius, subsequent encounter for closed fracture with delayed healing",
+      "time": "00:1:46"
+    },
+    {
+      "chapterId": 7,
+      "id": 17,
+      "title": "My Mom's New Boyfriend",
+      "decs": "Newborn light for gestational age, 1000-1249 grams",
+      "time": "00:7:12"
+    }
+  ],
+  "my_courses": [
+    {
+      "usedId": 1,
+      "coursesId": 1,
+      "chapterId": 1
+    }
+  ],
+  "teachers": [
+    {
+      "id": 1,
+      "fullName": "Tam Tran",
+      "avatar": "https://robohash.org/culpatotamet.jpg?size=96x96&set=set1",
+      "company": "Best-selling Instructor, Game Developer, Online Entrepreneur",
+      "password": "pLXSlSPI",
+      "desc": "Activities involving string instrument playing"
+    },
+    {
+      "id": 2,
+      "fullName": "Gaston Rubury",
+      "avatar": "https://robohash.org/etasperioresvoluptate.png?size=96x96&set=set1",
+      "company": "Rhycero",
+      "password": "jzYeIb",
+      "desc": "Heart valve replaced by transplant"
+    },
+    {
+      "id": 3,
+      "fullName": "Federica Zanni",
+      "avatar": "https://robohash.org/architectoautemmaiores.bmp?size=96x96&set=set1",
+      "company": "Thoughtstorm",
+      "password": "gX9mbphfENw",
+      "desc": "Mixed disturbance of conduct and emotions"
+    },
+    {
+      "id": 4,
+      "fullName": "Kingsley Downs",
+      "avatar": "https://robohash.org/officiisconsequaturodit.jpg?size=96x96&set=set1",
+      "company": "Twimm",
+      "password": "9c1RzeqRIe",
+      "desc": "Contaminated substance injected or used for vaccination"
+    },
+    {
+      "id": 5,
+      "fullName": "Stephen Heads",
+      "avatar": "https://robohash.org/eosvoluptateperspiciatis.jpg?size=96x96&set=set1",
+      "company": "Feednation",
+      "password": "6ufpSO",
+      "desc": "Excessive attrition, unspecified"
+    },
+    {
+      "id": 6,
+      "fullName": "Pavla Haggart",
+      "avatar": "https://robohash.org/nisiinrerum.png?size=96x96&set=set1",
+      "company": "Gabvine",
+      "password": "YMlrwvXTf",
+      "desc": "Arthropathy, unspecified, multiple sites"
+    },
+    {
+      "id": 7,
+      "fullName": "Chiquita Aubin",
+      "avatar": "https://robohash.org/consecteturveldolores.bmp?size=96x96&set=set1",
+      "company": "Divanoodle",
+      "password": "uiH03j0Z",
+      "desc": "Wiskott-aldrich syndrome"
+    },
+    {
+      "id": 8,
+      "fullName": "Paolina Le Breton",
+      "avatar": "https://robohash.org/repellendusdoloresqui.jpg?size=96x96&set=set1",
+      "company": "Tagcat",
+      "password": "z9yZhRzF",
+      "desc": "Sacroiliitis, not elsewhere classified"
+    },
+    {
+      "id": 9,
+      "fullName": "Tulley Delamaine",
+      "avatar": "https://robohash.org/inciduntvoluptatemet.png?size=96x96&set=set1",
+      "company": "Teklist",
+      "password": "GDZYqJ2m",
+      "desc": "Cryptococcosis"
+    },
+    {
+      "id": 10,
+      "fullName": "Giraldo Norcock",
+      "avatar": "https://robohash.org/rerummaioresprovident.jpg?size=96x96&set=set1",
+      "company": "Buzzbean",
+      "password": "SGsniUN0hq",
+      "desc": "Nonspecific abnormal electrocardiogram [ECG] [EKG]"
+    }
+  ],
+  "strategies": [
+    {
+      "id": 1,
+      "name": "expand-you-programming-knowledge",
+      "image": "/assets/img/expand.jpg",
+      "imageLg": "/assets/img/knowledges.jpg",
+      "title": "Expand you programming knowledge",
+      "desc": "Learn to code in the latest languages."
+    },
+    {
+      "id": 2,
+      "name": "be-your-own-boss",
+      "image": "/assets/img/own_boss.jpg",
+      "imageLg": "/assets/img/owns_boss.jpg",
+      "title": "Be your own boss",
+      "desc": "Be your own boss"
+    },
+    {
+      "id": 3,
+      "image": "/assets/img/land_tec.jpg",
+      "imageLg": "/assets/img/tech_job.jpg",
+      "name": "land-and-exciting-new-tech-job",
+      "title": "Land and Exciting new tech Job",
+      "desc": "Land and Exciting new tech Job"
+    },
+    {
+      "id": 4,
+      "name": "indulge-your-couriosity",
+      "image": "/assets/img/indulge.jpg",
+      "imageLg": "/assets/img/indulge_curiosity.jpg",
+      "title": "Indulge your couriosity",
+      "desc": "Learn something you’ve always wanted to."
+    },
+    {
+      "id": 5,
+      "name": "invest-in-your-passion",
+      "image": "/assets/img/invest.jpg",
+      "imageLg": "/assets/img/invests.jpg",
+      "title": "Invest in your passion",
+      "desc": "Give hobbies the attention they deserve."
+    },
+    {
+      "id": 6,
+      "name": "unlock-you-potential",
+      "image": "/assets/img/potential.jpg",
+      "imageLg": "/assets/img/unlock_potential.jpg",
+      "title": "Unlock you potential",
+      "desc": "Become your best self with expert guidance."
+    },
+    {
+      "id": 7,
+      "name": "make-analytics-work-for-you",
+      "image": "/assets/img/analytics.jpg",
+      "imageLg": "/assets/img/make_analytics.jpg",
+      "title": "Make analytics work for you",
+      "desc": "Take a deeper dive and learn the benefits."
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "user_courses": [
+    {
+      "userId": 1,
+      "courseId": 1,
+      "id": 1,
+      "teacherId": 1
+    },
+    {
+      "userId": 1,
+      "courseId": 2,
+      "id": 2,
+      "teacherId": 2
+    },
+    {
+      "userId": 2,
+      "courseId": 1,
+      "id": 3,
+      "teacherId": 2
+    },
+    {
+      "userId": 2,
+      "courseId": 2,
+      "id": 4,
+      "teacherId": 1
+    },
+    {
+      "userId": 1,
+      "courseId": 3,
+      "teacherId": 3,
+      "id": 5
+    }
+  ]
+}
