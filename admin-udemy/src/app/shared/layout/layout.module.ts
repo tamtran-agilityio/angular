@@ -20,18 +20,21 @@ import {
 import {
   PrimaryLayoutComponent
 } from '@app/shared/layout/components/primary-layout/primary-layout.component';
+import { MainGroupComponent } from './components/main-group/main-group.component';
 
-export const COMMON_MODULE: any[]= [
+export const COMMON_MODULE: any[] = [
   CommonModule,
   RouterModule,
   MaterialModule
-]
+];
+
 export const LAYOUT_COMPONENT: any = [
   MainHeaderComponent,
   MainFooterComponent,
   MainSidebarComponent,
   MainBreadcrumbsComponent,
-  PrimaryLayoutComponent
+  PrimaryLayoutComponent,
+  MainGroupComponent
 ];
 
 @NgModule({
