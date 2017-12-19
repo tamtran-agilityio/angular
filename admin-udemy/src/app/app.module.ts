@@ -27,6 +27,9 @@ import {
   UserModule
 } from '@app/user/user.module';
 import {
+  CoreModule
+} from '@app/core/core.module';
+import {
   AppRoutingModule
 } from '@app/app-routing.module';
 
@@ -35,6 +38,7 @@ export const COMMON_MODULE: any[] = [
   BrowserAnimationsModule,
   BrowserModule,
   RouterModule,
+  CoreModule,
   SharedModule,
   DashboardModule,
   CategoryModule,

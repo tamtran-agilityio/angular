@@ -16,8 +16,11 @@ import {
 export const ROUTES: Routes = [
   {
     path: '',
-    redirectTo: '',
-    pathMatch: 'full',
+    redirectTo: 'dashboard',
+    pathMatch: 'full'
+  },
+  {
+    path: 'dashboard',
     children: [
       ...dashboardRouting
     ]

@@ -1,0 +1,27 @@
+::ng-deep .mat-expansion-indicator:after {
+  color: white;
+}
+
+::ng-deep .mat-expansion-panel-body {
+  padding: 0 !important;
+}
+
+.mat-expansion-panel {
+  background: #1e282c;
+}
+
+.mat-expansion-panel-header-title {
+  color: #fff;
+}
+
+.mat-expansion-panel-spacing {
+  margin: 0;
+}
+
+.mat-list-item {
+  color: #FFF;
+}
+
+.mat-expansion-panel-header {
+  padding: 0 15px;
+}

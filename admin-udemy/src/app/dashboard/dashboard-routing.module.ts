@@ -12,6 +12,9 @@ import {
 import {
   PrimaryLayoutComponent
 } from '@app/shared/layout/components/primary-layout/primary-layout.component';
+import {
+  ListUserComponent
+} from '@app/user/components/list-user/list-user.component';
 
 export const ROUTES: Routes = [
   {
@@ -21,6 +24,10 @@ export const ROUTES: Routes = [
       {
         path: '',
         component: DashboardComponent
+      },
+      {
+        path: 'users',
+        component: ListUserComponent
       }
     ]
   }

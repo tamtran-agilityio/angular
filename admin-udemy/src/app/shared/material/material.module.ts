@@ -23,6 +23,18 @@ import {
 import {
   MatCheckboxModule
 } from '@angular/material/checkbox';
+import {
+  MatExpansionModule
+} from '@angular/material/expansion';
+import {
+  MatListModule
+} from '@angular/material/list';
+import {
+  MatTableModule
+} from '@angular/material/table';
+import {
+  MatSortModule
+} from '@angular/material/sort';
 
 export const MATERIAL_MODULES: any[] = [
   MatSidenavModule,
@@ -30,7 +42,11 @@ export const MATERIAL_MODULES: any[] = [
   MatIconModule,
   MatMenuModule,
   MatInputModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatExpansionModule,
+  MatListModule,
+  MatTableModule,
+  MatSortModule
 ];
 
 @NgModule({
