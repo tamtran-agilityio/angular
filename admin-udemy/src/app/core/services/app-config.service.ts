@@ -12,7 +12,7 @@ export class AppConfigService {
     API_ROOT: environment.API_ROOT
   };
 
-  API_URLS: {
+  API_URLS: any = {
     USERS: 'users/',
     COURSES: 'courses/'
   };

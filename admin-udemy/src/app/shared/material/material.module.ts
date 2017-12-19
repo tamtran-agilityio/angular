@@ -29,6 +29,12 @@ import {
 import {
   MatListModule
 } from '@angular/material/list';
+import {
+  MatTableModule
+} from '@angular/material/table';
+import {
+  MatSortModule
+} from '@angular/material/sort';
 
 export const MATERIAL_MODULES: any[] = [
   MatSidenavModule,
@@ -38,7 +44,9 @@ export const MATERIAL_MODULES: any[] = [
   MatInputModule,
   MatCheckboxModule,
   MatExpansionModule,
-  MatListModule
+  MatListModule,
+  MatTableModule,
+  MatSortModule
 ];
 
 @NgModule({
