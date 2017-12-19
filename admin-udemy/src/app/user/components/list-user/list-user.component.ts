@@ -1,15 +1,16 @@
 import {
   Component,
   OnInit,
-  AfterViewInit,
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   ViewChild
 } from '@angular/core';
 
+import * as _ from 'lodash';
 import {
   MatTableDataSource,
-  MatSort
+  MatSort,
+  MatPaginator
 } from '@angular/material';
 import {
   SelectionModel
@@ -33,12 +34,16 @@ import {
 })
 
 @LoggerDecorator()
-export class ListUserComponent implements OnInit, AfterViewInit {
+export class ListUserComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
   users: User[];
   displayedColumns = ['select', 'id', 'fullName', 'email', 'password', 'action'];
   dataSource = new MatTableDataSource<User>(this.users);
   selection = new SelectionModel<User>(true, []);
+  length = 100;
+  pageSize = 10;
+  pageSizeOptions = [5, 10, 25, 100];
   constructor(
     private userService: UserService,
     private cdr: ChangeDetectorRef
@@ -47,18 +52,12 @@ export class ListUserComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     this.userService.getUser()
       .subscribe(users => {
-        this.dataSource = new MatTableDataSource<User>(users);
+        this.users = users;
+        this.dataSource = new MatTableDataSource<User>(this.users);
+        this.dataSource.sort = this.sort;
+        this.dataSource.paginator = this.paginator;
         this.cdr.markForCheck();
       });
-  }
-
-  /**
-   * Set the sort after the view init since this component will
-   * be able to query its view for the initialized sort.
-   */
-  ngAfterViewInit() {
-    this.dataSource.sort = this.sort;
-    this.cdr.markForCheck();
   }
 
   /**
@@ -87,7 +86,16 @@ export class ListUserComponent implements OnInit, AfterViewInit {
         });
   }
 
+  /**
+   * Handle delete user
+   * @param event value of row need delete
+   */
   deleteUser(event) {
+    this.userService.deteleUserById(event.id);
+    const listUser = _.remove(this.users, (user) => {
+      return user.id === event.id;
+    });
+    this.dataSource = new MatTableDataSource<User>(this.users);
   }
 
 }

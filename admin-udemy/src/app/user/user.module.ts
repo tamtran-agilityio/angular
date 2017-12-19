@@ -16,6 +16,7 @@ import {
 import {
   UserService
 } from '@app/user/services/user.service';
+import { AddUserComponent } from './components/add-user/add-user.component';
 
 export const COMMON_MODULE: any[] = [
   SharedModule
@@ -35,7 +36,8 @@ export const USER_PROVIDERS: any[] = [
     COMMON_MODULE
   ],
   declarations: [
-    ...USER_COMPONENT
+    ...USER_COMPONENT,
+    AddUserComponent
   ],
   exports: [
     ...USER_COMPONENT

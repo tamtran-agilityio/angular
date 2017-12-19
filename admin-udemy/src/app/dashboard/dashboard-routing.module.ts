@@ -15,6 +15,9 @@ import {
 import {
   ListUserComponent
 } from '@app/user/components/list-user/list-user.component';
+import {
+  AddUserComponent
+} from '@app/user/components/add-user/add-user.component';
 
 export const ROUTES: Routes = [
   {
@@ -28,6 +31,10 @@ export const ROUTES: Routes = [
       {
         path: 'users',
         component: ListUserComponent
+      },
+      {
+        path: 'new-user',
+        component: AddUserComponent
       }
     ]
   }

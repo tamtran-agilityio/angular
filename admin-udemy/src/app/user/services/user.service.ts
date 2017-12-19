@@ -35,4 +35,14 @@ export class UserService {
     });
   }
 
+  /**
+   * Handle delete method
+   * @param id the number need to delete
+   */
+  deteleUserById(id: number) {
+    const table = this.appConfig.API_URLS.USERS;
+    return this.httpWrapper.delete(table, id)
+                           .subscribe();
+  }
+
 }
