@@ -8,6 +8,9 @@ import {
 
 import * as _ from 'lodash';
 import {
+  Subscription
+} from 'rxjs/Subscription';
+import {
   MatTableDataSource,
   MatSort,
   MatPaginator
@@ -25,6 +28,15 @@ import {
 import {
   User
 } from '@app/user/models/user';
+import {
+  AutoUnsubscribe
+} from '@app/core/decorators/autounsubscribe.decorator';
+import {
+  UserDialogService
+} from '@app/user/services/user-dialog.service';
+import {
+  AppConfigService
+} from '@app/core/services/app-config.service';
 
 @Component({
   selector: 'list-user',
@@ -34,26 +46,30 @@ import {
 })
 
 @LoggerDecorator()
+@AutoUnsubscribe()
 export class ListUserComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  users: User[];
+  users$: User[];
   displayedColumns = ['select', 'id', 'fullName', 'email', 'password', 'action'];
-  dataSource = new MatTableDataSource<User>(this.users);
+  dataSource = new MatTableDataSource<User>(this.users$);
   selection = new SelectionModel<User>(true, []);
-  length = 100;
-  pageSize = 10;
-  pageSizeOptions = [5, 10, 25, 100];
+  paginationOption: any;
   constructor(
     private userService: UserService,
-    private cdr: ChangeDetectorRef
-  ) { }
+    private cdr: ChangeDetectorRef,
+    private userDialogService: UserDialogService,
+    private appConfig: AppConfigService
+  ) {
+    this.paginationOption = this.appConfig.PAGINATION_DEFAULT;
+  }
 
   ngOnInit() {
     this.userService.getUser()
       .subscribe(users => {
-        this.users = users;
-        this.dataSource = new MatTableDataSource<User>(this.users);
+        this.users$ = users;
+        this.paginationOption.length = users.length;
+        this.dataSource = new MatTableDataSource<User>(this.users$);
         this.dataSource.sort = this.sort;
         this.dataSource.paginator = this.paginator;
         this.cdr.markForCheck();
@@ -92,10 +108,19 @@ export class ListUserComponent implements OnInit {
    */
   deleteUser(event) {
     this.userService.deteleUserById(event.id);
-    const listUser = _.remove(this.users, (user) => {
+    const listUser = _.remove(this.users$, (user) => {
       return user.id === event.id;
     });
-    this.dataSource = new MatTableDataSource<User>(this.users);
+    this.dataSource = new MatTableDataSource<User>(this.users$);
+  }
+
+  openDialog() {
+    const user: User = null;
+    this.userDialogService.confirm(user);
+  }
+
+  editUser(user: User) {
+    this.userDialogService.confirm(user);
   }
 
 }

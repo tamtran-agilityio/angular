@@ -18,18 +18,20 @@ import {
 
 @Injectable()
 export class UserService {
+  private userTable = '';
   constructor(
     private httpWrapper: HttpWrapperService,
     private appConfig: AppConfigService
-  ) { }
+  ) {
+    this.userTable = this.appConfig.API_URLS.USERS;
+  }
 
   /**
    * Get list user
    */
   getUser(): Observable<User[]> {
-    const table = this.appConfig.API_URLS.USERS;
     return Observable.create(obs => {
-      return this.httpWrapper.get(table).subscribe(res => {
+      return this.httpWrapper.get(this.userTable).subscribe(res => {
         obs.next(res);
       });
     });
@@ -40,9 +42,18 @@ export class UserService {
    * @param id the number need to delete
    */
   deteleUserById(id: number) {
-    const table = this.appConfig.API_URLS.USERS;
-    return this.httpWrapper.delete(table, id)
+    return this.httpWrapper.delete(this.userTable, id)
                            .subscribe();
+  }
+
+  /**
+   * Handle create new user
+   * @param user info user need to add
+   */
+  createUser(user: User) {
+    const table = this.appConfig.API_URLS.USERS;
+    this.httpWrapper.post(this.userTable, JSON.stringify(user))
+                    .subscribe(res => {});
   }
 
 }

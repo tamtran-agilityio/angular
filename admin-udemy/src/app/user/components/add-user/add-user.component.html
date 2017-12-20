@@ -1,11 +1,18 @@
-<form class="user-form">
+<form class="user-form" [formGroup]="userForm" >
   <mat-form-field class="email">
-    <input matInput placeholder="Name">
+    <input matInput type="name" formControlName="fullName" id='fullName' placeholder="Name">
   </mat-form-field>
   <mat-form-field class="email">
-    <input matInput placeholder="Email">
+    <input matInput type="email" formControlName="email" id='email' placeholder="Email">
   </mat-form-field>
   <mat-form-field class="email">
-    <input type="password" matInput placeholder="Password">
+    <input type="password" matInput formControlName="password" id='password' placeholder="Password">
   </mat-form-field>
+  <mat-form-field class="email">
+    <input type="password" matInput formControlName="confirmPassword" id='confirmPassword' placeholder="Confirm Password">
+  </mat-form-field>
+  <div class="button-row">
+    <button type="submit" (click)="saveUser($event)" mat-raised-button>Save </button>
+    <button (click)="dialogRef.close()" mat-raised-button>Cancel </button>
+  </div>
 </form>

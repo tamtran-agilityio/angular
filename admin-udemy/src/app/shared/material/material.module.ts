@@ -38,6 +38,9 @@ import {
 import {
   MatPaginatorModule
 } from '@angular/material/paginator';
+import {
+  MatDialogModule
+} from '@angular/material/dialog';
 
 export const MATERIAL_MODULES: any[] = [
   MatSidenavModule,
@@ -50,7 +53,8 @@ export const MATERIAL_MODULES: any[] = [
   MatListModule,
   MatTableModule,
   MatSortModule,
-  MatPaginatorModule
+  MatPaginatorModule,
+  MatDialogModule
 ];
 
 @NgModule({
