@@ -79,12 +79,12 @@ export class HttpWrapperService {
 
   /**
    * Performs a request with `post` http method.
-   * @param url      An url which is used in a http request.
+   * @param table      An table which is used in a http request.
    * @param options  A request options arguments.
    * @returns        It returns a cold Observable which emits one value (in JavaScript format) from the request.
    */
-  post<T>(url: string, body: any, opts?: RequestOptionsArgs): Observable<T> {
-    const urlQuery = this.rootUrl + url,
+  post<T>(table: string, body: any, opts?: RequestOptionsArgs): Observable<T> {
+    const urlQuery = this.rootUrl + table,
         requestOptions = this.getDefaultOptions(opts);
 
     return this.http.post(urlQuery, body, requestOptions)
@@ -92,6 +92,36 @@ export class HttpWrapperService {
                  return res;
                })
                .catch(this.handleErrorMessage);
+  }
+
+  /**
+   * Performs a request with `patchs` http method.
+   * @param tables      An tables which is used in a http request.
+   * @param options  A request options arguments.
+   * @returns        It returns a cold Observable which emits one value (in JavaScript format) from the request.
+   */
+  patchs<T>(table: string, data: Object, opts?: RequestOptionsArgs): Observable<T> {
+    const urlQuery = this.rootUrl + table,
+        requestOptions = this.getDefaultOptions(opts);
+
+    return this.http.patch(urlQuery, data, requestOptions)
+                    .map(this.extractData)
+                    .catch(this.handleErrorMessage);
+  }
+
+  /**
+   * Performs a request with `delete` http method.
+   * @param tables      An tables which is used in a http request.
+   * @param options  A request options arguments.
+   * @returns        It returns a cold Observable which emits one value (in JavaScript format) from the request.
+   */
+  delete<T>(table: string, body: any, opts?: RequestOptionsArgs): Observable<T> {
+    const urlQuery = this.rootUrl + table + body,
+        requestOptions = this.getDefaultOptions(opts);
+
+    return this.http.delete(urlQuery, requestOptions)
+                    .map(this.extractData)
+                    .catch(this.handleErrorMessage);
   }
 
   /**

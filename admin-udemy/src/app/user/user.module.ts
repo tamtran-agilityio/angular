@@ -16,6 +16,15 @@ import {
 import {
   UserService
 } from '@app/user/services/user.service';
+import {
+  AddUserComponent
+} from './components/add-user/add-user.component';
+import {
+  UserDialogService
+} from '@app/user/services/user-dialog.service';
+import {
+  UserValidationService
+} from '@app/user/services/user-validation.service';
 
 export const COMMON_MODULE: any[] = [
   SharedModule
@@ -27,7 +36,9 @@ export const USER_COMPONENT: any[] = [
 ];
 
 export const USER_PROVIDERS: any[] = [
-  UserService
+  UserService,
+  UserDialogService,
+  UserValidationService
 ];
 
 @NgModule({
@@ -35,7 +46,8 @@ export const USER_PROVIDERS: any[] = [
     COMMON_MODULE
   ],
   declarations: [
-    ...USER_COMPONENT
+    ...USER_COMPONENT,
+    AddUserComponent
   ],
   exports: [
     ...USER_COMPONENT

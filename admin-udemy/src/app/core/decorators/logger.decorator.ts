@@ -18,7 +18,7 @@ export function LoggerDecorator(): ClassDecorator {
 
         constructor.prototype[hook] = function ( ...args ) {
           console.log(`%c ${component} - ${hook}`, `color: #4CAF50; font-weight: bold`, ...args);
-          // tslint:disable-next-line:no-unused-expression
+
           original && original.apply(this, args);
         };
       });

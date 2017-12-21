@@ -1,15 +1,19 @@
 import {
   Component,
   OnInit,
-  AfterViewInit,
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   ViewChild
 } from '@angular/core';
 
+import * as _ from 'lodash';
+import {
+  Subscription
+} from 'rxjs/Subscription';
 import {
   MatTableDataSource,
-  MatSort
+  MatSort,
+  MatPaginator
 } from '@angular/material';
 import {
   SelectionModel
@@ -24,6 +28,15 @@ import {
 import {
   User
 } from '@app/user/models/user';
+import {
+  AutoUnsubscribe
+} from '@app/core/decorators/autounsubscribe.decorator';
+import {
+  UserDialogService
+} from '@app/user/services/user-dialog.service';
+import {
+  AppConfigService
+} from '@app/core/services/app-config.service';
 
 @Component({
   selector: 'list-user',
@@ -33,32 +46,34 @@ import {
 })
 
 @LoggerDecorator()
-export class ListUserComponent implements OnInit, AfterViewInit {
+@AutoUnsubscribe()
+export class ListUserComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
-  users: User[];
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  users$: User[];
   displayedColumns = ['select', 'id', 'fullName', 'email', 'password', 'action'];
-  dataSource = new MatTableDataSource<User>(this.users);
+  dataSource = new MatTableDataSource<User>(this.users$);
   selection = new SelectionModel<User>(true, []);
+  paginationOption: any;
   constructor(
     private userService: UserService,
-    private cdr: ChangeDetectorRef
-  ) { }
+    private cdr: ChangeDetectorRef,
+    private userDialogService: UserDialogService,
+    private appConfig: AppConfigService
+  ) {
+    this.paginationOption = this.appConfig.PAGINATION_DEFAULT;
+  }
 
   ngOnInit() {
     this.userService.getUser()
       .subscribe(users => {
-        this.dataSource = new MatTableDataSource<User>(users);
+        this.users$ = users;
+        this.paginationOption.length = users.length;
+        this.dataSource = new MatTableDataSource<User>(this.users$);
+        this.dataSource.sort = this.sort;
+        this.dataSource.paginator = this.paginator;
         this.cdr.markForCheck();
       });
-  }
-
-  /**
-   * Set the sort after the view init since this component will
-   * be able to query its view for the initialized sort.
-   */
-  ngAfterViewInit() {
-    this.dataSource.sort = this.sort;
-    this.cdr.markForCheck();
   }
 
   /**
@@ -87,7 +102,25 @@ export class ListUserComponent implements OnInit, AfterViewInit {
         });
   }
 
+  /**
+   * Handle delete user
+   * @param event value of row need delete
+   */
   deleteUser(event) {
+    this.userService.deteleUserById(event.id);
+    const listUser = _.remove(this.users$, (user) => {
+      return user.id === event.id;
+    });
+    this.dataSource = new MatTableDataSource<User>(this.users$);
+  }
+
+  openDialog() {
+    const user: User = null;
+    this.userDialogService.confirm(user);
+  }
+
+  editUser(user: User) {
+    this.userDialogService.confirm(user);
   }
 
 }

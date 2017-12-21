@@ -17,4 +17,25 @@ export class AppConfigService {
     COURSES: 'courses/'
   };
 
+  PAGINATION_DEFAULT = {
+    length: 0,
+    size: 10,
+    pageOption: [5, 10, 25, 100]
+  };
+
+  VALIDATION_MESSAGES = {
+    'required': 'Required',
+    'invalidCreditCard': 'Is invalid credit card number',
+    'invalidEmailAddress': 'Invalid email address',
+    'invalidPassword': 'Invalid password. Password must be at least 6 characters long, and contain a number.',
+    'invalidConfirmPassword': '',
+    'minlength': `Minimum length`
+  };
+
+  PATTERN_MATCHINGS = {
+    // tslint:disable-next-line:max-line-length
+    EMAIL: /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/,
+    PASSWORD: /^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{6,100}$/
+  };
+
 }

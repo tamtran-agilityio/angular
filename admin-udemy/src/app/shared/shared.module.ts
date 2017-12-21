@@ -5,7 +5,8 @@ import {
   CommonModule
 } from '@angular/common';
 import {
-  FormsModule
+  FormsModule,
+  ReactiveFormsModule
 } from '@angular/forms';
 import {
   HttpModule
@@ -21,14 +22,19 @@ import {
 import {
   LayoutModule
 } from '@app/shared/layout/layout.module';
+import {
+  PaginationModule
+} from '@app/shared/pagination/pagination.module';
 
 export const COMMON_MODULE: any[] = [
   CommonModule,
   FormsModule,
+  ReactiveFormsModule,
   HttpModule,
   RouterModule,
   MaterialModule,
-  LayoutModule
+  LayoutModule,
+  PaginationModule
 ];
 
 @NgModule({

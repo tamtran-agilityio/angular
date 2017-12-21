@@ -14,7 +14,6 @@ export function ClientDecorator(animations: any) {
     target.prototype.getUser = function() {
       return {};
     };
-    console.log('target', target.prototype.constructor);
     return target;
   };
 }
