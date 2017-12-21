@@ -22,9 +22,6 @@ import {
 import {
   LayoutModule
 } from '@app/shared/layout/layout.module';
-import {
-  PaginationModule
-} from '@app/shared/pagination/pagination.module';
 
 export const COMMON_MODULE: any[] = [
   CommonModule,
@@ -33,8 +30,7 @@ export const COMMON_MODULE: any[] = [
   HttpModule,
   RouterModule,
   MaterialModule,
-  LayoutModule,
-  PaginationModule
+  LayoutModule
 ];
 
 @NgModule({

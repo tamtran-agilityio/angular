@@ -10,6 +10,8 @@ import {
   Validators
 } from '@angular/forms';
 
+import * as _ from 'lodash';
+
 import {
   MatDialogRef
 } from '@angular/material';
@@ -40,6 +42,7 @@ import {
 export class AddUserComponent implements OnInit {
   private userForm: FormGroup;
   public user: User;
+  private isEdit: boolean;
   constructor(
     private formBuilder: FormBuilder,
     private dialogRef: MatDialogRef<AddUserComponent>,
@@ -52,14 +55,48 @@ export class AddUserComponent implements OnInit {
     this.userForm = this.formBuilder.group({
       fullName: ['', Validators.compose([Validators.required, Validators.min(5)])],
       email: ['', Validators.compose([Validators.required, this.userValidationService.emailValidator])],
-      password: ['', Validators.compose([Validators.required, this.userValidationService.passwordValidator])],
-      confirmPassword: ['', Validators.compose([Validators.required, this.userValidationService.confirmPasswordValidator])]
+      password: ['', Validators.compose([Validators.required, this.userValidationService.passwordValidator])]
+    });
+
+    if (this.user) {
+      this.isEdit = true;
+      this.getValueUser(this.user);
+    }
+  }
+
+  /**
+   * Handle set value user
+   * @param user set value user to form
+   */
+  getValueUser(user: User) {
+    this.userForm.setValue({
+      fullName: user.fullName,
+      email: user.email,
+      password: user.password
     });
   }
 
+  /**
+   * Handle save and edit user
+   * @param event click button save
+   */
   saveUser(event) {
     if (this.userForm.valid) {
-      this.userService.createUser(this.userForm.value);
+      const user: User = {
+        id: null,
+        fullName: this.userForm.value.fullName,
+        email: this.userForm.value.email,
+        password: this.userForm.value.password
+      };
+
+      if (this.isEdit) {
+        user.id = this.user.id;
+        this.userService.updateUser(user);
+      } else {
+        this.userService.createUser(user);
+        this.userForm.reset();
+      }
+      this.dialogRef.close();
     }
   }
 
