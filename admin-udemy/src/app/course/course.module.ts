@@ -10,10 +10,26 @@ export const COMMON_MODULE: any = [
   SharedModule
 ];
 
+export const COURSE_COMPONENT: any[] = [
+
+];
+
+export const COURSE_PROVIDERS: any[] = [
+
+];
+
 @NgModule({
   imports: [
     ...COMMON_MODULE
   ],
-  declarations: []
+  declarations: [
+    ...COURSE_COMPONENT
+  ],
+  providers: [
+    ...COURSE_PROVIDERS
+  ],
+  exports: [
+    ...COURSE_COMPONENT
+  ]
 })
 export class CourseModule { }
