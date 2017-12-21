@@ -1,12 +1,21 @@
-<button mat-raised-button (click)="openDialog()">New User</button>
+<div class="row">
+  <button class="new-user"
+          mat-raised-button
+          (click)="openDialog()">New User</button>
+</div>
 <div class="user-container mat-elevation-z8">
   <div class="user-header">
     <mat-form-field>
-      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      <input matInput
+             (keyup)="applyFilter($event.target.value)"
+             placeholder="Filter">
     </mat-form-field>
   </div>
-  <mat-table #table [dataSource]="dataSource"
-    matSort matSortActive="created" matSortDirection="desc">
+  <mat-table #table
+             [dataSource]="dataSource"
+             matSort
+             matSortActive="created"
+             matSortDirection="desc">
 
     <!-- Checkbox Column -->
     <ng-container matColumnDef="select">
@@ -52,8 +61,10 @@
     <ng-container matColumnDef="action">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Action </mat-header-cell>
       <mat-cell *matCellDef="let user">
-        <button mat-raised-button (click)="deleteUser(user)">Delete</button>
-        <button mat-raised-button (click)="editUser(user)">Edit user</button>
+        <button mat-raised-button
+                (click)="deleteUser(user)">Delete</button>
+        <button mat-raised-button
+                (click)="editUser(user)">Edit user</button>
       </mat-cell>
     </ng-container>
 
@@ -61,7 +72,7 @@
     <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
   </mat-table>
   <mat-paginator [length]="paginationOption.length"
-    [pageSize]="paginationOption.size"
-    [pageSizeOptions]="paginationOption.pageOption">
+                 [pageSize]="paginationOption.size"
+                 [pageSizeOptions]="paginationOption.pageOption">
 </mat-paginator>
 </div>

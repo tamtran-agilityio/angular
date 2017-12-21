@@ -17,9 +17,7 @@ export class UserValidationService {
 
   constructor(
     private appConfig: AppConfigService
-  ) {
-    debugger;
-   }
+  ) { }
 
   getValidatorErrorMessage(validatorName: string, validatorValue?: any) {
     const config = this.appConfig.VALIDATION_MESSAGES;
@@ -28,28 +26,25 @@ export class UserValidationService {
   }
 
   emailValidator(control) {
-    if (control.value.match('')) {
-      return null;
-    } else {
-      return { 'invalidEmailAddress': true };
+    // tslint:disable-next-line:max-line-length
+    const patternEmail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+    if (control.value) {
+      if (control.value.match(patternEmail)) {
+        return null;
+      } else {
+        return { 'invalidEmailAddress': true };
+      }
     }
   }
 
   passwordValidator(control: FormControl) {
-    if (control.value.match('')) {
-      return null;
-    } else {
-      return { 'invalidPassword': true };
-    }
-  }
-
-  confirmPasswordValidator(control: AbstractControl) {
-    const password = control.get('password').value;
-    const confirmPassword = control.get('confirmPassword').value;
-    if (password === confirmPassword) {
-      return null;
-    } else {
-      return { 'invalidConfirmPassword': true };
+    const patternPassword = /^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{6,100}$/;
+    if (control.value) {
+      if (control.value.match(patternPassword)) {
+        return null;
+      } else {
+        return { 'invalidPassword': true };
+      }
     }
   }
 }

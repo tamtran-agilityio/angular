@@ -8,9 +8,6 @@
   <mat-form-field class="email">
     <input type="password" matInput formControlName="password" id='password' placeholder="Password">
   </mat-form-field>
-  <mat-form-field class="email">
-    <input type="password" matInput formControlName="confirmPassword" id='confirmPassword' placeholder="Confirm Password">
-  </mat-form-field>
   <div class="button-row">
     <button type="submit" (click)="saveUser($event)" mat-raised-button>Save </button>
     <button (click)="dialogRef.close()" mat-raised-button>Cancel </button>

@@ -51,8 +51,16 @@ export class UserService {
    * @param user info user need to add
    */
   createUser(user: User) {
-    const table = this.appConfig.API_URLS.USERS;
     this.httpWrapper.post(this.userTable, JSON.stringify(user))
+                    .subscribe(res => {});
+  }
+
+  /**
+   * Handle create update user
+   * @param user info user need to update
+   */
+  updateUser(user: User) {
+    this.httpWrapper.patchs(this.userTable, user, JSON.stringify(user))
                     .subscribe(res => {});
   }
 
