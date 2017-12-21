@@ -1,6 +1,8 @@
 import {
   Component,
   OnInit,
+  Output,
+  EventEmitter,
   ChangeDetectionStrategy
 } from '@angular/core';
 import {
@@ -42,7 +44,7 @@ import {
 export class AddUserComponent implements OnInit {
   private userForm: FormGroup;
   public user: User;
-  private isEdit: boolean;
+  @Output() userInfo: EventEmitter<User> = new EventEmitter<User>();
   constructor(
     private formBuilder: FormBuilder,
     private dialogRef: MatDialogRef<AddUserComponent>,
@@ -59,7 +61,6 @@ export class AddUserComponent implements OnInit {
     });
 
     if (this.user) {
-      this.isEdit = true;
       this.getValueUser(this.user);
     }
   }
@@ -89,13 +90,8 @@ export class AddUserComponent implements OnInit {
         password: this.userForm.value.password
       };
 
-      if (this.isEdit) {
-        user.id = this.user.id;
-        this.userService.updateUser(user);
-      } else {
-        this.userService.createUser(user);
-        this.userForm.reset();
-      }
+      this.userInfo.emit(user);
+      this.userForm.reset();
       this.dialogRef.close();
     }
   }

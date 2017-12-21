@@ -13,8 +13,10 @@ import {
 import {
   MatTableDataSource,
   MatSort,
-  MatPaginator
+  MatPaginator,
+  MatDialog
 } from '@angular/material';
+import {} from '@angular/material';
 import {
   SelectionModel
 } from '@angular/cdk/collections';
@@ -37,6 +39,9 @@ import {
 import {
   AppConfigService
 } from '@app/core/services/app-config.service';
+import {
+  AddUserComponent
+} from '@app/user/components/add-user/add-user.component';
 
 @Component({
   selector: 'list-user',
@@ -59,13 +64,14 @@ export class ListUserComponent implements OnInit {
     private userService: UserService,
     private cdr: ChangeDetectorRef,
     private userDialogService: UserDialogService,
-    private appConfig: AppConfigService
+    private appConfig: AppConfigService,
+    private dialog: MatDialog
   ) {
     this.paginationOption = this.appConfig.PAGINATION_DEFAULT;
   }
 
   ngOnInit() {
-    this.userService.getUser()
+    this.userService.getUsers()
       .subscribe(users => {
         this.users$ = users;
         this.paginationOption.length = users.length;
@@ -86,20 +92,24 @@ export class ListUserComponent implements OnInit {
     this.dataSource.filter = filterValue;
   }
 
-  /** Whether the number of selected elements matches the total number of rows. */
+  /**
+   * The total number of rows
+   */
   isAllSelected() {
     const numSelected = this.selection.selected.length;
     const numRows = this.dataSource.data.length;
     return numSelected === numRows;
   }
 
-  /** Selects all rows if they are not all selected; otherwise clear selection. */
+  /**
+   * Selects all rows
+   */
   masterToggle() {
     this.isAllSelected() ?
-        this.selection.clear() :
-        this.dataSource.data.forEach(row => {
-          this.selection.select(row);
-        });
+      this.selection.clear() :
+      this.dataSource.data.forEach(row => {
+        this.selection.select(row);
+      });
   }
 
   /**
@@ -116,11 +126,26 @@ export class ListUserComponent implements OnInit {
 
   openDialog() {
     const user: User = null;
-    this.userDialogService.confirm(user);
+    const dialogRef = this.dialog.open(AddUserComponent);
+    dialogRef.componentInstance.user = user;
+
+    // Add new user
+    dialogRef.componentInstance.userInfo.subscribe((userInfo) => {
+      this.userService.createUser(userInfo);
+      this.users$.push(userInfo);
+      this.dataSource = new MatTableDataSource<User>(this.users$);
+    });
   }
 
   editUser(user: User) {
-    this.userDialogService.confirm(user);
+    const dialogRef = this.dialog.open(AddUserComponent);
+    dialogRef.componentInstance.user = user;
+
+    // Edit new user
+    dialogRef.componentInstance.userInfo.subscribe((userInfo) => {
+      userInfo.id = user.id;
+      this.userService.updateUser(userInfo);
+    });
   }
 
 }
