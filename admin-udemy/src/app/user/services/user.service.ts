@@ -5,7 +5,10 @@ import {
   Headers
 } from '@angular/http';
 
-import { Observable } from 'rxjs/Observable';
+import {
+  Observable
+} from 'rxjs/Observable';
+
 import {
   User
 } from '@app/user/models/user';
@@ -29,7 +32,7 @@ export class UserService {
   /**
    * Get list user
    */
-  getUser(): Observable<User[]> {
+  getUsers(): Observable<User[]> {
     return Observable.create(obs => {
       return this.httpWrapper.get(this.userTable).subscribe(res => {
         obs.next(res);
