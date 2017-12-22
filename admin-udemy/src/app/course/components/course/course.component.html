@@ -8,10 +8,13 @@
       {{course.subtitle}}
     </mat-card-subtitle>
   </mat-card-content>
+  <mat-card-actions>
+  </mat-card-actions>
   <mat-card-footer>
     <span class="price">{{course.price}}</span>
     <span class="discount-price">{{course.discountPrice}}</span>
   </mat-card-footer>
-  <mat-card-actions>
-  </mat-card-actions>
+  <button class="delete-btn"
+          mat-button
+          (click)=deleteCourse(course.id)>Delete</button>
 </mat-card>

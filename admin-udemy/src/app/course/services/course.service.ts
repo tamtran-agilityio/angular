@@ -33,7 +33,7 @@ export class CourseService {
   /**
    * Get all course
    */
-  getCouser(): Observable<Course[]> {
+  getCourse(): Observable<Course[]> {
     const headers: Headers = new Headers();
     const tableTeacher = this.appConfig.API_URLS.TEACHER;
     headers.append('_expand', tableTeacher);
@@ -41,6 +41,12 @@ export class CourseService {
       headers: headers
     };
     return this.httpWrapper.get(this.courseTable, options);
+  }
+
+  deleteCourse(id) {
+    const path = this.courseTable + id;
+    return this.httpWrapper.delete(path)
+                           .subscribe( res => {});
   }
 
 }

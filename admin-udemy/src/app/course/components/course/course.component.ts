@@ -2,6 +2,8 @@ import {
   Component,
   OnInit,
   Input,
+  Output,
+  EventEmitter,
   ChangeDetectionStrategy
 } from '@angular/core';
 
@@ -17,9 +19,13 @@ import {
 })
 export class CourseComponent implements OnInit {
   @Input() course: Course;
+  @Output() idCourseDelete: EventEmitter<any> = new EventEmitter<any>();
   constructor() { }
 
   ngOnInit() {
   }
 
+  deleteCourse(id: any) {
+    this.idCourseDelete.emit(id);
+  }
 }

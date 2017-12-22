@@ -5,6 +5,8 @@ import {
   ChangeDetectionStrategy
 } from '@angular/core';
 
+import * as _ from 'lodash';
+
 import {
   CourseService
 } from '@app/course/services/course.service';
@@ -26,11 +28,17 @@ export class CourseListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.courseService.getCouser()
-                      .subscribe((res: Course[]) => {
-                        this.courses = res;
+    this.courseService.getCourse()
+                      .subscribe((courses: Course[]) => {
+                        this.courses = courses;
                         this.cdr.markForCheck();
                       });
   }
 
+  deleteCourse(event: any) {
+    const courses = _.remove(this.courses, (course) => {
+      return course.id === _.parseInt(event);
+    });
+    this.courseService.deleteCourse(event);
+  }
 }
