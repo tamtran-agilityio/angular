@@ -1,6 +1,9 @@
 import {
   Injectable
 } from '@angular/core';
+import {
+  Headers
+} from '@angular/http';
 
 import {
   Observable
@@ -24,16 +27,20 @@ export class CourseService {
     private httpWrapper: HttpWrapperService,
     private appConfig: AppConfigService
   ) {
-    this.courseTable = this.appConfig.API_URLS.COURSE;
+    this.courseTable = this.appConfig.API_URLS.COURSES;
   }
 
   /**
    * Get all course
    */
-  getCouser(): Observable<Course> {
-    return Observable.create(obs => {
-      obs.next(this.httpWrapper.get(this.courseTable));
-    });
+  getCouser(): Observable<Course[]> {
+    const headers: Headers = new Headers();
+    const tableTeacher = this.appConfig.API_URLS.TEACHER;
+    headers.append('_expand', tableTeacher);
+    const options = {
+      headers: headers
+    };
+    return this.httpWrapper.get(this.courseTable, options);
   }
 
 }

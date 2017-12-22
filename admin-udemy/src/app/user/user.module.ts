@@ -20,9 +20,6 @@ import {
   AddUserComponent
 } from './components/add-user/add-user.component';
 import {
-  UserDialogService
-} from '@app/user/services/user-dialog.service';
-import {
   UserValidationService
 } from '@app/user/services/user-validation.service';
 
@@ -37,7 +34,6 @@ export const USER_COMPONENT: any[] = [
 
 export const USER_PROVIDERS: any[] = [
   UserService,
-  UserDialogService,
   UserValidationService
 ];
 

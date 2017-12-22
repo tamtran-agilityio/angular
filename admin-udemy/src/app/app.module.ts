@@ -32,6 +32,9 @@ import {
 import {
   AppRoutingModule
 } from '@app/app-routing.module';
+import {
+  CourseModule
+} from '@app/course/course.module';
 
 
 export const COMMON_MODULE: any[] = [
@@ -43,6 +46,7 @@ export const COMMON_MODULE: any[] = [
   DashboardModule,
   CategoryModule,
   UserModule,
+  CourseModule,
   AppRoutingModule
 ];
 

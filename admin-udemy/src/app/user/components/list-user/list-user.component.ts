@@ -34,9 +34,6 @@ import {
   AutoUnsubscribe
 } from '@app/core/decorators/autounsubscribe.decorator';
 import {
-  UserDialogService
-} from '@app/user/services/user-dialog.service';
-import {
   AppConfigService
 } from '@app/core/services/app-config.service';
 import {
@@ -55,15 +52,14 @@ import {
 export class ListUserComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  users$: User[];
+  users: User[];
   displayedColumns = ['select', 'id', 'fullName', 'email', 'password', 'action'];
-  dataSource = new MatTableDataSource<User>(this.users$);
+  dataSource = new MatTableDataSource<User>(this.users);
   selection = new SelectionModel<User>(true, []);
   paginationOption: any;
   constructor(
     private userService: UserService,
     private cdr: ChangeDetectorRef,
-    private userDialogService: UserDialogService,
     private appConfig: AppConfigService,
     private dialog: MatDialog
   ) {
@@ -73,9 +69,9 @@ export class ListUserComponent implements OnInit {
   ngOnInit() {
     this.userService.getUsers()
       .subscribe(users => {
-        this.users$ = users;
+        this.users = users;
         this.paginationOption.length = users.length;
-        this.dataSource = new MatTableDataSource<User>(this.users$);
+        this.dataSource = new MatTableDataSource<User>(this.users);
         this.dataSource.sort = this.sort;
         this.dataSource.paginator = this.paginator;
         this.cdr.markForCheck();
@@ -118,10 +114,10 @@ export class ListUserComponent implements OnInit {
    */
   deleteUser(event) {
     this.userService.deteleUserById(event.id);
-    const listUser = _.remove(this.users$, (user) => {
+    const listUser = _.remove(this.users, (user) => {
       return user.id === event.id;
     });
-    this.dataSource = new MatTableDataSource<User>(this.users$);
+    this.dataSource = new MatTableDataSource<User>(this.users);
   }
 
   openDialog() {
@@ -131,9 +127,11 @@ export class ListUserComponent implements OnInit {
 
     // Add new user
     dialogRef.componentInstance.userInfo.subscribe((userInfo) => {
+      this.users.push(userInfo);
+      this.dataSource = new MatTableDataSource<User>(this.users);
+      this.dataSource.sort = this.sort;
+      this.dataSource.paginator = this.paginator;
       this.userService.createUser(userInfo);
-      this.users$.push(userInfo);
-      this.dataSource = new MatTableDataSource<User>(this.users$);
     });
   }
 
@@ -144,6 +142,11 @@ export class ListUserComponent implements OnInit {
     // Edit new user
     dialogRef.componentInstance.userInfo.subscribe((userInfo) => {
       userInfo.id = user.id;
+      const index = _.findIndex(this.users, {id: userInfo.id});
+      this.users.splice(index, 1, userInfo);
+      this.dataSource = new MatTableDataSource<User>(this.users);
+      this.dataSource.sort = this.sort;
+      this.dataSource.paginator = this.paginator;
       this.userService.updateUser(userInfo);
     });
   }
