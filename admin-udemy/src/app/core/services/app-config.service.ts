@@ -14,7 +14,8 @@ export class AppConfigService {
 
   API_URLS: any = {
     USERS: 'users/',
-    COURSES: 'courses/'
+    COURSES: 'courses/',
+    TEACHERS: 'teachers/'
   };
 
   PAGINATION_DEFAULT = {

@@ -100,8 +100,8 @@ export class HttpWrapperService {
    * @param options  A request options arguments.
    * @returns        It returns a cold Observable which emits one value (in JavaScript format) from the request.
    */
-  patchs<T>(table: string, body: any, data: Object, opts?: RequestOptionsArgs): Observable<T> {
-    const urlQuery = this.rootUrl + table + body.id,
+  patchs<T>(table: string, data: Object, opts?: RequestOptionsArgs): Observable<T> {
+    const urlQuery = this.rootUrl + table,
         requestOptions = this.getDefaultOptions(opts);
 
     return this.http.patch(urlQuery, data, requestOptions)
@@ -115,8 +115,8 @@ export class HttpWrapperService {
    * @param options  A request options arguments.
    * @returns        It returns a cold Observable which emits one value (in JavaScript format) from the request.
    */
-  delete<T>(table: string, body: any, opts?: RequestOptionsArgs): Observable<T> {
-    const urlQuery = this.rootUrl + table + body,
+  delete<T>(table: string, opts?: RequestOptionsArgs): Observable<T> {
+    const urlQuery = this.rootUrl + table,
         requestOptions = this.getDefaultOptions(opts);
 
     return this.http.delete(urlQuery, requestOptions)

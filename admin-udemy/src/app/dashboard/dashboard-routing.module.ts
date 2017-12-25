@@ -18,6 +18,9 @@ import {
 import {
   AddUserComponent
 } from '@app/user/components/add-user/add-user.component';
+import {
+  CourseListComponent
+} from '@app/course/components/course-list/course-list.component';
 
 export const ROUTES: Routes = [
   {
@@ -33,8 +36,8 @@ export const ROUTES: Routes = [
         component: ListUserComponent
       },
       {
-        path: 'new-user',
-        component: AddUserComponent
+        path: 'courses',
+        component: CourseListComponent
       }
     ]
   }

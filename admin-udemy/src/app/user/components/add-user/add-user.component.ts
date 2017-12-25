@@ -24,9 +24,6 @@ import {
   User
 } from '@app/user/models/user';
 import {
-  UserDialogService
-} from '@app/user/services/user-dialog.service';
-import {
   UserService
 } from '@app/user/services/user.service';
 import {

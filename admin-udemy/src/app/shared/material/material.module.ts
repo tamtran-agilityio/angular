@@ -41,6 +41,12 @@ import {
 import {
   MatDialogModule
 } from '@angular/material/dialog';
+import {
+  MatGridListModule
+} from '@angular/material/grid-list';
+import {
+  MatCardModule
+} from '@angular/material/card';
 
 export const MATERIAL_MODULES: any[] = [
   MatSidenavModule,
@@ -54,7 +60,9 @@ export const MATERIAL_MODULES: any[] = [
   MatTableModule,
   MatSortModule,
   MatPaginatorModule,
-  MatDialogModule
+  MatDialogModule,
+  MatGridListModule,
+  MatCardModule
 ];
 
 @NgModule({
