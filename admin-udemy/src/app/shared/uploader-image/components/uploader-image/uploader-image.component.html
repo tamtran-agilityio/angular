@@ -1,0 +1,11 @@
+<label class="uploader">
+  <span class="icon icon-upload upload-file" >
+    <span class="upload-icon"></span>
+  </span>
+  <img [attr.src]="imageSrc"/>
+  <input
+    type="file"
+    name="images"
+    accept="image/*"
+    (change)="changeImage($event)">
+</label>

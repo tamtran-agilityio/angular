@@ -1,4 +1,11 @@
 <mat-grid-list cols="6" rowHeight="1:1.2">
+  <mat-grid-tile>
+    <mat-card class="course-add">
+      <button class="add-btn"
+              mat-button
+              (click)="newCourse()"></button>
+    </mat-card>
+  </mat-grid-tile>
   <mat-grid-tile *ngFor="let course of courses">
     <course [course]="course"
             (idCourseDelete)="deleteCourse($event)"></course>

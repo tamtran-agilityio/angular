@@ -6,6 +6,9 @@ import {
 } from '@angular/core';
 
 import * as _ from 'lodash';
+import {
+  MatDialog
+} from '@angular/material';
 
 import {
   CourseService
@@ -13,6 +16,9 @@ import {
 import {
   Course
 } from '@app/course/models/course';
+import {
+  AddCourseComponent
+} from '@app/course/components/add-course/add-course.component';
 
 @Component({
   selector: 'course-list',
@@ -24,7 +30,8 @@ export class CourseListComponent implements OnInit {
   courses: Course[];
   constructor(
     private courseService: CourseService,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private dialog: MatDialog
   ) { }
 
   ngOnInit() {
@@ -41,4 +48,12 @@ export class CourseListComponent implements OnInit {
     });
     this.courseService.deleteCourse(event);
   }
-}
+
+  newCourse() {
+
+    const dialogRef = this.dialog.open(AddCourseComponent);
+    dialogRef.componentInstance.course.subscribe(course => {
+      this.courseService.createCourse(course);
+    });
+  }
+ }

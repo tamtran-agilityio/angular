@@ -53,7 +53,7 @@ export class ListUserComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   users: User[];
-  displayedColumns = ['select', 'id', 'fullName', 'email', 'password', 'action'];
+  displayedColumns = [];
   dataSource = new MatTableDataSource<User>(this.users);
   selection = new SelectionModel<User>(true, []);
   paginationOption: any;
@@ -64,6 +64,7 @@ export class ListUserComponent implements OnInit {
     private dialog: MatDialog
   ) {
     this.paginationOption = this.appConfig.PAGINATION_DEFAULT;
+    this.displayedColumns = this.appConfig.TABLE_COLUMNS.USER;
   }
 
   ngOnInit() {

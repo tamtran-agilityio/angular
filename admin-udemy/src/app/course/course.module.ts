@@ -14,6 +14,7 @@ import {
 import {
   CourseService
 } from '@app/course/services/course.service';
+import { AddCourseComponent } from './components/add-course/add-course.component';
 
 export const COMMON_MODULE: any = [
   SharedModule
@@ -21,11 +22,16 @@ export const COMMON_MODULE: any = [
 
 export const COURSE_COMPONENT: any[] = [
   CourseComponent,
-  CourseListComponent
+  CourseListComponent,
+  AddCourseComponent
 ];
 
 export const COURSE_PROVIDERS: any[] = [
   CourseService
+];
+
+export const ENTRY_COMPONENT: any[] = [
+  AddCourseComponent
 ];
 
 @NgModule({
@@ -37,6 +43,9 @@ export const COURSE_PROVIDERS: any[] = [
   ],
   providers: [
     ...COURSE_PROVIDERS
+  ],
+  entryComponents: [
+    ...ENTRY_COMPONENT
   ],
   exports: [
     ...COURSE_COMPONENT

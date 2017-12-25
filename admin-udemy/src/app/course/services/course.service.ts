@@ -43,10 +43,19 @@ export class CourseService {
     return this.httpWrapper.get(this.courseTable, options);
   }
 
+  /**
+   * Handle delete course by id
+   * @param id the number id need to delete
+   */
   deleteCourse(id) {
     const path = this.courseTable + id;
     return this.httpWrapper.delete(path)
                            .subscribe( res => {});
+  }
+
+  createCourse(course: Course) {
+    this.httpWrapper.post(this.courseTable, course)
+                    .subscribe((res) => {});
   }
 
 }
