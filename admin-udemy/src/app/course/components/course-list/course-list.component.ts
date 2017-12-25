@@ -42,6 +42,10 @@ export class CourseListComponent implements OnInit {
                       });
   }
 
+  /**
+   * Handle delete course
+   * @param event
+   */
   deleteCourse(event: any) {
     const courses = _.remove(this.courses, (course) => {
       return course.id === _.parseInt(event);
@@ -49,11 +53,15 @@ export class CourseListComponent implements OnInit {
     this.courseService.deleteCourse(event);
   }
 
+  /**
+   * Handle add new course
+   */
   newCourse() {
-
     const dialogRef = this.dialog.open(AddCourseComponent);
     dialogRef.componentInstance.course.subscribe(course => {
       this.courseService.createCourse(course);
+      this.courses = _.concat(this.courses, course);
+      this.cdr.markForCheck();
     });
   }
  }

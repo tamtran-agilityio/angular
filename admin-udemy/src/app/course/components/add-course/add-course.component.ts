@@ -10,6 +10,9 @@ import {
   FormBuilder,
   Validators
 } from '@angular/forms';
+import {
+  MatDialogRef
+} from '@angular/material';
 
 import {
   Course
@@ -26,13 +29,14 @@ export class AddCourseComponent implements OnInit {
   imageSrc: string = '';
   @Output() course: EventEmitter<Course> = new EventEmitter<Course>();
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private dialogRef: MatDialogRef<AddCourseComponent>
   ) { }
 
   ngOnInit() {
     this.courseForm = this.fb.group({
       title: ['', Validators.compose([Validators.required])],
-      subTitle: ['', Validators.compose([Validators.required])],
+      subtitle: ['', Validators.compose([Validators.required])],
       price: ['', Validators.compose([Validators.required])],
       discountPrice: ['', Validators.compose([Validators.required])],
       image: ['']
@@ -52,6 +56,7 @@ export class AddCourseComponent implements OnInit {
   saveCourse() {
     if (this.courseForm.valid) {
       this.course.emit(this.courseForm.value);
+      this.dialogRef.close();
     }
   }
 
