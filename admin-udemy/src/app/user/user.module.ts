@@ -29,7 +29,8 @@ export const COMMON_MODULE: any[] = [
 
 export const USER_COMPONENT: any[] = [
   UserComponent,
-  ListUserComponent
+  ListUserComponent,
+  AddUserComponent
 ];
 
 export const USER_PROVIDERS: any[] = [
@@ -37,13 +38,19 @@ export const USER_PROVIDERS: any[] = [
   UserValidationService
 ];
 
+export const ENTRY_COMPONENT: any[] = [
+  AddUserComponent
+];
+
 @NgModule({
   imports: [
     COMMON_MODULE
   ],
   declarations: [
-    ...USER_COMPONENT,
-    AddUserComponent
+    ...USER_COMPONENT
+  ],
+  entryComponents: [
+    ...ENTRY_COMPONENT
   ],
   exports: [
     ...USER_COMPONENT
