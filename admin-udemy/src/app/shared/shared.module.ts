@@ -22,6 +22,9 @@ import {
 import {
   LayoutModule
 } from '@app/shared/layout/layout.module';
+import {
+  UploaderImageModule
+} from '@app/shared/uploader-image/uploader-image.module';
 
 export const COMMON_MODULE: any[] = [
   CommonModule,
@@ -30,7 +33,8 @@ export const COMMON_MODULE: any[] = [
   HttpModule,
   RouterModule,
   MaterialModule,
-  LayoutModule
+  LayoutModule,
+  UploaderImageModule
 ];
 
 @NgModule({

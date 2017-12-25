@@ -6,7 +6,7 @@ export interface Course {
   name: string;
   title?: string;
   subtitle?: string;
-  images: string;
+  image: string;
   learning: string;
   description: string;
   requirements: string;

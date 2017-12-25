@@ -18,6 +18,10 @@ export class AppConfigService {
     TEACHERS: 'teachers/'
   };
 
+  TABLE_COLUMNS = {
+    USER: ['select', 'id', 'fullName', 'email', 'password', 'action']
+  };
+
   PAGINATION_DEFAULT = {
     length: 0,
     size: 10,
