@@ -27,7 +27,8 @@ import {
 export class AddCourseComponent implements OnInit {
   courseForm: FormGroup;
   imageSrc: string = '';
-  @Output() course: EventEmitter<Course> = new EventEmitter<Course>();
+  course: Course;
+  @Output() courseInfor: EventEmitter<Course> = new EventEmitter<Course>();
   constructor(
     private fb: FormBuilder,
     private dialogRef: MatDialogRef<AddCourseComponent>
@@ -41,6 +42,17 @@ export class AddCourseComponent implements OnInit {
       discountPrice: ['', Validators.compose([Validators.required])],
       image: ['']
     });
+
+    if (this.course) {
+      this.courseForm.setValue({
+        title: this.course.title,
+        subtitle: this.course.subtitle,
+        price: this.course.price,
+        discountPrice: this.course.discountPrice,
+        image: this.course.image
+      });
+      this.imageSrc = this.course.image;
+    }
   }
 
   /**
@@ -51,11 +63,22 @@ export class AddCourseComponent implements OnInit {
   }
 
   /**
-   * Handle save new course
+   * Handle save new or update course
    */
   saveCourse() {
     if (this.courseForm.valid) {
-      this.course.emit(this.courseForm.value);
+      const course: any = {
+        title: this.courseForm.value.title,
+        subtitle: this.courseForm.value.subtitle,
+        price: this.courseForm.value.price,
+        discountPrice: this.courseForm.value.discountPrice,
+        image: this.courseForm.value.image
+      };
+
+      if (this.course) {
+        course.id = this.course.id;
+      }
+      this.courseInfor.emit(course);
       this.dialogRef.close();
     }
   }

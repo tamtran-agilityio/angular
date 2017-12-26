@@ -20,6 +20,7 @@ import {
 export class CourseComponent implements OnInit {
   @Input() course: Course;
   @Output() idCourseDelete: EventEmitter<any> = new EventEmitter<any>();
+  @Output() courseEdit: EventEmitter<Course> = new EventEmitter<Course>();
   constructor() { }
 
   ngOnInit() {
@@ -27,5 +28,9 @@ export class CourseComponent implements OnInit {
 
   deleteCourse(id: any) {
     this.idCourseDelete.emit(id);
+  }
+
+  updateCourse(course: Course) {
+    this.courseEdit.emit(course);
   }
 }

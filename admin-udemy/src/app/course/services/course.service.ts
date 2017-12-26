@@ -2,7 +2,8 @@ import {
   Injectable
 } from '@angular/core';
 import {
-  Headers
+  Headers,
+  URLSearchParams
 } from '@angular/http';
 
 import {
@@ -53,8 +54,22 @@ export class CourseService {
                            .subscribe( res => {});
   }
 
+  /**
+   * Handle new course
+   * @param course infor of course
+   */
   createCourse(course: Course) {
-    this.httpWrapper.post(this.courseTable, course)
+    this.httpWrapper.post(this.courseTable, JSON.stringify(course))
+                    .subscribe((res) => {});
+  }
+
+  /**
+   * Handle update course
+   * @param course infor course need to update
+   */
+  updateCourse(course: Course) {
+    const path = this.courseTable + course.id;
+    this.httpWrapper.patchs(path, JSON.stringify(course))
                     .subscribe((res) => {});
   }
 

@@ -8,6 +8,7 @@
   </mat-grid-tile>
   <mat-grid-tile *ngFor="let course of courses">
     <course [course]="course"
-            (idCourseDelete)="deleteCourse($event)"></course>
+            (idCourseDelete)="deleteCourse($event)"
+            (courseEdit)="updateCourse($event)"></course>
   </mat-grid-tile>
 </mat-grid-list>

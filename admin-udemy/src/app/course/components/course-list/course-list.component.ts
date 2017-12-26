@@ -58,9 +58,20 @@ export class CourseListComponent implements OnInit {
    */
   newCourse() {
     const dialogRef = this.dialog.open(AddCourseComponent);
-    dialogRef.componentInstance.course.subscribe(course => {
+    dialogRef.componentInstance.courseInfor.subscribe(course => {
       this.courseService.createCourse(course);
       this.courses = _.concat(this.courses, course);
+      this.cdr.markForCheck();
+    });
+  }
+
+  updateCourse(event) {
+    const dialogRef = this.dialog.open(AddCourseComponent);
+    dialogRef.componentInstance.course = event;
+    dialogRef.componentInstance.courseInfor.subscribe(course => {
+      this.courseService.updateCourse(course);
+      const index = _.findIndex(this.courses, {id: course.id});
+      this.courses.splice(index, 1, course);
       this.cdr.markForCheck();
     });
   }
