@@ -25,6 +25,9 @@ import {
 import {
   UploaderImageModule
 } from '@app/shared/uploader-image/uploader-image.module';
+import {
+  ControlMessageModule
+} from '@app/shared/control-message/control-message.module';
 
 export const COMMON_MODULE: any[] = [
   CommonModule,
@@ -34,7 +37,8 @@ export const COMMON_MODULE: any[] = [
   RouterModule,
   MaterialModule,
   LayoutModule,
-  UploaderImageModule
+  UploaderImageModule,
+  ControlMessageModule
 ];
 
 @NgModule({

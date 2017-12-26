@@ -22,6 +22,9 @@ import {
 import {
   UserValidationService
 } from '@app/user/services/user-validation.service';
+import {
+  UserHelperService
+} from '@app/user/services/user-helper.service';
 
 export const COMMON_MODULE: any[] = [
   SharedModule
@@ -35,6 +38,7 @@ export const USER_COMPONENT: any[] = [
 
 export const USER_PROVIDERS: any[] = [
   UserService,
+  UserHelperService,
   UserValidationService
 ];
 

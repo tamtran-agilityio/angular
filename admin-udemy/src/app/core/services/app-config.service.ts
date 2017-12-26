@@ -38,7 +38,6 @@ export class AppConfigService {
   };
 
   PATTERN_MATCHINGS = {
-    // tslint:disable-next-line:max-line-length
     EMAIL: /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/,
     PASSWORD: /^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{6,100}$/
   };

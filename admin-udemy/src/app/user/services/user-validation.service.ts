@@ -19,14 +19,7 @@ export class UserValidationService {
     private appConfig: AppConfigService
   ) { }
 
-  getValidatorErrorMessage(validatorName: string, validatorValue?: any) {
-    const config = this.appConfig.VALIDATION_MESSAGES;
-
-    return config[validatorName];
-  }
-
-  emailValidator(control) {
-    // tslint:disable-next-line:max-line-length
+  emailValidator(control: FormControl) {
     const patternEmail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
     if (control.value) {
       if (control.value.match(patternEmail)) {

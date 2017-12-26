@@ -39,6 +39,9 @@ import {
 import {
   AddUserComponent
 } from '@app/user/components/add-user/add-user.component';
+import {
+  UserHelperService
+} from '@app/user/services/user-helper.service';
 
 @Component({
   selector: 'list-user',
@@ -59,6 +62,7 @@ export class ListUserComponent implements OnInit {
   paginationOption: any;
   constructor(
     private userService: UserService,
+    private userHelperService: UserHelperService,
     private cdr: ChangeDetectorRef,
     private appConfig: AppConfigService,
     private dialog: MatDialog
@@ -72,9 +76,7 @@ export class ListUserComponent implements OnInit {
       .subscribe(users => {
         this.users = users;
         this.paginationOption.length = users.length;
-        this.dataSource = new MatTableDataSource<User>(this.users);
-        this.dataSource.sort = this.sort;
-        this.dataSource.paginator = this.paginator;
+        this.getDataSource();
         this.cdr.markForCheck();
       });
   }
@@ -115,9 +117,7 @@ export class ListUserComponent implements OnInit {
    */
   deleteUser(event) {
     this.userService.deteleUserById(event.id);
-    const listUser = _.remove(this.users, (user) => {
-      return user.id === event.id;
-    });
+    this.users = this.userHelperService.deleteUsers(event, this.users);
     this.dataSource = new MatTableDataSource<User>(this.users);
   }
 
@@ -128,10 +128,9 @@ export class ListUserComponent implements OnInit {
 
     // Add new user
     dialogRef.componentInstance.userInfo.subscribe((userInfo) => {
+      userInfo.id = this.userHelperService.getIdUser();
       this.users.push(userInfo);
-      this.dataSource = new MatTableDataSource<User>(this.users);
-      this.dataSource.sort = this.sort;
-      this.dataSource.paginator = this.paginator;
+      this.getDataSource();
       this.userService.createUser(userInfo);
     });
   }
@@ -143,13 +142,16 @@ export class ListUserComponent implements OnInit {
     // Edit new user
     dialogRef.componentInstance.userInfo.subscribe((userInfo) => {
       userInfo.id = user.id;
-      const index = _.findIndex(this.users, {id: userInfo.id});
-      this.users.splice(index, 1, userInfo);
-      this.dataSource = new MatTableDataSource<User>(this.users);
-      this.dataSource.sort = this.sort;
-      this.dataSource.paginator = this.paginator;
+      this.users = this.userHelperService.updateUsers(userInfo, this.users);
+      this.getDataSource();
       this.userService.updateUser(userInfo);
     });
+  }
+
+  getDataSource() {
+    this.dataSource = new MatTableDataSource<User>(this.users);
+    this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
   }
 
 }

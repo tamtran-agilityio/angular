@@ -2,12 +2,15 @@
   <mat-form-field class="email">
     <input matInput type="name" formControlName="fullName" id='fullName' placeholder="Name">
   </mat-form-field>
+  <control-messages [control]="userForm.controls.fullName"></control-messages>
   <mat-form-field class="email">
     <input matInput type="email" formControlName="email" id='email' placeholder="Email">
   </mat-form-field>
+  <control-messages [control]="userForm.controls.email"></control-messages>
   <mat-form-field class="email">
     <input type="password" matInput formControlName="password" id='password' placeholder="Password">
   </mat-form-field>
+  <control-messages [control]="userForm.controls.password"></control-messages>
   <div class="button-row">
     <button type="submit" (click)="saveUser($event)" mat-raised-button>Save </button>
     <button (click)="dialogRef.close()" mat-raised-button>Cancel </button>
