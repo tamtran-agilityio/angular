@@ -19,6 +19,9 @@ import {
 import {
   AddCourseComponent
 } from '@app/course/components/add-course/add-course.component';
+import {
+  CourseHelperService
+} from '@app/course/services/course-helper.service';
 
 @Component({
   selector: 'course-list',
@@ -30,6 +33,7 @@ export class CourseListComponent implements OnInit {
   courses: Course[];
   constructor(
     private courseService: CourseService,
+    private courseHelperService: CourseHelperService,
     private cdr: ChangeDetectorRef,
     private dialog: MatDialog
   ) { }
@@ -47,9 +51,7 @@ export class CourseListComponent implements OnInit {
    * @param event
    */
   deleteCourse(event: any) {
-    const courses = _.remove(this.courses, (course) => {
-      return course.id === _.parseInt(event);
-    });
+    this.courses = this.courseHelperService.deleteCourse(event, this.courses);
     this.courseService.deleteCourse(event);
   }
 
@@ -59,6 +61,7 @@ export class CourseListComponent implements OnInit {
   newCourse() {
     const dialogRef = this.dialog.open(AddCourseComponent);
     dialogRef.componentInstance.courseInfor.subscribe(course => {
+      course.id = this.courseHelperService.getCourseId();
       this.courseService.createCourse(course);
       this.courses = _.concat(this.courses, course);
       this.cdr.markForCheck();
@@ -69,6 +72,7 @@ export class CourseListComponent implements OnInit {
     const dialogRef = this.dialog.open(AddCourseComponent);
     dialogRef.componentInstance.course = event;
     dialogRef.componentInstance.courseInfor.subscribe(course => {
+      course.id = event.id;
       this.courseService.updateCourse(course);
       const index = _.findIndex(this.courses, {id: course.id});
       this.courses.splice(index, 1, course);

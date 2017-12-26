@@ -74,10 +74,6 @@ export class AddCourseComponent implements OnInit {
         discountPrice: this.courseForm.value.discountPrice,
         image: this.courseForm.value.image
       };
-
-      if (this.course) {
-        course.id = this.course.id;
-      }
       this.courseInfor.emit(course);
       this.dialogRef.close();
     }
