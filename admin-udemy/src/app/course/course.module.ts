@@ -14,7 +14,12 @@ import {
 import {
   CourseService
 } from '@app/course/services/course.service';
-import { AddCourseComponent } from './components/add-course/add-course.component';
+import {
+  AddCourseComponent
+} from './components/add-course/add-course.component';
+import {
+  CourseHelperService
+} from '@app/course/services/course-helper.service';
 
 export const COMMON_MODULE: any = [
   SharedModule
@@ -27,7 +32,8 @@ export const COURSE_COMPONENT: any[] = [
 ];
 
 export const COURSE_PROVIDERS: any[] = [
-  CourseService
+  CourseService,
+  CourseHelperService
 ];
 
 export const ENTRY_COMPONENT: any[] = [
