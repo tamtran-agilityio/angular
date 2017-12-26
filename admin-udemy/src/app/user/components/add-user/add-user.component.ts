@@ -47,16 +47,10 @@ export class AddUserComponent implements OnInit {
     private dialogRef: MatDialogRef<AddUserComponent>,
     private userService: UserService,
     private userValidationService: UserValidationService
-  ) {
-  }
+  ) { }
 
   ngOnInit() {
-    this.userForm = this.formBuilder.group({
-      fullName: ['', Validators.compose([Validators.required, Validators.min(5)])],
-      email: ['', Validators.compose([Validators.required, this.userValidationService.emailValidator])],
-      password: ['', Validators.compose([Validators.required, this.userValidationService.passwordValidator])]
-    });
-
+    this.getValidator();
     if (this.user) {
       this.getValueUser(this.user);
     }
@@ -91,6 +85,17 @@ export class AddUserComponent implements OnInit {
       this.userForm.reset();
       this.dialogRef.close();
     }
+  }
+
+  /**
+   * Handle get validator
+   */
+  getValidator() {
+    this.userForm = this.formBuilder.group({
+      fullName: ['', Validators.compose([Validators.required, Validators.minLength(5)])],
+      email: ['', Validators.compose([Validators.required, this.userValidationService.emailValidator])],
+      password: ['', Validators.compose([Validators.required, this.userValidationService.passwordValidator])]
+    });
   }
 
 }
