@@ -50,7 +50,6 @@ export class AddUserComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private dialogRef: MatDialogRef<AddUserComponent>,
-    private userService: UserService,
     private userValidationService: UserValidationService,
     private appConfig: AppConfigService
   ) { }
@@ -99,8 +98,8 @@ export class AddUserComponent implements OnInit {
   getValidator() {
     this.userForm = this.formBuilder.group({
       name: ['', Validators.compose([Validators.required, Validators.minLength(this.appConfig.PATTERN_MATCHINGS.MIN_LENGTH)])],
-      email: ['', Validators.compose([Validators.required, this.userValidationService.emailValidator])],
-      password: ['', Validators.compose([Validators.required, this.userValidationService.passwordValidator])]
+      email: ['', Validators.compose([Validators.required, this.userValidationService.emailValidator.bind(this.userValidationService)])],
+      password: ['', Validators.compose([Validators.required, this.userValidationService.passwordValidator.bind(this.userValidationService)])]
     });
   }
 

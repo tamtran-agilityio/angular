@@ -5,7 +5,8 @@ import {
 } from '@angular/core';
 import {
   FormControl,
-  AbstractControl
+  AbstractControl,
+  Validators
 } from '@angular/forms';
 
 import {
@@ -20,14 +21,14 @@ export class UserValidationService {
   ) { }
 
   emailValidator(control: FormControl) {
-    const patternEmail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+    let emailPattern = this.appConfig.PATTERN_MATCHINGS.EMAIL;
     if (control.value) {
-      return control.value.match(patternEmail) ? null : { 'invalidEmailAddress': true };
+      return control.value.match(emailPattern) ? null : { 'invalidEmailAddress': true };
     }
   }
 
   passwordValidator(control: FormControl) {
-    const patternPassword = /^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{6,100}$/;
+    let patternPassword = this.appConfig.PATTERN_MATCHINGS.PASSWORD;
     if (control.value) {
       return control.value.match(patternPassword) ? null : { 'invalidPassword': true };
     }

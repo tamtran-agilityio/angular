@@ -26,22 +26,18 @@ import {
 })
 export class AddCourseComponent implements OnInit {
   courseForm: FormGroup;
-  src: string = '';
+  src: string;
   course: Course;
+
   @Output() courseInfor: EventEmitter<Course> = new EventEmitter<Course>();
+
   constructor(
     private fb: FormBuilder,
     private dialogRef: MatDialogRef<AddCourseComponent>
   ) { }
 
   ngOnInit() {
-    this.courseForm = this.fb.group({
-      title: ['', Validators.compose([Validators.required])],
-      subtitle: ['', Validators.compose([Validators.required])],
-      price: ['', Validators.compose([Validators.required])],
-      discountPrice: ['', Validators.compose([Validators.required])],
-      image: ['']
-    });
+    this.validationCourse();
 
     if (this.course) {
       this.courseForm.setValue({
@@ -53,6 +49,19 @@ export class AddCourseComponent implements OnInit {
       });
       this.src = this.course.image;
     }
+  }
+
+  /**
+   * Handle validations course
+   */
+  validationCourse() {
+    this.courseForm = this.fb.group({
+      title: ['', Validators.compose([Validators.required])],
+      subtitle: ['', Validators.compose([Validators.required])],
+      price: ['', Validators.compose([Validators.required])],
+      discountPrice: ['', Validators.compose([Validators.required])],
+      image: ['']
+    });
   }
 
   /**
