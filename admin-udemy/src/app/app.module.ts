@@ -37,7 +37,7 @@ import {
 } from '@app/course/course.module';
 
 
-export const COMMON_MODULE: any[] = [
+export const COMMON_MODULES: any[] = [
   BrowserAnimationsModule,
   BrowserModule,
   RouterModule,
@@ -55,7 +55,7 @@ export const COMMON_MODULE: any[] = [
     AppComponent
   ],
   imports: [
-    ...COMMON_MODULE
+    ...COMMON_MODULES
   ],
   providers: [],
   bootstrap: [
