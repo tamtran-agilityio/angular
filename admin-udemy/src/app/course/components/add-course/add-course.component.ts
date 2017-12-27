@@ -58,7 +58,7 @@ export class AddCourseComponent implements OnInit {
   /**
    * Handle add data image course
    */
-  imageSelecter(event) {
+  imageChange(event) {
     this.courseForm.patchValue({
       image: event
     });
