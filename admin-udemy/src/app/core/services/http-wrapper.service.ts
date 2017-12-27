@@ -100,7 +100,7 @@ export class HttpWrapperService {
    * @param options  A request options arguments.
    * @returns        It returns a cold Observable which emits one value (in JavaScript format) from the request.
    */
-  patchs<T>(table: string, data: Object, opts?: RequestOptionsArgs): Observable<T> {
+  patch<T>(table: string, data: Object, opts?: RequestOptionsArgs): Observable<T> {
     const urlQuery = this.rootUrl + table,
         requestOptions = this.getDefaultOptions(opts);
 

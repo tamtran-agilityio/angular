@@ -1,7 +1,7 @@
-$color_1: #eee;
-$color_2: rgba(0, 0, 0, 0.2);
-$background_color_1: #efefef;
-$background_color_2: rgba(0, 0, 0, 0.02);
+$color_grey: #eee;
+$color_red: rgba(0, 0, 0, 0.2);
+$background_color_grey: #efefef;
+$background_color_red: rgba(0, 0, 0, 0.02);
 
 /* File Uploader Styles  */
 .uploader {
@@ -9,8 +9,8 @@ $background_color_2: rgba(0, 0, 0, 0.02);
 		display: none;
 	}
 	align-items: center;
-	background-color: $background_color_1;
-	background-color: $background_color_2;
+	background-color: $background_color_grey;
+	background-color: $background_color_red;
 	cursor: pointer;
 	display: flex;
 	height: 200px;
@@ -32,9 +32,9 @@ $background_color_2: rgba(0, 0, 0, 0.02);
 	}
 }
 
-$color_1: #2c3e50;
-$background_color_1: #ecf0f1;
-$background_color_2: currentColor;
+$color_grey: #2c3e50;
+$background_color_grey: #ecf0f1;
+$background_color_red: currentColor;
 
 .upload-file {
 	width: 70px;
@@ -44,7 +44,7 @@ $background_color_2: currentColor;
 	align-items: center;
 	border-radius: 100%;
 	justify-content: center;
-	background-color: $background_color_1;
+	background-color: $background_color_grey;
 	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
   z-index: 2;
 }
@@ -52,8 +52,8 @@ $background_color_2: currentColor;
 	width: 10px;
 	height: 10px;
 	position: relative;
-	color: $color_1;
-	background-color: $background_color_2;
+	color: $color_grey;
+	background-color: $background_color_red;
 	&:before {
 		content: "";
 		display: block;
@@ -74,6 +74,6 @@ $background_color_2: currentColor;
 		height: 2px;
 		margin-top: 5px;
 		position: absolute;
-		background-color: $background_color_2;
+		background-color: $background_color_red;
 	}
 }

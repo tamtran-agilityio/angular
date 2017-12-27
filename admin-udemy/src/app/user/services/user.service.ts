@@ -45,7 +45,7 @@ export class UserService {
    * @param id the number need to delete
    */
   deteleUserById(id: number) {
-    const path = this.userTable + id;
+    let path = this.userTable + id;
     return this.httpWrapper.delete(path)
                            .subscribe();
   }
@@ -64,8 +64,8 @@ export class UserService {
    * @param user info user need to update
    */
   updateUser(user: User) {
-    const path = this.userTable + user.id;
-    this.httpWrapper.patchs(path, JSON.stringify(user))
+    let path = this.userTable + user.id;
+    this.httpWrapper.patch(path, user)
                     .subscribe(res => {});
   }
 

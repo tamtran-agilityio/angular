@@ -19,7 +19,7 @@ import {
 })
 export class CourseComponent implements OnInit {
   @Input() course: Course;
-  @Output() idCourseDelete: EventEmitter<any> = new EventEmitter<any>();
+  @Output() idCourseDelete: EventEmitter<string> = new EventEmitter<string>();
   @Output() courseEdit: EventEmitter<Course> = new EventEmitter<Course>();
   constructor() { }
 

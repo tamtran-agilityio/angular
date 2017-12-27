@@ -95,8 +95,8 @@ export class ListUserComponent implements OnInit {
    * The total number of rows
    */
   isAllSelected() {
-    const numSelected = this.selection.selected.length;
-    const numRows = this.dataSource.data.length;
+    let numSelected = this.selection.selected.length;
+    let numRows = this.dataSource.data.length;
     return numSelected === numRows;
   }
 
@@ -122,9 +122,7 @@ export class ListUserComponent implements OnInit {
   }
 
   openDialog() {
-    const user: User = null;
     const dialogRef = this.dialog.open(AddUserComponent);
-    dialogRef.componentInstance.user = user;
 
     // Add new user
     dialogRef.componentInstance.userInfo.subscribe((userInfo) => {

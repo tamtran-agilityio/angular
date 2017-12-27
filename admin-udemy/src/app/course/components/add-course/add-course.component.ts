@@ -26,7 +26,7 @@ import {
 })
 export class AddCourseComponent implements OnInit {
   courseForm: FormGroup;
-  imageSrc: string = '';
+  src: string = '';
   course: Course;
   @Output() courseInfor: EventEmitter<Course> = new EventEmitter<Course>();
   constructor(
@@ -51,7 +51,7 @@ export class AddCourseComponent implements OnInit {
         discountPrice: this.course.discountPrice,
         image: this.course.image
       });
-      this.imageSrc = this.course.image;
+      this.src = this.course.image;
     }
   }
 
@@ -59,7 +59,9 @@ export class AddCourseComponent implements OnInit {
    * Handle add data image course
    */
   imageSelecter(event) {
-    this.courseForm.value.image = event;
+    this.courseForm.patchValue({
+      image: event
+    });
   }
 
   /**
@@ -67,7 +69,7 @@ export class AddCourseComponent implements OnInit {
    */
   saveCourse() {
     if (this.courseForm.valid) {
-      const course: any = {
+      let course: any = {
         title: this.courseForm.value.title,
         subtitle: this.courseForm.value.subtitle,
         price: this.courseForm.value.price,

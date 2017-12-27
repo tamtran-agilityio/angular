@@ -11,22 +11,22 @@ import {
   DashboardComponent
 } from '@app/dashboard/components/dashboard/dashboard.component';
 
-export const COMMON_MODULE: any[] = [
+export const COMMON_MODULES: any[] = [
   SharedModule
 ];
-export const DASHBOARD_COMPONENT: any[] = [
+export const DASHBOARD_COMPONENTS: any[] = [
   DashboardComponent
 ];
 
 @NgModule({
   imports: [
-    ...COMMON_MODULE
+    ...COMMON_MODULES
   ],
   declarations: [
-    ...DASHBOARD_COMPONENT
+    ...DASHBOARD_COMPONENTS
   ],
   exports: [
-    ...DASHBOARD_COMPONENT
+    ...DASHBOARD_COMPONENTS
   ]
 })
 export class DashboardModule { }

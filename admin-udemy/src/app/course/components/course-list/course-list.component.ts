@@ -59,7 +59,7 @@ export class CourseListComponent implements OnInit {
    * Handle add new course
    */
   newCourse() {
-    const dialogRef = this.dialog.open(AddCourseComponent);
+    let dialogRef = this.dialog.open(AddCourseComponent);
     dialogRef.componentInstance.courseInfor.subscribe(course => {
       course.id = this.courseHelperService.getCourseId();
       this.courseService.createCourse(course);
@@ -69,12 +69,12 @@ export class CourseListComponent implements OnInit {
   }
 
   updateCourse(event) {
-    const dialogRef = this.dialog.open(AddCourseComponent);
+    let dialogRef = this.dialog.open(AddCourseComponent);
     dialogRef.componentInstance.course = event;
     dialogRef.componentInstance.courseInfor.subscribe(course => {
       course.id = event.id;
       this.courseService.updateCourse(course);
-      const index = _.findIndex(this.courses, {id: course.id});
+      let index = _.findIndex(this.courses, {id: course.id});
       this.courses.splice(index, 1, course);
       this.cdr.markForCheck();
     });

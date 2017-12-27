@@ -26,11 +26,11 @@ import {
   UserHelperService
 } from '@app/user/services/user-helper.service';
 
-export const COMMON_MODULE: any[] = [
+export const COMMON_MODULES: any[] = [
   SharedModule
 ];
 
-export const USER_COMPONENT: any[] = [
+export const USER_COMPONENTS: any[] = [
   UserComponent,
   ListUserComponent,
   AddUserComponent
@@ -42,22 +42,22 @@ export const USER_PROVIDERS: any[] = [
   UserValidationService
 ];
 
-export const ENTRY_COMPONENT: any[] = [
+export const ENTRY_COMPONENTS: any[] = [
   AddUserComponent
 ];
 
 @NgModule({
   imports: [
-    COMMON_MODULE
+    COMMON_MODULES
   ],
   declarations: [
-    ...USER_COMPONENT
+    ...USER_COMPONENTS
   ],
   entryComponents: [
-    ...ENTRY_COMPONENT
+    ...ENTRY_COMPONENTS
   ],
   exports: [
-    ...USER_COMPONENT
+    ...USER_COMPONENTS
   ],
   providers: [
     ...USER_PROVIDERS

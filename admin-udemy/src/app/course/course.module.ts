@@ -21,11 +21,11 @@ import {
   CourseHelperService
 } from '@app/course/services/course-helper.service';
 
-export const COMMON_MODULE: any = [
+export const COMMON_MODULES: any = [
   SharedModule
 ];
 
-export const COURSE_COMPONENT: any[] = [
+export const COURSE_COMPONENTS: any[] = [
   CourseComponent,
   CourseListComponent,
   AddCourseComponent
@@ -36,25 +36,25 @@ export const COURSE_PROVIDERS: any[] = [
   CourseHelperService
 ];
 
-export const ENTRY_COMPONENT: any[] = [
+export const ENTRY_COMPONENTS: any[] = [
   AddCourseComponent
 ];
 
 @NgModule({
   imports: [
-    ...COMMON_MODULE
+    ...COMMON_MODULES
   ],
   declarations: [
-    ...COURSE_COMPONENT
+    ...COURSE_COMPONENTS
   ],
   providers: [
     ...COURSE_PROVIDERS
   ],
   entryComponents: [
-    ...ENTRY_COMPONENT
+    ...ENTRY_COMPONENTS
   ],
   exports: [
-    ...COURSE_COMPONENT
+    ...COURSE_COMPONENTS
   ]
 })
 export class CourseModule { }
