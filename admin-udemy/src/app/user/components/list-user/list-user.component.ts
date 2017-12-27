@@ -53,13 +53,16 @@ import {
 @LoggerDecorator()
 @AutoUnsubscribe()
 export class ListUserComponent implements OnInit {
+
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
+
   users: User[];
   displayedColumns = [];
   dataSource = new MatTableDataSource<User>(this.users);
   selection = new SelectionModel<User>(true, []);
   paginationOption: any;
+
   constructor(
     private userService: UserService,
     private userHelperService: UserHelperService,
@@ -76,7 +79,7 @@ export class ListUserComponent implements OnInit {
       .subscribe(users => {
         this.users = users;
         this.paginationOption.length = users.length;
-        this.getDataSource();
+        this.dataSourceTable();
         this.cdr.markForCheck();
       });
   }
@@ -128,7 +131,7 @@ export class ListUserComponent implements OnInit {
     dialogRef.componentInstance.userInfo.subscribe((userInfo) => {
       userInfo.id = this.userHelperService.getIdUser();
       this.users.push(userInfo);
-      this.getDataSource();
+      this.dataSourceTable();
       this.userService.createUser(userInfo);
     });
   }
@@ -141,12 +144,12 @@ export class ListUserComponent implements OnInit {
     dialogRef.componentInstance.userInfo.subscribe((userInfo) => {
       userInfo.id = user.id;
       this.users = this.userHelperService.updateUsers(userInfo, this.users);
-      this.getDataSource();
+      this.dataSourceTable();
       this.userService.updateUser(userInfo);
     });
   }
 
-  getDataSource() {
+  dataSourceTable() {
     this.dataSource = new MatTableDataSource<User>(this.users);
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;

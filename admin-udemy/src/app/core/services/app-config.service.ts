@@ -19,7 +19,7 @@ export class AppConfigService {
   };
 
   TABLE_COLUMNS = {
-    USER: ['select', 'id', 'fullName', 'email', 'password', 'action']
+    USER: ['select', 'id', 'name', 'email', 'password', 'action']
   };
 
   PAGINATION_DEFAULT = {
@@ -39,7 +39,8 @@ export class AppConfigService {
 
   PATTERN_MATCHINGS = {
     EMAIL: /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/,
-    PASSWORD: /^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{6,100}$/
+    PASSWORD: /^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{6,100}$/,
+    MIN_LENGTH: 5
   };
 
 }

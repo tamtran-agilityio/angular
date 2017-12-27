@@ -1,8 +1,8 @@
 <form class="user-form" [formGroup]="userForm" >
   <mat-form-field class="email">
-    <input matInput type="name" formControlName="fullName" placeholder="Name">
+    <input matInput type="name" formControlName="name" placeholder="Name">
   </mat-form-field>
-  <control-messages [control]="userForm.controls.fullName"></control-messages>
+  <control-messages [control]="userForm.controls.name"></control-messages>
   <mat-form-field class="email">
     <input matInput type="email" formControlName="email" placeholder="Email">
   </mat-form-field>

@@ -33,7 +33,7 @@ export class UserHelperService {
    */
   deleteUsers(user: User, users: User[]) {
     _.remove(users, (item) => {
-      return item.id === user.id;
+      return item.id === +user.id;
     });
     return users;
   }

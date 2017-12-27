@@ -18,8 +18,8 @@ import * as _ from 'lodash';
 })
 export class UploaderImageComponent implements OnInit {
   @Input() src: string;
-  @Output() imageSelecter: EventEmitter<any> = new EventEmitter<any>();
-  imageInfor: any = null;
+  @Output() imageChange: EventEmitter<any> = new EventEmitter<any>();
+
   constructor(
     private cdr: ChangeDetectorRef
   ) { }
@@ -42,7 +42,7 @@ export class UploaderImageComponent implements OnInit {
   readerLoaded(e) {
     const reader = e.target;
     this.src = reader.result;
-    this.imageSelecter.emit(this.src);
+    this.imageChange.emit(this.src);
   }
 
 }
