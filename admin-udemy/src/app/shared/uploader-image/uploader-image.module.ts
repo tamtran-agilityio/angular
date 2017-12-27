@@ -9,23 +9,23 @@ import {
   UploaderImageComponent
 } from './components/uploader-image/uploader-image.component';
 
-export const COMMON_MODULE: any[] = [
+export const COMMON_MODULES: any[] = [
   CommonModule
 ];
 
-export const UPLOADER_IMAGE_COMPONENT: any[] = [
+export const UPLOADER_IMAGE_COMPONENTS: any[] = [
   UploaderImageComponent
 ];
 
 @NgModule({
   imports: [
-    ...COMMON_MODULE
+    ...COMMON_MODULES
   ],
   declarations: [
-    ...UPLOADER_IMAGE_COMPONENT
+    ...UPLOADER_IMAGE_COMPONENTS
   ],
   exports: [
-    ...UPLOADER_IMAGE_COMPONENT
+    ...UPLOADER_IMAGE_COMPONENTS
   ]
 })
 export class UploaderImageModule { }

@@ -8,23 +8,23 @@ import {
   ControlMessagesComponent
 } from '@app/shared/control-message/components/control-messages/control-messages.component';
 
-export const COMMON_MODULE: any[] = [
+export const COMMON_MODULES: any[] = [
   CommonModule
 ];
 
-export const CONTROL_MESSAGE_COMPONENT: any[] = [
+export const CONTROL_MESSAGE_COMPONENTS: any[] = [
   ControlMessagesComponent
 ];
 
 @NgModule({
   imports: [
-    ...COMMON_MODULE
+    ...COMMON_MODULES
   ],
   declarations: [
-    ...CONTROL_MESSAGE_COMPONENT
+    ...CONTROL_MESSAGE_COMPONENTS
   ],
   exports: [
-    ...CONTROL_MESSAGE_COMPONENT
+    ...CONTROL_MESSAGE_COMPONENTS
   ]
 })
 export class ControlMessageModule { }

@@ -17,7 +17,7 @@ import * as _ from 'lodash';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UploaderImageComponent implements OnInit {
-  @Input() imageSrc: string;
+  @Input() src: string;
   @Output() imageSelecter: EventEmitter<any> = new EventEmitter<any>();
   imageInfor: any = null;
   constructor(
@@ -29,9 +29,8 @@ export class UploaderImageComponent implements OnInit {
 
   changeImage(event) {
     if (event) {
-      const file = event.dataTransfer ? _.firsr(event.dataTransfer.files) : _.first(event.target.files);
-      const pattern = /image-*/;
-      const reader = new FileReader();
+      let file = event.dataTransfer ? _.firsr(event.dataTransfer.files) : _.first(event.target.files);
+      let reader = new FileReader();
       reader.onload = this.readerLoaded.bind(this);
 
       if (file) {
@@ -42,8 +41,8 @@ export class UploaderImageComponent implements OnInit {
 
   readerLoaded(e) {
     const reader = e.target;
-    this.imageSrc = reader.result;
-    this.imageSelecter.emit(this.imageSrc);
+    this.src = reader.result;
+    this.imageSelecter.emit(this.src);
   }
 
 }

@@ -74,7 +74,7 @@ export class AddUserComponent implements OnInit {
    */
   saveUser(event) {
     if (this.userForm.valid) {
-      const user: User = {
+      let user: User = {
         id: null,
         fullName: this.userForm.value.fullName,
         email: this.userForm.value.email,

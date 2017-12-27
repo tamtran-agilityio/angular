@@ -1,22 +1,22 @@
 <mat-card class="course-card">
-  <img mat-card-image [attr.src]="course.image" [alt]="course.name">
+  <img mat-card-image [attr.src]="course?.image" [alt]="course?.name">
   <mat-card-content>
     <mat-card-title>
-      {{course.title}}
+      {{course?.title}}
     </mat-card-title>
     <mat-card-subtitle>
-      {{course.subtitle}}
+      {{course?.subtitle}}
     </mat-card-subtitle>
   </mat-card-content>
   <mat-card-actions>
   </mat-card-actions>
   <mat-card-footer>
-    <span class="price">{{course.price}}</span>
-    <span class="discount-price">{{course.discountPrice}}</span>
+    <span class="price">{{course?.price}}</span>
+    <span class="discount-price">{{course?.discountPrice}}</span>
   </mat-card-footer>
   <button class="delete-btn"
           mat-button
-          (click)=deleteCourse(course.id)>Delete</button>
+          (click)=deleteCourse(course?.id)>Delete</button>
   <button class="update-btn"
           mat-button
           (click)=updateCourse(course)>Edit</button>

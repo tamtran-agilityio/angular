@@ -3,7 +3,8 @@ import {
 } from '@angular/core';
 import {
   Headers,
-  URLSearchParams
+  URLSearchParams,
+  Http
 } from '@angular/http';
 
 import {
@@ -25,6 +26,7 @@ export class CourseService {
 
   private courseTable = '';
   constructor(
+    private http: Http,
     private httpWrapper: HttpWrapperService,
     private appConfig: AppConfigService
   ) {
@@ -35,10 +37,10 @@ export class CourseService {
    * Get all course
    */
   getCourse(): Observable<Course[]> {
-    const headers: Headers = new Headers();
-    const tableTeacher = this.appConfig.API_URLS.TEACHER;
+    let headers: Headers = new Headers();
+    let tableTeacher = this.appConfig.API_URLS.TEACHER;
     headers.append('_expand', tableTeacher);
-    const options = {
+    let options = {
       headers: headers
     };
     return this.httpWrapper.get(this.courseTable, options);
@@ -49,7 +51,7 @@ export class CourseService {
    * @param id the number id need to delete
    */
   deleteCourse(id) {
-    const path = this.courseTable + id;
+    let path = this.courseTable + id;
     return this.httpWrapper.delete(path)
                            .subscribe( res => {});
   }
@@ -59,7 +61,7 @@ export class CourseService {
    * @param course infor of course
    */
   createCourse(course: Course) {
-    this.httpWrapper.post(this.courseTable, JSON.stringify(course))
+    this.httpWrapper.post(this.courseTable, course)
                     .subscribe((res) => {});
   }
 
@@ -68,8 +70,8 @@ export class CourseService {
    * @param course infor course need to update
    */
   updateCourse(course: Course) {
-    const path = this.courseTable + course.id;
-    this.httpWrapper.patchs(path, JSON.stringify(course))
+    let path = this.courseTable + course.id;
+    this.httpWrapper.patch(path, course)
                     .subscribe((res) => {});
   }
 

@@ -25,7 +25,7 @@ export class CourseHelperService {
    */
   deleteCourse(id: any, courses: Course[]) {
     _.remove(courses, (course) => {
-      return course.id === _.parseInt(course);
+      return course.id === + _.parseInt(course);
     });
     return courses;
   }

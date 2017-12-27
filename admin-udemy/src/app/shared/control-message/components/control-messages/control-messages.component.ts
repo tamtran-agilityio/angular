@@ -16,8 +16,7 @@ import {
 @Component({
   selector: 'control-messages',
   templateUrl: './control-messages.component.html',
-  styleUrls: ['./control-messages.component.scss'],
-  // changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./control-messages.component.scss']
 })
 export class ControlMessagesComponent implements OnInit {
   @Input() control: FormControl;

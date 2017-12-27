@@ -22,22 +22,14 @@ export class UserValidationService {
   emailValidator(control: FormControl) {
     const patternEmail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
     if (control.value) {
-      if (control.value.match(patternEmail)) {
-        return null;
-      } else {
-        return { 'invalidEmailAddress': true };
-      }
+      return control.value.match(patternEmail) ? null : { 'invalidEmailAddress': true };
     }
   }
 
   passwordValidator(control: FormControl) {
     const patternPassword = /^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{6,100}$/;
     if (control.value) {
-      if (control.value.match(patternPassword)) {
-        return null;
-      } else {
-        return { 'invalidPassword': true };
-      }
+      return control.value.match(patternPassword) ? null : { 'invalidPassword': true };
     }
   }
 }
