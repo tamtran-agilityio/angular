@@ -65,12 +65,12 @@ export class HttpWrapperService {
 
   /**
    * Performs a request with `get` http method.
-   * @param tables      An tables which is used in a http request.
+   * @param url      An url which is used in a http request.
    * @param options  A request options arguments.
    * @returns        It returns a cold Observable which emits one value (in JavaScript format) from the request.
    */
-  get<T>(table: string, options?: RequestOptionsArgs): Observable<T> {
-    const urlQuery = this.rootUrl + table;
+  get<T>(url: string, options?: RequestOptionsArgs): Observable<T> {
+    const urlQuery = this.rootUrl + url;
 
     return this.http.get(urlQuery, this.getDefaultOptions(options))
                .map(this.extractData)
@@ -79,12 +79,12 @@ export class HttpWrapperService {
 
   /**
    * Performs a request with `post` http method.
-   * @param table      An table which is used in a http request.
+   * @param url      An url which is used in a http request.
    * @param options  A request options arguments.
    * @returns        It returns a cold Observable which emits one value (in JavaScript format) from the request.
    */
-  post<T>(table: string, body: any, opts?: RequestOptionsArgs): Observable<T> {
-    const urlQuery = this.rootUrl + table,
+  post<T>(url: string, body: any, opts?: RequestOptionsArgs): Observable<T> {
+    const urlQuery = this.rootUrl + url,
         requestOptions = this.getDefaultOptions(opts);
 
     return this.http.post(urlQuery, body, requestOptions)
@@ -96,12 +96,12 @@ export class HttpWrapperService {
 
   /**
    * Performs a request with `patchs` http method.
-   * @param tables      An tables which is used in a http request.
+   * @param url      An url which is used in a http request.
    * @param options  A request options arguments.
    * @returns        It returns a cold Observable which emits one value (in JavaScript format) from the request.
    */
-  patch<T>(table: string, data: Object, opts?: RequestOptionsArgs): Observable<T> {
-    const urlQuery = this.rootUrl + table,
+  patch<T>(url: string, data: Object, opts?: RequestOptionsArgs): Observable<T> {
+    const urlQuery = this.rootUrl + url,
         requestOptions = this.getDefaultOptions(opts);
 
     return this.http.patch(urlQuery, data, requestOptions)
@@ -111,12 +111,12 @@ export class HttpWrapperService {
 
   /**
    * Performs a request with `delete` http method.
-   * @param tables      An tables which is used in a http request.
+   * @param url      An url which is used in a http request.
    * @param options  A request options arguments.
    * @returns        It returns a cold Observable which emits one value (in JavaScript format) from the request.
    */
-  delete<T>(table: string, opts?: RequestOptionsArgs): Observable<T> {
-    const urlQuery = this.rootUrl + table,
+  delete<T>(url: string, opts?: RequestOptionsArgs): Observable<T> {
+    const urlQuery = this.rootUrl + url,
         requestOptions = this.getDefaultOptions(opts);
 
     return this.http.delete(urlQuery, requestOptions)

@@ -25,7 +25,8 @@ export class UserHelperService {
    */
   updateUsers(user: User, users: User[]) {
     const index = _.findIndex(users, {id: user.id});
-    return users.splice(index, 1, user);
+    users.splice(index, 1, user);
+    return users;
   }
 
   /**

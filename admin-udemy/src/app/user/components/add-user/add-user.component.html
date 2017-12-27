@@ -1,13 +1,13 @@
 <form class="user-form" [formGroup]="userForm" >
-  <mat-form-field class="email">
+  <mat-form-field class="text-field">
     <input matInput type="name" formControlName="name" placeholder="Name">
   </mat-form-field>
   <control-messages [control]="userForm.controls.name"></control-messages>
-  <mat-form-field class="email">
+  <mat-form-field class="text-field">
     <input matInput type="email" formControlName="email" placeholder="Email">
   </mat-form-field>
   <control-messages [control]="userForm.controls.email"></control-messages>
-  <mat-form-field class="email">
+  <mat-form-field class="text-field">
     <input type="password" matInput formControlName="password" placeholder="Password">
   </mat-form-field>
   <control-messages [control]="userForm.controls.password"></control-messages>

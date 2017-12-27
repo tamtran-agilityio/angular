@@ -2,14 +2,14 @@
   "users": [
     {
       "id": 101,
-      "name": "tamtran",
-      "email": "trantamtk08b@gmail.com",
+      "name": "testing",
+      "email": "testing@gmail.com",
       "password": "tamtamuan2"
     },
     {
       "id": 102,
       "name": "tamtran AAAAAA",
-      "email": "trantamtk08b@gmail.com",
+      "email": "admin@gmail.com",
       "password": "tamtamuan2"
     },
     {
