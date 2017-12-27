@@ -29,6 +29,9 @@ import {
 import {
   UserValidationService
 } from '@app/user/services/user-validation.service';
+import {
+  AppConfigService
+} from '@app/core/services/app-config.service';
 
 @Component({
   selector: 'add-user',
@@ -41,12 +44,15 @@ import {
 export class AddUserComponent implements OnInit {
   private userForm: FormGroup;
   public user: User;
+
   @Output() userInfo: EventEmitter<User> = new EventEmitter<User>();
+
   constructor(
     private formBuilder: FormBuilder,
     private dialogRef: MatDialogRef<AddUserComponent>,
     private userService: UserService,
-    private userValidationService: UserValidationService
+    private userValidationService: UserValidationService,
+    private appConfig: AppConfigService
   ) { }
 
   ngOnInit() {
@@ -62,7 +68,7 @@ export class AddUserComponent implements OnInit {
    */
   getValueUser(user: User) {
     this.userForm.setValue({
-      fullName: user.fullName,
+      name: user.name,
       email: user.email,
       password: user.password
     });
@@ -76,7 +82,7 @@ export class AddUserComponent implements OnInit {
     if (this.userForm.valid) {
       let user: User = {
         id: null,
-        fullName: this.userForm.value.fullName,
+        name: this.userForm.value.name,
         email: this.userForm.value.email,
         password: this.userForm.value.password
       };
@@ -92,7 +98,7 @@ export class AddUserComponent implements OnInit {
    */
   getValidator() {
     this.userForm = this.formBuilder.group({
-      fullName: ['', Validators.compose([Validators.required, Validators.minLength(5)])],
+      name: ['', Validators.compose([Validators.required, Validators.minLength(this.appConfig.PATTERN_MATCHINGS.MIN_LENGTH)])],
       email: ['', Validators.compose([Validators.required, this.userValidationService.emailValidator])],
       password: ['', Validators.compose([Validators.required, this.userValidationService.passwordValidator])]
     });

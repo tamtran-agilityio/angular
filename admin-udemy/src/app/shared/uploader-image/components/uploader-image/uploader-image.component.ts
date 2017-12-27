@@ -19,7 +19,7 @@ import * as _ from 'lodash';
 export class UploaderImageComponent implements OnInit {
   @Input() src: string;
   @Output() imageSelecter: EventEmitter<any> = new EventEmitter<any>();
-  imageInfor: any = null;
+
   constructor(
     private cdr: ChangeDetectorRef
   ) { }

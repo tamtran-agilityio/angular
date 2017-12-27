@@ -53,13 +53,16 @@ import {
 @LoggerDecorator()
 @AutoUnsubscribe()
 export class ListUserComponent implements OnInit {
+
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
+
   users: User[];
   displayedColumns = [];
   dataSource = new MatTableDataSource<User>(this.users);
   selection = new SelectionModel<User>(true, []);
   paginationOption: any;
+
   constructor(
     private userService: UserService,
     private userHelperService: UserHelperService,
