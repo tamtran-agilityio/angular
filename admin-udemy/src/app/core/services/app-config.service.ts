@@ -34,7 +34,7 @@ export class AppConfigService {
     'invalidEmailAddress': 'Invalid email address',
     'invalidPassword': 'Invalid password. Password must be at least 6 characters long, and contain a number.',
     'invalidConfirmPassword': '',
-    'minlength': `Minimum length`
+    'minlength': `Minimum length 6 characters`
   };
 
   PATTERN_MATCHINGS = {
