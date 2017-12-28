@@ -14,3 +14,18 @@
   background-color: #fff;
   border-bottom: 1px solid #c2cfd6;
 }
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+
+  span, a {
+    justify-content: center;
+    height: 100%;
+    align-content: center;
+    flex-direction: column;
+    display: flex;
+    margin-right: 10px;
+  }
+}
