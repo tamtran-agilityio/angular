@@ -1,4 +1,4 @@
-<mat-grid-list cols="6" rowHeight="1:1.2">
+<mat-grid-list [cols]="cols | async" rowHeight="300">
   <mat-grid-tile>
     <mat-card class="course-add">
       <button class="add-btn"

@@ -4,11 +4,17 @@ import {
   ChangeDetectorRef,
   ChangeDetectionStrategy
 } from '@angular/core';
-
-import * as _ from 'lodash';
+import {
+  ObservableMedia
+} from '@angular/flex-layout';
 import {
   MatDialog
 } from '@angular/material';
+
+import * as _ from 'lodash';
+import {
+  Observable
+} from 'rxjs/Observable';
 
 import {
   CourseService
@@ -22,6 +28,12 @@ import {
 import {
   CourseHelperService
 } from '@app/course/services/course-helper.service';
+import {
+  AutoUnsubscribe
+} from '@app/core/decorators/autounsubscribe.decorator';
+import {
+  AppConfigService
+} from '@app/core/services/app-config.service';
 
 @Component({
   selector: 'course-list',
@@ -29,11 +41,17 @@ import {
   styleUrls: ['./course-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
+
+@AutoUnsubscribe()
 export class CourseListComponent implements OnInit {
   courses: Course[];
+  cols: Observable<any>;
+
   constructor(
     private courseService: CourseService,
+    private observableMedia: ObservableMedia,
     private courseHelperService: CourseHelperService,
+    private appConfig: AppConfigService,
     private cdr: ChangeDetectorRef,
     private dialog: MatDialog
   ) { }
@@ -44,6 +62,7 @@ export class CourseListComponent implements OnInit {
                         this.courses = courses;
                         this.cdr.markForCheck();
                       });
+    this.changeGird();
   }
 
   /**
@@ -51,7 +70,7 @@ export class CourseListComponent implements OnInit {
    * @param event
    */
   deleteCourse(event: any) {
-    this.courses = this.courseHelperService.deleteCourse(event, this.courses);
+    this.courseHelperService.deleteCourse(event, this.courses);
     this.courseService.deleteCourse(event);
   }
 
@@ -63,20 +82,41 @@ export class CourseListComponent implements OnInit {
     dialogRef.componentInstance.courseInfor.subscribe(course => {
       course.id = this.courseHelperService.getCourseId();
       this.courseService.createCourse(course);
-      this.courses = _.concat(this.courses, course);
+      this.courses = this.courseHelperService.createCourse(this.courses, course);
       this.cdr.markForCheck();
     });
   }
 
+  /**
+   * Handle update course
+   * @param event the course need to update
+   */
   updateCourse(event) {
     let dialogRef = this.dialog.open(AddCourseComponent);
     dialogRef.componentInstance.course = event;
-    dialogRef.componentInstance.courseInfor.subscribe(course => {
+    dialogRef.componentInstance.courseInfor.subscribe((course: any) => {
       course.id = event.id;
       this.courseService.updateCourse(course);
-      let index = _.findIndex(this.courses, {id: course.id});
-      this.courses.splice(index, 1, course);
+      this.courseHelperService.updateCourse(this.courses, course);
       this.cdr.markForCheck();
     });
+  }
+
+  /**
+   * Handle change number cols on gird list
+   */
+  changeGird() {
+    let grid = new Map(this.appConfig.GRID_LIST);
+    let start: number;
+    _.each(grid, (cols: number, mqAlias: string) => {
+      if (this.observableMedia.isActive(mqAlias)) {
+        start = cols;
+      }
+    });
+    this.cols = this.observableMedia.asObservable()
+      .map(change => {
+        return grid.get(change.mqAlias);
+      })
+      .startWith(start);
   }
  }
