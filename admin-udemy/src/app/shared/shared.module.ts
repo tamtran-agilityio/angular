@@ -14,6 +14,9 @@ import {
 import {
   RouterModule
 } from '@angular/router';
+import {
+  FlexLayoutModule
+} from '@angular/flex-layout';
 
 import {
   MaterialModule
@@ -35,6 +38,7 @@ export const COMMON_MODULE: any[] = [
   ReactiveFormsModule,
   HttpModule,
   RouterModule,
+  FlexLayoutModule,
   MaterialModule,
   LayoutModule,
   UploaderImageModule,

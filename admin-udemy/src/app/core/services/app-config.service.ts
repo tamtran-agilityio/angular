@@ -43,4 +43,11 @@ export class AppConfigService {
     MIN_LENGTH: 5
   };
 
+  GRID_LIST: Array<any> = [
+    ['xs', 1],
+    ['sm', 3],
+    ['md', 4],
+    ['lg', 6],
+    ['xl', 8]
+  ];
 }

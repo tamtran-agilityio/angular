@@ -23,11 +23,26 @@ export class CourseHelperService {
   /**
    * Handle delete course by id
    */
+  createCourse(courses: Course[], course: Course) {
+    return courses = _.concat(courses, course);
+  }
+
+  /**
+   * Handle delete course by id
+   */
   deleteCourse(id: any, courses: Course[]) {
-    _.remove(courses, (course) => {
-      return course.id === + _.parseInt(course);
+    let index = _.findIndex(courses, (course) => {
+      return course.id === _.parseInt(id);
     });
-    return courses;
+    return courses.splice(index, 1);
+  }
+
+  /**
+   * Handle update courses by course
+   */
+  updateCourse(courses: Course[], course: Course) {
+    let index = _.findIndex(courses, {id: course.id});
+    return courses.splice(index, 1, course);
   }
 
 }
