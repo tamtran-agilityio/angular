@@ -29,7 +29,7 @@ export const ROUTES: Routes = [
     children: [
       {
         path: '',
-        component: DashboardComponent
+        component: CourseListComponent
       },
       {
         path: 'users',

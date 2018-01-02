@@ -672,7 +672,7 @@
       "requirements": "Free disc space (5GB on PC, 10GB on Mac) to install Unity, Visual Studio, and our projects. PC or Mac capable of running Unity 2017 (free Personal version). Regular internet access for Q&A and community.",
       "teacherId": 1,
       "rating": 4.2,
-      "price": 105,
+      "price": 220,
       "discountPrice": 10,
       "date": "2017/11/02",
       "language": "English"
@@ -848,26 +848,6 @@
       "name": "sql-my-sql-for-data-analytics-and-business-intelligence",
       "id": 17,
       "discount": "15"
-    },
-    {
-      "title": "Angular",
-      "subtitle": "Learn more angular4",
-      "image": "/assets/img/course/1045942_d12f.jpg",
-      "learning": "What is new ",
-      "decsription": "You can l",
-      "type": "new",
-      "requirements": "sd",
-      "rating": "4.3",
-      "price": "240",
-      "discount": "12",
-      "date": "2017-05-12",
-      "language": "English",
-      "categoryId": 1,
-      "topicId": 5,
-      "teacherId": 1,
-      "discountPrice": "12",
-      "name": "angular",
-      "id": 18
     }
   ],
   "chapters": [
