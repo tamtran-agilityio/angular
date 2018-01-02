@@ -48,6 +48,6 @@ export class AppConfigService {
     ['sm', 3],
     ['md', 4],
     ['lg', 6],
-    ['xl', 8]
+    ['xl', 7]
   ];
 }

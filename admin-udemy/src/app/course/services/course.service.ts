@@ -53,7 +53,7 @@ export class CourseService {
   deleteCourse(id) {
     let path = this.courseTable + id;
     return this.httpWrapper.delete(path)
-                           .subscribe( res => {});
+                           .subscribe();
   }
 
   /**
@@ -62,7 +62,7 @@ export class CourseService {
    */
   createCourse(course: Course) {
     this.httpWrapper.post(this.courseTable, course)
-                    .subscribe((res) => {});
+                    .subscribe();
   }
 
   /**
