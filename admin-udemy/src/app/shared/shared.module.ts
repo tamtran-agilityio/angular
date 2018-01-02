@@ -31,6 +31,9 @@ import {
 import {
   ControlMessageModule
 } from '@app/shared/control-message/control-message.module';
+import {
+  FormControlModule
+} from '@app/shared/form-control/form-control.module';
 
 export const COMMON_MODULE: any[] = [
   CommonModule,
@@ -42,7 +45,8 @@ export const COMMON_MODULE: any[] = [
   MaterialModule,
   LayoutModule,
   UploaderImageModule,
-  ControlMessageModule
+  ControlMessageModule,
+  FormControlModule
 ];
 
 @NgModule({

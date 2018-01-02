@@ -34,6 +34,9 @@ import {
 import {
   AppConfigService
 } from '@app/core/services/app-config.service';
+import {
+  LoggerDecorator
+} from '@app/core/decorators/logger.decorator';
 
 @Component({
   selector: 'course-list',
@@ -43,6 +46,7 @@ import {
 })
 
 @AutoUnsubscribe()
+@LoggerDecorator()
 export class CourseListComponent implements OnInit {
   courses: Course[];
   cols: Observable<any>;
