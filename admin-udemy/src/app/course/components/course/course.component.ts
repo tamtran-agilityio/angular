@@ -1,6 +1,7 @@
 import {
   Component,
   OnInit,
+  OnChanges,
   Input,
   Output,
   EventEmitter,
@@ -10,6 +11,9 @@ import {
 import {
   Course
 } from '@app/course/models/course';
+import {
+  LoggerDecorator
+} from '@app/core/decorators/logger.decorator';
 
 @Component({
   selector: 'course',
@@ -17,13 +21,18 @@ import {
   styleUrls: ['./course.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CourseComponent implements OnInit {
+
+@LoggerDecorator()
+export class CourseComponent implements OnInit, OnChanges {
   @Input() course: Course;
   @Output() idCourseDelete: EventEmitter<string> = new EventEmitter<string>();
   @Output() courseEdit: EventEmitter<Course> = new EventEmitter<Course>();
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngOnChanges() {
   }
 
   deleteCourse(id: any) {

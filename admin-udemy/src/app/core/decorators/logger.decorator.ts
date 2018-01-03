@@ -3,7 +3,7 @@ import {
 } from '@env/environment';
 
 export function LoggerDecorator(): ClassDecorator {
-  return function (constructor: any) {
+  return function (target: Function) {
     if (!environment.production) {
 
       const LIFECYCLE_HOOKS = [
@@ -11,12 +11,12 @@ export function LoggerDecorator(): ClassDecorator {
         'ngOnChanges',
         'ngOnDestroy'
       ];
-      const component = constructor.name;
+      const component = target.name;
 
       LIFECYCLE_HOOKS.forEach(hook => {
-        const original = constructor.prototype[hook];
+        const original = target.prototype[hook];
 
-        constructor.prototype[hook] = function ( ...args ) {
+        target.prototype[hook] = function ( ...args ) {
           console.log(`%c ${component} - ${hook}`, `color: #4CAF50; font-weight: bold`, ...args);
 
           original && original.apply(this, args);
