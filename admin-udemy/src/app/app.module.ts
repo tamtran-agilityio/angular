@@ -44,7 +44,6 @@ export const COMMON_MODULES: any[] = [
   CoreModule,
   SharedModule,
   DashboardModule,
-  CategoryModule,
   UserModule,
   CourseModule,
   AppRoutingModule
