@@ -1,7 +1,10 @@
 import { Action } from '@ngrx/store';
 
 export const PostActionType = {
-  LOAD_POST: '[Post] Load';
-  LOAD_POST_SUCCESS: '[Post] Load Success';
-  LOAD_POST_FAIL: '[Post] Load Fail';
+  LOAD: '[Post] Load',
+  LOAD_SUCCESS: '[Post] Load Success',
+  LOAD_FAIL: '[Post] Load Fail',
+  SEARCH: '[Post] Search',
+  SEARCH_COMPLETE: '[Post] Search Complete',
+  SELECT: '[Post] Select',
 };
