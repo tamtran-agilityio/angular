@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { PostActionType } from '@app/post/actions/post-action.type';
+import { PostActionType } from '@app/post/actions/post.action.type';
 import { Post } from '@app/post/models/post';
 import { Action } from '@ngrx/store/src/models';
 

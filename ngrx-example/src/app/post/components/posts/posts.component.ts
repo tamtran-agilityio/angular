@@ -25,7 +25,13 @@ export class PostsComponent implements OnInit {
     private store: Store<rootPost.postState>,
     private actions: postAction.PostAction
   ) {
-    this.posts = this.store.select('postState');
+    store.select('postState').subscribe(res => {
+      if (res) {
+        console.log('postState', res);
+      }
+      console.log('postState', res);
+    });
+
   }
 
   ngOnInit() {

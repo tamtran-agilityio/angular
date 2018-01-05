@@ -33,6 +33,9 @@ export const POST_SERVICES: any[] = [
   ],
   providers: [
     ...POST_SERVICES
+  ],
+  exports: [
+    ...POST_COMPONENTS
   ]
 })
 export class PostModule { }
