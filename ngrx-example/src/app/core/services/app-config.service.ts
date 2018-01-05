@@ -9,5 +9,8 @@ export class AppConfigService {
     API_ROOT: environment.API_ROOT
   };
 
+  URL_TABLES = {
+    POST: 'posts/'
+  };
 
 }
