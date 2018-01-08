@@ -17,6 +17,6 @@ export class TodoEffects {
   loadAction$: Observable<Action> = this.actions$
     .ofType(todoActions.ActionTypes.LOAD)
     .switchMap(() => this.todoService.getTodos())
-    .map((res: any) => new todoActions.LoadCompletedAction({todos: res}))
+    .map((res: any) => new todoActions.LoadCompletedAction(res))
     .catch(() => Observable.of({ type: todoActions.ActionTypes.LOAD_ERROR }));
 }

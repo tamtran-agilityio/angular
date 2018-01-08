@@ -22,103 +22,103 @@ export const ActionTypes = {
 };
 
 export class TodoPayload {
-    constructor(public todo: Todo) { }
+  constructor(public todo: Todo) { }
 }
 
 export class TodoUpdatePayload {
-    constructor(public todoId: string, public todo: Todo) { }
+  constructor(public todoId: string, public todo: Todo) { }
 }
 
 export class TodoRemovePayload {
-    constructor(public todoId: string) { }
+  constructor(public todoId: string) { }
 }
 
 export class TodosPayload {
-    constructor(public todos: Todo[]) { }
+  constructor(public todos: Todo[]) { }
 }
 
 export class LoadAction implements Action {
-    type = ActionTypes.LOAD;
+  type = ActionTypes.LOAD;
 
-    constructor(public payload: any = null) { }
+  constructor(public payload: any = null) { }
 }
 
 export class LoadCompletedAction implements Action {
-    type = ActionTypes.LOAD_COMPLETED;
+  type = ActionTypes.LOAD_COMPLETED;
 
-    constructor(public payload: TodosPayload) { }
+  constructor(public payload: TodosPayload) { }
 }
 
 export class LoadErrorAction implements Action {
-    type = ActionTypes.LOAD_ERROR;
+  type = ActionTypes.LOAD_ERROR;
 
-    constructor(public payload: string) { }
+  constructor(public payload: string) { }
 }
 
 export class CreateAction implements Action {
-    type = ActionTypes.CREATE;
+  type = ActionTypes.CREATE;
 
-    constructor(public payload: TodoPayload) { }
+  constructor(public payload: TodoPayload) { }
 }
 
 export class CreateCompletedAction implements Action {
-    type = ActionTypes.CREATE_COMPLETED;
+  type = ActionTypes.CREATE_COMPLETED;
 
-    constructor(public payload: TodoPayload) { }
+  constructor(public payload: TodoPayload) { }
 }
 
 export class CreateErrorAction implements Action {
-    type = ActionTypes.CREATE_ERROR;
+  type = ActionTypes.CREATE_ERROR;
 
-    constructor(public payload: string) { }
+  constructor(public payload: string) { }
 }
 
 export class UpdateAction implements Action {
-    type = ActionTypes.UPDATE;
+  type = ActionTypes.UPDATE;
 
-    constructor(public payload: TodoUpdatePayload) { }
+  constructor(public payload: TodoUpdatePayload) { }
 }
 
 export class UpdateCompletedAction implements Action {
-    type = ActionTypes.UPDATE_COMPLETED;
+  type = ActionTypes.UPDATE_COMPLETED;
 
-    constructor(public payload: TodoPayload) { }
+  constructor(public payload: TodoPayload) { }
 }
 
 export class UpdateErrorAction implements Action {
-    type = ActionTypes.UPDATE_ERROR;
+  type = ActionTypes.UPDATE_ERROR;
 
-    constructor(public payload: string) { }
+  constructor(public payload: string) { }
 }
 
 export class RemoveAction implements Action {
-    type = ActionTypes.REMOVE;
+  type = ActionTypes.REMOVE;
 
-    constructor(public payload: TodoRemovePayload) { }
+  constructor(public payload: TodoRemovePayload) { }
 }
 
 export class RemoveCompletedAction implements Action {
-    type = ActionTypes.REMOVE_COMPLETED;
+  type = ActionTypes.REMOVE_COMPLETED;
 
-    constructor(public payload: TodoPayload) { }
+  constructor(public payload: TodoPayload) { }
 }
 
 export class RemoveErrorAction implements Action {
-    type = ActionTypes.REMOVE_ERROR;
+  type = ActionTypes.REMOVE_ERROR;
 
-    constructor(public payload: string) { }
+  constructor(public payload: string) { }
 }
 
 export type TodoAction
-    = LoadAction
-    | LoadCompletedAction
-    | LoadErrorAction
-    | CreateAction
-    | CreateCompletedAction
-    | CreateErrorAction
-    | UpdateAction
-    | UpdateCompletedAction
-    | UpdateErrorAction
-    | RemoveAction
-    | RemoveCompletedAction
-    | RemoveErrorAction;
+  = LoadAction
+  | LoadCompletedAction
+  | LoadErrorAction
+  | CreateAction
+  | CreateCompletedAction
+  | CreateErrorAction
+  | UpdateAction
+  | UpdateCompletedAction
+  | UpdateErrorAction
+  | RemoveAction
+  | RemoveCompletedAction
+  | RemoveErrorAction;

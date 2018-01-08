@@ -22,7 +22,7 @@ export const COMMON_MODULE: any[] = [
   TodoModule,
   AppRouterModule,
   StoreModule.forRoot(todoReducer),
-  EffectsModule.forRoot([TodoEffects]),
+  EffectsModule.forRoot([]),
 ];
 
 @NgModule({

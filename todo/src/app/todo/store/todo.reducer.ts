@@ -1,14 +1,19 @@
 import { Action, ActionReducer, createSelector } from '@ngrx/store';
 import { TodoAction, ActionTypes } from '@app/todo/store/todo.actions';
 import { Todo } from '@app/todo/models/todo';
+import * as Immutable from 'seamless-immutable';
 
-export interface TodoState {
-  todos?: Todo[];
+export interface State {
+  ids: string[];
+  entities: { [id: string]: Todo };
+  selectedTodoId: string;
 }
 
-export const initialTodo: TodoState = {
-  todos: []
-};
+export const initialTodo: State = Immutable({
+  ids: [],
+  entities: {},
+  selectedTodoId: null
+});
 
 export function todoReducer(
   state: any = initialTodo, action: TodoAction
@@ -17,7 +22,11 @@ export function todoReducer(
   switch (action.type) {
 
   case ActionTypes.LOAD_COMPLETED:
-    return [...state, ...action.payload.todos];
+    const ids = Object.keys(action.payload);
+    return Immutable.merge(initialTodo, {
+      ids,
+      entities: action.payload
+    });
 
   case ActionTypes.CREATE_COMPLETED:
     return [...state, action.payload.todo];
@@ -36,3 +45,15 @@ export function todoReducer(
     return state;
   }
 }
+
+export const getEntites = (state: State) => state.entities;
+export const getIds = (state: State) => state.ids;
+export const getSelectedId = (state: State) => state.selectedTodoId;
+
+export const getSelected = createSelector(
+  getEntites,
+  getSelectedId,
+  (entities, id) => entities[id]
+);
+
+export const getEntitesArray = (state: State) => state.ids.map(id => state.entities[id]);
