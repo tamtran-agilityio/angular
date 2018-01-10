@@ -15,7 +15,7 @@ services:
 
     # command: npm rebuild node-sass --force
     # command: yarn install
-    command: ng serve --app=todo --host 0.0.0.0 --port 9000
+    command: ng serve --host 0.0.0.0 --port 9000
     # command: ng test --host 0.0.0.0 --port 9876
     # npm start
 

@@ -1,1 +1,1 @@
-export { ControlMessagesModule } from './src/control-messages.module';
+export { ControlMessagesModule, controlMessagesRoutes } from './src/control-messages.module';

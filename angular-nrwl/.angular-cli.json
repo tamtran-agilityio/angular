@@ -22,6 +22,14 @@
     {
       "project": "apps/todo/e2e/tsconfig.e2e.json",
       "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "apps/product/src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "apps/product/e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
     }
   ],
   "test": {
@@ -46,6 +54,31 @@
   },
   "apps": [
     {
+      "name": "product",
+      "root": "apps/product/src",
+      "outDir": "dist/apps/product",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "../../../test.js",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "../../../tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "styles.css"
+      ],
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    },
+    {
       "name": "todo",
       "root": "apps/todo/src",
       "outDir": "dist/apps/todo",
@@ -59,7 +92,7 @@
       "test": "../../../test.js",
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "../../../tsconfig.spec.json",
-      "prefix": "app",
+      "prefix": "",
       "styles": [
         "styles.css"
       ],
