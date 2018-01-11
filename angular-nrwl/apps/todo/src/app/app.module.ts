@@ -12,6 +12,7 @@ import { appReducer } from './+state/app.reducer';
 import { appInitialState } from './+state/app.init';
 import { AppEffects } from './+state/app.effects';
 import { controlMessagesRoutes } from '@angular-nrwl/control-messages';
+import { ControlMessagesModule } from '@angular-nrwl/control-messages/src/control-messages.module';
 
 @NgModule({
   imports: [
@@ -28,7 +29,8 @@ import { controlMessagesRoutes } from '@angular-nrwl/control-messages';
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     StoreRouterConnectingModule,
     StoreModule.forRoot({ app: appReducer }, { initialState: { app: appInitialState } }),
-    EffectsModule.forRoot([AppEffects])
+    EffectsModule.forRoot([AppEffects]),
+    ControlMessagesModule
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
