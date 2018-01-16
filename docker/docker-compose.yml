@@ -11,7 +11,7 @@ services:
 
     volumes:
       # Remaps the volume for live editing
-      - ../ng-bootstrap:/workspace
+      - ../ngb-example:/workspace
 
     # command: npm rebuild node-sass --force
     # command: yarn install

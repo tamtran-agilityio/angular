@@ -5,7 +5,7 @@ RUN npm install -g yarn
 RUN gem install sass scss_lint
 RUN yarn global add @angular-devkit/core@0.0.23 \
                     @nrwl/schematics \
-                    @angular/cli@latest \
+                    @angular/cli@1.6.0 \
                     karma-chrome-launcher@2.2.0 \
                     karma-cli@1.0.1 \
                     phantomjs-prebuilt@2.1.16 \
@@ -19,6 +19,7 @@ RUN yarn global add @angular-devkit/core@0.0.23 \
 
 # Rebuild node-sass comparative with current node version
 RUN npm rebuild node-sass --force
+RUN ng set --global packageManager=yarn
 WORKDIR /workspace
 # ADD package.json .
 # ADD yarn.lock .
