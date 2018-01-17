@@ -5,8 +5,10 @@
   [(ngModel)]="model"
   [displayMonths]="displayMonths"
   (navigate)="date = $event.next"
+  [navigation]="navigation"
+  [showWeekNumbers]="showWeekNumbers"
+  [startDate]="startDate"
 ></ngb-datepicker>
-
 <hr/>
 
 <button class="btn btn-sm btn-outline-primary" (click)="selectToday()">Select Today</button>

@@ -8,6 +8,9 @@ import { ButtonComponent } from '@ngb-example/bootstrap/src/components/button/bu
 import { CarouselComponent } from '@ngb-example/bootstrap/src/components/carousel/carousel.component';
 import { CollapseComponent } from '@ngb-example/bootstrap/src/components/collapse/collapse.component';
 import { DatepickerComponent } from '@ngb-example/bootstrap/src/components/datepicker/datepicker.component';
+import { DropdownComponent } from '@ngb-example/bootstrap/src/components/dropdown/dropdown.component';
+import { ModalComponent } from '@ngb-example/bootstrap/src/components/modal/modal.component';
+import { NgbModalContent } from '@ngb-example/bootstrap/src/components/modal/modal-content.component';
 
 export const COMMON_MODULES: any[] = [FormsModule, CommonModule, NgbModule.forRoot()];
 
@@ -17,7 +20,9 @@ export const BOOTSTRAP_COMPONENTS: any[] = [
   ButtonComponent,
   CarouselComponent,
   CollapseComponent,
-  DatepickerComponent
+  DatepickerComponent,
+  DropdownComponent,
+  ModalComponent
 ];
 
 @NgModule({

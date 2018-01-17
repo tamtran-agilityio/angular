@@ -4,7 +4,7 @@ RUN apt-get install -y vim nano rubygems ruby-dev ruby`ruby -e 'puts RUBY_VERSIO
 RUN npm install -g yarn
 RUN gem install sass scss_lint
 RUN yarn global add @angular-devkit/core@0.0.23 \
-                    @nrwl/schematics \
+                    @nrwl/schematics@0.6.10 \
                     @angular/cli@1.6.0 \
                     karma-chrome-launcher@2.2.0 \
                     karma-cli@1.0.1 \

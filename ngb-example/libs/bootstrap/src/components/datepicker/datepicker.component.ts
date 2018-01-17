@@ -11,12 +11,17 @@ import { Date } from '@ngb-example/bootstrap/src/models/date';
 export class DatepickerComponent implements OnInit {
   model: NgbDateStruct;
   date: Date;
-  displayMonths = 2;
+  displayMonths = 1;
   navigation = 'select';
+  showWeekNumbers = true;
   hoveredDate: NgbDateStruct;
   fromDate: NgbDateStruct;
   toDate: NgbDateStruct;
-
+  placement: 'top'
+  startDate = {
+    year: 2018,
+    month: 1
+  }
   constructor() {
     this.model = this.selectToday();
   }
