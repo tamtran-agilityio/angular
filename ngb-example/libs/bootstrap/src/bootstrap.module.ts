@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { AccordionComponent } from '@ngb-example/bootstrap/src/components/accordion/accordion.component';
 import { AlertComponent } from '@ngb-example/bootstrap/src/components/alert/alert.component';
@@ -13,8 +13,15 @@ import { DropdownComponent } from '@ngb-example/bootstrap/src/components/dropdow
 import { ModalComponent } from '@ngb-example/bootstrap/src/components/modal/modal.component';
 import { ModalContent } from '@ngb-example/bootstrap/src/components/modal/modal.content.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { PopoverComponent } from './popover/popover.component';
+import { ProgressbarComponent } from './progressbar/progressbar.component';
+import { RatingComponent } from './rating/rating.component';
+import { TabsComponent } from './tabs/tabs.component';
+import { TimepickerComponent } from './timepicker/timepicker.component';
+import { TooltipComponent } from './tooltip/tooltip.component';
+import { TypeaheadComponent } from './typeahead/typeahead.component';
 
-export const COMMON_MODULES: any[] = [FormsModule, CommonModule, NgbModule.forRoot()];
+export const COMMON_MODULES: any[] = [ReactiveFormsModule, FormsModule, CommonModule, NgbModule.forRoot()];
 
 export const BOOTSTRAP_COMPONENTS: any[] = [
   AccordionComponent,
@@ -26,7 +33,14 @@ export const BOOTSTRAP_COMPONENTS: any[] = [
   DropdownComponent,
   ModalComponent,
   ModalContent,
-  PaginationComponent
+  PaginationComponent,
+  PopoverComponent,
+  ProgressbarComponent,
+  RatingComponent,
+  TabsComponent,
+  TimepickerComponent,
+  TooltipComponent,
+  TypeaheadComponent
 ];
 
 export const ENTRY_COMPONENTS: any[] = [ModalContent];
