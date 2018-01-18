@@ -12,6 +12,7 @@ import { DatepickerComponent } from '@ngb-example/bootstrap/src/components/datep
 import { DropdownComponent } from '@ngb-example/bootstrap/src/components/dropdown/dropdown.component';
 import { ModalComponent } from '@ngb-example/bootstrap/src/components/modal/modal.component';
 import { ModalContent } from '@ngb-example/bootstrap/src/components/modal/modal.content.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 export const COMMON_MODULES: any[] = [FormsModule, CommonModule, NgbModule.forRoot()];
 
@@ -24,7 +25,8 @@ export const BOOTSTRAP_COMPONENTS: any[] = [
   DatepickerComponent,
   DropdownComponent,
   ModalComponent,
-  ModalContent
+  ModalContent,
+  PaginationComponent
 ];
 
 export const ENTRY_COMPONENTS: any[] = [ModalContent];
