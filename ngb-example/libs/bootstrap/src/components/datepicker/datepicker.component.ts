@@ -17,11 +17,11 @@ export class DatepickerComponent implements OnInit {
   hoveredDate: NgbDateStruct;
   fromDate: NgbDateStruct;
   toDate: NgbDateStruct;
-  placement: 'top'
+  placement: 'top';
   startDate = {
     year: 2018,
     month: 1
-  }
+  };
   constructor() {
     this.model = this.selectToday();
   }

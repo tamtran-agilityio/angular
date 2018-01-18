@@ -1,32 +1,18 @@
-import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
-import { NgbModal, ModalDismissReasons, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { NgbModalContent } from '@ngb-example/bootstrap/src/components/modal/modal-content.component';
+import { Component, Input } from '@angular/core';
+
+import { NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalContent } from '@ngb-example/bootstrap/src/components/modal/modal.content.component';
 
 @Component({
   selector: 'modal',
   templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./modal.component.scss']
 })
-export class ModalComponent implements OnInit {
-  closeResult: string;
-  constructor(
-    private modalService: NgbModal
-  ) {}
+export class ModalComponent {
+  constructor(private modalService: NgbModal) {}
 
-  ngOnInit() {}
-
-  open(content) {
-    const modalRef = this.modalService.open(content)
-  }
-
-  private getDismissReason(reason: any): string {
-    if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
-    } else {
-      return  `with: ${reason}`;
-    }
+  open() {
+    const modalRef = this.modalService.open(ModalContent);
+    modalRef.componentInstance.name = 'World Test';
   }
 }
