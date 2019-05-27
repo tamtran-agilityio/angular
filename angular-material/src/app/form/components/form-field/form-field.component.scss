@@ -1,0 +1,8 @@
+.form-controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-controls > * {
+  width: 100%;
+}

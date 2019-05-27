@@ -1,0 +1,12 @@
+<mat-card>
+  <h4>Basic mat-select</h4>
+  <mat-form-field>
+    <mat-label>Favorite food</mat-label>
+    <mat-select [(value)]="selected" multiple>
+      <mat-option *ngFor="let food of foods" [value]="food.value">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <p>You selected: {{selected}}</p>
+</mat-card>
