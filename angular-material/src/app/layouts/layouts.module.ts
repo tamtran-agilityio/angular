@@ -1,28 +1,38 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 import {
-  CommonLayoutComponent,
-  HeaderComponent
-} from './components';
-import {
-  MatToolbarModule,
-  MatButtonModule
+  MatCardModule,
+  MatDividerModule,
+  MatListModule,
+  MatExpansionModule,
+  MatGridListModule
 } from '@angular/material';
+
+import { LayoutsRoutingModule } from './layouts-routing.module';
+import { LayoutComponent } from './pages';
+import {
+  CardComponent,
+  DividerComponent,
+  ExpansionPanelComponent,
+  GirdListComponent
+ } from './components';
 
 @NgModule({
   declarations: [
-    CommonLayoutComponent,
-    HeaderComponent
+    LayoutComponent,
+    CardComponent,
+    DividerComponent,
+    ExpansionPanelComponent,
+    GirdListComponent
   ],
   imports: [
     CommonModule,
-    RouterModule,
-    MatToolbarModule,
-    MatButtonModule
-  ],
-  exports: [
-    CommonLayoutComponent
+    LayoutsRoutingModule,
+    MatCardModule,
+    MatDividerModule,
+    MatListModule,
+    MatExpansionModule,
+    MatGridListModule
   ]
 })
 export class LayoutsModule { }

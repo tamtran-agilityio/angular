@@ -1,0 +1,17 @@
+.card {
+  width: 400px;
+  padding: 10px;
+  margin: 0 auto;
+
+  &__header {
+    background-size: cover;
+  }
+
+  img {
+    margin: 0;
+  }
+
+  mat-card-actions {
+    margin-bottom: 10px;
+  }
+}

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CommonLayoutComponent } from './layouts/components';
 
 const routes: Routes = [
   {
@@ -11,6 +10,14 @@ const routes: Routes = [
   {
     path: 'form',
     loadChildren: './form/form.module#FormModule'
+  },
+  {
+    path: 'navigation',
+    loadChildren: './navigation/navigation.module#NavigationModule'
+  },
+  {
+    path: 'layouts',
+    loadChildren: './layouts/layouts.module#LayoutsModule'
   }
 ];
 
